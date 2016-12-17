@@ -347,9 +347,7 @@ and (max-width: 768px) {
 /**  Page -- Contacts **/
 
 #contacts {
-	min-height: 500px;
-	background: url(../images/team3.jpg) no-repeat center;
-    background-size: contain;
+
 }
 
 #contacts {
@@ -359,7 +357,7 @@ and (max-width: 768px) {
     background-repeat: no-repeat;
     background-position: bottom right;
     background-size: contain;
-    max-height: 800px
+    height: 50vh
 }
 
 #contacts h2 {
@@ -375,7 +373,7 @@ and (max-width: 768px) {
 
 #contactdata {
 	position: absolute;
-	bottom: 45px;
+	bottom: 30px;
 	left: 20px;	
 }
 
