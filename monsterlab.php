@@ -32,6 +32,13 @@
           <li><a href="#staff"><?= _('Staff'); ?></a></li>
           <li><a href="#customers"><?= _('Customers'); ?></a></li>
 		  <li><a href="#contacts"><?= _('Contacts'); ?></a></li>
+		  
+			<?php if($locale == 'en_US') : ?>
+				<li><a href="?lang=ru_RU"><img src="images/ru.png" title="Русский"></a></li>
+			<?php else: ?>
+				<li><a href="?lang=en_US"><img src="images/en.png" title="English"></a></li>
+			<?php endif; ?>	
+			
         </ul>        
       </div><!-- collapse navbar-collapse -->
     </div><!-- container -->
@@ -215,7 +222,7 @@
 </div><!-- main -->
 
 <footer>
-    <p>&copy; 2016-2017 <a href="">MonsterLab.xyz</a>. All rights reserved.</p>    
+    <p>2016-2017, <a href="http://m-lab.xyz">Monster Lab.</a></p>    
 
 <!--------------------------------------------------------------------------------     
 	<nav class="navbar navbar-default" role="navigation">

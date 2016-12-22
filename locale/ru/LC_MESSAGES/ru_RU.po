@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-12-22 17:57+0300\n"
+"POT-Creation-Date: 2016-12-22 23:04+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -30,7 +30,7 @@ msgstr "Услуги"
 
 #: monsterlab.php:32
 msgid "Staff"
-msgstr "Сотрудники"
+msgstr "Команда"
 
 #: monsterlab.php:33
 msgid "Customers"
@@ -82,7 +82,7 @@ msgstr ""
 
 #: monsterlab.php:85
 msgid "Web Design"
-msgstr "Веб Дизайн"
+msgstr "Вэб Дизайн"
 
 #: monsterlab.php:86
 msgid "Our creative web design team makes it ... just bright!"
@@ -100,7 +100,7 @@ msgstr ""
 
 #: monsterlab.php:99
 msgid "Software Development"
-msgstr "Разработка"
+msgstr "Разработка Программного Обеспечения"
 
 #: monsterlab.php:100
 msgid ""
@@ -134,7 +134,7 @@ msgstr "Наша команда"
 
 #: monsterlab.php:129
 msgid "James P. Sullivan"
-msgstr ""
+msgstr "Джеймс Салливан"
 
 #: monsterlab.php:130
 msgid ""
@@ -144,7 +144,7 @@ msgstr ""
 
 #: monsterlab.php:141
 msgid "Celia Mae"
-msgstr ""
+msgstr "Селия Мэй"
 
 #: monsterlab.php:142
 msgid ""
@@ -154,7 +154,7 @@ msgstr ""
 
 #: monsterlab.php:153
 msgid "Mike Wazovzky"
-msgstr ""
+msgstr "Майк Вазовзки"
 
 #: monsterlab.php:154
 msgid ""
@@ -165,7 +165,7 @@ msgstr ""
 
 #: monsterlab.php:166
 msgid "Customer Testimonials"
-msgstr "Отзывы Клиентов"
+msgstr "Отзывы клиентов"
 
 #: monsterlab.php:170
 msgid "Best EVER web design studio for entrepreners and small businesses"
@@ -237,8 +237,8 @@ msgstr ""
 
 #: monsterlab.php:210
 msgid "Phone: "
-msgstr "Телефон"
+msgstr "Телефон: "
 
 #: monsterlab.php:211
 msgid "Email: "
-msgstr "Электронная почта"
+msgstr "Электронная почта: "
