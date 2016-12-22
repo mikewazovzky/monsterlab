@@ -1,3 +1,1 @@
-<?php
-
-include __DIR__ . '/monsterlab.php';
+<a href="ru.php">Russian</a>
