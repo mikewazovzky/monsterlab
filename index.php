@@ -26,12 +26,12 @@
       </div><!-- navbar-header -->
       <div class="collapse navbar-collapse" id="collapse">
         <ul class="nav navbar-nav navbar-right">
-          <li class="active"><a href="#featured">Home</a></li>
-          <li><a href="#mission">Mission</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#staff">Staff</a></li>
-          <li><a href="#customers">Customers</a></li>
-		  <li><a href="#contacts">Contacts</a></li>
+          <li class="active"><a href="#featured"><?= _('Home'); ?></a></li>
+          <li><a href="#mission"><?= _('Mission'); ?></a></li>
+          <li><a href="#services"><?= _('Services'); ?></a></li>
+          <li><a href="#staff"><?= _('Staff'); ?></a></li>
+          <li><a href="#customers"><?= _('Customers'); ?></a></li>
+		  <li><a href="#contacts"><?= _('Contacts'); ?></a></li>
         </ul>        
       </div><!-- collapse navbar-collapse -->
     </div><!-- container -->
@@ -61,55 +61,55 @@
 <div class="main">
   <div class="page" id="mission">
     <div class="content container">
-      <h2>Our Mission. The Beauty of Simplicity. </h2>      
+      <h2><?= _('Our Mission. The Beauty of Simplicity.'); ?></h2>      
       <div class="row">
-        <p class="col-md-4">Monster Lab. web  development studio strives to dive deep to understand customer business. Based on that knowledge, we deliver robust technology to bring our client to the web for efficient interation with customers and partners over internet.</p>
-        <p class="col-md-4">Our approach is to keep technology as simple as possible still efficient to do the job. Thus, being an ikea of web development, we bring down time and cost to have our solution up and running.</p> 
-		<p class="col-md-4">We are specifically proud by our ability to minimize cost and effort required to support our product, still allowing its scaling and further development as customer business grows and changes.</p>
+        <p class="col-md-4"><?= _('Monster Lab. web  development studio strives to dive deep to understand customer business. Based on that knowledge, we deliver robust technology to bring our client to the web for efficient interation with customers and partners over internet.'); ?></p>
+        <p class="col-md-4"><?= _('Our approach is to keep technology as simple as possible still efficient to do the job. Thus, being an ikea of web development, we bring down time and cost to have our solution up and running.'); ?></p> 
+		<p class="col-md-4"><?= _('We are specifically proud by our ability to minimize cost and effort required to support our product, still allowing its scaling and further development as customer business grows and changes.'); ?></p>
       </div><!-- row -->
     </div><!-- content container -->
   </div><!-- mission page -->
 
   <div class="page" id="services">
     <div class="content container">
-      <h2>Services and Technology</h2>
+      <h2><?= _('Services and Technology'); ?></h2>
       <div class="row">
         <article class="service col-md-4 col-sm-6 col-xs-12">
           <img class="icon" src="images/icon-advice.png" alt="Icon">
-          <h3>Advisory Service</h3>
-          <p>We help customer to understand how they can use mordern technology to fuel their business.</p>
+          <h3><?= _('Advisory Service'); ?></h3>
+          <p><?= _('We help customer to understand how they can use mordern technology to fuel their business.'); ?></p>
         </article>
 
         <article class="service col-md-4 col-sm-6 col-xs-12">
           <img class="icon" src="images/icon-bootstrap.png" alt="Icon">
-          <h3>Web Design</h3>
-          <p>Our creative web design team makes it ... just bright!</p>
+          <h3><?= _('Web Design'); ?></h3>
+          <p><?= _('Our creative web design team makes it ... just bright!'); ?></p>
         </article>
 		
 		<div class="clearfix visible-sm-block"></div>
 
         <article class="service col-md-4 col-sm-6 col-xs-12">
           <img class="icon" src="images/icon-jquery.png" alt="Icon">
-          <h3>Interactivity</h3>
-          <p>Nobody comes back to boring static pages anymore. JavaScript and jQuery bring interactivity to your web solution!</p>
+          <h3><?= _('Interactivity'); ?></h3>
+          <p><?= _('Nobody comes back to boring static pages anymore. JavaScript and jQuery bring interactivity to your web solution!'); ?></p>
         </article>
 
         <article class="service col-md-4 col-sm-6 col-xs-12">
           <img class="icon" src="images/icon-php.png" alt="Icon">
-          <h3>Software Development</h3>
-          <p>To build a complex  solution we develop a server side application. The stack of technologies we rely upon includes PHP and Laravel.</p>
+          <h3><?= _('Software Development'); ?></h3>
+          <p><?= _('To build a complex  solution we develop a server side application. The stack of technologies we rely upon includes PHP and Laravel.'); ?></p>
         </article>
 
         <article class="service col-md-4 col-sm-6 col-xs-12">
           <img class="icon" src="images/icon-sql.png" alt="Icon">
-          <h3>DataBases</h3>
-          <p>Need to handle large amount of data? No problem, we use contemporary database solution to handle it.</p>
+          <h3><?= _('DataBases'); ?></h3>
+          <p><?= _('Need to handle large amount of data? No problem, we use contemporary database solution to handle it.'); ?></p>
         </article>
 
         <article class="service col-md-4 col-sm-6 col-xs-12">
           <img class="icon" src="images/icon-service.png" alt="Icon">
-          <h3>Support</h3>
-          <p>Lifetime support is provided to customer. We help you deploy your solution, support, update and enhance it as needed.</p>
+          <h3><?= _('Support'); ?></h3>
+          <p><?= _('Lifetime support is provided to customer. We help you deploy your solution, support, update and enhance it as needed.'); ?></p>
         </article>   
       </div><!-- row -->   
     </div><!-- content container -->
@@ -117,7 +117,7 @@
 
   <div class="page" id="staff">
     <div class="container-fluid">
-      <h2 id="ourstaff">Our Staff</h2>
+      <h2 id="ourstaff"><?= _('Our Staff'); ?></h2>
       <div class="row">
 
         <div class="employee col-lg-4">
@@ -126,8 +126,8 @@
               <img class="img-circle" src="images/team-sulley.jpg" alt="Photo of Dr Sanders">
             </div><!-- photo -->
             <div class="info col-xs-8 col-xs-offset-2 col-sm-7 col-sm-offset-0 col-md-6 col-lg-8">
-              <h3>James P. Sullivan</h3>
-              <p>Sulley is our Senior Developer and Software Architecture design guru. Pls. never NEVER argue with him!</p>
+              <h3><?= _('James P. Sullivan'); ?></h3>
+              <p><?= _('Sulley is our Senior Developer and Software Architecture design guru. Pls. never NEVER argue with him!'); ?></p>
             </div><!-- info -->
           </div> <!-- inner row -->
         </div> <!-- employee -->
@@ -138,8 +138,8 @@
               <img class="img-circle" src="images/team-ceila.jpg"  alt="Photo of Dr Sanders">
             </div><!-- photo -->
             <div class="info col-xs-8 col-xs-offset-2 col-sm-7 col-sm-offset-0 col-md-6 col-lg-8">
-              <h3>Celia Mae</h3>
-              <p>Our web design team is led by Celia.  I bet you'll be absolutly happy by how it all looks and feels.</p>
+              <h3><?= _('Celia Mae'); ?></h3>
+              <p><?= _('Our web design team is led by Celia.  I bet you\'ll be absolutly happy by how it all looks and feels.'); ?></p>
             </div><!-- info -->
           </div> <!-- inner row -->
         </div> <!-- employee -->
@@ -150,8 +150,8 @@
               <img class="img-circle" src="images/team-mike.jpg" alt="Photo of Dr Sanders">
             </div><!-- photo -->
             <div class="info col-xs-8 col-xs-offset-2 col-sm-7 col-sm-offset-0 col-md-6 col-lg-8">
-              <h3>Mike Wazovzky</h3>
-             <p>Mike's job as a producer is to make you happy. The guy will communicate with you from the original requirement discussion till the <del>end you life</del> celebration of successful solution launch.</p>
+              <h3><?= _('Mike Wazovzky'); ?></h3>
+             <p><?= _('Mike\'s job as a producer is to make you happy. The guy will communicate with you from the original requirement discussion till the <del>end you life</del> celebration of successful solution launch.'); ?></p>
             </div><!-- info -->
           </div> <!-- inner row -->
         </div> <!-- employee -->
@@ -163,40 +163,40 @@
 
   <div class="page" id="customers">
     <div class="container-fluid">
-      <h2>Customer Testimonials</h2>
+      <h2><?= _('Customer Testimonials'); ?></h2>
       <div class="row">
         <blockquote class="col-md-6 col-lg-3" id="randell">
           <div class="quote">
-            <span class="intro">Best EVER web design studio for entrepreners and small businesses</span>
-            <span class="more"> brings your site up and running in no time! Nice people to deal with.</span>
-            <span class="customer">Randell Boggs</span>
-			<span class="customer">entreprener</span>
+            <span class="intro"><?= _('Best EVER web design studio for entrepreners and small businesses'); ?></span>
+            <span class="more"><?= _(' brings your site up and running in no time! Nice people to deal with.'); ?></span>
+            <span class="customer"><?= _('Randell Boggs'); ?></span>
+			<span class="customer"><?= _('entreprener'); ?></span>
           </div>
         </blockquote>
 
         <blockquote class="col-md-6 col-lg-3" id="henry">
           <div class="quote">
-            <span class="intro">We need a fairily complex and unique solution for large company. They managed to cope with it</span>
-            <span class="more">I'm specifically happy on how they organized a post production support!</span>
-            <span class="customer">Henry J. Waternoose</span>
-			<span class="customer">SW Power Inc.</span>
+            <span class="intro"><?= _('We need a fairily complex and unique solution for large company. They managed to cope with it'); ?></span>
+            <span class="more"><?= _('I\'m specifically happy on how they organized a post production support!'); ?></span>
+            <span class="customer"><?= _('Henry J. Waternoose'); ?></span>
+			<span class="customer">S<?= _('W Power Inc.'); ?></span>
           </div>
         </blockquote>
 
         <blockquote class="col-md-6 col-lg-3" id="roz">
           <div class="quote">
-            <span class="intro">The govermenment agencies like a CDA have a set of specific requirement to service providers</span>
-            <span class="more">Monster Labs worked out for us.</span>
-            <span class="customer">Roz</span>
-			<span class="customer">Child Detection Agency</span>
+            <span class="intro"><?= _('The govermenment agencies like a CDA have a set of specific requirement to service providers'); ?></span>
+            <span class="more"><?= _('Monster Labs worked out for us.'); ?></span>
+            <span class="customer"><?= _('Roz'); ?></span>
+			<span class="customer"><?= _('Child Detection Agency'); ?></span>
           </div>
         </blockquote>
 
         <blockquote class="col-md-6 col-lg-3" id="boo">
           <div class="quote">
-            <span class="intro">Not everyone has complex needs and a lot of money. I just wanted to share my drowings with my friends over internet</span>
-            <span class="more">monsters helped me. Now I'm internet superstar and a millionair. Mom is happy!</span>
-            <span class="customer">Boo</span>
+            <span class="intro"><?= _('Not everyone has complex needs and a lot of money. I just wanted to share my drowings with my friends over internet'); ?></span>
+            <span class="more"><?= _('monsters helped me. Now I\'m internet superstar and a millionair. Mom is happy!'); ?></span>
+            <span class="customer"><?= _('Boo'); ?></span>
           </div>
         </blockquote>          
       </div>
@@ -205,17 +205,17 @@
 
   <div class="page" id="contacts">
     <div class="container-fluid">
-		<h2>Contacts</h2>
+		<h2><?= _('Contacts'); ?></h2>
 		<div id="contactdata">
-			<p>Phone: <span class="phone">+7 (222) 222-3-222</span></p>
-			<p>Email: <span class="phone">mike.wazovzky@gmail.com</span></p>			
+			<p><?= _('Phone: '); ?><span class="phone">+7 (222) 222-3-222'); ?></span></p>
+			<p><?= _('Email: '); ?><span class="phone">admin@m-lab.xyz</span></p>			
 		</div> <!-- contactdata -->
     </div><!-- container -->
   </div><!-- contacts page -->  
 </div><!-- main -->
 
 <footer>
-    <p>&copy; 2016 <a href="">MonsterLab.xyz</a>. All rights reserved.</p>    
+    <p>&copy; 2016-2017 <a href="">MonsterLab.xyz</a>. All rights reserved.</p>    
 
 <!--------------------------------------------------------------------------------     
 	<nav class="navbar navbar-default" role="navigation">
