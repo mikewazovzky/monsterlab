@@ -3,18 +3,19 @@
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-12-22 23:04+0300\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2016-12-23 13:23+0300\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: ru_RU\n"
+"X-Generator: Poedit 1.8.11\n"
 
 #: monsterlab.php:29
 msgid "Home"
@@ -51,6 +52,10 @@ msgid ""
 "bring our client to the web for efficient interation with customers and "
 "partners over internet."
 msgstr ""
+"Cтудия веб-програмирования Monster Lab.  стремится глубоко разобраться в "
+"особенностях бизнеса клиента. Исходя из этого понимания, мы поставляем "
+"надежные технологии позволяющие клиенту организовать эффективное "
+"взаимодествие с заказчиками и партнерами через Интернет."
 
 #: monsterlab.php:67
 msgid ""
@@ -58,6 +63,10 @@ msgid ""
 "do the job. Thus, being an ikea of web development, we bring down time and "
 "cost to have our solution up and running."
 msgstr ""
+"Наш подход заключается в том, чтобы предложить клиенту максимально простые и "
+"гибкие  технологии позволящие решать его задачи. Таким образом, будучи ИКЕА "
+"в области веб-разработки, мы можем минимизировать затраты времени и средств "
+"на создание нашего решения."
 
 #: monsterlab.php:68
 msgid ""
@@ -65,6 +74,10 @@ msgid ""
 "required to support our product, still allowing its scaling and further "
 "development as customer business grows and changes."
 msgstr ""
+"Мы особенно гордимся нашей способностью минимизировать затраты и усилия, "
+"необходимые для поддержки нашего продукта, при этом сохраняя все возможности "
+"его масштабирование и дальнейшего развития, по мере того как бизнес-клиента "
+"развивается и меняется."
 
 #: monsterlab.php:75
 msgid "Services and Technology"
@@ -79,6 +92,8 @@ msgid ""
 "We help customer to understand how they can use mordern technology to fuel "
 "their business."
 msgstr ""
+"Мы помогаем клиентам понять, как современные технологии могут поддержать и "
+"способствовать развитию их бизнеса."
 
 #: monsterlab.php:85
 msgid "Web Design"
@@ -87,6 +102,8 @@ msgstr "Вэб Дизайн"
 #: monsterlab.php:86
 msgid "Our creative web design team makes it ... just bright!"
 msgstr ""
+"Наша творческая команда веб-дизайна сделает так, чтобы все  это было ... "
+"просто восхитительно!"
 
 #: monsterlab.php:93
 msgid "Interactivity"
@@ -97,6 +114,8 @@ msgid ""
 "Nobody comes back to boring static pages anymore. JavaScript and jQuery "
 "bring interactivity to your web solution!"
 msgstr ""
+"Никто больше не возвращается  на  скучные статические вэб-страницы. Добавь "
+"интерактивности своим веб-решениям!  "
 
 #: monsterlab.php:99
 msgid "Software Development"
@@ -107,6 +126,8 @@ msgid ""
 "To build a complex  solution we develop a server side application. The stack "
 "of technologies we rely upon includes PHP and Laravel."
 msgstr ""
+"При создании сложных вэб решений мы разрабатываем серверное программное "
+"обеспечение. Используемый нами стэк технологий включает в себя PHP и Laravel."
 
 #: monsterlab.php:105
 msgid "DataBases"
@@ -117,6 +138,8 @@ msgid ""
 "Need to handle large amount of data? No problem, we use contemporary "
 "database solution to handle it."
 msgstr ""
+"Работаете с большими объемами данных? Нет проблем! Мы используем современные "
+"системы управления базами данных для их обработки."
 
 #: monsterlab.php:111
 msgid "Support"
@@ -127,6 +150,9 @@ msgid ""
 "Lifetime support is provided to customer. We help you deploy your solution, "
 "support, update and enhance it as needed."
 msgstr ""
+"Мы обеспечиваем поддержку нашего продукта на протяжении всего жизненного "
+"цикла. Мы поможем развернуть решение, будем поддерживать, развивать и "
+"совершенствовать его по мере необходимости. "
 
 #: monsterlab.php:120
 msgid "Our Staff"
@@ -141,6 +167,9 @@ msgid ""
 "Sulley is our Senior Developer and Software Architecture design guru. Pls. "
 "never NEVER argue with him!"
 msgstr ""
+"Джеймс Салливан (Салли) - руководитель разработки и гуру в области "
+"архитектуры программного обеспечения. Пожалуйста, никогда НИКОГДА не спорьте "
+"с ним!"
 
 #: monsterlab.php:141
 msgid "Celia Mae"
@@ -151,6 +180,8 @@ msgid ""
 "Our web design team is led by Celia.  I bet you'll be absolutly happy by how "
 "it all looks and feels."
 msgstr ""
+"Селия отвечает в нашей команде за вэб-дизайн.  Готов спорить, вы будете в "
+"восторге от всего, что она сможет вам предложить."
 
 #: monsterlab.php:153
 msgid "Mike Wazovzky"
@@ -162,6 +193,9 @@ msgid ""
 "you from the original requirement discussion till the <del>end you life</"
 "del> celebration of successful solution launch."
 msgstr ""
+"Задача Майка, как продюсера проекта, сделать Вас счастливым. Пока, этого не "
+"случится (надеемся в момент запуска вашего решения), Майк будет на связи с "
+"Вами 24 часа в сутки."
 
 #: monsterlab.php:166
 msgid "Customer Testimonials"
@@ -170,32 +204,39 @@ msgstr "Отзывы клиентов"
 #: monsterlab.php:170
 msgid "Best EVER web design studio for entrepreners and small businesses"
 msgstr ""
+"ЛУЧШАЯ студия вэб-дизайна для индивидуальных предпринимателей и небольшого "
+"бизнеса."
 
 #: monsterlab.php:171
 msgid " brings your site up and running in no time! Nice people to deal with."
 msgstr ""
+"Не успеете осознать, что происходит, как ваш сайт будет сделан и запущен!"
 
 #: monsterlab.php:172
 msgid "Randell Boggs"
-msgstr ""
+msgstr "Рэндел Богг"
 
 #: monsterlab.php:173
 msgid "entreprener"
-msgstr ""
+msgstr "предприниматель"
 
 #: monsterlab.php:179
 msgid ""
 "We need a fairily complex and unique solution for large company. They "
 "managed to cope with it"
 msgstr ""
+"Для управления крупной компанией нам нужно достаточно сложное программное "
+"решение. Они успешно справились с задачей такого масштаба."
 
 #: monsterlab.php:180
 msgid "I'm specifically happy on how they organized a post production support!"
 msgstr ""
+"Я особенно доволен тем, как они организовали поддержку нашего решения после "
+"его запуска."
 
 #: monsterlab.php:181
 msgid "Henry J. Waternoose"
-msgstr ""
+msgstr "Генри Водоног"
 
 #: monsterlab.php:182
 msgid "W Power Inc."
@@ -206,34 +247,40 @@ msgid ""
 "The govermenment agencies like a CDA have a set of specific requirement to "
 "service providers"
 msgstr ""
+"У государственных органов и агенств достаточно специфичные требования к "
+"поставщикам услуг."
 
 #: monsterlab.php:189
 msgid "Monster Labs worked out for us."
-msgstr ""
+msgstr "Monster Lab. вполне соответствовала всем нашим ожиданиям."
 
 #: monsterlab.php:190
 msgid "Roz"
-msgstr ""
+msgstr "Роз"
 
 #: monsterlab.php:191
 msgid "Child Detection Agency"
-msgstr ""
+msgstr "АОД"
 
 #: monsterlab.php:197
 msgid ""
 "Not everyone has complex needs and a lot of money. I just wanted to share my "
 "drowings with my friends over internet"
 msgstr ""
+"Не у всех сложные потребности и много денег. Я просто хотела поделиться "
+"своими рисунками с друзьями в интернете"
 
 #: monsterlab.php:198
 msgid ""
 "monsters helped me. Now I'm internet superstar and a millionair. Mom is "
 "happy!"
 msgstr ""
+"монстры помогли мне. Теперь я звезда интернета и миллионер. Мама очень "
+"довольна."
 
 #: monsterlab.php:199
 msgid "Boo"
-msgstr ""
+msgstr "Бу"
 
 #: monsterlab.php:210
 msgid "Phone: "
