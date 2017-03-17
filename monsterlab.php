@@ -71,7 +71,7 @@
             <div class="row">
                 <p class="col-md-4"><?= _('Monster Lab. web  development studio strives to dive deep to understand 
                         customer business. Based on that knowledge, we deliver robust technology to bring our 
-                        client to the web for efficient interation with customers and partners over internet.'); ?>
+                        client to the web for efficient interaction with customers and partners over internet.'); ?>
                 </p>
                 <p class="col-md-4"><?= _('Our approach is to keep technology as simple as possible still efficient 
                     to do the job. Thus, being an ikea of web development, we bring down time and cost to have our 
