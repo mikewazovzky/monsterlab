@@ -45,9 +45,9 @@ header .navbar-default .navbar-nav .active a {
 }
 
 header .navbar-default .navbar-nav .active a:hover {
-  color: #E15D5F;
-  background: transparent;
+  color: #EEC856;  /* #E15D5F;  */ 
   text-shadow: none;
+  background: transparent;
 }
 
 /**  Navbar Brand **/
