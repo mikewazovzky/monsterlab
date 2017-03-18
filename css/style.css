@@ -358,8 +358,8 @@ and (max-width: 768px) {
     background-position: bottom right;
     background-size: contain;
     height: 50vh;
-	border-top: 60px solid #fff;
-	margin-bottom: 20px;
+	margin-top: 50px;	
+	margin-bottom: 40px;
 }
 
 #contacts h2 {
