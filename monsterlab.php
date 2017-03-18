@@ -69,18 +69,9 @@
         <div class="content container">
         <h2><?= _('Our Mission. The Beauty of Simplicity.'); ?></h2>      
             <div class="row">
-                <p class="col-md-4"><?= _('Monster Lab. web  development studio strives to dive deep to understand 
-                        customer business. Based on that knowledge, we deliver robust technology to bring our 
-                        client to the web for efficient interaction with customers and partners over internet.'); ?>
-                </p>
-                <p class="col-md-4"><?= _('Our approach is to keep technology as simple as possible still efficient 
-                    to do the job. Thus, being an ikea of web development, we define stack of technologies that fits best
-					project requirements and brings down time and cost to have our solution up and running.'); ?>
-                </p> 
-                <p class="col-md-4"><?= _('We are specifically proud by our ability to minimize cost and effort 
-                    required to support our product, still allowing its scaling and further development as 
-                    customer business grows and changes.'); ?>
-                </p>
+                <p class="col-md-4"><?= _('Monster Lab. web  development studio strives to dive deep to understand customer business. Based on that knowledge, we deliver robust technology to bring our client to the web for efficient interaction with customers and partners over internet.'); ?></p>
+                <p class="col-md-4"><?= _('Our approach is to keep technology as simple as possible still efficient to do the job. Thus, being an ikea of web development, we define stack of technologies that fits best project requirements and brings down time and cost to have our solution up and running.'); ?></p> 
+                <p class="col-md-4"><?= _('We are specifically proud by our ability to minimize cost and effort required to support our product, still allowing its scaling and further development as customer business grows and changes.'); ?></p>
             </div><!-- row -->
         </div><!-- content container -->
     </div><!-- mission page -->
@@ -93,8 +84,7 @@
                 <article class="service col-md-4 col-sm-6 col-xs-12">
                     <img class="icon" src="images/icon-advice.png" alt="Icon">
                     <h3><?= _('Advisory Service'); ?></h3>
-                    <p><?= _('We help customer to understand how they can use mordern technology to drive the business.'); ?>
-                    </p>
+                    <p><?= _('We help customer to understand how they can use mordern technology to drive the business.'); ?></p>
                 </article>
 
                 <article class="service col-md-4 col-sm-6 col-xs-12">
@@ -108,9 +98,7 @@
                 <article class="service col-md-4 col-sm-6 col-xs-12">
                     <img class="icon" src="images/icon-vue.png" alt="Icon">
                     <h3><?= _('Interactivity'); ?></h3>
-                    <p><?= _('Nobody comes back to boring static pages anymore. Modern JavaScript libraries 
-                        bring interactivity to your web solution!'); ?>
-                    </p>
+                    <p><?= _('Nobody comes back to boring static pages anymore. Modern JavaScript libraries bring interactivity to your web solution!'); ?></p>
                 </article>
         
                 <div class="clearfix visible-md-block"></div>
@@ -119,25 +107,19 @@
                 <article class="service col-md-4 col-sm-6 col-xs-12">
                     <img class="icon" src="images/icon-php.png" alt="Icon">
                     <h3><?= _('Software Development'); ?></h3>
-                    <p><?= _('To build a complex  solution we develop a server side application. 
-                        The stack of technologies we rely upon includes PHP and Laravel.'); ?>
-                    </p>
+                    <p><?= _('To build a complex  solution we develop a server side application. The stack of technologies we rely upon includes PHP and Laravel.'); ?></p>
                 </article>
 
                 <article class="service col-md-4 col-sm-6 col-xs-12">
                     <img class="icon" src="images/icon-sql.png" alt="Icon">
                     <h3><?= _('DataBases'); ?></h3>
-                    <p><?= _('Need to handle large amount of data? No problem, we use contemporary 
-                        database solution to manage it.'); ?>
-                    </p>
+                    <p><?= _('Need to handle large amount of data? No problem, we use contemporary database solution to manage it.'); ?></p>
                 </article>
 
                 <article class="service col-md-4 col-sm-6 col-xs-12">
                     <img class="icon" src="images/icon-service.png" alt="Icon">
                     <h3><?= _('Support'); ?></h3>
-                    <p><?= _('Lifetime support is provided to customer. We deploy and host the solution, 
-                        update and enhance it as needed, provide required training.'); ?>
-                    </p>
+                    <p><?= _('Lifetime support is provided to customer. We deploy and host the solution, update and enhance it as needed, provide required training.'); ?></p>
                 </article> 
         
             </div><!-- row -->   
@@ -156,9 +138,7 @@
                         </div><!-- photo -->
                         <div class="info col-xs-8 col-xs-offset-2 col-sm-7 col-sm-offset-0 col-md-6 col-lg-8">
                             <h3><?= _('James P. Sullivan'); ?></h3>
-                            <p><?= _('Sulley is our Senior Developer and Software Architecture design guru. 
-                                Pls. never NEVER argue with him!'); ?>
-                            </p>
+                            <p><?= _('Sulley is our Senior Developer and Software Architecture design guru. Pls. never NEVER argue with him!'); ?></p>
                         </div><!-- info -->
                     </div> <!-- inner row -->
                 </div> <!-- employee -->
@@ -170,9 +150,7 @@
                         </div><!-- photo -->
                         <div class="info col-xs-8 col-xs-offset-2 col-sm-7 col-sm-offset-0 col-md-6 col-lg-8">
                             <h3><?= _('Celia Mae'); ?></h3>
-                            <p><?= _('Our web design team is led by Celia.  I bet you\'ll be absolutly happy by how 
-                                it all looks and feels.'); ?>
-                            </p>
+                            <p><?= _('Our web design team is led by Celia.  I bet you\'ll be absolutly happy by how it all looks and feels.'); ?></p>
                         </div><!-- info -->
                     </div> <!-- inner row -->
                 </div> <!-- employee -->
@@ -184,8 +162,7 @@
                         </div><!-- photo -->
                         <div class="info col-xs-8 col-xs-offset-2 col-sm-7 col-sm-offset-0 col-md-6 col-lg-8">
                             <h3><?= _('Mike Wazovzky'); ?></h3>
-                            <p><?= _('Mike\'s job as a producer is to make you happy. The guy will stay in touch with you 24x7
-								till the successful solution launch.'); ?></p>
+                            <p><?= _('Mike\'s job as a producer is to make you happy. The guy will stay in touch with you 24x7 till the successful solution launch.'); ?></p>
                         </div><!-- info -->
                     </div> <!-- inner row -->
                 </div> <!-- employee -->
