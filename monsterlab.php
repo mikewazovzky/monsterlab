@@ -74,8 +74,8 @@
                         client to the web for efficient interaction with customers and partners over internet.'); ?>
                 </p>
                 <p class="col-md-4"><?= _('Our approach is to keep technology as simple as possible still efficient 
-                    to do the job. Thus, being an ikea of web development, we bring down time and cost to have our 
-                    solution up and running.'); ?>
+                    to do the job. Thus, being an ikea of web development, we define stack of technologies that fits best
+					project requirements and brings down time and cost to have our solution up and running.'); ?>
                 </p> 
                 <p class="col-md-4"><?= _('We are specifically proud by our ability to minimize cost and effort 
                     required to support our product, still allowing its scaling and further development as 
@@ -93,7 +93,7 @@
                 <article class="service col-md-4 col-sm-6 col-xs-12">
                     <img class="icon" src="images/icon-advice.png" alt="Icon">
                     <h3><?= _('Advisory Service'); ?></h3>
-                    <p><?= _('We help customer to understand how they can use mordern technology to fuel their business.'); ?>
+                    <p><?= _('We help customer to understand how they can use mordern technology to drive the business.'); ?>
                     </p>
                 </article>
 
@@ -128,15 +128,15 @@
                     <img class="icon" src="images/icon-sql.png" alt="Icon">
                     <h3><?= _('DataBases'); ?></h3>
                     <p><?= _('Need to handle large amount of data? No problem, we use contemporary 
-                        database solution to handle it.'); ?>
+                        database solution to manage it.'); ?>
                     </p>
                 </article>
 
                 <article class="service col-md-4 col-sm-6 col-xs-12">
                     <img class="icon" src="images/icon-service.png" alt="Icon">
                     <h3><?= _('Support'); ?></h3>
-                    <p><?= _('Lifetime support is provided to customer. We help you deploy your solution, 
-                        support, update and enhance it as needed.'); ?>
+                    <p><?= _('Lifetime support is provided to customer. We deploy and host the solution, 
+                        update and enhance it as needed, provide required training.'); ?>
                     </p>
                 </article> 
         
@@ -184,7 +184,8 @@
                         </div><!-- photo -->
                         <div class="info col-xs-8 col-xs-offset-2 col-sm-7 col-sm-offset-0 col-md-6 col-lg-8">
                             <h3><?= _('Mike Wazovzky'); ?></h3>
-                            <p><?= _('Mike\'s job as a producer is to make you happy. The guy will communicate with you from the original requirement discussion till the <del>end you life</del> celebration of successful solution launch.'); ?></p>
+                            <p><?= _('Mike\'s job as a producer is to make you happy. The guy will stay in touch with you 24x7
+								till the successful solution launch.'); ?></p>
                         </div><!-- info -->
                     </div> <!-- inner row -->
                 </div> <!-- employee -->
@@ -201,7 +202,7 @@
             
                 <blockquote class="col-md-6 col-lg-3" id="randell">
                     <div class="quote">
-                        <span class="intro"><?= _('Best EVER web design studio for entrepreners and small businesses'); ?></span>
+                        <span class="intro"><?= _('Best EVER web design studio for entrepreners and small business'); ?></span>
                         <span class="more"><?= _(' brings your site up and running in no time! Nice people to deal with.'); ?></span>
                         <span class="customer"><?= _('Randell Boggs'); ?></span>
                         <span class="customer"><?= _('entreprener'); ?></span>
@@ -229,7 +230,7 @@
                 <blockquote class="col-md-6 col-lg-3" id="boo">
                     <div class="quote">
                         <span class="intro"><?= _('Not everyone has complex needs and a lot of money. I just wanted to share my drowings with my friends over internet'); ?></span>
-                        <span class="more"><?= _('monsters helped me. Now I\'m internet superstar and a millionair. Mom is happy!'); ?></span>
+                        <span class="more"><?= _('monsters helped me. Now I\'m internet star and a millionair. Mom is happy!'); ?></span>
                         <span class="customer"><?= _('Boo'); ?></span>
                     </div>
                 </blockquote>          
