@@ -106,9 +106,9 @@
                 <div class="clearfix visible-sm-block"></div>
 
                 <article class="service col-md-4 col-sm-6 col-xs-12">
-                    <img class="icon" src="images/icon-jquery.png" alt="Icon">
+                    <img class="icon" src="images/icon-vue.png" alt="Icon">
                     <h3><?= _('Interactivity'); ?></h3>
-                    <p><?= _('Nobody comes back to boring static pages anymore. JavaScript and jQuery 
+                    <p><?= _('Nobody comes back to boring static pages anymore. Modern JavaScript libraries 
                         bring interactivity to your web solution!'); ?>
                     </p>
                 </article>
