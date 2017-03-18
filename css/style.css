@@ -359,6 +359,7 @@ and (max-width: 768px) {
     background-size: contain;
     height: 50vh;
 	border-top: 60px solid #fff;
+	margin-bottom: 20px;
 }
 
 #contacts h2 {
@@ -374,7 +375,7 @@ and (max-width: 768px) {
 
 #contactdata {
 	position: absolute;
-	bottom: 30px;
+	bottom: 20px;
 	left: 20px;	
 }
 
