@@ -109,6 +109,8 @@
                     <h3><?= _('Software Development'); ?></h3>
                     <p><?= _('To build a complex  solution we develop a server side application. The stack of technologies we rely upon includes PHP and Laravel.'); ?></p>
                 </article>
+				
+				<div class="clearfix visible-sm-block"></div>
 
                 <article class="service col-md-4 col-sm-6 col-xs-12">
                     <img class="icon" src="images/icon-sql.png" alt="Icon">
