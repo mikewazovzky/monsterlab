@@ -1,5 +1,5 @@
 $(function someFunction() {
-    const topoffset = 50; // variable for menu height
+
     const slideqty = $('#featured .item').length;
     let wheight = window.innerHeight; // get the height of the window
     const randSlide = Math.floor(Math.random() * slideqty);
@@ -22,6 +22,7 @@ $(function someFunction() {
     });
 
     // Activate Scrollspy
+    const topoffset = 50; // variable for menu height
     $('body').scrollspy({
         target: 'header .navbar',
         offset: topoffset
@@ -29,6 +30,7 @@ $(function someFunction() {
 
     // add inbody class wheN page reloads
     const hash = $(this).find('li.active a').attr('href');
+
     if (hash !== '#featured') {
         $('header nav').addClass('inbody');
     } else {

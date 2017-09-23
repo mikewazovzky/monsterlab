@@ -15,9 +15,9 @@
     @yield('header')
 </head>
 <body>
-    <div>
-        @include('layouts.nav')
+    <div id="app">
         @yield('content')
+        @include('layouts.nav')
     </div>
 
     <!-- Scripts -->

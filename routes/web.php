@@ -10,6 +10,9 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/{locale?}', function ($locale = null) {
 
@@ -22,6 +25,4 @@ Route::get('/{locale?}', function ($locale = null) {
     return view('pages.main', compact('locale'));
 });
 
-Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');

@@ -1,0 +1,1105 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"back",
+				"background-color"
+			],
+			[
+				"list",
+				"list-group-item"
+			],
+			[
+				"sign",
+				"signIn"
+			],
+			[
+				"fun",
+				"fun\tfunction …"
+			],
+			[
+				"padding-",
+				"padding-right"
+			],
+			[
+				"err",
+				"errors"
+			],
+			[
+				"ta",
+				"tag"
+			],
+			[
+				"cl",
+				"class\tAttr"
+			],
+			[
+				"class",
+				"class\tAttr"
+			],
+			[
+				"folder",
+				"folderName"
+			],
+			[
+				"margin",
+				"margin-bottom"
+			],
+			[
+				"Cli",
+				"ClientFormRequest"
+			],
+			[
+				"val",
+				"validatedRequestData"
+			],
+			[
+				"uni",
+				"uniqueRule"
+			],
+			[
+				"ind",
+				"industry"
+			],
+			[
+				"in",
+				"inline"
+			],
+			[
+				"S",
+				"ShouldQueue"
+			],
+			[
+				"tren",
+				"trending_threads"
+			],
+			[
+				"tre",
+				"trending_threads"
+			],
+			[
+				"up",
+				"updateAvatar"
+			],
+			[
+				"load",
+				"loadAvatar"
+			],
+			[
+				"call",
+				"callback"
+			],
+			[
+				"men",
+				"mentionedUsers"
+			],
+			[
+				"re",
+				"reply"
+			],
+			[
+				"You",
+				"YouWereMentioned"
+			],
+			[
+				"for",
+				"foreach\tforeach …"
+			],
+			[
+				"dete",
+				"detectInvalidKeywords"
+			],
+			[
+				"not",
+				"notificationId"
+			],
+			[
+				"subsc",
+				"subscription"
+			],
+			[
+				"subs",
+				"subscription"
+			],
+			[
+				"sub",
+				"subscription"
+			],
+			[
+				"th",
+				"thread_id"
+			],
+			[
+				"dat",
+				"dataSet"
+			],
+			[
+				"can",
+				"canUpdate"
+			],
+			[
+				"fav",
+				"favoritesCount"
+			],
+			[
+				"au",
+				"authorize"
+			],
+			[
+				"f",
+				"feed"
+			],
+			[
+				"ev",
+				"event"
+			],
+			[
+				"getA",
+				"geActivitiesToRecord"
+			],
+			[
+				"rec",
+				"recordActivity"
+			],
+			[
+				"strto",
+				"strtolower"
+			],
+			[
+				"thr",
+				"threadNotByUser"
+			],
+			[
+				"ret",
+				"return"
+			],
+			[
+				"pop",
+				"popular"
+			],
+			[
+				"ai",
+				"align-items"
+			],
+			[
+				"THre",
+				"ThreadFilters"
+			],
+			[
+				"thre",
+				"threadNotByMike"
+			],
+			[
+				"thread",
+				"threads"
+			],
+			[
+				"chann",
+				"channelSlug"
+			],
+			[
+				"pub",
+				"publishThread"
+			],
+			[
+				"var",
+				"var_dump"
+			],
+			[
+				"Exce",
+				"ExceptionHandler"
+			],
+			[
+				"form",
+				"form-control"
+			],
+			[
+				"pa",
+				"path"
+			],
+			[
+				"Data",
+				"DatabaseMigrations"
+			],
+			[
+				"mar",
+				"margin-right"
+			],
+			[
+				"Stat",
+				"StatusesController"
+			],
+			[
+				"status",
+				"statuses"
+			],
+			[
+				"statu",
+				"statuses"
+			],
+			[
+				"add",
+				"addStatus"
+			],
+			[
+				"stat",
+				"statuses"
+			],
+			[
+				"or",
+				"originalData"
+			],
+			[
+				"on",
+				"onFailure"
+			],
+			[
+				"req",
+				"request"
+			],
+			[
+				"b",
+				"block"
+			],
+			[
+				"is",
+				"isActiveTwo"
+			],
+			[
+				"coup",
+				"couponCode"
+			],
+			[
+				"coupen",
+				"coupon-was-applied"
+			],
+			[
+				"coupon",
+				"couponApplied"
+			],
+			[
+				"co",
+				"couponCode"
+			],
+			[
+				"Cou",
+				"couponApplied"
+			],
+			[
+				"sele",
+				"selectTab"
+			],
+			[
+				"hi",
+				"hideModal"
+			],
+			[
+				"padding",
+				"padding-top"
+			],
+			[
+				"text",
+				"text-decoration"
+			],
+			[
+				"c",
+				"completedTasks"
+			],
+			[
+				"com",
+				"completed"
+			],
+			[
+				"show",
+				"showCount"
+			],
+			[
+				"click",
+				"clickCount"
+			],
+			[
+				"cli",
+				"clickCount"
+			],
+			[
+				"secu",
+				"security"
+			],
+			[
+				"security",
+				"securityHandler"
+			],
+			[
+				"ph",
+				"phoneProxy"
+			],
+			[
+				"per",
+				"personProxy"
+			],
+			[
+				"pe",
+				"person"
+			],
+			[
+				"thi",
+				"thirst"
+			],
+			[
+				"nick",
+				"nickname"
+			],
+			[
+				"pro",
+				"prototype"
+			],
+			[
+				"ge",
+				"george"
+			],
+			[
+				"user",
+				"userUrl"
+			],
+			[
+				"node",
+				"nodeEnv"
+			],
+			[
+				"twee",
+				"tweetsInfo"
+			],
+			[
+				"we",
+				"weatherInfo"
+			],
+			[
+				"aut",
+				"authorDetails"
+			],
+			[
+				"get",
+				"getAuthorByName"
+			],
+			[
+				"post",
+				"postsPromise"
+			],
+			[
+				"t",
+				"tshirt"
+			],
+			[
+				"comment",
+				"commentIndex"
+			],
+			[
+				"do",
+				"domestic"
+			],
+			[
+				"peop",
+				"peopleArray"
+			],
+			[
+				"key",
+				"keys"
+			],
+			[
+				"ani",
+				"animal"
+			],
+			[
+				"con",
+				"converted"
+			],
+			[
+				"de",
+				"deputyCaptain"
+			],
+			[
+				"ba",
+				"background-color"
+			],
+			[
+				"m",
+				"markup"
+			],
+			[
+				"sec",
+				"seconds"
+			],
+			[
+				"flex",
+				"flexboxVideos"
+			],
+			[
+				"su",
+				"subie"
+			],
+			[
+				"font",
+				"font-size"
+			],
+			[
+				"cla",
+				"classList"
+			],
+			[
+				"p",
+				"person"
+			],
+			[
+				"cons",
+				"console"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "/C/OSPanel/domains/monster-lab/resources/views/layouts/app.blade.php",
+			"settings":
+			{
+				"buffer_size": 678,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/C/OSPanel/domains/monster-lab/app/Http/Controllers/Auth/LoginController.php",
+			"settings":
+			{
+				"buffer_size": 939,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/OSPanel/domains/monster-lab/app/Http/Controllers/Auth/RegisterController.php",
+			"settings":
+			{
+				"buffer_size": 1813,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/OSPanel/domains/monster-lab/routes/web.php",
+			"settings":
+			{
+				"buffer_size": 665,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 354.0,
+		"last_filter": "Auto",
+		"selected_items":
+		[
+			[
+				"Auto",
+				"AutoFoldCode: Clear"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			],
+			[
+				"packinst",
+				"Package Control: Install Package"
+			],
+			[
+				"Snippet: ",
+				"Snippet: html"
+			],
+			[
+				"Snippet: test",
+				"Snippet: TestMethod"
+			],
+			[
+				"Pack ins",
+				"Package Control: Install Package"
+			],
+			[
+				"sublimelinter lint",
+				"SublimeLinter: Choose Lint Mode"
+			],
+			[
+				"P",
+				"Package Control: Install Package"
+			],
+			[
+				"packa",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 480.0
+	},
+	"console":
+	{
+		"height": 162.0,
+		"history":
+		[
+			"PackageResourceViewer: Open Resource:",
+			"PackageResourceViewer: Open Resource",
+			"import urllib.request,os,hashlib; h = 'df21e130d211cfc94d9b0905775a7c0f' + '1e3d39e33b79698005270310898eea76'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/C/OSPanel/domains/monster-lab",
+		"/C/OSPanel/domains/monster-lab/app",
+		"/C/OSPanel/domains/monster-lab/app/Http",
+		"/C/OSPanel/domains/monster-lab/app/Http/Controllers",
+		"/C/OSPanel/domains/monster-lab/app/Http/Controllers/Auth",
+		"/C/OSPanel/domains/monster-lab/resources",
+		"/C/OSPanel/domains/monster-lab/resources/views",
+		"/C/OSPanel/domains/monster-lab/resources/views/auth",
+		"/C/OSPanel/domains/monster-lab/resources/views/layouts",
+		"/C/OSPanel/domains/monster-lab/resources/views/pages",
+		"/C/OSPanel/domains/monster-lab/routes"
+	],
+	"file_history":
+	[
+		"/C/OSPanel/domains/monster-lab/public/js/myscript.js",
+		"/C/OSPanel/domains/monster-lab/.env",
+		"/C/OSPanel/domains/research/laravel-queues-redis/resources/views/emails/hello.blade.php",
+		"/C/OSPanel/domains/research/laravel-mailing/routes/web.php",
+		"/C/OSPanel/domains/research/laravel-mailing/resources/views/pages/welcome.blade.php",
+		"/C/OSPanel/domains/research/laravel-mailing/storage/logs/laravel.log",
+		"/C/OSPanel/domains/research/laravel-mailing/.env",
+		"/C/OSPanel/domains/research/laravel-mailing/app/Mail/HelloAgain.php",
+		"/C/OSPanel/domains/research/laravel-mailing/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php",
+		"/C/OSPanel/domains/smart/resources/views/layouts/app.blade.php",
+		"/C/OSPanel/domains/smart/app/Tools/Flash.php",
+		"/C/OSPanel/domains/m-lab/readme.md",
+		"/C/Users/Dev/Documents/Network/mac.txt",
+		"/C/OSPanel/domains/monsters-lab/resources/lang/ru.json",
+		"/C/OSPanel/domains/monsters-lab/resources/views/pages/main.blade.php",
+		"/C/OSPanel/domains/monsters-lab/routes/web.php",
+		"/C/OSPanel/domains/research/laravel-translation/routes/web.php",
+		"/C/OSPanel/domains/monsters-lab/.env",
+		"/C/OSPanel/domains/monsters-lab/resources/views/layouts/nav.blade.php",
+		"/C/OSPanel/domains/monsters-lab/public/js/myscript.js",
+		"/C/OSPanel/domains/monsters-lab/resources/assets/js/app.js",
+		"/C/OSPanel/domains/monsters-lab/public/css/style.css",
+		"/C/OSPanel/domains/monsters-lab/resources/views/layouts/app.blade.php",
+		"/C/OSPanel/domains/monsters-lab/resources/assets/sass/app.scss",
+		"/C/OSPanel/domains/monsters-lab/resources/assets/sass/_variables.scss",
+		"/C/OSPanel/domains/m-lab/monsterlab.php",
+		"/C/OSPanel/domains/monster-lab/resources/views/pages/main.blade.php",
+		"/C/OSPanel/domains/monster-lab/resources/views/layouts/nav.blade.php",
+		"/C/OSPanel/domains/monster-lab/resources/views/welcome.blade.php",
+		"/C/OSPanel/domains/monster-lab/public/css/style.css",
+		"/C/OSPanel/domains/monster-lab/routes/web.php",
+		"/C/OSPanel/domains/monster-lab/package.json",
+		"/C/OSPanel/domains/monster-lab/resources/views/layouts/app.blade.php",
+		"/C/OSPanel/domains/research/laravel-mailing/vendor/laravel/framework/src/Illuminate/Mail/Mailable.php",
+		"/C/OSPanel/domains/research/laravel-mailing/vendor/laravel/framework/src/Illuminate/Contracts/Mail/Mailable.php",
+		"/C/OSPanel/domains/research/laravel-mailing/vendor/laravel/framework/src/Illuminate/Mail/Mailer.php",
+		"/C/OSPanel/domains/research/laravel-mailing/resources/views/emails/hello-again.blade.php",
+		"/C/OSPanel/domains/research/laravel-mailing/resources/views/vendor/mail/html/themes/mw-theme.css",
+		"/C/OSPanel/domains/research/laravel-mailing/config/app.php",
+		"/C/OSPanel/domains/research/laravel-mailing/config/mail.php",
+		"/C/OSPanel/domains/research/laravel-mailing/resources/views/emails/hello.blade.php",
+		"/C/OSPanel/domains/research/laravel-mailing/app/Mail/HelloMessage.php",
+		"/C/OSPanel/domains/forum/.env",
+		"/Z/Shared/.env",
+		"/Z/Shared/webdev/pmo/.env",
+		"/Z/Shared/webdev/travelblog/.env",
+		"/Z/Shared/web.php",
+		"/Z/Shared/.env2",
+		"/C/OSPanel/domains/smart/resources/assets/js/app.js",
+		"/C/OSPanel/domains/smart/resources/views/clients/index.blade.php",
+		"/C/OSPanel/domains/smart/resources/views/clients/show.blade.php",
+		"/C/OSPanel/domains/smart/app/Http/Controllers/ClientFavoritesController.php",
+		"/C/OSPanel/domains/smart/app/Favoritable.php",
+		"/C/OSPanel/domains/smart/app/Favorite.php",
+		"/C/OSPanel/domains/smart/resources/assets/js/components/Favorite.vue",
+		"/C/OSPanel/domains/smart/database/migrations/2017_09_22_083541_create_favorites_table.php",
+		"/C/OSPanel/domains/smart/database/migrations/2017_09_22_085256_create_people_table.php",
+		"/C/OSPanel/domains/smart/app/Http/Controllers/PeopleController.php",
+		"/C/OSPanel/domains/smart/tests/Feature/IndustryJsonApiTest.php",
+		"/C/OSPanel/domains/smart/app/Http/Controllers/CatalogController.php",
+		"/C/OSPanel/domains/smart/tests/Feature/IndustryCrudOperationsTest.php",
+		"/C/OSPanel/domains/smart/resources/views/catalog/index.blade.php",
+		"/C/OSPanel/domains/smart/resources/views/catalog/show.blade.php",
+		"/C/OSPanel/domains/smart/resources/views/catalog/form.blade.php",
+		"/C/OSPanel/domains/smart/resources/views/catalog/edit.blade.php",
+		"/C/OSPanel/domains/smart/resources/views/tags/index.blade.php",
+		"/C/OSPanel/domains/smart/app/Http/Controllers/TagsController.php",
+		"/C/OSPanel/domains/smart/app/Http/Controllers/IndustriesController.php",
+		"/C/OSPanel/domains/smart/tests/Feature/UserProfileTest.php",
+		"/C/OSPanel/domains/smart/tests/Feature/ClientTagsTest.php",
+		"/C/OSPanel/domains/smart/tests/Feature/ClientCrudOperationsTest.php",
+		"/C/OSPanel/domains/smart/tests/Feature/ClientCommentsTest.php",
+		"/C/OSPanel/domains/smart/app/Http/Controllers/ClientTagsController.php",
+		"/C/OSPanel/domains/smart/app/Http/Controllers/ClientCommentsController.php",
+		"/C/OSPanel/domains/smart/app/Comment.php",
+		"/C/OSPanel/domains/smart/routes/web.php",
+		"/C/OSPanel/domains/smart/resources/assets/js/components/Tags.vue",
+		"/C/OSPanel/domains/smart/tests/Unit/UserTest.php",
+		"/C/OSPanel/domains/smart/database/factories/CommentFactory.php",
+		"/C/OSPanel/domains/smart/vendor/laravel/framework/src/Illuminate/Foundation/Testing/Concerns/InteractsWithExceptionHandling.php",
+		"/C/OSPanel/domains/smart/app/Client.php",
+		"/C/OSPanel/domains/smart/database/migrations/2017_09_17_190323_create_comments_table.php",
+		"/C/OSPanel/domains/smart/phpunit.xml",
+		"/C/OSPanel/domains/php-research/test.php",
+		"/C/OSPanel/domains/forum/resources/assets/js/components/Favorite.vue",
+		"/C/OSPanel/domains/smart/resources/views/clients/form.blade.php",
+		"/C/OSPanel/domains/smart/resources/assets/js/lib/select2.min.js",
+		"/C/OSPanel/domains/smart/database/factories/TagFactory.php",
+		"/C/OSPanel/domains/smart/resources/assets/js/components/CatalogCreateItem.vue",
+		"/C/OSPanel/domains/smart/resources/assets/js/components/CatalogItem.vue",
+		"/C/OSPanel/domains/smart/resources/assets/js/components/Catalog.vue",
+		"/C/OSPanel/domains/smart/database/migrations/2017_09_16_125644_create_tags_table.php",
+		"/C/OSPanel/domains/smart/app/Tag.php",
+		"/C/OSPanel/domains/smart/resources/views/layouts/nav.blade.php",
+		"/C/OSPanel/domains/smart/resources/views/industries/show.blade.php",
+		"/C/OSPanel/domains/smart/resources/views/industries/edit.blade.php",
+		"/C/OSPanel/domains/smart/resources/views/industries/index.blade.php",
+		"/C/OSPanel/domains/smart/resources/views/catalog/create.blade.php",
+		"/C/Users/Dev/AppData/Roaming/Sublime Text 3/Packages/User/Docblock.sublime-snippet",
+		"/C/OSPanel/domains/smart/app/Industry.php",
+		"/C/OSPanel/domains/smart/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php",
+		"/C/OSPanel/domains/smart/app/Http/Controllers/Controller.php",
+		"/C/OSPanel/domains/smart/vendor/laravel/framework/src/Illuminate/Routing/Controller.php",
+		"/C/OSPanel/domains/smart/app/Tools/helpers.php",
+		"/C/OSPanel/domains/smart/resources/assets/js/components/Flash.vue",
+		"/C/OSPanel/domains/smart/resources/assets/js/components/Test.vue",
+		"/C/OSPanel/domains/smart/composer.json",
+		"/C/OSPanel/domains/smart/resources/views/pages/home.blade.php",
+		"/C/OSPanel/domains/forum/resources/views/layouts/app.blade.php",
+		"/C/Users/Dev/Documents/tmp/new.php",
+		"/C/OSPanel/domains/smart/resources/assets/js/components/Industries.vue",
+		"/C/OSPanel/domains/smart/resources/assets/js/components/Industry.vue",
+		"/C/OSPanel/domains/forum/resources/assets/js/components/Reply.vue",
+		"/C/OSPanel/domains/smart/resources/assets/js/components/IndustryCreate.vue",
+		"/C/OSPanel/domains/smart/resources/assets/js/mixins/Auth.js",
+		"/C/OSPanel/domains/forum/resources/assets/js/bootstrap.js",
+		"/C/OSPanel/domains/forum/resources/assets/js/app.js",
+		"/C/OSPanel/domains/forum/resources/assets/js/components/Replies.vue",
+		"/C/OSPanel/domains/smart/resources/assets/js/mixins/Collection.js",
+		"/Y/Dev/Projects/learn-Vue/spa/resources/assets/js/components/Statuses.vue",
+		"/C/OSPanel/domains/smart/app/User.php",
+		"/C/OSPanel/domains/smart/resources/assets/js/bootstrap.js",
+		"/Y/Dev/Projects/learn-Vue/spa/resources/assets/js/utilities/Collection.js",
+		"/Y/Dev/Projects/learn-Vue/15-main.js",
+		"/C/OSPanel/domains/smart/resources/assets/js/components/Industry2.vue",
+		"/C/OSPanel/domains/smart/app/Http/Requests/ClientFormRequest.php",
+		"/C/OSPanel/domains/smart/app/Http/Controllers/ClientsController.php",
+		"/C/OSPanel/domains/smart/resources/views/clients/edit.blade.php"
+	],
+	"find":
+	{
+		"height": 70.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"v-text"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "/C/OSPanel/domains/monster-lab/resources/views/layouts/app.blade.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 678,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								640,
+								640
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Laravel Blade Highlighter/blade.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/C/OSPanel/domains/monster-lab/app/Http/Controllers/Auth/LoginController.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 939,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								684,
+								684
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 324.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "/C/OSPanel/domains/monster-lab/app/Http/Controllers/Auth/RegisterController.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1813,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								818,
+								818
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 162.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "/C/OSPanel/domains/monster-lab/routes/web.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 665,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								520,
+								520
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 31.0
+	},
+	"input":
+	{
+		"height": 81.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "monsterlab.sublime-project",
+	"replace":
+	{
+		"height": 58.0
+	},
+	"save_all_on_build": false,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"create_u",
+				"database\\migrations\\2014_10_12_000000_create_users_table.php"
+			],
+			[
+				"kernel.php",
+				"app\\Http\\Kernel.php"
+			],
+			[
+				"threadscon",
+				"app\\Http\\Controllers\\ThreadsController.php"
+			],
+			[
+				"userava",
+				"app\\Http\\Controllers\\Api\\UserAvatarController.php"
+			],
+			[
+				"authser",
+				"app\\Providers\\AuthServiceProvider.php"
+			],
+			[
+				"create_users",
+				"database\\migrations\\2014_10_12_000000_create_users_table.php"
+			],
+			[
+				"threadcontro",
+				"app\\Http\\Controllers\\ThreadsController.php"
+			],
+			[
+				"threads/show",
+				"resources\\views\\threads\\show.blade.php"
+			],
+			[
+				"replytest",
+				"tests\\Unit\\ReplyTest.php"
+			],
+			[
+				"treadsc",
+				"app\\Http\\Controllers\\ThreadsController.php"
+			],
+			[
+				"repliesco",
+				"app\\Http\\Controllers\\RepliesController.php"
+			],
+			[
+				"threadre",
+				"app\\Events\\ThreadReceivedNewReply.php"
+			],
+			[
+				"repliesc",
+				"app\\Http\\Controllers\\RepliesController.php"
+			],
+			[
+				"eventser",
+				"app\\Providers\\EventServiceProvider.php"
+			],
+			[
+				"notific",
+				"tests\\Feature\\NotificationsTest.php"
+			],
+			[
+				"eventserv",
+				"app\\Providers\\EventServiceProvider.php"
+			],
+			[
+				"replies",
+				"app\\Http\\Controllers\\RepliesController.php"
+			],
+			[
+				"ment",
+				"tests\\Feature\\MentionUsersTest.php"
+			],
+			[
+				"rcon",
+				"app\\Http\\Controllers\\RepliesController.php"
+			],
+			[
+				"appserv",
+				"app\\Providers\\AppServiceProvider.php"
+			],
+			[
+				"thread.php",
+				"app\\Thread.php"
+			],
+			[
+				"threads/index",
+				"resources\\views\\threads\\index.blade.php"
+			],
+			[
+				"threadsc",
+				"app\\Http\\Controllers\\ThreadsController.php"
+			],
+			[
+				"threadtest",
+				"tests\\Unit\\ThreadTest.php"
+			],
+			[
+				"create_thread_s",
+				"database\\migrations\\2017_09_05_220104_create_thread_subscriptions_table.php"
+			],
+			[
+				"tread/show",
+				"resources\\views\\threads\\show.blade.php"
+			],
+			[
+				"collection",
+				"vendor\\laravel\\framework\\src\\Illuminate\\Support\\Collection.php"
+			],
+			[
+				"nav",
+				"resources\\views\\layouts\\nav.blade.php"
+			],
+			[
+				"reply",
+				"resources\\views\\threads\\reply.blade.php"
+			],
+			[
+				"layouts/",
+				"resources\\views\\layouts\\app.blade.php"
+			],
+			[
+				"show",
+				"resources\\views\\profiles\\show.blade.php"
+			],
+			[
+				"authserv",
+				"app\\Providers\\AuthServiceProvider.php"
+			],
+			[
+				"functions.php",
+				"tests\\utilities\\functions.php"
+			],
+			[
+				"builder",
+				"vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Builder.php"
+			],
+			[
+				"apps",
+				"app\\Providers\\AppServiceProvider.php"
+			],
+			[
+				"appser",
+				"app\\Providers\\AppServiceProvider.php"
+			],
+			[
+				"handler",
+				"app\\Exceptions\\Handler.php"
+			],
+			[
+				"statuses",
+				"app\\Http\\Controllers\\StatusesController.php"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 381.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
