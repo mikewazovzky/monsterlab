@@ -12,6 +12,17 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <!-- TEMPORARY -->
+    <style>
+        body { margin-bottom: 50px; }
+        .center { text-align: center; }
+        .sidebar li { list-style: none; display: inline; }
+        .sidebar li:after { content: " | "; }
+        .sidebar li:last-child:after { content: none; }
+        .panel { margin: 7px 0; }
+        .level { display: flex; align-items: center; }
+        .flex { flex: 1; }
+    </style>
     @yield('header')
 </head>
 <body>
