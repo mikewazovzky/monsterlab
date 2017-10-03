@@ -11,8 +11,13 @@
 |
 */
 
-Route::get('/{locale?}', function ($locale = null) {
+Auth::routes();
 
+Route::get('/home', 'HomeController@index')->name('home');
+
+Route::resource('/posts', 'PostsController');
+
+Route::get('/{locale?}', function ($locale = null) {
     if ($locale != 'ru') {
         $locale = 'en';
     }
@@ -21,7 +26,3 @@ Route::get('/{locale?}', function ($locale = null) {
 
     return view('pages.main', compact('locale'));
 });
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
