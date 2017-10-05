@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Tag;
 use App\Post;
 use Illuminate\Http\Request;
 
@@ -40,14 +41,12 @@ class PostsController extends Controller
      */
     public function store(Request $request)
     {
-        $user = auth()->user();
-
         $attributes = $request->validate([
             'title' => 'required',
             'body' => 'required',
         ]);
 
-        $post = $user->posts()->create($attributes);
+        $post = $this->createPost($attributes, $request->tagList);
 
         return redirect(route('posts.show', $post));
     }
@@ -90,6 +89,8 @@ class PostsController extends Controller
 
         $post->update($attributes);
 
+        $this->syncTags($post, $request->tagList);
+
         return redirect(route('posts.show', $post));
     }
 
@@ -104,5 +105,33 @@ class PostsController extends Controller
         $post->delete();
 
         return redirect(route('posts.index'));
+    }
+
+    /**
+     * Creates new post. Associate tags with the post.
+     *
+     * @param array $attributes
+     * @param array $tagList
+     * @return App\Post
+     */
+    protected function createPost($attributes, $tagList) : Post
+    {
+        $post = auth()->user()->posts()->create($attributes);
+
+        $this->syncTags($post, $tagList);
+
+        return $post;
+    }
+
+    /**
+     * Method description
+     *
+     * @param App\Post $post
+     * @param array $tagList
+     * @return void
+     */
+    protected function syncTags(Post $post, array $tagList)
+    {
+        $post->tags()->sync($tagList);
     }
 }

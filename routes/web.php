@@ -19,6 +19,8 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::resource('/posts', 'PostsController');
+Route::get('/posts/tags/{tag}', 'TagsController@index');
+Route::post('/tags/create', 'TagsController@store');
 
 Route::get('/{locale?}', function ($locale = null) {
     if ($locale != 'ru') {
