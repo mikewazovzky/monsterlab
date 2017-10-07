@@ -130,7 +130,7 @@ class PostsController extends Controller
      * @param array $tagList
      * @return void
      */
-    protected function syncTags(Post $post, array $tagList)
+    protected function syncTags(Post $post, $tagList = [])
     {
         $post->tags()->sync($tagList);
     }

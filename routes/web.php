@@ -12,17 +12,12 @@
 */
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
 
 Route::resource('/posts', 'PostsController');
-Route::get('/posts/tags/{tag}', 'TagsController@index');
-Route::post('/tags/create', 'TagsController@store');
+Route::resource('/tags', 'TagsController')->middleware('auth');
 
-Route::get('/{locale?}', function ($locale = null) {
+Route::redirect('/', '/main', 301);
+Route::get('/main/{locale?}', function ($locale = null) {
     if ($locale != 'ru') {
         $locale = 'en';
     }
@@ -30,5 +25,4 @@ Route::get('/{locale?}', function ($locale = null) {
     App::setLocale($locale);
 
     return view('pages.main', compact('locale'));
-});
-
+})->name('main');

@@ -28,9 +28,9 @@
                     <li><a href="#contacts">{{ __('Contacts') }}</a></li>
 
                     @if($locale == 'en')
-                        <li><a href="/ru"><img src="/images/ru.png" title="Русский"></a></li>
+                        <li><a href="/main/ru"><img src="/images/ru.png" title="Русский"></a></li>
                     @else
-                        <li><a href="/en"><img src="/images/en.png" title="English"></a></li>
+                        <li><a href="/main/en"><img src="/images/en.png" title="English"></a></li>
                     @endif
 
                 </ul>

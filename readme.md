@@ -2,7 +2,7 @@
 [![Coverage Status](https://coveralls.io/repos/github/mikewazovzky/monsterlab/badge.svg?branch=master)](https://coveralls.io/github/mikewazovzky/monsterlab?branch=master)
 
 ### Project: Monster Lab.
-### Description: Web development studio joke promotion page/site
+### Description: Web development studio promo
 
 ### Branch: KISS/PHP
 ##### Status: production
@@ -10,7 +10,7 @@
 
 ### Branch Laravel
 ##### Status: Development
-##### Link: [m-lab.xyz](http://m-lab.xyz)
+##### Link: none
 ##### Version: 0.0.0
 ##### Change Log:
 - ...

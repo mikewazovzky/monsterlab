@@ -50,7 +50,7 @@
                 headers: { 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content') }
             });
 
-            $.post('/tags/create', { name: evt.params.data.text }, function( data ) {
+            $.post('/tags', { name: evt.params.data.text }, function( data ) {
                 // Add HTML option to select field
                 $('<option value="' + data.id + '">' + data.name + '</option>').appendTo(select2element);
                 // Replace the tag name in the current selection with the new persisted ID
