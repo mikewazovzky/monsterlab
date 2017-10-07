@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Tag;
 use App\Post;
+use App\Filters\PostFilters;
 use Illuminate\Http\Request;
 
 class PostsController extends Controller
@@ -18,9 +19,11 @@ class PostsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request, PostFilters $filters)
     {
-        return view('posts.index', ['posts' => Post::latest()->paginate(10)]);
+        $posts = Post::latest()->filter($filters);
+
+        return view('posts.index', ['posts' => $posts->paginate(10)]);
     }
 
     /**

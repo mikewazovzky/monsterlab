@@ -7,10 +7,11 @@
 ### Branch: KISS/PHP
 ##### Status: production
 ##### Link: [m-lab.xyz](http://m-lab.xyz)
+##### Version: 1.3
 
 ### Branch Laravel
 ##### Status: Development
 ##### Link: none
-##### Version: 0.0.0
+##### Version: 2.0
 ##### Change Log:
-- ...
+- 2.0 Project ported to Laravel

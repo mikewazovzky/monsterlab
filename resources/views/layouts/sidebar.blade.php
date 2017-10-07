@@ -5,7 +5,7 @@
     <div class="panel-body">
         <ul>
             @foreach($tags as $tagName)
-                <li><a href="/posts/tags/{{ $tagName }}">{{ $tagName }}</a></li>
+                <li><a href="/posts?tag={{ $tagName }}">{{ $tagName }}</a></li>
             @endforeach
         </ul>
     </div>
