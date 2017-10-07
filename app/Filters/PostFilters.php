@@ -2,6 +2,8 @@
 
 namespace App\Filters;
 
+use Carbon\Carbon;
+
 class PostFilters extends Filters
 {
     /**
@@ -9,7 +11,7 @@ class PostFilters extends Filters
      *
      * @var array of strings
      */
-    protected $filters = ['tag'];
+    protected $filters = ['tag', 'year', 'month'];
 
     /**
      * Filters posts by tag.
@@ -19,8 +21,30 @@ class PostFilters extends Filters
      */
     protected function tag($value)
     {
-        $this->builder = $this->builder->whereHas('tags', function ($query) use ($value) {
+        $this->builder->whereHas('tags', function ($query) use ($value) {
             return $query->whereName($value);
         });
+    }
+
+    /**
+     * Filters posts by year.
+     *
+     * @param string $value
+     * @return Illuminate\Database\Eloquent\Builder
+     */
+    protected function year($value)
+    {
+        $this->builder->whereYear('created_at', $value);
+    }
+
+    /**
+     * Filters posts by month.
+     *
+     * @param string $value
+     * @return Illuminate\Database\Eloquent\Builder
+     */
+    protected function month($value)
+    {
+        $this->builder->whereMonth('created_at', Carbon::parse($value)->month);
     }
 }

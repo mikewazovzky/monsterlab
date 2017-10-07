@@ -15,6 +15,7 @@ class PostOperationsTest extends TestCase
         $post = create('App\Post');
 
         $this->get(route('posts.index'))
+            ->assertStatus(200)
             ->assertSee($post->title);
     }
 

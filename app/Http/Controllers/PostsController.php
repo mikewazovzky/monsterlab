@@ -19,11 +19,11 @@ class PostsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index(Request $request, PostFilters $filters)
+    public function index(PostFilters $filters)
     {
-        $posts = Post::latest()->filter($filters);
+        $posts = Post::latest()->filter($filters)->paginate(10);
 
-        return view('posts.index', ['posts' => $posts->paginate(10)]);
+        return view('posts.index', ['posts' => $posts]);
     }
 
     /**

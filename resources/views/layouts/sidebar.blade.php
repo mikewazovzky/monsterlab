@@ -12,6 +12,24 @@
 </div>
 
 <div class="panel panel-default">
+    <div class="panel-heading">
+        Archives
+
+    </div>
+    <div class="panel-body">
+        <ul>
+            @foreach($archives as $period)
+                <li>
+                    <a href="/posts?year={{ $period['year'] }}&month={{ $period['month'] }}">
+                        {{ $period['month'] . ' ' . $period['year'] . ' [' . $period['published'] . ']'}}
+                    </a>
+                </li>
+            @endforeach
+        </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
     <div class="panel-body">
         <ul class="terms">
             <li><a href="#">О нас</a></li>
