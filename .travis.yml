@@ -1,0 +1,23 @@
+# see http://about.travis-ci.org/docs/user/languages/php/ for more hints
+language: php
+
+# list any PHP version you want to test against
+php:
+  # using major version aliases
+  - 7.1
+
+# optionally set up exclutions and allowed failures in the matrix
+matrix:
+  allow_failures:
+    - php: hhvm
+
+before_script:
+  - cp .env.travis .env
+  - composer install --no-interaction
+  - mkdir -p build/logs
+
+script:
+  - vendor/bin/phpunit --coverage-clover build/logs/clover.xml
+
+after_success:
+- travis_retry php vendor/bin/coveralls
