@@ -11,7 +11,7 @@ class PostFilters extends Filters
      *
      * @var array of strings
      */
-    protected $filters = ['tag', 'year', 'month'];
+    protected $filters = ['tag', 'year', 'month', 'search'];
 
     /**
      * Filters posts by tag.
@@ -46,5 +46,18 @@ class PostFilters extends Filters
     protected function month($value)
     {
         $this->builder->whereMonth('created_at', Carbon::parse($value)->month);
+    }
+
+    /**
+     * Filters posts by search string.
+     *
+     * @param string $value
+     * @return Illuminate\Database\Eloquent\Builder
+     */
+    protected function search($value)
+    {
+        $this->builder
+            ->where('title', 'LIKE', "%{$value}%")
+            ->orWhere('body', 'LIKE', "%{$value}%");
     }
 }

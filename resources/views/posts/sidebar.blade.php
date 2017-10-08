@@ -3,7 +3,16 @@
         <strong>Search</strong>
     </div>
     <div class="panel-body">
-        <input type="text" class="form-control" placeholder="Enter key words to start search...">
+        <form method="GET" action="/posts">
+            <div class="input-group">
+                <input type="text" name="search" class="form-control" placeholder="Search posts title and body by query ..." />
+                <div class="input-group-btn">
+                    <button class="btn btn-info btn-md" type="submit">
+                        <span class="glyphicon glyphicon-search"></span>
+                    </button>
+                </div>
+            </div>
+        </form>
     </div>
 </div>
 
