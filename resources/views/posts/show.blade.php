@@ -1,4 +1,4 @@
-@extends('layouts.blog')
+@extends('posts.layout')
 
 @section('main')
     <div class="panel panel-default">
@@ -7,8 +7,8 @@
             <div class="level">
                 <div class="flex">
                     <span><a href="#">{{ $post->user->name }}</a></span>
-                    posted
-                    <span>{{ $post->created_at->diffForHumans() }}</span>
+                    posted on
+                    <strong><span>{{ $post->created_at->toDateTimeString() }}</span></strong>
                 </div>
                 <a href="{{ route('posts.edit', $post)}}">Edit</a>
                 &nbsp;

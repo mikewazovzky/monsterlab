@@ -13,8 +13,7 @@
             </div>
 
             <div class="col-sm-4 sidebar">
-                @yield('sidebar')
-                @include('layouts.sidebar')
+                @include('posts.sidebar')
             </div>
 
         </div>

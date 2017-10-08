@@ -17,7 +17,7 @@ class ViewComposerServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        View::composer('layouts.sidebar', function ($view) {
+        View::composer('posts.sidebar', function ($view) {
 
             // $tags = Cache::remember('tags', 3600, function() {
             //     return Tag::has('posts')->withCount('posts')->get();

@@ -1,4 +1,4 @@
-@extends('layouts.blog')
+@extends('posts.layout')
 
 @section('main')
     @foreach($posts as $post)
@@ -9,7 +9,7 @@
                     <div class="flex">
                         <span><a href="#">{{ $post->user->name }}</a></span>
                         posted
-                        <span>{{ $post->created_at->diffForHumans() }}</span>
+                        <em><span>{{ $post->created_at->diffForHumans() }}</span></em>
                     </div>
                     <div>
                         <ul class="tags">
@@ -24,7 +24,11 @@
                 <p>{{ substr($post->body, 0, 255) . ' ...' }}</p>
             </div>
             <div class="panel-footer">
-                Views: {{ $post->views }}
+                @if($post->views)
+                    Views: {{ $post->views }}
+                @else
+                    No views.
+                @endif
             </div>
         </div>
     @endforeach

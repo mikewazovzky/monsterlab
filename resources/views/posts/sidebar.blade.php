@@ -1,6 +1,15 @@
-<div class="panel panel-default">
+<div class="panel panel-primary">
     <div class="panel-heading">
-        Tags
+        <strong>Search</strong>
+    </div>
+    <div class="panel-body">
+        <input type="text" class="form-control" placeholder="Enter key words to start search...">
+    </div>
+</div>
+
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <strong>Tags</strong>
     </div>
     <div class="panel-body">
         <ul>
@@ -14,9 +23,9 @@
     </div>
 </div>
 
-<div class="panel panel-default">
+<div class="panel panel-primary">
     <div class="panel-heading">
-        Latest posts
+        <strong>Latest posts</strong>
     </div>
     <div class="panel-body">
         <ul>
@@ -35,9 +44,9 @@
     </div>
 </div>
 
-<div class="panel panel-default">
+<div class="panel panel-primary">
     <div class="panel-heading">
-        Popular posts (top 5)
+        <strong>Popular posts (top 5)</strong>
     </div>
     <div class="panel-body">
         <ul>
@@ -56,9 +65,9 @@
     </div>
 </div>
 
-<div class="panel panel-default">
+<div class="panel panel-primary">
     <div class="panel-heading">
-        Archives
+        <strong>Archives</strong>
     </div>
     <div class="panel-body">
         <ul>
@@ -72,7 +81,7 @@
     </div>
 </div>
 
-<div class="panel panel-default">
+<div class="panel panel-primary">
     <div class="panel-body">
         <ul class="terms">
             <li><a href="#">О нас</a></li>

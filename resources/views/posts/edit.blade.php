@@ -1,4 +1,4 @@
-@extends('layouts.blog')
+@extends('posts.layout')
 
 @section('main')
     @component('posts.form', [
