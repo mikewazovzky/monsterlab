@@ -62,7 +62,7 @@ class Post extends Model
         //     ->get()
         //     ->toArray();
 
-        $posts = Post::pluck('created_at')->toArray();
+        $posts = Post::orderBy('created_at', 'desc')->pluck('created_at')->toArray();
         $stats = [];
 
         foreach ($posts as $post) {

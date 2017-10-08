@@ -11,7 +11,7 @@
 |
 */
 Auth::routes();
-
+Route::get('/register/confirm', 'Auth\RegisterConfirmationController@confirm')->name('register.confirm');
 
 Route::resource('/posts', 'PostsController');
 Route::resource('/tags', 'TagsController')->middleware('auth');
