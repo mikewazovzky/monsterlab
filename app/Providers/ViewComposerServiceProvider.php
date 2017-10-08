@@ -19,25 +19,25 @@ class ViewComposerServiceProvider extends ServiceProvider
     {
         View::composer('layouts.sidebar', function ($view) {
 
-            $tags = Cache::remember('tags', 3600, function() {
-                return Tag::has('posts')->withCount('posts')->get();
-            });
+            // $tags = Cache::remember('tags', 3600, function() {
+            //     return Tag::has('posts')->withCount('posts')->get();
+            // });
 
-            $archives = Cache::remember('archives', 3600, function() {
-                return Post::archives();
-            });
+            // $archives = Cache::remember('archives', 3600, function() {
+            //     return Post::archives();
+            // });
 
-            $popular = Cache::remember('popular', 3600, function() {
-                return Post::orderBy('views', 'desc')->take(5)->get();
-            });
+            // $popular = Cache::remember('popular', 3600, function() {
+            //     return Post::orderBy('views', 'desc')->take(5)->get();
+            // });
 
             // $latest = Cache::rememberForever('latest', function() {
             //     return Post::latest()->take(5)->get();
             // });
 
-            // $tags = Tag::has('posts')->withCount('posts')->get();
-            // $archives = Post::archives();
-            // $popular = Post::orderBy('views', 'desc')->take(5)->get();
+            $tags = Tag::has('posts')->withCount('posts')->get();
+            $archives = Post::archives();
+            $popular = Post::orderBy('views', 'desc')->take(5)->get();
             $latest = Post::latest()->take(5)->get();
 
             return $view->with([
