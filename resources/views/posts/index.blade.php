@@ -23,6 +23,9 @@
             <div class="panel-body">
                 <p>{{ substr($post->body, 0, 255) . ' ...' }}</p>
             </div>
+            <div class="panel-footer">
+                Views: {{ $post->views }}
+            </div>
         </div>
     @endforeach
     {{ $posts->links() }}
