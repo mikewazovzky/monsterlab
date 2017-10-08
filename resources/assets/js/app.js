@@ -7,9 +7,18 @@
 
 require('./bootstrap');
 
-window.Vue = require('vue');
+import Vue from 'vue';
+window.Vue = Vue;
 
-// Vue.component('tags', require('./components/Tags.vue'));
+// create global event bus
+window.events = new Vue();
+
+// create global flash function
+window.flash = function (message, level = 'success') {
+    window.events.$emit('flash', { message, level });
+};
+
+Vue.component('flash', require('./components/Flash.vue'));
 
 const app = new Vue({
     el: '#app'

@@ -21,9 +21,13 @@ class PostsController extends Controller
      */
     public function index(PostFilters $filters)
     {
-        $posts = Post::latest()->filter($filters)->paginate(10);
+        $posts = Post::latest()->filter($filters);
 
-        return view('posts.index', ['posts' => $posts]);
+        if (request()->wantsJson()) {
+            return $posts->get();
+        }
+
+        return view('posts.index', ['posts' => $posts->paginate(10)]);
     }
 
     /**
@@ -50,6 +54,8 @@ class PostsController extends Controller
         ]);
 
         $post = $this->createPost($attributes, $request->tagList);
+
+        flash('Your post has been published!');
 
         return redirect(route('posts.show', $post));
     }
@@ -96,6 +102,8 @@ class PostsController extends Controller
 
         $this->syncTags($post, $request->tagList);
 
+        flash('Your post has been updated!');
+
         return redirect(route('posts.show', $post));
     }
 
@@ -108,6 +116,8 @@ class PostsController extends Controller
     public function destroy(Post $post)
     {
         $post->delete();
+
+        flash()->danger('Your post has been deleted!');
 
         return redirect(route('posts.index'));
     }

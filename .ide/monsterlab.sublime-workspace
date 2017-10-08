@@ -4,6 +4,30 @@
 		"selected_items":
 		[
 			[
+				"month",
+				"monthIndex"
+			],
+			[
+				"mon",
+				"monthIndex"
+			],
+			[
+				"array_u",
+				"array_unique"
+			],
+			[
+				"year",
+				"year"
+			],
+			[
+				"tag",
+				"tagOne"
+			],
+			[
+				"grid-temp",
+				"grid-template-rows"
+			],
+			[
 				"back",
 				"background-color"
 			],
@@ -460,57 +484,48 @@
 	"buffers":
 	[
 		{
-			"file": "/C/OSPanel/domains/monster-lab/resources/views/posts/form.blade.php",
+			"file": "/C/OSPanel/domains/monster-lab/tests/Feature/PostFiltersTest.php",
 			"settings":
 			{
-				"buffer_size": 1581,
+				"buffer_size": 1206,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/OSPanel/domains/monster-lab/app/Providers/ViewComposerServiceProvider.php",
+			"settings":
+			{
+				"buffer_size": 1769,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
 			}
 		},
 		{
 			"file": "/C/OSPanel/domains/monster-lab/resources/assets/js/app.js",
 			"settings":
 			{
-				"buffer_size": 381,
+				"buffer_size": 592,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "/C/OSPanel/domains/monster-lab/resources/views/layouts/app.blade.php",
+			"file": "/C/OSPanel/domains/monster-lab/app/Http/Controllers/PostsController.php",
 			"settings":
 			{
-				"buffer_size": 1318,
+				"buffer_size": 3274,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "/C/OSPanel/domains/monster-lab/resources/views/layouts/sidebar.blade.php",
+			"file": "/C/OSPanel/domains/monster-lab/app/Filters/PostFilters.php",
 			"settings":
 			{
-				"buffer_size": 839,
+				"buffer_size": 1054,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "/C/OSPanel/domains/monster-lab/routes/web.php",
-			"settings":
-			{
-				"buffer_size": 897,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "/C/OSPanel/domains/monster-lab/app/Http/Controllers/TagsController.php",
-			"settings":
-			{
-				"buffer_size": 465,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
 			}
 		}
 	],
@@ -522,9 +537,13 @@
 	"command_palette":
 	{
 		"height": 354.0,
-		"last_filter": "Auto",
+		"last_filter": "Snippet: ",
 		"selected_items":
 		[
+			[
+				"Snippet: ",
+				"Snippet: html"
+			],
 			[
 				"Auto",
 				"AutoFoldCode: Clear"
@@ -536,10 +555,6 @@
 			[
 				"packinst",
 				"Package Control: Install Package"
-			],
-			[
-				"Snippet: ",
-				"Snippet: html"
 			],
 			[
 				"Snippet: test",
@@ -587,30 +602,61 @@
 	[
 		"/C/OSPanel/domains/monster-lab",
 		"/C/OSPanel/domains/monster-lab/resources",
+		"/C/OSPanel/domains/monster-lab/resources/assets",
+		"/C/OSPanel/domains/monster-lab/resources/assets/js",
+		"/C/OSPanel/domains/monster-lab/resources/lang",
 		"/C/OSPanel/domains/monster-lab/resources/views",
 		"/C/OSPanel/domains/monster-lab/resources/views/layouts",
-		"/C/OSPanel/domains/monster-lab/resources/views/pages"
+		"/C/OSPanel/domains/monster-lab/resources/views/pages",
+		"/C/OSPanel/domains/monster-lab/resources/views/posts"
 	],
 	"file_history":
 	[
+		"/C/OSPanel/domains/smart/resources/assets/js/app.js",
+		"/C/OSPanel/domains/monster-lab/app/Tools/helpers.php",
+		"/C/OSPanel/domains/smart/composer.json",
+		"/C/OSPanel/domains/smart/app/Tools/helpers.php",
+		"/C/OSPanel/domains/monster-lab/app/Providers/ViewComposerServiceProvider.php",
+		"/C/OSPanel/domains/smart/app/Providers/AppServiceProvider.php",
+		"/C/OSPanel/domains/monster-lab/tests/Feature/PostFiltersTest.php",
+		"/C/OSPanel/domains/monster-lab/app/Post.php",
+		"/C/OSPanel/domains/monster-lab/app/Http/Controllers/PostsController.php",
 		"/C/OSPanel/domains/monster-lab/resources/views/layouts/sidebar.blade.php",
-		"/C/OSPanel/domains/monster-lab/resources/views/posts/show.blade.php",
+		"/C/OSPanel/domains/monster-lab/app/Filters/PostFilters.php",
+		"/C/OSPanel/domains/monster-lab/tests/Feature/PostOperationsTest.php",
+		"/C/OSPanel/domains/test/test.php",
+		"/C/OSPanel/domains/monster-lab/config/app.php",
+		"/C/OSPanel/domains/monster-lab/resources/views/posts/index.blade.php",
+		"/C/OSPanel/domains/monster-lab/app/Providers/AppServiceProvider.php",
+		"/C/OSPanel/domains/monster-lab/database/migrations/2017_10_03_170059_create_posts_table.php",
+		"/C/Users/Dev/Documents/Network/mac.txt",
+		"/C/OSPanel/domains/monster-lab/phpunit.xml",
+		"/C/OSPanel/domains/smart/app/Client.php",
+		"/C/OSPanel/domains/monster-lab/app/Filters/Filters.php",
+		"/C/OSPanel/domains/smart/app/Filters/Filters.php",
+		"/C/OSPanel/domains/research/css-grid/index.html",
+		"/C/OSPanel/domains/monster-lab/readme.md",
+		"/C/OSPanel/domains/monster-lab/tests/Feature/TagOperationsTest.php",
+		"/C/OSPanel/domains/monster-lab/resources/views/posts/form.blade.php",
+		"/C/OSPanel/domains/monster-lab/resources/assets/js/app.js",
+		"/C/OSPanel/domains/monster-lab/app/Http/Controllers/TagsController.php",
+		"/C/OSPanel/domains/monster-lab/routes/web.php",
 		"/C/OSPanel/domains/monster-lab/resources/views/layouts/blog.blade.php",
+		"/Y/Dev/Projects/learn-Vue/01-basic-data-binding.html",
+		"/C/OSPanel/domains/index.html",
+		"/C/OSPanel/domains/monster-lab/resources/views/pages/main.blade.php",
+		"/C/OSPanel/domains/smart/phpunit.xml",
+		"/C/OSPanel/domains/smart/tests/Feature/ClientCrudOperationsTest.php",
+		"/C/OSPanel/domains/monster-lab/tests/TestCase.php",
+		"/C/OSPanel/domains/smart/tests/TestCase.php",
+		"/C/OSPanel/domains/monster-lab/composer.json",
+		"/C/OSPanel/domains/monster-lab/resources/views/layouts/app.blade.php",
+		"/C/OSPanel/domains/monster-lab/resources/views/posts/show.blade.php",
 		"/C/OSPanel/domains/smart/resources/assets/js/components/Tags.vue",
 		"/C/OSPanel/domains/smart/resources/assets/js/components/TagsList.vue",
-		"/C/OSPanel/domains/monster-lab/app/Providers/AppServiceProvider.php",
-		"/C/OSPanel/domains/monster-lab/app/Http/Controllers/PostsController.php",
-		"/C/Users/Dev/Documents/Network/mac.txt",
-		"/C/OSPanel/domains/monster-lab/resources/views/layouts/app.blade.php",
-		"/C/OSPanel/domains/monster-lab/resources/views/posts/index.blade.php",
-		"/C/OSPanel/domains/smart/app/Providers/AppServiceProvider.php",
-		"/C/OSPanel/domains/monster-lab/routes/web.php",
-		"/C/OSPanel/domains/monster-lab/app/Http/Controllers/TagsController.php",
 		"/C/OSPanel/domains/monster-lab/app/Tag.php",
-		"/C/OSPanel/domains/monster-lab/app/Post.php",
 		"/C/OSPanel/domains/monster-lab/database/factories/TagFactory.php",
 		"/C/OSPanel/domains/monster-lab/database/migrations/2017_10_04_223753_create_tags_table.php",
-		"/C/OSPanel/domains/monster-lab/database/migrations/2017_10_03_170059_create_posts_table.php",
 		"/C/OSPanel/domains/smart/database/migrations/2017_09_09_190209_create_clients_table.php",
 		"/C/OSPanel/domains/monster-lab/database/migrations/2017_10_04_214421_create_tags_table.php",
 		"/C/OSPanel/domains/smart/database/migrations/2017_09_10_185644_create_tags_table.php",
@@ -642,7 +688,6 @@
 		"/C/OSPanel/domains/monsters-lab/resources/assets/sass/app.scss",
 		"/C/OSPanel/domains/monsters-lab/resources/assets/sass/_variables.scss",
 		"/C/OSPanel/domains/m-lab/monsterlab.php",
-		"/C/OSPanel/domains/monster-lab/resources/views/pages/main.blade.php",
 		"/C/OSPanel/domains/monster-lab/resources/views/layouts/nav.blade.php",
 		"/C/OSPanel/domains/monster-lab/resources/views/welcome.blade.php",
 		"/C/OSPanel/domains/monster-lab/public/css/style.css",
@@ -662,7 +707,6 @@
 		"/Z/Shared/webdev/travelblog/.env",
 		"/Z/Shared/web.php",
 		"/Z/Shared/.env2",
-		"/C/OSPanel/domains/smart/resources/assets/js/app.js",
 		"/C/OSPanel/domains/smart/resources/views/clients/index.blade.php",
 		"/C/OSPanel/domains/smart/resources/views/clients/show.blade.php",
 		"/C/OSPanel/domains/smart/app/Http/Controllers/ClientFavoritesController.php",
@@ -684,7 +728,6 @@
 		"/C/OSPanel/domains/smart/app/Http/Controllers/IndustriesController.php",
 		"/C/OSPanel/domains/smart/tests/Feature/UserProfileTest.php",
 		"/C/OSPanel/domains/smart/tests/Feature/ClientTagsTest.php",
-		"/C/OSPanel/domains/smart/tests/Feature/ClientCrudOperationsTest.php",
 		"/C/OSPanel/domains/smart/tests/Feature/ClientCommentsTest.php",
 		"/C/OSPanel/domains/smart/app/Http/Controllers/ClientTagsController.php",
 		"/C/OSPanel/domains/smart/app/Http/Controllers/ClientCommentsController.php",
@@ -693,34 +736,10 @@
 		"/C/OSPanel/domains/smart/tests/Unit/UserTest.php",
 		"/C/OSPanel/domains/smart/database/factories/CommentFactory.php",
 		"/C/OSPanel/domains/smart/vendor/laravel/framework/src/Illuminate/Foundation/Testing/Concerns/InteractsWithExceptionHandling.php",
-		"/C/OSPanel/domains/smart/app/Client.php",
 		"/C/OSPanel/domains/smart/database/migrations/2017_09_17_190323_create_comments_table.php",
-		"/C/OSPanel/domains/smart/phpunit.xml",
 		"/C/OSPanel/domains/php-research/test.php",
 		"/C/OSPanel/domains/forum/resources/assets/js/components/Favorite.vue",
-		"/C/OSPanel/domains/smart/resources/views/clients/form.blade.php",
-		"/C/OSPanel/domains/smart/resources/assets/js/lib/select2.min.js",
-		"/C/OSPanel/domains/smart/database/factories/TagFactory.php",
-		"/C/OSPanel/domains/smart/resources/assets/js/components/CatalogCreateItem.vue",
-		"/C/OSPanel/domains/smart/resources/assets/js/components/CatalogItem.vue",
-		"/C/OSPanel/domains/smart/resources/assets/js/components/Catalog.vue",
-		"/C/OSPanel/domains/smart/database/migrations/2017_09_16_125644_create_tags_table.php",
-		"/C/OSPanel/domains/smart/app/Tag.php",
-		"/C/OSPanel/domains/smart/resources/views/layouts/nav.blade.php",
-		"/C/OSPanel/domains/smart/resources/views/industries/show.blade.php",
-		"/C/OSPanel/domains/smart/resources/views/industries/edit.blade.php",
-		"/C/OSPanel/domains/smart/resources/views/industries/index.blade.php",
-		"/C/OSPanel/domains/smart/resources/views/catalog/create.blade.php",
-		"/C/Users/Dev/AppData/Roaming/Sublime Text 3/Packages/User/Docblock.sublime-snippet",
-		"/C/OSPanel/domains/smart/app/Industry.php",
-		"/C/OSPanel/domains/smart/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php",
-		"/C/OSPanel/domains/smart/app/Http/Controllers/Controller.php",
-		"/C/OSPanel/domains/smart/vendor/laravel/framework/src/Illuminate/Routing/Controller.php",
-		"/C/OSPanel/domains/smart/app/Tools/helpers.php",
-		"/C/OSPanel/domains/smart/resources/assets/js/components/Flash.vue",
-		"/C/OSPanel/domains/smart/resources/assets/js/components/Test.vue",
-		"/C/OSPanel/domains/smart/composer.json",
-		"/C/OSPanel/domains/smart/resources/views/pages/home.blade.php"
+		"/C/OSPanel/domains/smart/resources/views/clients/form.blade.php"
 	],
 	"find":
 	{
@@ -761,24 +780,112 @@
 			[
 				{
 					"buffer": 0,
-					"file": "/C/OSPanel/domains/monster-lab/resources/views/posts/form.blade.php",
+					"file": "/C/OSPanel/domains/monster-lab/tests/Feature/PostFiltersTest.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1581,
+						"buffer_size": 1206,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1204,
-								1204
+								748,
+								748
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Laravel Blade Highlighter/blade.sublime-syntax",
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 425.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/C/OSPanel/domains/monster-lab/app/Providers/ViewComposerServiceProvider.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1769,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								321,
+								321
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 360.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "/C/OSPanel/domains/monster-lab/resources/assets/js/app.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 592,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								489,
+								489
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "/C/OSPanel/domains/monster-lab/app/Http/Controllers/PostsController.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3274,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								561,
+								561
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
@@ -790,144 +897,30 @@
 					"type": "text"
 				},
 				{
-					"buffer": 1,
-					"file": "/C/OSPanel/domains/monster-lab/resources/assets/js/app.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 381,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								381,
-								381
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "/C/OSPanel/domains/monster-lab/resources/views/layouts/app.blade.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1318,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								464,
-								464
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Laravel Blade Highlighter/blade.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "/C/OSPanel/domains/monster-lab/resources/views/layouts/sidebar.blade.php",
-					"semi_transient": true,
-					"settings":
-					{
-						"buffer_size": 839,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Laravel Blade Highlighter/blade.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
 					"buffer": 4,
-					"file": "/C/OSPanel/domains/monster-lab/routes/web.php",
+					"file": "/C/OSPanel/domains/monster-lab/app/Filters/PostFilters.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 897,
+						"buffer_size": 1054,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								696,
-								696
+								1054,
+								1054
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/PHP/PHP.sublime-syntax"
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 270.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "/C/OSPanel/domains/monster-lab/app/Http/Controllers/TagsController.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 465,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								465,
-								465
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 755.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 3,

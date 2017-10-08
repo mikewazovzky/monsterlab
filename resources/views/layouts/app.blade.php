@@ -34,6 +34,7 @@
     <div id="app">
         @yield('content')
         @include('layouts.nav')
+        <flash :message="{{ json_encode(session('flash')) }}"></flash>
     </div>
 
     <!-- Scripts -->
