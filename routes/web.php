@@ -13,8 +13,13 @@
 Auth::routes();
 Route::get('/register/confirm', 'Auth\RegisterConfirmationController@confirm')->name('register.confirm');
 
-Route::resource('/posts', 'PostsController');
 Route::resource('/tags', 'TagsController')->middleware('auth');
+Route::resource('/posts', 'PostsController');
+Route::get('/posts/{post}/replies', 'PostRepliesController@index')->name('post.replies.index');
+Route::post('/posts/{post}/replies', 'PostRepliesController@store')->name('post.replies.store');
+Route::patch('/posts/{post}/replies/{reply}', 'PostRepliesController@update')->name('post.replies.update');
+Route::delete('/posts/{post}/replies/{reply}', 'PostRepliesController@destroy')->name('post.replies.destroy');
+
 
 Route::redirect('/', '/main', 301);
 Route::get('/main/{locale?}', function ($locale = null) {

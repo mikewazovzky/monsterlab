@@ -2,19 +2,25 @@
 
 namespace App\Http\Controllers;
 
+use App\Post;
 use App\Reply;
 use Illuminate\Http\Request;
 
-class ReplyController extends Controller
+class PostRepliesController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth')->except(['index', 'show']);
+    }
+
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Post $post)
     {
-        //
+        return $post->replies()->paginate(10);
     }
 
     /**
@@ -33,9 +39,16 @@ class ReplyController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Post $post, Request $request)
     {
-        //
+        $request->validate(['body' => 'required']);
+
+        $reply = $post->replies()->create([
+            'user_id' => auth()->id(),
+            'body' => $request->body,
+        ]);
+
+        return $reply;
     }
 
     /**
@@ -67,9 +80,13 @@ class ReplyController extends Controller
      * @param  \App\Reply  $reply
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Reply $reply)
+    public function update(Post $post, Request $request, Reply $reply)
     {
-        //
+        $attributes = $request->validate(['body' => 'required']);
+
+        $reply->update($attributes);
+
+        return $reply;
     }
 
     /**
@@ -78,8 +95,8 @@ class ReplyController extends Controller
      * @param  \App\Reply  $reply
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Reply $reply)
+    public function destroy(Post $post, Reply $reply)
     {
-        //
+        $reply->delete();
     }
 }

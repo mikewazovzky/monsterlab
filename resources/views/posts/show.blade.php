@@ -33,4 +33,7 @@
             <p>{{ $post->body }}</p>
         </div>
     </div>
+
+    <replies></replies>
+
 @stop

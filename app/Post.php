@@ -84,4 +84,9 @@ class Post extends Model
 
         return $stats;
     }
+
+    public function replies()
+    {
+        return $this->hasMany(Reply::class);
+    }
 }
