@@ -12,6 +12,8 @@ class PostFiltersTest extends TestCase
     /** @test */
     public function it_filters_posts_by_tag()
     {
+        // $this->withExceptionHandling();
+
         $tagOne = create('App\Tag', ['name' => 'One']);
         $tagTwo = create('App\Tag', ['name' => 'Two']);
         $postOne = create('App\Post');
