@@ -19,12 +19,12 @@ class User extends Authenticatable
     ];
 
     /**
-     * The attributes that should be hidden for arrays.
+     * The attributes that should be hidden for arrays (toArray()) and json (json_encode()).
      *
      * @var array
      */
     protected $hidden = [
-        'password', 'remember_token',
+        'password', 'remember_token', 'confirmation_token', 'email', 'created_at', 'updated_at',
     ];
 
     public function posts()

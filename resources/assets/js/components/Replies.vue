@@ -6,7 +6,7 @@
             @deleted="fetch"
             @updated="fetch">
         </reply>
-        <reply-create @created="fetch"></reply-create>
+        <reply-create v-if="canCreate" @created="fetch"></reply-create>
 
         <paginator :dataSet="dataSet" @changed="fetch" ref="paginator"></paginator>
     </div>
@@ -30,6 +30,12 @@
 
         created() {
             this.fetch();
+        },
+
+        computed: {
+            canCreate() {
+                return this.authorize('createReply');
+            }
         },
 
         methods: {

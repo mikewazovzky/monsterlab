@@ -28,6 +28,13 @@
         .level { display: flex; align-items: center; }
         .flex { flex: 1; }
     </style>
+    <!-- Pass data to JavaScript -->
+    <script>
+        window.App = {!! json_encode([
+            'user' => Auth::user(),
+            'signedIn' => Auth::check()
+        ]) !!};
+    </script>
     @yield('header')
 </head>
 <body>

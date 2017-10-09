@@ -20,7 +20,7 @@ class PostRepliesController extends Controller
      */
     public function index(Post $post)
     {
-        return $post->replies()->paginate(10);
+        return $post->replies()->latest()->paginate(10);
     }
 
     /**

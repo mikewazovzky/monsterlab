@@ -16,6 +16,23 @@ window.moment = moment;
 // create global event bus
 window.events = new Vue();
 
+// set up auth as a s single point to manage authorizations for frontend
+const authorizations = require('./authorizations');
+
+Vue.prototype.authorize = function (...params) {
+    if (!window.App.user) return false;
+
+    if(window.App.user.role === 'admin') return true;
+
+    if (typeof params[0] === 'string') {
+        return authorizations[params[0]](params[1]);
+    }
+
+    return params[0](window.App.user);
+};
+
+Vue.prototype.signedIn = window.App.signedIn;
+
 // create global flash function
 window.flash = function (message, level = 'success') {
     window.events.$emit('flash', { message, level });

@@ -215,7 +215,6 @@
             <div id="contactdata">
                 <p>{{ __('Phone') }}: <span class="phone">+7 (222) 222-3-222</span></p>
                 <p>{{ __('Email') }}: <span class="phone">mike.wazovzky@gmail.com</span></p>
-                <p v-text="contactsMessage"></p>
             </div> <!-- contactdata -->
         </div><!-- container -->
     </div><!-- contacts page -->
@@ -223,7 +222,6 @@
 </div><!-- main -->
 
 <footer id="footer">
-    <p v-text="message"></p>
     <p>2016-2017, <a href="http://m-lab.xyz">Monster Lab.</a></p>
 </footer>
 
