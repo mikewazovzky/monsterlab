@@ -5,7 +5,7 @@
                 <div class="level">
                     <div class="flex">
                         <span v-text="ago"></span>
-                        <a href="#" v-text="data.user.name"></a> posted:
+                        <a :href="profile" v-text="data.user.name"></a> posted:
                     </div>
                     <div v-if="canUpdate" class="buttons-block">
                         <button class="btn btn-xs btn-info" @click="edit = true">Edit</button>
@@ -47,6 +47,10 @@
 
             ago() {
                 return moment(this.data.created_at).fromNow() + '...';
+            },
+
+            profile() {
+                return '/profiles/' + this.item.user.id;
             },
 
             canUpdate() {

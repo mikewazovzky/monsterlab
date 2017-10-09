@@ -12,6 +12,7 @@
 */
 Auth::routes();
 Route::get('/register/confirm', 'Auth\RegisterConfirmationController@confirm')->name('register.confirm');
+Route::get('/profiles/{user}', 'ProfilesController@show')->name('profiles.show');
 
 Route::resource('/tags', 'TagsController')->middleware('auth');
 Route::resource('/posts', 'PostsController');

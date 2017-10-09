@@ -23,7 +23,7 @@ class Post extends Model
      *
      * @var array of strings
      */
-    protected $with = ['tags'];
+    protected $with = ['tags', 'user'];
 
     /**
      * Get a user the post belongs to.

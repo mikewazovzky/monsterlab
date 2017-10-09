@@ -6,7 +6,7 @@
             <h1>{{ $post->title }}</h1>
             <div class="level">
                 <div class="flex">
-                    <span><a href="#">{{ $post->user->name }}</a></span>
+                    <span><a href="{{ route('profiles.show', $post->user) }}">{{ $post->user->name }}</a></span>
                     posted on
                     <strong><span>{{ $post->created_at->toDateTimeString() }}</span></strong>
                 </div>

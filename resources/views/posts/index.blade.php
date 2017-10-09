@@ -7,7 +7,7 @@
                 <h2><a href="/posts/{{ $post->id }}">{{ $post->title }}</a></h2>
                 <div class="level">
                     <div class="flex">
-                        <span><a href="#">{{ $post->user->name }}</a></span>
+                        <span><a href="{{ route('profiles.show', $post->user) }}">{{ $post->user->name }}</a></span>
                         posted
                         <em><span>{{ $post->created_at->diffForHumans() }}</span></em>
                     </div>

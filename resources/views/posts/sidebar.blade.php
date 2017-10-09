@@ -1,4 +1,6 @@
+{{-- SEARCH PANEL --}}
 <div class="panel panel-primary">
+
     <div class="panel-heading">
         <strong>Search</strong>
     </div>
@@ -15,7 +17,7 @@
         </form>
     </div>
 </div>
-
+{{-- TAGS PANEL --}}
 <div class="panel panel-primary">
     <div class="panel-heading">
         <strong>Tags</strong>
@@ -31,7 +33,7 @@
         </ul>
     </div>
 </div>
-
+{{-- LATEST POSTS PANEL --}}
 <div class="panel panel-primary">
     <div class="panel-heading">
         <strong>Latest posts</strong>
@@ -44,7 +46,7 @@
                         {{ substr($post->title, 0, 40) . '...' }}
                     </a>
                     by
-                    <a href="#">
+                    <a href="{{ route('profiles.show', $post->user) }}">
                         {{ $post->user->name }}
                     </a>
                 </li>
@@ -52,7 +54,7 @@
         </ul>
     </div>
 </div>
-
+{{-- POPULAR POSTS PANEL --}}
 <div class="panel panel-primary">
     <div class="panel-heading">
         <strong>Popular posts (top 5)</strong>
@@ -65,7 +67,7 @@
                         {{ substr($post->title, 0, 40) . '...' }}
                     </a>
                     by
-                    <a href="#">
+                    <a href="{{ route('profiles.show', $post->user) }}">
                         {{ $post->user->name }}
                     </a>
                 </li>
@@ -73,7 +75,7 @@
         </ul>
     </div>
 </div>
-
+{{-- ARCHIVES PANEL --}}
 <div class="panel panel-primary">
     <div class="panel-heading">
         <strong>Archives</strong>
@@ -89,7 +91,7 @@
         </ul>
     </div>
 </div>
-
+{{-- ABOUT PANEL --}}
 <div class="panel panel-primary">
     <div class="panel-body">
         <ul class="terms">

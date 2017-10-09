@@ -16783,7 +16783,7 @@ window.moment = __WEBPACK_IMPORTED_MODULE_1_moment___default.a;
 window.events = new __WEBPACK_IMPORTED_MODULE_0_vue___default.a();
 
 // set up auth as a s single point to manage authorizations for frontend
-var authorizations = __webpack_require__(189);
+var authorizations = __webpack_require__(156);
 
 __WEBPACK_IMPORTED_MODULE_0_vue___default.a.prototype.authorize = function () {
     if (!window.App.user) return false;
@@ -58128,7 +58128,21 @@ module.exports = webpackContext;
 webpackContext.id = 155;
 
 /***/ }),
-/* 156 */,
+/* 156 */
+/***/ (function(module, exports) {
+
+var user = window.App.user;
+
+module.exports = {
+    updateReply: function updateReply(reply) {
+        return reply.user_id === user.id;
+    },
+    createReply: function createReply() {
+        return user.role === 'writer';
+    }
+};
+
+/***/ }),
 /* 157 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -58918,6 +58932,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         ago: function ago() {
             return __WEBPACK_IMPORTED_MODULE_0_moment___default()(this.data.created_at).fromNow() + '...';
         },
+        profile: function profile() {
+            return '/profiles/' + this.item.user.id;
+        },
         canUpdate: function canUpdate() {
             return this.authorize('updateReply', this.item);
         }
@@ -58972,7 +58989,7 @@ var render = function() {
                 _c("span", { domProps: { textContent: _vm._s(_vm.ago) } }),
                 _vm._v(" "),
                 _c("a", {
-                  attrs: { href: "#" },
+                  attrs: { href: _vm.profile },
                   domProps: { textContent: _vm._s(_vm.data.user.name) }
                 }),
                 _vm._v(" posted:\n                ")
@@ -59261,29 +59278,6 @@ if (false) {
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
-
-/***/ }),
-/* 181 */,
-/* 182 */,
-/* 183 */,
-/* 184 */,
-/* 185 */,
-/* 186 */,
-/* 187 */,
-/* 188 */,
-/* 189 */
-/***/ (function(module, exports) {
-
-var user = window.App.user;
-
-module.exports = {
-    updateReply: function updateReply(reply) {
-        return reply.user_id === user.id;
-    },
-    createReply: function createReply() {
-        return user.role === 'writer';
-    }
-};
 
 /***/ })
 /******/ ]);
