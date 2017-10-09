@@ -14,6 +14,7 @@ class Post extends Model
      * @var array
      */
     protected $guarded = [];
+    protected $casts = ['user_id' => 'integer'];
 
     /**
      * The relationships that shoul be eager loaded every tyme the model is retrieved.

@@ -39,4 +39,14 @@ class User extends Authenticatable
             'confirmation_token' => null,
         ]);
     }
+
+    public function isAdmin()
+    {
+        return $this->role == 'admin';
+    }
+
+    public function isWriter()
+    {
+        return $this->role == 'writer';
+    }
 }

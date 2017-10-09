@@ -37,6 +37,8 @@ class PostsController extends Controller
      */
     public function create()
     {
+        $this->authorize('create', Post::class);
+
         return view('posts.create');
     }
 
@@ -48,6 +50,8 @@ class PostsController extends Controller
      */
     public function store(Request $request)
     {
+        $this->authorize('create', Post::class);
+
         $attributes = $request->validate([
             'title' => 'required',
             'body' => 'required',
@@ -81,6 +85,8 @@ class PostsController extends Controller
      */
     public function edit(Post $post)
     {
+        $this->authorize('update', $post);
+
         return view('posts.edit', ['post' => $post]);
     }
 
@@ -93,6 +99,9 @@ class PostsController extends Controller
      */
     public function update(Request $request, Post $post)
     {
+
+        $this->authorize('update', $post);
+
         $attributes = $request->validate([
             'title' => 'required',
             'body' => 'required',
@@ -115,6 +124,8 @@ class PostsController extends Controller
      */
     public function destroy(Post $post)
     {
+        $this->authorize('delete', $post);
+
         $post->delete();
 
         flash()->danger('Your post has been deleted!');

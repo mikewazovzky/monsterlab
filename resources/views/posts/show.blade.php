@@ -10,13 +10,17 @@
                     posted on
                     <strong><span>{{ $post->created_at->toDateTimeString() }}</span></strong>
                 </div>
-                <a href="{{ route('posts.edit', $post)}}">Edit</a>
+                @can('update', $post)
+                    <a href="{{ route('posts.edit', $post)}}">Edit</a>
+                @endcan
                 &nbsp;
-                <form method="POST" action="{{ route('posts.destroy', $post) }}">
-                    {{ method_field('DELETE') }}
-                    {{ csrf_field() }}
-                    <button type="submit" class="btn btn-link">Delete</button>
-                </form>
+                @can('delete', $post)
+                    <form method="POST" action="{{ route('posts.destroy', $post) }}">
+                        {{ method_field('DELETE') }}
+                        {{ csrf_field() }}
+                        <button type="submit" class="btn btn-link">Delete</button>
+                    </form>
+                @endcan
             </div>
 
             @unless($post->tags->isEmpty())
@@ -30,7 +34,7 @@
 
         </div>
         <div class="panel-body">
-            <p>{{ $post->body }}</p>
+            <p>{!! $post->body !!}</p>
         </div>
     </div>
 
