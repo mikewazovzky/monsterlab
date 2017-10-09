@@ -30,7 +30,7 @@ class PostOperationsTest extends TestCase
     }
 
     /** @test */
-    public function unauthorized_users_may_not_create_posts()
+    public function unauthorized_user_may_not_create_posts()
     {
         // Guest may not create a post
         $post = create('App\Post');

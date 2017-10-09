@@ -14,7 +14,9 @@ class Post extends Model
      * @var array
      */
     protected $guarded = [];
-    protected $casts = ['user_id' => 'integer'];
+    protected $casts = [
+        'user_id' => 'integer'
+    ];
 
     /**
      * The relationships that shoul be eager loaded every tyme the model is retrieved.
@@ -41,6 +43,16 @@ class Post extends Model
     public function tags()
     {
         return $this->belongsToMany(Tag::class);
+    }
+
+    /**
+     * Get replies associated to the to post.
+     *
+     * @return Illuminate\Database\Eloquent\Relations\belongsToMany
+     */
+    public function replies()
+    {
+        return $this->hasMany(Reply::class);
     }
 
     /**
@@ -84,10 +96,5 @@ class Post extends Model
         }
 
         return $stats;
-    }
-
-    public function replies()
-    {
-        return $this->hasMany(Reply::class);
     }
 }

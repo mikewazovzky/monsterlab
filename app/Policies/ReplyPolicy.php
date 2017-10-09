@@ -3,10 +3,10 @@
 namespace App\Policies;
 
 use App\User;
-use App\Post;
+use App\Reply;
 use Illuminate\Auth\Access\HandlesAuthorization;
 
-class PostPolicy
+class ReplyPolicy
 {
     use HandlesAuthorization;
 
@@ -16,7 +16,7 @@ class PostPolicy
     }
 
     /**
-     * Determine whether the user can create posts.
+     * Determine whether the user can create replies.
      *
      * @param  \App\User  $user
      * @return mixed
@@ -27,26 +27,26 @@ class PostPolicy
     }
 
     /**
-     * Determine whether the user can update the post.
+     * Determine whether the user can update the reply.
      *
      * @param  \App\User  $user
-     * @param  \App\Post  $post
+     * @param  \App\Reply  $reply
      * @return mixed
      */
-    public function update(User $user, Post $post)
+    public function update(User $user, Reply $reply)
     {
-        return $user->isWriter() && $user->id == $post->user_id;
+        return $user->isWriter() && $user->id == $reply->user_id;
     }
 
     /**
-     * Determine whether the user can delete the post.
+     * Determine whether the user can delete the reply.
      *
      * @param  \App\User  $user
-     * @param  \App\Post  $post
+     * @param  \App\Reply  $reply
      * @return mixed
      */
-    public function delete(User $user, Post $post)
+    public function delete(User $user, Reply $reply)
     {
-        return $user->isWriter() && $user->id == $post->user_id;
+        return $user->isWriter() && $user->id == $reply->user_id;
     }
 }

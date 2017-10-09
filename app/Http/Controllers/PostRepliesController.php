@@ -24,16 +24,6 @@ class PostRepliesController extends Controller
     }
 
     /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
@@ -41,6 +31,8 @@ class PostRepliesController extends Controller
      */
     public function store(Post $post, Request $request)
     {
+        $this->authorize('create', Reply::class);
+
         $request->validate(['body' => 'required']);
 
         $reply = $post->replies()->create([
@@ -52,28 +44,6 @@ class PostRepliesController extends Controller
     }
 
     /**
-     * Display the specified resource.
-     *
-     * @param  \App\Reply  $reply
-     * @return \Illuminate\Http\Response
-     */
-    public function show(Reply $reply)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Reply  $reply
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Reply $reply)
-    {
-        //
-    }
-
-    /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
@@ -82,6 +52,8 @@ class PostRepliesController extends Controller
      */
     public function update(Post $post, Request $request, Reply $reply)
     {
+        $this->authorize('update', $reply);
+
         $attributes = $request->validate(['body' => 'required']);
 
         $reply->update($attributes);
@@ -97,6 +69,8 @@ class PostRepliesController extends Controller
      */
     public function destroy(Post $post, Reply $reply)
     {
+        $this->authorize('delete', $reply);
+
         $reply->delete();
     }
 }
