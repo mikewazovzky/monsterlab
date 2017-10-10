@@ -11,7 +11,7 @@ class UserConfirmed extends Notification
 {
     use Queueable;
 
-    protected $user;
+    public $user;
     /**
      * Create a new notification instance.
      *

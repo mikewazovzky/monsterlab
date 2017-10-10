@@ -29,6 +29,25 @@ class RegistrationTest extends TestCase
     }
 
     /** @test */
+    public function confirmation_email_can_be_sent_upon_user_request()
+    {
+        Mail::fake();
+
+        $this->post(route('register'), [
+            'name' => 'John',
+            'email' => 'john@example.com',
+            'password' => 'password',
+            'password_confirmation' => 'password'
+        ]);
+
+        Mail::assertSent(ConfirmEmailRequest::class);
+
+        $this->get(route('register.send'))->assertStatus(302);
+
+        Mail::assertSent(ConfirmEmailRequest::class);
+    }
+
+    /** @test */
     public function user_can_confirm_email_address()
     {
         Mail::fake();

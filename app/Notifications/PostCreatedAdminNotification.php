@@ -11,7 +11,7 @@ class PostCreatedAdminNotification extends Notification
 {
     use Queueable;
 
-    protected $post;
+    public $post;
 
     /**
      * Create a new notification instance.

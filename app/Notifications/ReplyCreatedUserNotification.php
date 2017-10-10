@@ -11,7 +11,7 @@ class ReplyCreatedUserNotification extends Notification
 {
     use Queueable;
 
-    protected $reply;
+    public $reply;
 
     /**
      * Create a new notification instance.

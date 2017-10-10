@@ -27,7 +27,7 @@
             @foreach($tags as $tag)
                 <li>
                     <a href="/posts?tag={{ $tag->name }}">{{ $tag->name }}</a>
-                    <span class="label label-default">{{ $tag->posts_count }}</span>
+                    <span class="label label-info">{{ $tag->posts_count }}</span>
                 </li>
             @endforeach
         </ul>
@@ -85,7 +85,7 @@
             @foreach($archives as $period)
                 <li>
                     <a href="/posts?year={{ $period['year'] }}&month={{ $period['month'] }}">{{ $period['month'] . ' ' . $period['year'] }}</a>
-                    <span class="label label-default">{{ $period['published'] }}</span>
+                    <span class="label label-info">{{ $period['published'] }}</span>
                 </li>
             @endforeach
         </ul>
