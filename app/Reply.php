@@ -2,6 +2,7 @@
 
 namespace App;
 
+use App\Events\ReplyCreated;
 use Illuminate\Database\Eloquent\Model;
 
 class Reply extends Model
@@ -28,6 +29,10 @@ class Reply extends Model
     protected $casts = [
         'user_id' => 'integer',
         'post_id' => 'integer',
+    ];
+
+    protected $dispatchesEvents = [
+        'created' => ReplyCreated::class,
     ];
 
     /**

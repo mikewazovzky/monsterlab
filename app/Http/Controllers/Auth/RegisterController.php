@@ -81,14 +81,14 @@ class RegisterController extends Controller
      * @param  mixed  $user
      * @return mixed
      */
-    protected function registered(Request $request, $user)
-    {
-        Mail::to($user)->send(new ConfirmEmailRequest($user));
+    // protected function registered(Request $request, $user)
+    // {
+    //     Mail::to($user)->send(new ConfirmEmailRequest($user));
 
-        User::admin()->notify(new UserRegistered($user));
+    //     User::admin()->notify(new UserRegistered($user));
 
-        return redirect($this->redirectPath());
-    }
+    //     return redirect($this->redirectPath());
+    // }
 
     protected function generateUserConfirmationToken($seed)
     {

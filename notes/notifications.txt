@@ -1,4 +1,4 @@
-Requirements.
+# Requirements.
 
 Notifications for the user are created if any user related activity
 happens in the app. Message (email) is sent to user when new
@@ -23,30 +23,54 @@ main menu if there are unread notifications for the user
 Unread notifcations are displaied on user profile page,
 can be marked as read.
 
-Implementation
+# Implementation
 
 Create notifications table
 $ php artisan notifications:table
 $ php artisan migrate
 
 $ php artisan make:notification UserRegistered --markdown=emails.notification.user-registered
-$ php artisan make:notification PostCreated --markdown=emails.notification.post-created
-$ php artisan make:notification ReplyCreated --markdown=emails.notification.reply-created
+$ php artisan make:notification PostCreatedAdminNotification --markdown=emails.notification.post-created
+$ php artisan make:notification ReplyCreatedAdminNotification --markdown=emails.notification.reply-created
+$ php artisan make:notification ReplyCreatedUserNotification --markdown=emails.notification.reply-created
+
++ Events:
+    + Registered (native laravel event)
+    + PostCreated
+    + ReplyCreated
+
++ Listeners:
+    + InformAdminThatUserRegistered,
+    + InformAdminThatPostCreated,
+    + InformAdminThatReplyCreated
+    - ReplyCreatedAdminNotification.
 
 Notification:
-+ UserRegistered
-- PostCreated
-- ReplyCreated
+    + UserRegistered
+    + PostCreatedAdminNotification
+    + ReplyCreatedNotification
+    - review if data required by profile view is stored by notifications
+
 Views:
-+ email.notification.user-registered
-- email.notification.post-created
-- email.notification.reply-created
-Events:
-+ Registered (native laravel event)
-- PostCreated
-- ReplyCreated
-Listeners:
-- NotifyAdminUserRegistered,
-- NotifyAdminPostCreated,
-- NotifyAdminReplyCreated.
-Tests
+    - email.notification
+        - email.notification.user-registered
+        - email.notification.post-created
+        - email.notification.reply-created
+    - profile
+        - list of notification
+        - notification.user-registered
+        - notification.post-created
+        - notification.reply-created
+        - mark notificatios as read button(s)
+    - inform user (glyphicon-bell) if there are new notifications
+
+Routes
+    - mark notification as read
+
+Controllers
+    - mark notification as read
+
+- Tests
+
+- Queues
+    - make notifcation Queueable
