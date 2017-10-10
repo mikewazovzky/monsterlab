@@ -55,6 +55,8 @@ class ReplyCreatedAdminNotification extends Notification
     {
         return [
             'reply' => $this->reply,
+            'user' => $this->reply->user,
+            'post_title' => $this->reply->post->title,
         ];
     }
 }

@@ -45,6 +45,11 @@ class User extends Authenticatable
         return $this->role == 'admin';
     }
 
+    public function isReader()
+    {
+        return $this->role == 'reader';
+    }
+
     public function isWriter()
     {
         return $this->role == 'writer';

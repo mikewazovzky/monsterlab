@@ -7,20 +7,19 @@ use Illuminate\Notifications\Notification;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Notifications\Messages\MailMessage;
 
-class ReplyCreatedUserNotification extends Notification
+class UserConfirmed extends Notification
 {
     use Queueable;
 
-    protected $reply;
-
+    protected $user;
     /**
      * Create a new notification instance.
      *
      * @return void
      */
-    public function __construct($reply)
+    public function __construct($user)
     {
-        $this->reply = $reply;
+        $this->user = $user;
     }
 
     /**
@@ -42,7 +41,7 @@ class ReplyCreatedUserNotification extends Notification
      */
     public function toMail($notifiable)
     {
-        return (new MailMessage)->markdown('emails.notification.reply-created', ['reply' => $this->reply]);
+        return (new MailMessage)->markdown('emails.notification.user-confirmed', ['user' => $this->user]);
     }
 
     /**
@@ -54,9 +53,7 @@ class ReplyCreatedUserNotification extends Notification
     public function toArray($notifiable)
     {
         return [
-            'reply' => $this->reply,
-            'user' => $this->reply->user,
-            'post_title' => $this->reply->post->title,
+            'user' => $this->user,
         ];
     }
 }

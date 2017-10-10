@@ -55,6 +55,7 @@ class PostCreatedAdminNotification extends Notification
     {
         return [
             'post' => $this->post,
+            'user' => $this->post->user
         ];
     }
 }

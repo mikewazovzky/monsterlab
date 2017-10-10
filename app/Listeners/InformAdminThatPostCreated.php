@@ -30,7 +30,7 @@ class InformAdminThatPostCreated
     {
         $admin = User::admin();
 
-        if ($admin) {
+        if ($admin && $admin->id != $event->post->user->id) {
             $admin->notify(new PostCreatedAdminNotification($event->post));
         }
     }

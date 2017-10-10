@@ -48,7 +48,7 @@ class RegistrationTest extends TestCase
         $this->assertNotNull($user->confirmation_token);
 
         $this->get(route('register.confirm', [ 'token' => $user->confirmation_token]))
-            ->assertRedirect(route('posts.index'))
+            ->assertRedirect(route('login'))
             ->assertSessionHas('flash');
 
         tap($user->fresh(), function ($user) {

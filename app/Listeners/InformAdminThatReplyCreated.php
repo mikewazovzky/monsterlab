@@ -30,7 +30,7 @@ class InformAdminThatReplyCreated
     {
         $admin = User::admin();
 
-        if ($admin) {
+        if ($admin && $admin->id != $event->reply->user->id) {
             $admin->notify(new ReplyCreatedAdminNotification($event->reply));
         }
     }

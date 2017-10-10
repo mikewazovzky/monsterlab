@@ -27,6 +27,10 @@ class InformUserThatReplyCreated
      */
     public function handle(ReplyCreated $event)
     {
-        $event->reply->post->user->notify(new ReplyCreatedUserNotification($event->reply));
+        $postAuthor = $event->reply->post->user;
+
+        if ($postAuthor->id != $event->reply->user_id) {
+            $postAuthor->notify(new ReplyCreatedUserNotification($event->reply));
+        }
     }
 }

@@ -30,6 +30,7 @@ $ php artisan notifications:table
 $ php artisan migrate
 
 $ php artisan make:notification UserRegistered --markdown=emails.notification.user-registered
+$ php artisan make:notification UserConfirmed --markdown=emails.notification.user-confirmed
 $ php artisan make:notification PostCreatedAdminNotification --markdown=emails.notification.post-created
 $ php artisan make:notification ReplyCreatedAdminNotification --markdown=emails.notification.reply-created
 $ php artisan make:notification ReplyCreatedUserNotification --markdown=emails.notification.reply-created
@@ -43,32 +44,38 @@ $ php artisan make:notification ReplyCreatedUserNotification --markdown=emails.n
     + InformAdminThatUserRegistered,
     + InformAdminThatPostCreated,
     + InformAdminThatReplyCreated
-    - ReplyCreatedAdminNotification.
+    + InformUserThatReplyCreated.
 
 Notification:
     + UserRegistered
+    + UserConfirmed
     + PostCreatedAdminNotification
-    + ReplyCreatedNotification
+    + ReplyCreatedAdminNotification
+    + ReplyCreatedUserNotification
     - review if data required by profile view is stored by notifications
 
 Views:
     - email.notification
         - email.notification.user-registered
+        - email.notification.user-confirmed
         - email.notification.post-created
         - email.notification.reply-created
     - profile
-        - list of notification
-        - notification.user-registered
-        - notification.post-created
-        - notification.reply-created
-        - mark notificatios as read button(s)
-    - inform user (glyphicon-bell) if there are new notifications
+        + list of notification
+        + notification.user-registered
+        + notification.user-confirmed
+        + notification.post-created
+        + notification.reply-created
+        + mark notifications as read button(s)
+    + inform user (glyphicon-bell) if there are new notifications
 
 Routes
-    - mark notification as read
+    + mark notification(s) as read
+    + re-send email confirmation request
 
 Controllers
-    - mark notification as read
+    + mark notification(s) as read
+    + re-send email confirmation request
 
 - Tests
 

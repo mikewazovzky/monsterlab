@@ -12,7 +12,12 @@
 */
 Auth::routes();
 Route::get('/register/confirm', 'Auth\RegisterConfirmationController@confirm')->name('register.confirm');
+Route::get('/register/sendconfirmationrequest', 'Auth\RegisterConfirmationController@send')->name('register.send')->middleware('auth');
+
 Route::get('/profiles/{user}', 'ProfilesController@show')->name('profiles.show');
+Route::get('/user/{user}/notifications', 'NotificationsController@index')->name('notifications.index');
+Route::delete('/user/{user}/notifications/{notification}', 'NotificationsController@markAsRead')->name('notifications.markAsRead');
+Route::delete('/user/{user}/notifications', 'NotificationsController@markAllAsRead')->name('notifications.markAllAsRead');
 
 Route::resource('/tags', 'TagsController')->middleware('auth');
 Route::resource('/posts', 'PostsController');
@@ -23,6 +28,8 @@ Route::delete('/posts/{post}/replies/{reply}', 'PostRepliesController@destroy')-
 
 
 Route::redirect('/', '/main', 301);
+Route::redirect('/home', '/main', 301);  // TEMPORARY: find actions that redirect home!
+
 Route::get('/main/{locale?}', function ($locale = null) {
     if ($locale != 'ru') {
         $locale = 'en';
@@ -32,3 +39,5 @@ Route::get('/main/{locale?}', function ($locale = null) {
 
     return view('pages.main', compact('locale'));
 })->name('main');
+
+

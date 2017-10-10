@@ -4,7 +4,10 @@ namespace App\Http\Controllers\Auth;
 
 use App\User;
 use Illuminate\Http\Request;
+use App\Mail\ConfirmEmailRequest;
 use App\Http\Controllers\Controller;
+use App\Notifications\UserConfirmed;
+use Illuminate\Support\Facades\Mail;
 
 class RegisterConfirmationController extends Controller
 {
@@ -19,7 +22,24 @@ class RegisterConfirmationController extends Controller
 
         $user->confirm();
 
+        if ($admin = User::admin()) {
+            $admin->notify(new UserConfirmed($user));
+        }
+
         flash()->success('Your account is now confirmed!');
-        return redirect(route('posts.index'));
+
+        return redirect(route('login'));
+    }
+
+    public function send()
+    {
+        $user = auth()->user();
+
+        if ($user->isReader()) {
+            Mail::to($user)->send(new ConfirmEmailRequest($user));
+            flash('User email confirmation request has neen send!');
+        }
+
+        return back();
     }
 }
