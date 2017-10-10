@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Mail\ConfirmEmailRequest;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Mail;
+use App\Notifications\UserRegistered;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
 
@@ -83,6 +84,8 @@ class RegisterController extends Controller
     protected function registered(Request $request, $user)
     {
         Mail::to($user)->send(new ConfirmEmailRequest($user));
+
+        User::admin()->notify(new UserRegistered($user));
 
         return redirect($this->redirectPath());
     }

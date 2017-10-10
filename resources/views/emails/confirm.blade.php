@@ -1,7 +1,7 @@
 @component('mail::message')
-# Welcome to Monster Lab.
+# Thank you for registering with Monster Lab.!
 
-Pls. press the button to confirm your email address.
+Pls. press the button to confirm your email address and complete the registration process.
 
 @component('mail::button', ['url' => 'http://monster-lab/register/confirm?token=' . $user->confirmation_token])
 Confirm Email

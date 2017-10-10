@@ -29,6 +29,6 @@ class ConfirmEmailRequest extends Mailable
      */
     public function build()
     {
-        return $this->markdown('email.confirm');
+        return $this->markdown('emails.confirm');
     }
 }

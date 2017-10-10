@@ -49,4 +49,9 @@ class User extends Authenticatable
     {
         return $this->role == 'writer';
     }
+
+    public static function admin()
+    {
+        return User::where('role', 'admin')->first();
+    }
 }

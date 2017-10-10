@@ -1,0 +1,19 @@
+Users may post replies to posts
+
++ Model: Reply.php
+    Relations
+    + Reply::user()
+    + Reply::post()
+    + Post::replies()
++ Migration
++ Factory: ReplyFactory.php
++ Seeder
++ Routes
++ Controller(s)
++ Test
++ Views
+    + Vue: <replies>
+    + Vue: <reply>
+    + Vue: <reply-create>
++ Utilities
+    + Vue: <paginator>
