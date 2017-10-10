@@ -3,6 +3,7 @@
 namespace App;
 
 use Carbon\Carbon;
+use App\Events\PostCreated;
 use App\Filters\PostFilters;
 use Illuminate\Database\Eloquent\Model;
 
@@ -16,6 +17,10 @@ class Post extends Model
     protected $guarded = [];
     protected $casts = [
         'user_id' => 'integer'
+    ];
+
+    protected $dispatchesEvents = [
+        'created' => PostCreated::class,
     ];
 
     /**
