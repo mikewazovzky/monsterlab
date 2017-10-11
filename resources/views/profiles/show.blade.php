@@ -3,7 +3,10 @@
 @section('main')
 
     <div class="page-header">
-        <h1>{{ $profileUser->name }}</h1>
+        <div class="level">
+            <avatar-form :user="{{ $profileUser }}" :changable="true"></avatar-form>
+            <h1>{{ $profileUser->name }}</h1>
+        </div>
         @if($profileUser->isReader())
             <div class="well well-sm">
                 Your e-mail has not been confirmed yet.

@@ -15,7 +15,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password', 'confirmation_token', 'role'
+        'name', 'email', 'password', 'confirmation_token', 'role', 'avatar_path',
     ];
 
     /**
@@ -58,5 +58,11 @@ class User extends Authenticatable
     public static function admin()
     {
         return User::where('role', 'admin')->first();
+    }
+
+    public function getAvatarPathAttribute($avatar)
+    {
+        // return $avatar ? "/storage/{$avatar}" : '/images/default.png';
+        return $avatar ? asset("/storage/{$avatar}") : asset('images/avatars/default.png');
     }
 }

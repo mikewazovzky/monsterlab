@@ -4,6 +4,42 @@
 		"selected_items":
 		[
 			[
+				"po",
+				"profileUser"
+			],
+			[
+				"not",
+				"notifications"
+			],
+			[
+				"for",
+				"foreach\tforeach …"
+			],
+			[
+				"noti",
+				"notification"
+			],
+			[
+				"view",
+				"viewName"
+			],
+			[
+				"vie",
+				"viewName"
+			],
+			[
+				"f",
+				"fun\tfunction …"
+			],
+			[
+				"pro",
+				"profileUser"
+			],
+			[
+				"paddin",
+				"padding-bottom"
+			],
+			[
 				"month",
 				"monthIndex"
 			],
@@ -128,16 +164,8 @@
 				"YouWereMentioned"
 			],
 			[
-				"for",
-				"foreach\tforeach …"
-			],
-			[
 				"dete",
 				"detectInvalidKeywords"
-			],
-			[
-				"not",
-				"notificationId"
 			],
 			[
 				"subsc",
@@ -170,10 +198,6 @@
 			[
 				"au",
 				"authorize"
-			],
-			[
-				"f",
-				"feed"
 			],
 			[
 				"ev",
@@ -376,10 +400,6 @@
 				"nickname"
 			],
 			[
-				"pro",
-				"prototype"
-			],
-			[
 				"ge",
 				"george"
 			],
@@ -484,48 +504,46 @@
 	"buffers":
 	[
 		{
-			"file": "/C/OSPanel/domains/monster-lab/tests/Feature/PostFiltersTest.php",
+			"file": "/C/OSPanel/domains/monster-lab/notes/notifications.txt",
 			"settings":
 			{
-				"buffer_size": 1206,
+				"buffer_size": 2589,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "/C/OSPanel/domains/monster-lab/app/Providers/ViewComposerServiceProvider.php",
+			"file": "/C/OSPanel/domains/monster-lab/tests/Feature/ProfilesTest.php",
 			"settings":
 			{
-				"buffer_size": 1769,
+				"buffer_size": 456,
 				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/OSPanel/domains/test/test.php",
+			"settings":
+			{
+				"buffer_size": 643,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/OSPanel/domains/smart/tests/Feature/AvatarUpdateTest.php",
+			"settings":
+			{
+				"buffer_size": 2380,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/OSPanel/domains/monster-lab/app/Http/Controllers/ProfilesController.php",
+			"settings":
+			{
+				"buffer_size": 406,
 				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/C/OSPanel/domains/monster-lab/resources/assets/js/app.js",
-			"settings":
-			{
-				"buffer_size": 592,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "/C/OSPanel/domains/monster-lab/app/Http/Controllers/PostsController.php",
-			"settings":
-			{
-				"buffer_size": 3274,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "/C/OSPanel/domains/monster-lab/app/Filters/PostFilters.php",
-			"settings":
-			{
-				"buffer_size": 1054,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
 			}
 		}
 	],
@@ -601,145 +619,144 @@
 	"expanded_folders":
 	[
 		"/C/OSPanel/domains/monster-lab",
-		"/C/OSPanel/domains/monster-lab/resources",
-		"/C/OSPanel/domains/monster-lab/resources/assets",
-		"/C/OSPanel/domains/monster-lab/resources/assets/js",
-		"/C/OSPanel/domains/monster-lab/resources/lang",
-		"/C/OSPanel/domains/monster-lab/resources/views",
-		"/C/OSPanel/domains/monster-lab/resources/views/layouts",
-		"/C/OSPanel/domains/monster-lab/resources/views/pages",
-		"/C/OSPanel/domains/monster-lab/resources/views/posts"
+		"/C/OSPanel/domains/monster-lab/app",
+		"/C/OSPanel/domains/monster-lab/app/Http",
+		"/C/OSPanel/domains/monster-lab/app/Http/Controllers",
+		"/C/OSPanel/domains/monster-lab/app/Notifications",
+		"/C/OSPanel/domains/monster-lab/routes",
+		"/C/OSPanel/domains/monster-lab/tests",
+		"/C/OSPanel/domains/monster-lab/tests/Feature"
 	],
 	"file_history":
 	[
+		"/C/OSPanel/domains/monster-lab/tests/Feature/RegistrationTest.php",
+		"/C/OSPanel/domains/monster-lab/tests/Unit/NotificationEmailsTest.php",
+		"/C/OSPanel/domains/monster-lab/resources/views/posts/sidebar.blade.php",
+		"/C/OSPanel/domains/monster-lab/tests/Unit/EventsTest.php",
+		"/C/OSPanel/domains/monster-lab/tests/Unit/NotificationsTest.php",
+		"/C/OSPanel/domains/monster-lab/tests/Feature/NotificationOperationsTest.php",
+		"/C/OSPanel/domains/monster-lab/app/Notifications/UserConfirmed.php",
+		"/C/OSPanel/domains/monster-lab/app/Notifications/ReplyCreatedUserNotification.php",
+		"/C/OSPanel/domains/monster-lab/app/Notifications/PostCreatedAdminNotification.php",
+		"/C/OSPanel/domains/monster-lab/app/Notifications/ReplyCreatedAdminNotification.php",
+		"/C/OSPanel/domains/monster-lab/app/User.php",
+		"/C/OSPanel/domains/monster-lab/routes/web.php",
+		"/C/OSPanel/domains/monster-lab/app/Http/Controllers/Auth/RegisterConfirmationController.php",
+		"/C/OSPanel/domains/monster-lab/resources/views/profiles/show.blade.php",
+		"/C/OSPanel/domains/monster-lab/resources/views/layouts/nav.blade.php",
+		"/C/OSPanel/domains/monster-lab/resources/views/profiles/notifications/reply_created_admin_notification.blade.php",
+		"/C/OSPanel/domains/monster-lab/resources/views/profiles/notifications/reply_created_user_notification.blade.php",
+		"/C/OSPanel/domains/monster-lab/resources/views/emails/notification/user-confirmed.blade.php",
+		"/C/OSPanel/domains/monster-lab/resources/views/profiles/notifications/user_confirmed.blade.php",
+		"/C/OSPanel/domains/monster-lab/resources/views/emails/notification/user-registered.blade.php",
+		"/C/OSPanel/domains/monster-lab/app/Http/Controllers/ProfilesController.php",
+		"/C/OSPanel/domains/monster-lab/resources/views/profiles/notifications/post_created_admin_notification.blade.php",
+		"/C/OSPanel/domains/monster-lab/resources/views/profiles/notifications/user_registered.blade.php",
+		"/C/OSPanel/domains/monster-lab/app/Listeners/InformAdminThatPostCreated.php",
+		"/C/OSPanel/domains/monster-lab/app/Listeners/InformAdminThatReplyCreated.php",
+		"/C/OSPanel/domains/monster-lab/app/Listeners/InformUserThatReplyCreated.php",
+		"/C/OSPanel/domains/monster-lab/tests/Feature/NotificationsTest.php",
+		"/C/OSPanel/domains/monster-lab/app/Http/Controllers/NotificationsController.php",
+		"/C/OSPanel/domains/monster-lab/resources/views/layouts/app.blade.php",
+		"/C/OSPanel/domains/forum/resources/views/layouts/nav.blade.php",
+		"/C/OSPanel/domains/forum/resources/assets/js/components/UserNotifications.vue",
+		"/C/OSPanel/domains/forum/resources/views/profiles/show.blade.php",
+		"/C/OSPanel/domains/monster-lab/app/Listeners/InformAdminThatUserRegistered.php",
+		"/C/OSPanel/domains/monster-lab/tests/TestCase.php",
+		"/C/OSPanel/domains/monster-lab/app/Notifications/UserRegistered.php",
+		"/C/OSPanel/domains/monster-lab/app/Providers/EventServiceProvider.php",
+		"/C/OSPanel/domains/monster-lab/resources/views/emails/notification/reply-created.blade.php",
+		"/C/OSPanel/domains/monster-lab/app/Events/PostCreated.php",
+		"/C/OSPanel/domains/monster-lab/resources/views/emails/notification/post-created.blade.php",
+		"/C/OSPanel/domains/monster-lab/app/Events/ReplyCreated.php",
+		"/C/OSPanel/domains/monster-lab/app/Reply.php",
+		"/C/OSPanel/domains/monster-lab/app/Notifications/ReplyCreatedNotification.php",
+		"/C/OSPanel/domains/monster-lab/app/Listeners/SendConfirmEmailRequest.php",
+		"/C/OSPanel/domains/monster-lab/app/Http/Controllers/Auth/RegisterController.php",
+		"/C/OSPanel/domains/monster-lab/app/Notifications/PostCreatedNotification.php",
+		"/C/OSPanel/domains/monster-lab/app/Post.php",
+		"/C/OSPanel/domains/monster-lab/vendor/laravel/framework/src/Illuminate/Foundation/Auth/RegistersUsers.php",
+		"/C/OSPanel/domains/monster-lab/resources/views/emails/confirm.blade.php",
+		"/C/OSPanel/domains/monster-lab/app/Mail/ConfirmEmailRequest.php",
+		"/C/OSPanel/domains/monster-lab/app/Notifications/RegisteredNotification.php",
+		"/C/OSPanel/domains/monster-lab/app/Notifications/UserRegisteredNotification.php",
+		"/C/Users/Dev/Documents/Network/mac.txt",
+		"/C/OSPanel/domains/monster-lab/notes/replies.txt",
+		"/C/OSPanel/domains/smart/notes/Statistic.txt",
+		"/C/OSPanel/domains/monster-lab/resources/views/email/user-registered.blade.php",
+		"/C/OSPanel/domains/monster-lab/app/Mail/UserRegisteredMessage.php",
+		"/C/OSPanel/domains/monster-lab/app/Listeners/NewUserRegistered.php",
+		"/C/OSPanel/domains/forum/app/Listeners/SendEmailConfirmationRequest.php",
+		"/C/OSPanel/domains/forum/app/Listeners/NotifyMentionedUser.php",
+		"/C/OSPanel/domains/forum/app/Listeners/NotifySubscribers.php",
+		"/C/OSPanel/domains/monster-lab/vendor/laravel/framework/src/Illuminate/Auth/Events/Registered.php",
+		"/C/OSPanel/domains/monster-lab/tests/Feature/UserProfileTest.php",
+		"/C/OSPanel/domains/monster-lab/resources/assets/js/components/Reply.vue",
+		"/C/OSPanel/domains/monster-lab/resources/views/posts/show.blade.php",
+		"/C/OSPanel/domains/monster-lab/resources/views/posts/index.blade.php",
+		"/C/OSPanel/domains/monster-lab/resources/assets/js/authorizations.js",
+		"/C/OSPanel/domains/monster-lab/resources/assets/js/app.js",
+		"/C/OSPanel/domains/monster-lab/resources/assets/js/components/Replies.vue",
+		"/C/OSPanel/domains/monster-lab/app/Http/Controllers/PostRepliesController.php",
+		"/C/OSPanel/domains/forum/resources/assets/js/bootstrap.js",
+		"/C/OSPanel/domains/forum/resources/assets/js/components/Reply.vue",
+		"/C/OSPanel/domains/forum/resources/assets/js/components/Replies.vue",
+		"/C/OSPanel/domains/forum/resources/assets/js/app.js",
+		"/C/OSPanel/domains/monster-lab/resources/views/posts/layout.blade.php",
+		"/C/OSPanel/domains/monster-lab/tests/Feature/ReplyOperationsTest.php",
+		"/C/OSPanel/domains/monster-lab/resources/views/pages/main.blade.php",
+		"/C/OSPanel/domains/smart/app/User.php",
+		"/C/OSPanel/domains/forum/app/Reply.php",
+		"/C/OSPanel/domains/forum/app/Thread.php",
+		"/C/OSPanel/domains/forum/app/User.php",
+		"/C/OSPanel/domains/forum/resources/views/layouts/app.blade.php",
+		"/C/OSPanel/domains/monster-lab/app/Policies/ReplyPolicy.php",
+		"/C/OSPanel/domains/monster-lab/tests/Feature/PostOperationsTest.php",
+		"/C/OSPanel/domains/monster-lab/app/Providers/AuthServiceProvider.php",
+		"/C/OSPanel/domains/monster-lab/app/Policies/PostPolicy.php",
+		"/C/OSPanel/domains/monster-lab/app/Http/Controllers/PostsController.php",
+		"/C/OSPanel/domains/monster-lab/resources/views/errors/403.blade.php",
+		"/C/OSPanel/domains/monster-lab/vendor/laravel/framework/src/Illuminate/Http/Request.php",
+		"/C/OSPanel/domains/forum/app/Http/Controllers/ThreadsController.php",
+		"/C/OSPanel/domains/smart/app/Http/Controllers/ClientsController.php",
+		"/C/OSPanel/domains/research/html-purifier/notes.txt",
+		"/C/OSPanel/domains/monster-lab/resources/assets/js/components/ReplyCreate.vue",
+		"/C/OSPanel/domains/monster-lab/resources/assets/js/utilities/pagination.js",
+		"/C/OSPanel/domains/monster-lab/database/seeds/RepliesTableSeeder.php",
+		"/C/OSPanel/domains/monster-lab/resources/assets/js/components/Paginator.vue",
+		"/C/OSPanel/domains/monster-lab/database/seeds/UsersTableSeeder.php",
+		"/C/OSPanel/domains/monster-lab/database/seeds/DatabaseSeeder.php",
+		"/C/OSPanel/domains/monster-lab/database/factories/ReplyFactory.php",
+		"/C/OSPanel/domains/monster-lab/database/migrations/2017_10_08_220704_create_replies_table.php",
+		"/C/OSPanel/domains/research/laravel-mail/.env",
+		"/C/OSPanel/domains/monster-lab/resources/views/email/confirm.blade.php",
+		"/C/OSPanel/domains/monster-lab/.env",
+		"/C/OSPanel/domains/monster-lab/database/migrations/2014_10_12_000000_create_users_table.php",
+		"/C/OSPanel/domains/monster-lab/webpack.mix.js",
+		"/C/OSPanel/domains/monster-lab/app/Filters/PostFilters.php",
+		"/C/OSPanel/domains/research/search-scout-algolia/routes/web.php",
+		"/C/OSPanel/domains/research/search-scout-algolia/resources/views/welcome.blade.php",
+		"/C/OSPanel/domains/monster-lab/app/Providers/ViewComposerServiceProvider.php",
+		"/C/OSPanel/domains/monster-lab/resources/views/posts/edit.blade.php",
+		"/C/OSPanel/domains/monster-lab/resources/views/posts/create.blade.php",
+		"/C/OSPanel/domains/monster-lab/resources/views/layouts/sidebar.blade.php",
+		"/C/OSPanel/domains/monster-lab/database/seeds/TagsTableSeeder.php",
+		"/C/OSPanel/domains/monster-lab/database/seeds/PostsTableSeeder.php",
+		"/C/OSPanel/domains/smart/database/seeds/ClientsTableSeeder.php",
+		"/C/OSPanel/domains/smart/database/seeds/DatabaseSeeder.php",
+		"/C/OSPanel/domains/smart/database/seeds/CommentsTableSeeder.php",
+		"/C/OSPanel/domains/smart/database/seeds/PeopleTableSeeder.php",
+		"/C/OSPanel/domains/monster-lab/resources/assets/js/components/Flash.vue",
+		"/C/OSPanel/domains/monster-lab/tests/Feature/PostFiltersTest.php",
+		"/C/OSPanel/domains/smart/resources/views/layouts/app.blade.php",
 		"/C/OSPanel/domains/smart/resources/assets/js/app.js",
 		"/C/OSPanel/domains/monster-lab/app/Tools/helpers.php",
 		"/C/OSPanel/domains/smart/composer.json",
 		"/C/OSPanel/domains/smart/app/Tools/helpers.php",
-		"/C/OSPanel/domains/monster-lab/app/Providers/ViewComposerServiceProvider.php",
 		"/C/OSPanel/domains/smart/app/Providers/AppServiceProvider.php",
-		"/C/OSPanel/domains/monster-lab/tests/Feature/PostFiltersTest.php",
-		"/C/OSPanel/domains/monster-lab/app/Post.php",
-		"/C/OSPanel/domains/monster-lab/app/Http/Controllers/PostsController.php",
-		"/C/OSPanel/domains/monster-lab/resources/views/layouts/sidebar.blade.php",
-		"/C/OSPanel/domains/monster-lab/app/Filters/PostFilters.php",
-		"/C/OSPanel/domains/monster-lab/tests/Feature/PostOperationsTest.php",
 		"/C/OSPanel/domains/test/test.php",
 		"/C/OSPanel/domains/monster-lab/config/app.php",
-		"/C/OSPanel/domains/monster-lab/resources/views/posts/index.blade.php",
-		"/C/OSPanel/domains/monster-lab/app/Providers/AppServiceProvider.php",
-		"/C/OSPanel/domains/monster-lab/database/migrations/2017_10_03_170059_create_posts_table.php",
-		"/C/Users/Dev/Documents/Network/mac.txt",
-		"/C/OSPanel/domains/monster-lab/phpunit.xml",
-		"/C/OSPanel/domains/smart/app/Client.php",
-		"/C/OSPanel/domains/monster-lab/app/Filters/Filters.php",
-		"/C/OSPanel/domains/smart/app/Filters/Filters.php",
-		"/C/OSPanel/domains/research/css-grid/index.html",
-		"/C/OSPanel/domains/monster-lab/readme.md",
-		"/C/OSPanel/domains/monster-lab/tests/Feature/TagOperationsTest.php",
-		"/C/OSPanel/domains/monster-lab/resources/views/posts/form.blade.php",
-		"/C/OSPanel/domains/monster-lab/resources/assets/js/app.js",
-		"/C/OSPanel/domains/monster-lab/app/Http/Controllers/TagsController.php",
-		"/C/OSPanel/domains/monster-lab/routes/web.php",
-		"/C/OSPanel/domains/monster-lab/resources/views/layouts/blog.blade.php",
-		"/Y/Dev/Projects/learn-Vue/01-basic-data-binding.html",
-		"/C/OSPanel/domains/index.html",
-		"/C/OSPanel/domains/monster-lab/resources/views/pages/main.blade.php",
-		"/C/OSPanel/domains/smart/phpunit.xml",
-		"/C/OSPanel/domains/smart/tests/Feature/ClientCrudOperationsTest.php",
-		"/C/OSPanel/domains/monster-lab/tests/TestCase.php",
-		"/C/OSPanel/domains/smart/tests/TestCase.php",
-		"/C/OSPanel/domains/monster-lab/composer.json",
-		"/C/OSPanel/domains/monster-lab/resources/views/layouts/app.blade.php",
-		"/C/OSPanel/domains/monster-lab/resources/views/posts/show.blade.php",
-		"/C/OSPanel/domains/smart/resources/assets/js/components/Tags.vue",
-		"/C/OSPanel/domains/smart/resources/assets/js/components/TagsList.vue",
-		"/C/OSPanel/domains/monster-lab/app/Tag.php",
-		"/C/OSPanel/domains/monster-lab/database/factories/TagFactory.php",
-		"/C/OSPanel/domains/monster-lab/database/migrations/2017_10_04_223753_create_tags_table.php",
-		"/C/OSPanel/domains/smart/database/migrations/2017_09_09_190209_create_clients_table.php",
-		"/C/OSPanel/domains/monster-lab/database/migrations/2017_10_04_214421_create_tags_table.php",
-		"/C/OSPanel/domains/smart/database/migrations/2017_09_10_185644_create_tags_table.php",
-		"/C/OSPanel/domains/monster-lab/.env",
-		"/C/OSPanel/domains/smart/.env",
-		"/C/OSPanel/domains/monster-lab/app/Http/Controllers/Auth/RegisterController.php",
-		"/C/OSPanel/domains/monster-lab/app/Http/Controllers/Auth/LoginController.php",
-		"/C/OSPanel/domains/monster-lab/public/js/myscript.js",
-		"/C/OSPanel/domains/research/laravel-queues-redis/resources/views/emails/hello.blade.php",
-		"/C/OSPanel/domains/research/laravel-mailing/routes/web.php",
-		"/C/OSPanel/domains/research/laravel-mailing/resources/views/pages/welcome.blade.php",
-		"/C/OSPanel/domains/research/laravel-mailing/storage/logs/laravel.log",
-		"/C/OSPanel/domains/research/laravel-mailing/.env",
-		"/C/OSPanel/domains/research/laravel-mailing/app/Mail/HelloAgain.php",
-		"/C/OSPanel/domains/research/laravel-mailing/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php",
-		"/C/OSPanel/domains/smart/resources/views/layouts/app.blade.php",
-		"/C/OSPanel/domains/smart/app/Tools/Flash.php",
-		"/C/OSPanel/domains/m-lab/readme.md",
-		"/C/OSPanel/domains/monsters-lab/resources/lang/ru.json",
-		"/C/OSPanel/domains/monsters-lab/resources/views/pages/main.blade.php",
-		"/C/OSPanel/domains/monsters-lab/routes/web.php",
-		"/C/OSPanel/domains/research/laravel-translation/routes/web.php",
-		"/C/OSPanel/domains/monsters-lab/.env",
-		"/C/OSPanel/domains/monsters-lab/resources/views/layouts/nav.blade.php",
-		"/C/OSPanel/domains/monsters-lab/public/js/myscript.js",
-		"/C/OSPanel/domains/monsters-lab/resources/assets/js/app.js",
-		"/C/OSPanel/domains/monsters-lab/public/css/style.css",
-		"/C/OSPanel/domains/monsters-lab/resources/views/layouts/app.blade.php",
-		"/C/OSPanel/domains/monsters-lab/resources/assets/sass/app.scss",
-		"/C/OSPanel/domains/monsters-lab/resources/assets/sass/_variables.scss",
-		"/C/OSPanel/domains/m-lab/monsterlab.php",
-		"/C/OSPanel/domains/monster-lab/resources/views/layouts/nav.blade.php",
-		"/C/OSPanel/domains/monster-lab/resources/views/welcome.blade.php",
-		"/C/OSPanel/domains/monster-lab/public/css/style.css",
-		"/C/OSPanel/domains/monster-lab/package.json",
-		"/C/OSPanel/domains/research/laravel-mailing/vendor/laravel/framework/src/Illuminate/Mail/Mailable.php",
-		"/C/OSPanel/domains/research/laravel-mailing/vendor/laravel/framework/src/Illuminate/Contracts/Mail/Mailable.php",
-		"/C/OSPanel/domains/research/laravel-mailing/vendor/laravel/framework/src/Illuminate/Mail/Mailer.php",
-		"/C/OSPanel/domains/research/laravel-mailing/resources/views/emails/hello-again.blade.php",
-		"/C/OSPanel/domains/research/laravel-mailing/resources/views/vendor/mail/html/themes/mw-theme.css",
-		"/C/OSPanel/domains/research/laravel-mailing/config/app.php",
-		"/C/OSPanel/domains/research/laravel-mailing/config/mail.php",
-		"/C/OSPanel/domains/research/laravel-mailing/resources/views/emails/hello.blade.php",
-		"/C/OSPanel/domains/research/laravel-mailing/app/Mail/HelloMessage.php",
-		"/C/OSPanel/domains/forum/.env",
-		"/Z/Shared/.env",
-		"/Z/Shared/webdev/pmo/.env",
-		"/Z/Shared/webdev/travelblog/.env",
-		"/Z/Shared/web.php",
-		"/Z/Shared/.env2",
-		"/C/OSPanel/domains/smart/resources/views/clients/index.blade.php",
-		"/C/OSPanel/domains/smart/resources/views/clients/show.blade.php",
-		"/C/OSPanel/domains/smart/app/Http/Controllers/ClientFavoritesController.php",
-		"/C/OSPanel/domains/smart/app/Favoritable.php",
-		"/C/OSPanel/domains/smart/app/Favorite.php",
-		"/C/OSPanel/domains/smart/resources/assets/js/components/Favorite.vue",
-		"/C/OSPanel/domains/smart/database/migrations/2017_09_22_083541_create_favorites_table.php",
-		"/C/OSPanel/domains/smart/database/migrations/2017_09_22_085256_create_people_table.php",
-		"/C/OSPanel/domains/smart/app/Http/Controllers/PeopleController.php",
-		"/C/OSPanel/domains/smart/tests/Feature/IndustryJsonApiTest.php",
-		"/C/OSPanel/domains/smart/app/Http/Controllers/CatalogController.php",
-		"/C/OSPanel/domains/smart/tests/Feature/IndustryCrudOperationsTest.php",
-		"/C/OSPanel/domains/smart/resources/views/catalog/index.blade.php",
-		"/C/OSPanel/domains/smart/resources/views/catalog/show.blade.php",
-		"/C/OSPanel/domains/smart/resources/views/catalog/form.blade.php",
-		"/C/OSPanel/domains/smart/resources/views/catalog/edit.blade.php",
-		"/C/OSPanel/domains/smart/resources/views/tags/index.blade.php",
-		"/C/OSPanel/domains/smart/app/Http/Controllers/TagsController.php",
-		"/C/OSPanel/domains/smart/app/Http/Controllers/IndustriesController.php",
-		"/C/OSPanel/domains/smart/tests/Feature/UserProfileTest.php",
-		"/C/OSPanel/domains/smart/tests/Feature/ClientTagsTest.php",
-		"/C/OSPanel/domains/smart/tests/Feature/ClientCommentsTest.php",
-		"/C/OSPanel/domains/smart/app/Http/Controllers/ClientTagsController.php",
-		"/C/OSPanel/domains/smart/app/Http/Controllers/ClientCommentsController.php",
-		"/C/OSPanel/domains/smart/app/Comment.php",
-		"/C/OSPanel/domains/smart/routes/web.php",
-		"/C/OSPanel/domains/smart/tests/Unit/UserTest.php",
-		"/C/OSPanel/domains/smart/database/factories/CommentFactory.php",
-		"/C/OSPanel/domains/smart/vendor/laravel/framework/src/Illuminate/Foundation/Testing/Concerns/InteractsWithExceptionHandling.php",
-		"/C/OSPanel/domains/smart/database/migrations/2017_09_17_190323_create_comments_table.php",
-		"/C/OSPanel/domains/php-research/test.php",
-		"/C/OSPanel/domains/forum/resources/assets/js/components/Favorite.vue",
-		"/C/OSPanel/domains/smart/resources/views/clients/form.blade.php"
+		"/C/OSPanel/domains/monster-lab/app/Providers/AppServiceProvider.php"
 	],
 	"find":
 	{
@@ -757,6 +774,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"();\n",
 			"v-text"
 		],
 		"highlight": true,
@@ -775,61 +793,85 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 3,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "/C/OSPanel/domains/monster-lab/tests/Feature/PostFiltersTest.php",
+					"file": "/C/OSPanel/domains/monster-lab/notes/notifications.txt",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1206,
+						"buffer_size": 2589,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								748,
-								748
+								845,
+								845
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/Text/Plain text.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 425.0,
+						"translation.y": 365.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/C/OSPanel/domains/monster-lab/tests/Feature/ProfilesTest.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 456,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								422,
+								422
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 2,
 					"type": "text"
 				},
 				{
-					"buffer": 1,
-					"file": "/C/OSPanel/domains/monster-lab/app/Providers/ViewComposerServiceProvider.php",
+					"buffer": 2,
+					"file": "/C/OSPanel/domains/test/test.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1769,
+						"buffer_size": 643,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								321,
-								321
+								605,
+								605
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/PHP/PHP.sublime-syntax"
 						},
 						"translation.x": 0.0,
 						"translation.y": 360.0,
@@ -839,88 +881,58 @@
 					"type": "text"
 				},
 				{
-					"buffer": 2,
-					"file": "/C/OSPanel/domains/monster-lab/resources/assets/js/app.js",
+					"buffer": 3,
+					"file": "/C/OSPanel/domains/smart/tests/Feature/AvatarUpdateTest.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 592,
+						"buffer_size": 2380,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								489,
-								489
+								0,
+								0
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 1710.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
 					"type": "text"
 				},
 				{
-					"buffer": 3,
-					"file": "/C/OSPanel/domains/monster-lab/app/Http/Controllers/PostsController.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3274,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								561,
-								561
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 360.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
 					"buffer": 4,
-					"file": "/C/OSPanel/domains/monster-lab/app/Filters/PostFilters.php",
-					"semi_transient": false,
+					"file": "/C/OSPanel/domains/monster-lab/app/Http/Controllers/ProfilesController.php",
+					"semi_transient": true,
 					"settings":
 					{
-						"buffer_size": 1054,
+						"buffer_size": 406,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1054,
-								1054
+								0,
+								0
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/PHP/PHP.sublime-syntax"
 						},
 						"translation.x": 0.0,
-						"translation.y": 755.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 3,
@@ -1158,7 +1170,7 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 356.0,
+	"side_bar_width": 267.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

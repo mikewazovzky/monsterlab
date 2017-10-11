@@ -18,6 +18,8 @@ Route::get('/profiles/{user}', 'ProfilesController@show')->name('profiles.show')
 Route::get('/user/{user}/notifications', 'NotificationsController@index')->name('notifications.index');
 Route::delete('/user/{user}/notifications/{notification}', 'NotificationsController@markAsRead')->name('notifications.markAsRead');
 Route::delete('/user/{user}/notifications', 'NotificationsController@markAllAsRead')->name('notifications.markAllAsRead');
+Route::post('/user/{user}/avatar', 'AvatarsController@store')->name('avatars.store');
+
 
 Route::resource('/tags', 'TagsController')->middleware('auth');
 Route::resource('/posts', 'PostsController');
