@@ -14,6 +14,18 @@
                     </button>
                 </div>
             </div>
+            <div class="text-center mt-1">
+                <label class="radio-inline">
+                    <input type="radio" name="search-type" id="mySQL" value="mySQL" checked> mySQL
+                </label>
+                <label class="radio-inline">
+                    <input type="radio" name="search-type" id="algolia" value="algolia" disabled> algolia
+                </label>
+                <label class="radio-inline">
+                    <input type="radio" name="search-type" id="elasticsearch" value="elasticsearch" disabled> elasticsearch
+                </label>
+            </div>
+
         </form>
     </div>
 </div>

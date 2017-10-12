@@ -7,7 +7,8 @@
             <avatar-form :user="{{ $profileUser }}" :changable="true"></avatar-form>
             <h1>{{ $profileUser->name }}</h1>
         </div>
-        @if($profileUser->isReader())
+
+        @if(auth()->id() == $profileUser->id && $profileUser->isReader() )
             <div class="well well-sm">
                 Your e-mail has not been confirmed yet.
                 Pls. press the <a href="{{ route('register.send') }}">link</a> to resend email confirmation request.
@@ -60,57 +61,69 @@
                 <div class="form-group form-group-sm">
                     <label for="name" class="col-sm-3 control-label">Name</label>
                     <div class="col-sm-9">
-                        <input type="text" class="form-control" id="name" name="name" value="{{ $profileUser->name }}">
+                        <input type="text" class="form-control" id="name" name="name" value="{{ $profileUser->name }}"
+                            @cannot('admin', $profileUser)
+                                disabled
+                            @endcannot
+                        >
                     </div>
                 </div>
 
-                <div class="form-group form-group-sm">
-                    <label for="email" class="col-sm-3 control-label">Email</label>
-                    <div class="col-sm-9">
-                        <input type="email" class="form-control" id="email" name="email" value="{{ $profileUser->email }}">
-                    </div>
-                </div>
+                @can('update', $profileUser)
 
-                <div class="form-group form-group-sm">
-                    <div class="col-sm-offset-3 col-sm-9">
-                        <button type="submit" class="btn btn-sm btn-info">Update</button>
+                    <div class="form-group form-group-sm">
+                        <label for="email" class="col-sm-3 control-label">Email</label>
+                        <div class="col-sm-9">
+                            <input type="email" class="form-control" id="email" name="email" value="{{ $profileUser->email }}">
+                        </div>
                     </div>
-                </div>
+
+                    <div class="form-group form-group-sm">
+                        <div class="col-sm-offset-3 col-sm-9">
+                            <button type="submit" class="btn btn-sm btn-info">Update</button>
+                        </div>
+                    </div>
+
+                @endcan
+
             </form>
         </div>
     </div>
 
     {{-- USER PASSWORD FORM --}}
-    <div class="panel panel-default">
-        <div class="panel-body">
-            <form class="form-horizontal" method="POST" action="{{ route('user.update.password', $profileUser) }}">
-                {{ method_field('PATCH') }}
-                {{ csrf_field() }}
+    @can('update', $profileUser)
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <form class="form-horizontal" method="POST" action="{{ route('user.update.password', $profileUser) }}">
+                    {{ method_field('PATCH') }}
+                    {{ csrf_field() }}
 
-                <div class="form-group form-group-sm">
-                    <label for="password" class="col-sm-3 control-label">Password</label>
-                    <div class="col-sm-9">
-                        <input type="password" class="form-control" id="password" name="password" value="**************">
+                    <div class="form-group form-group-sm">
+                        <label for="password" class="col-sm-3 control-label">Password</label>
+                        <div class="col-sm-9">
+                            <input type="password" class="form-control" id="password" name="password" value="**************">
+                        </div>
                     </div>
-                </div>
 
-                <div class="form-group form-group-sm">
-                    <label for="password_confirmation" class="col-sm-3 control-label">Confirm Password</label>
-                    <div class="col-sm-9">
-                        <input type="password" class="form-control" id="password_confirmation" name="password_confirmation" value="**************">
+                    <div class="form-group form-group-sm">
+                        <label for="password_confirmation" class="col-sm-3 control-label">Confirm Password</label>
+                        <div class="col-sm-9">
+                            <input type="password" class="form-control" id="password_confirmation" name="password_confirmation" value="**************">
+                        </div>
                     </div>
-                </div>
 
-                <div class="form-group form-group-sm">
-                    <div class="col-sm-offset-3 col-sm-9">
-                        <button type="submit" class="btn btn-sm btn-info">Update</button>
+                    <div class="form-group form-group-sm">
+                        <div class="col-sm-offset-3 col-sm-9">
+                            <button type="submit" class="btn btn-sm btn-info">Update</button>
+                        </div>
                     </div>
-                </div>
-            </form>
+                </form>
+            </div>
         </div>
-    </div>
 
-    @include('layouts.errors')
+        @include('layouts.errors')
+
+    @endcan
 
     @if($notifications && $notifications->count())
         <table class="table table-condensed">
@@ -143,7 +156,7 @@
             <button class="btn btn-info">Mark ALL Read</button>
         </form>
     @else
-        There are no notifications at the moment.
+        There are no notifications for you at the moment.
     @endif
 
 @endsection

@@ -59419,7 +59419,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
             data.append('avatar', avatar.file);
 
-            axios.post('/users/' + this.user.name + '/avatar', data).then(function () {
+            axios.post('/users/' + this.user.id + '/avatar', data).then(function () {
                 flash('Avatar uploaded!');
 
                 _this2.avatar = avatar.src;

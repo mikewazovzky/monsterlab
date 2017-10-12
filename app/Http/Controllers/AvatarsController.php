@@ -8,18 +8,20 @@ use Illuminate\Support\Facades\Storage;
 
 class AvatarsController extends Controller
 {
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
+    // public function __construct()
+    // {
+    //     $this->middleware('auth');
+    // }
 
-    public function store()
+    public function store(User $user)
     {
+        $this->authorize('update', $user);
+
         request()->validate([
             'avatar' => ['required', 'image', 'max:400']
         ]);
 
-        $user = auth()->user();
+        // $user = auth()->user();
 
         $this->deleteAvatarFile($user);
 
