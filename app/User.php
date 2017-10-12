@@ -38,6 +38,11 @@ class User extends Authenticatable
         });
     }
 
+    /**
+     * Get the route key name for Laravel.
+     *
+     * @return string
+     */
     public function getRouteKeyName()
     {
         return 'slug';

@@ -30,6 +30,27 @@ class Post extends Model
      */
     protected $with = ['tags', 'user'];
 
+    protected static function boot()
+    {
+        parent::boot();
+
+        static::created(function ($post) {
+            $post->update([
+                'slug' => $post->title
+            ]);
+        });
+    }
+
+    /**
+     * Get the route key name for Laravel.
+     *
+     * @return string
+     */
+    public function getRouteKeyName()
+    {
+        return 'slug';
+    }
+
     /**
      * Get a user the post belongs to.
      *
@@ -101,5 +122,16 @@ class Post extends Model
         }
 
         return $stats;
+    }
+
+    public function setSlugAttribute($value)
+    {
+        $slug = str_slug($value);
+
+        if (static::whereSlug($slug)->exists()) {
+            $slug = "{$slug}-" . $this->id;
+        }
+
+        $this->attributes['slug'] = $slug;
     }
 }

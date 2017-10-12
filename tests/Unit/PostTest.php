@@ -5,15 +5,15 @@ namespace Tests\Feature;
 use Tests\TestCase;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 
-class UserTest extends TestCase
+class PostTest extends TestCase
 {
     use DatabaseMigrations;
 
     /** @test */
     public function it_creates_a_slug()
     {
-        $user = create('App\User');
+        $post = create('App\Post');
 
-        $this->assertEquals(str_slug($user->name), $user->fresh()->slug);
+        $this->assertEquals(str_slug($post->title), $post->fresh()->slug);
     }
 }

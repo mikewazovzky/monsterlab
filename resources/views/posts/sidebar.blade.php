@@ -54,7 +54,7 @@
         <ul>
             @foreach($latest as $post)
                 <li>
-                    <a href="/posts/{{ $post->id }}">
+                    <a href="{{ route('posts.show', $post) }}">
                         {{ substr($post->title, 0, 40) . '...' }}
                     </a>
                     by
@@ -75,7 +75,7 @@
         <ul>
             @foreach($popular as $post)
                 <li>
-                    <a href="/posts/{{ $post->id }}">
+                    <a href="{{ route('posts.show', $post) }}">
                         {{ substr($post->title, 0, 40) . '...' }}
                     </a>
                     by

@@ -50,7 +50,7 @@
             },
 
             profile() {
-                return '/profiles/' + this.item.user.id;
+                return '/profiles/' + this.item.user.slug;
             },
 
             canUpdate() {

@@ -58934,7 +58934,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             return __WEBPACK_IMPORTED_MODULE_0_moment___default()(this.data.created_at).fromNow() + '...';
         },
         profile: function profile() {
-            return '/profiles/' + this.item.user.id;
+            return '/profiles/' + this.item.user.slug;
         },
         canUpdate: function canUpdate() {
             return this.authorize('updateReply', this.item);
@@ -59419,7 +59419,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
             data.append('avatar', avatar.file);
 
-            axios.post('/users/' + this.user.id + '/avatar', data).then(function () {
+            axios.post('/users/' + this.user.slug + '/avatar', data).then(function () {
                 flash('Avatar uploaded!');
 
                 _this2.avatar = avatar.src;
