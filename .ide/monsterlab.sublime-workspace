@@ -4,6 +4,26 @@
 		"selected_items":
 		[
 			[
+				"updated",
+				"updatedEmail"
+			],
+			[
+				"upd",
+				"updatedRole"
+			],
+			[
+				"assert",
+				"assertStatus"
+			],
+			[
+				"profile",
+				"profileUser"
+			],
+			[
+				"marg",
+				"margin-right"
+			],
+			[
 				"po",
 				"profileUser"
 			],
@@ -494,10 +514,6 @@
 			[
 				"p",
 				"person"
-			],
-			[
-				"cons",
-				"console"
 			]
 		]
 	},
@@ -513,36 +529,64 @@
 			}
 		},
 		{
-			"file": "/C/OSPanel/domains/monster-lab/tests/Feature/ProfilesTest.php",
+			"file": "/C/OSPanel/domains/monster-lab/resources/views/profiles/show.blade.php",
 			"settings":
 			{
-				"buffer_size": 456,
+				"buffer_size": 5644,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "/C/OSPanel/domains/test/test.php",
+			"file": "/C/OSPanel/domains/monster-lab/tests/Feature/UserProfileTest.php",
 			"settings":
 			{
-				"buffer_size": 643,
+				"buffer_size": 4102,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "/C/OSPanel/domains/smart/tests/Feature/AvatarUpdateTest.php",
+			"file": "/C/OSPanel/domains/monster-lab/app/Http/Controllers/UserDataController.php",
 			"settings":
 			{
-				"buffer_size": 2380,
+				"buffer_size": 438,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Y/Tutorials/PHP/PHP (profIT)/PHP-1/About.txt",
+			"settings":
+			{
+				"buffer_size": 14304,
+				"encoding": "Western (Windows 1252)",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "/C/OSPanel/domains/monster-lab/app/Http/Controllers/ProfilesController.php",
+			"file": "/C/OSPanel/domains/monster-lab/app/Http/Controllers/UserPasswordsController.php",
 			"settings":
 			{
-				"buffer_size": 406,
+				"buffer_size": 423,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/C/OSPanel/domains/monster-lab/routes/web.php",
+			"settings":
+			{
+				"buffer_size": 2326,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/OSPanel/domains/monster-lab/app/Http/Controllers/UserRolesController.php",
+			"settings":
+			{
+				"buffer_size": 381,
+				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		}
@@ -622,13 +666,38 @@
 		"/C/OSPanel/domains/monster-lab/app",
 		"/C/OSPanel/domains/monster-lab/app/Http",
 		"/C/OSPanel/domains/monster-lab/app/Http/Controllers",
-		"/C/OSPanel/domains/monster-lab/app/Notifications",
+		"/C/OSPanel/domains/monster-lab/app/Http/Controllers/Auth",
+		"/C/OSPanel/domains/monster-lab/resources",
+		"/C/OSPanel/domains/monster-lab/resources/views",
+		"/C/OSPanel/domains/monster-lab/resources/views/layouts",
+		"/C/OSPanel/domains/monster-lab/resources/views/posts",
+		"/C/OSPanel/domains/monster-lab/resources/views/profiles",
 		"/C/OSPanel/domains/monster-lab/routes",
 		"/C/OSPanel/domains/monster-lab/tests",
 		"/C/OSPanel/domains/monster-lab/tests/Feature"
 	],
 	"file_history":
 	[
+		"/C/OSPanel/domains/monster-lab/app/Http/Controllers/UserDataController.php",
+		"/C/OSPanel/domains/monster-lab/app/Http/Controllers/AvatarsController.php",
+		"/C/OSPanel/domains/monster-lab/resources/assets/js/app.js",
+		"/C/OSPanel/domains/monster-lab/resources/views/posts/show.blade.php",
+		"/C/OSPanel/domains/monster-lab/resources/assets/js/components/AvatarForm.vue",
+		"/C/Users/Dev/Documents/Network/mac.txt",
+		"/C/OSPanel/domains/forum/resources/views/threads/index.blade.php",
+		"/C/OSPanel/domains/forum/resources/views/threads/list.blade.php",
+		"/C/OSPanel/domains/monster-lab/tests/Feature/AvatarUpdateTest.php",
+		"/C/OSPanel/domains/monster-lab/resources/views/layouts/app.blade.php",
+		"/C/OSPanel/domains/smart/resources/views/profiles/show.blade.php",
+		"/C/OSPanel/domains/monster-lab/routes/web.php",
+		"/C/OSPanel/domains/monster-lab/app/User.php",
+		"/C/OSPanel/domains/smart/app/User.php",
+		"/C/OSPanel/domains/monster-lab/database/migrations/2014_10_12_000000_create_users_table.php",
+		"/C/OSPanel/domains/smart/database/migrations/2014_10_12_000000_create_users_table.php",
+		"/C/OSPanel/domains/smart/app/Http/Controllers/Api/UserAvatarController.php",
+		"/C/OSPanel/domains/test/test.php",
+		"/C/OSPanel/domains/monster-lab/tests/Feature/ProfilesTest.php",
+		"/C/OSPanel/domains/smart/tests/Feature/AvatarUpdateTest.php",
 		"/C/OSPanel/domains/monster-lab/tests/Feature/RegistrationTest.php",
 		"/C/OSPanel/domains/monster-lab/tests/Unit/NotificationEmailsTest.php",
 		"/C/OSPanel/domains/monster-lab/resources/views/posts/sidebar.blade.php",
@@ -639,8 +708,6 @@
 		"/C/OSPanel/domains/monster-lab/app/Notifications/ReplyCreatedUserNotification.php",
 		"/C/OSPanel/domains/monster-lab/app/Notifications/PostCreatedAdminNotification.php",
 		"/C/OSPanel/domains/monster-lab/app/Notifications/ReplyCreatedAdminNotification.php",
-		"/C/OSPanel/domains/monster-lab/app/User.php",
-		"/C/OSPanel/domains/monster-lab/routes/web.php",
 		"/C/OSPanel/domains/monster-lab/app/Http/Controllers/Auth/RegisterConfirmationController.php",
 		"/C/OSPanel/domains/monster-lab/resources/views/profiles/show.blade.php",
 		"/C/OSPanel/domains/monster-lab/resources/views/layouts/nav.blade.php",
@@ -657,7 +724,6 @@
 		"/C/OSPanel/domains/monster-lab/app/Listeners/InformUserThatReplyCreated.php",
 		"/C/OSPanel/domains/monster-lab/tests/Feature/NotificationsTest.php",
 		"/C/OSPanel/domains/monster-lab/app/Http/Controllers/NotificationsController.php",
-		"/C/OSPanel/domains/monster-lab/resources/views/layouts/app.blade.php",
 		"/C/OSPanel/domains/forum/resources/views/layouts/nav.blade.php",
 		"/C/OSPanel/domains/forum/resources/assets/js/components/UserNotifications.vue",
 		"/C/OSPanel/domains/forum/resources/views/profiles/show.blade.php",
@@ -680,7 +746,6 @@
 		"/C/OSPanel/domains/monster-lab/app/Mail/ConfirmEmailRequest.php",
 		"/C/OSPanel/domains/monster-lab/app/Notifications/RegisteredNotification.php",
 		"/C/OSPanel/domains/monster-lab/app/Notifications/UserRegisteredNotification.php",
-		"/C/Users/Dev/Documents/Network/mac.txt",
 		"/C/OSPanel/domains/monster-lab/notes/replies.txt",
 		"/C/OSPanel/domains/smart/notes/Statistic.txt",
 		"/C/OSPanel/domains/monster-lab/resources/views/email/user-registered.blade.php",
@@ -692,10 +757,8 @@
 		"/C/OSPanel/domains/monster-lab/vendor/laravel/framework/src/Illuminate/Auth/Events/Registered.php",
 		"/C/OSPanel/domains/monster-lab/tests/Feature/UserProfileTest.php",
 		"/C/OSPanel/domains/monster-lab/resources/assets/js/components/Reply.vue",
-		"/C/OSPanel/domains/monster-lab/resources/views/posts/show.blade.php",
 		"/C/OSPanel/domains/monster-lab/resources/views/posts/index.blade.php",
 		"/C/OSPanel/domains/monster-lab/resources/assets/js/authorizations.js",
-		"/C/OSPanel/domains/monster-lab/resources/assets/js/app.js",
 		"/C/OSPanel/domains/monster-lab/resources/assets/js/components/Replies.vue",
 		"/C/OSPanel/domains/monster-lab/app/Http/Controllers/PostRepliesController.php",
 		"/C/OSPanel/domains/forum/resources/assets/js/bootstrap.js",
@@ -705,7 +768,6 @@
 		"/C/OSPanel/domains/monster-lab/resources/views/posts/layout.blade.php",
 		"/C/OSPanel/domains/monster-lab/tests/Feature/ReplyOperationsTest.php",
 		"/C/OSPanel/domains/monster-lab/resources/views/pages/main.blade.php",
-		"/C/OSPanel/domains/smart/app/User.php",
 		"/C/OSPanel/domains/forum/app/Reply.php",
 		"/C/OSPanel/domains/forum/app/Thread.php",
 		"/C/OSPanel/domains/forum/app/User.php",
@@ -731,7 +793,6 @@
 		"/C/OSPanel/domains/research/laravel-mail/.env",
 		"/C/OSPanel/domains/monster-lab/resources/views/email/confirm.blade.php",
 		"/C/OSPanel/domains/monster-lab/.env",
-		"/C/OSPanel/domains/monster-lab/database/migrations/2014_10_12_000000_create_users_table.php",
 		"/C/OSPanel/domains/monster-lab/webpack.mix.js",
 		"/C/OSPanel/domains/monster-lab/app/Filters/PostFilters.php",
 		"/C/OSPanel/domains/research/search-scout-algolia/routes/web.php",
@@ -744,19 +805,7 @@
 		"/C/OSPanel/domains/monster-lab/database/seeds/PostsTableSeeder.php",
 		"/C/OSPanel/domains/smart/database/seeds/ClientsTableSeeder.php",
 		"/C/OSPanel/domains/smart/database/seeds/DatabaseSeeder.php",
-		"/C/OSPanel/domains/smart/database/seeds/CommentsTableSeeder.php",
-		"/C/OSPanel/domains/smart/database/seeds/PeopleTableSeeder.php",
-		"/C/OSPanel/domains/monster-lab/resources/assets/js/components/Flash.vue",
-		"/C/OSPanel/domains/monster-lab/tests/Feature/PostFiltersTest.php",
-		"/C/OSPanel/domains/smart/resources/views/layouts/app.blade.php",
-		"/C/OSPanel/domains/smart/resources/assets/js/app.js",
-		"/C/OSPanel/domains/monster-lab/app/Tools/helpers.php",
-		"/C/OSPanel/domains/smart/composer.json",
-		"/C/OSPanel/domains/smart/app/Tools/helpers.php",
-		"/C/OSPanel/domains/smart/app/Providers/AppServiceProvider.php",
-		"/C/OSPanel/domains/test/test.php",
-		"/C/OSPanel/domains/monster-lab/config/app.php",
-		"/C/OSPanel/domains/monster-lab/app/Providers/AppServiceProvider.php"
+		"/C/OSPanel/domains/smart/database/seeds/CommentsTableSeeder.php"
 	],
 	"find":
 	{
@@ -793,7 +842,7 @@
 	"groups":
 	[
 		{
-			"selected": 3,
+			"selected": 4,
 			"sheets":
 			[
 				{
@@ -821,80 +870,54 @@
 						"translation.y": 365.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 7,
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "/C/OSPanel/domains/monster-lab/tests/Feature/ProfilesTest.php",
+					"file": "/C/OSPanel/domains/monster-lab/resources/views/profiles/show.blade.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 456,
+						"buffer_size": 5644,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								422,
-								422
+								2996,
+								2996
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/PHP/PHP.sublime-syntax"
+							"syntax": "Packages/Laravel Blade Highlighter/blade.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 1530.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 5,
 					"type": "text"
 				},
 				{
 					"buffer": 2,
-					"file": "/C/OSPanel/domains/test/test.php",
+					"file": "/C/OSPanel/domains/monster-lab/tests/Feature/UserProfileTest.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 643,
+						"buffer_size": 4102,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								605,
-								605
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 360.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "/C/OSPanel/domains/smart/tests/Feature/AvatarUpdateTest.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2380,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
+								151,
+								166
 							]
 						],
 						"settings":
@@ -904,19 +927,49 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1710.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "/C/OSPanel/domains/monster-lab/app/Http/Controllers/UserDataController.php",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 438,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								406,
+								406
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
 					"buffer": 4,
-					"file": "/C/OSPanel/domains/monster-lab/app/Http/Controllers/ProfilesController.php",
-					"semi_transient": true,
+					"file": "/Y/Tutorials/PHP/PHP (profIT)/PHP-1/About.txt",
+					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 406,
+						"buffer_size": 14304,
 						"regions":
 						{
 						},
@@ -925,6 +978,94 @@
 							[
 								0,
 								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "/C/OSPanel/domains/monster-lab/app/Http/Controllers/UserPasswordsController.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 423,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								414,
+								414
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "/C/OSPanel/domains/monster-lab/routes/web.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2326,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1450,
+								1456
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 180.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "/C/OSPanel/domains/monster-lab/app/Http/Controllers/UserRolesController.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 381,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								378,
+								131
 							]
 						],
 						"settings":

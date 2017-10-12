@@ -11,10 +11,16 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
+        $mailDriver = config('mail.driver');
+        config(['mail.driver' => 'log']);
+
         $this->call(UsersTableSeeder::class);
         $this->call(TagsTableSeeder::class);
         $this->call(PostsTableSeeder::class);
         $this->call(RepliesTableSeeder::class);
+
+        config(['mail.driver' => $mailDriver]);
+
         cache()->flush();
     }
 }

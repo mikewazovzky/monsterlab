@@ -39,7 +39,7 @@
 
                 data.append('avatar', avatar.file);
 
-                axios.post(`/user/${this.user.name}/avatar`, data)
+                axios.post(`/users/${this.user.name}/avatar`, data)
                     .then(() => {
                         flash('Avatar uploaded!');
 

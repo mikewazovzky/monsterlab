@@ -35,6 +35,8 @@
 
             <!-- Right Side Of Navbar -->
             <ul class="nav navbar-nav navbar-right">
+                <li><a href="{{ route('contacts') }}">Contacts</a></li>
+                <li><a href="{{ route('about') }}">About</a></li>
                 <!-- Authentication Links -->
                 @guest
                     <li><a href="{{ route('login') }}">Login</a></li>

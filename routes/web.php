@@ -14,12 +14,14 @@ Auth::routes();
 Route::get('/register/confirm', 'Auth\RegisterConfirmationController@confirm')->name('register.confirm');
 Route::get('/register/sendconfirmationrequest', 'Auth\RegisterConfirmationController@send')->name('register.send')->middleware('auth');
 
-Route::get('/profiles/{user}', 'ProfilesController@show')->name('profiles.show');
+Route::get('/profiles/{user}', 'ProfilesController@show')->name('profiles.show')->middleware('auth');
 Route::get('/user/{user}/notifications', 'NotificationsController@index')->name('notifications.index');
 Route::delete('/user/{user}/notifications/{notification}', 'NotificationsController@markAsRead')->name('notifications.markAsRead');
 Route::delete('/user/{user}/notifications', 'NotificationsController@markAllAsRead')->name('notifications.markAllAsRead');
-Route::post('/user/{user}/avatar', 'AvatarsController@store')->name('avatars.store');
-
+Route::post('/users/{user}/avatar', 'AvatarsController@store')->name('avatars.store');
+Route::patch('/users/{user}/role', 'UsersUpdateController@role')->name('user.update.role')->middleware('auth');
+Route::patch('/users/{user}/data', 'UsersUpdateController@data')->name('user.update.data')->middleware('auth');
+Route::patch('/users/{user}/password', 'UsersUpdateController@password')->name('user.update.password')->middleware('auth');
 
 Route::resource('/tags', 'TagsController')->middleware('auth');
 Route::resource('/posts', 'PostsController');
@@ -29,17 +31,12 @@ Route::patch('/posts/{post}/replies/{reply}', 'PostRepliesController@update')->n
 Route::delete('/posts/{post}/replies/{reply}', 'PostRepliesController@destroy')->name('post.replies.destroy');
 
 
+Route::get('/main/{locale?}', 'PagesController@index')->name('main');
+Route::view('/about', 'pages.about')->name('about');
+Route::view('/contacts', 'pages.contacts')->name('contacts');
+
 Route::redirect('/', '/main', 301);
 Route::redirect('/home', '/main', 301);  // TEMPORARY: find actions that redirect home!
 
-Route::get('/main/{locale?}', function ($locale = null) {
-    if ($locale != 'ru') {
-        $locale = 'en';
-    }
-
-    App::setLocale($locale);
-
-    return view('pages.main', compact('locale'));
-})->name('main');
 
 
