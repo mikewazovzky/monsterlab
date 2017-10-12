@@ -58,16 +58,17 @@
                 {{ method_field('PATCH') }}
                 {{ csrf_field() }}
 
-                <div class="form-group form-group-sm">
-                    <label for="name" class="col-sm-3 control-label">Name</label>
-                    <div class="col-sm-9">
-                        <input type="text" class="form-control" id="name" name="name" value="{{ $profileUser->name }}"
-                            @cannot('admin', $profileUser)
-                                disabled
-                            @endcannot
-                        >
+
+                    <div class="form-group form-group-sm">
+                        <label for="name" class="col-sm-3 control-label">Name</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" id="name" name="name" value="{{ $profileUser->name }}"
+                                @cannot('update', $profileUser)
+                                    disabled
+                                @endcannot
+                            >
+                        </div>
                     </div>
-                </div>
 
                 @can('update', $profileUser)
 

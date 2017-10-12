@@ -19,9 +19,16 @@ class Post extends Model
         'user_id' => 'integer'
     ];
 
-    protected $dispatchesEvents = [
-        'created' => PostCreated::class,
-    ];
+    /**
+     * The attributes that should be hidden for arrays (toArray()) and json (json_encode()).
+     *
+     * @var array
+     */
+    protected $hidden = [];
+
+    // protected $dispatchesEvents = [
+    //     'created' => PostCreated::class,
+    // ];
 
     /**
      * The relationships that shoul be eager loaded every tyme the model is retrieved.
@@ -38,6 +45,8 @@ class Post extends Model
             $post->update([
                 'slug' => $post->title
             ]);
+
+            event(new PostCreated($post));
         });
     }
 

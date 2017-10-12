@@ -57,6 +57,7 @@ class ReplyCreatedUserNotification extends Notification
             'reply' => $this->reply,
             'user' => $this->reply->user,
             'post_title' => $this->reply->post->title,
+            'post_slug' => $this->reply->post->slug,
         ];
     }
 }

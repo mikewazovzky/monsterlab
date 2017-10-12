@@ -17,7 +17,7 @@ class RepliesTableSeeder extends Seeder
         $faker = FakerFactory::create();
 
         Post::all()->each(function ($post) use ($faker) {
-            for ($i = 0; $i < 25; $i++) {
+            for ($i = 0; $i < 5; $i++) {
                 Reply::create([
                     'user_id' => factory('App\User')->create()->id,
                     'post_id' => $post->id,
