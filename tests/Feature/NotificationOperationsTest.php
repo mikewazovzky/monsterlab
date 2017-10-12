@@ -26,7 +26,7 @@ class NotificationOperationsTest extends TestCase
     /** @test */
     public function guest_may_not_fetch_notifications()
     {
-        $response = $this->getJson("user/1/notifications")->assertStatus(401);
+        $response = $this->getJson(route('notifications.index', 1))->assertStatus(401);
     }
 
     /** @test */
@@ -35,12 +35,12 @@ class NotificationOperationsTest extends TestCase
         $this->signIn($user = create('App\User'));
         $reply = create('App\Reply');
 
-        $response = $this->getJson("user/{$user->id}/notifications")->json();
+        $response = $this->getJson(route('notifications.index', $user))->json();
         $this->assertCount(0, $response);
 
         $user->notify(new ReplyCreatedUserNotification($reply));
 
-        $response = $this->getJson("user/{$user->id}/notifications")->json();
+        $response = $this->getJson(route('notifications.index', $user))->json();
         $this->assertCount(1, $response);
     }
 
@@ -51,12 +51,12 @@ class NotificationOperationsTest extends TestCase
         $user->notify(new ReplyCreatedUserNotification(create('App\Reply')));
         $notification = $user->notifications()->first();
 
-        $response = $this->getJson("user/{$user->id}/notifications")->json();
+        $response = $this->getJson(route('notifications.index', $user))->json();
         $this->assertCount(1, $response);
 
-        $this->deleteJson("user/{$user->id}/notifications/{$notification->id}")->assertStatus(200);
+        $this->deleteJson(route('notifications.markAsRead', [$user, $notification]))->assertStatus(200);
 
-        $response = $this->getJson("user/{$user->id}/notifications")->json();
+        $response = $this->getJson(route('notifications.index', $user))->json();
         $this->assertCount(0, $response);
     }
 
@@ -69,12 +69,12 @@ class NotificationOperationsTest extends TestCase
         $user->notify(new ReplyCreatedUserNotification(create('App\Reply')));
         $notification = $user->notifications()->first();
 
-        $response = $this->getJson("user/{$user->id}/notifications")->json();
+        $response = $this->getJson(route('notifications.index', $user))->json();
         $this->assertCount(1, $response);
 
-        $this->deleteJson("user/{$user->id}/notifications")->assertStatus(200);
+        $this->deleteJson(route('notifications.markAllAsRead', $user))->assertStatus(200);
 
-        $response = $this->getJson("user/{$user->id}/notifications")->json();
+        $response = $this->getJson(route('notifications.index', $user))->json();
         $this->assertCount(0, $response);
     }
 }

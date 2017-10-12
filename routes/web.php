@@ -15,13 +15,14 @@ Route::get('/register/confirm', 'Auth\RegisterConfirmationController@confirm')->
 Route::get('/register/sendconfirmationrequest', 'Auth\RegisterConfirmationController@send')->name('register.send')->middleware('auth');
 
 Route::get('/profiles/{user}', 'ProfilesController@show')->name('profiles.show')->middleware('auth');
-Route::get('/user/{user}/notifications', 'NotificationsController@index')->name('notifications.index');
-Route::delete('/user/{user}/notifications/{notification}', 'NotificationsController@markAsRead')->name('notifications.markAsRead');
-Route::delete('/user/{user}/notifications', 'NotificationsController@markAllAsRead')->name('notifications.markAllAsRead');
 Route::post('/users/{user}/avatar', 'AvatarsController@store')->name('avatars.store');
 Route::patch('/users/{user}/role', 'UsersUpdateController@role')->name('user.update.role')->middleware('auth');
 Route::patch('/users/{user}/data', 'UsersUpdateController@data')->name('user.update.data')->middleware('auth');
 Route::patch('/users/{user}/password', 'UsersUpdateController@password')->name('user.update.password')->middleware('auth');
+
+Route::get('/users/{user}/notifications', 'NotificationsController@index')->name('notifications.index');
+Route::delete('/users/{user}/notifications/{notification}', 'NotificationsController@markAsRead')->name('notifications.markAsRead');
+Route::delete('/users/{user}/notifications', 'NotificationsController@markAllAsRead')->name('notifications.markAllAsRead');
 
 Route::resource('/tags', 'TagsController')->middleware('auth');
 Route::resource('/posts', 'PostsController');
