@@ -70,8 +70,9 @@ class AvatarUpdateTest extends TestCase
 
         Storage::disk('public')->assertExists('avatars/' . $file->hashName());
     }
+
     /** @test */
-    public function a_user_has_avatar_path()
+    public function user_has_avatar_path()
     {
         $user = create('App\User');
 
@@ -83,7 +84,7 @@ class AvatarUpdateTest extends TestCase
     }
 
     /** @test */
-    public function an_old_avatar_file_is_deleted_when_avatar_is_updated()
+    public function old_avatar_file_is_deleted_when_avatar_is_updated()
     {
         $this->withoutExceptionHandling();
         Storage::fake('public');

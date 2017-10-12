@@ -15,7 +15,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password', 'confirmation_token', 'role', 'avatar_path',
+        'name', 'email', 'password', 'confirmation_token', 'role', 'avatar_path', 'slug',
     ];
 
     /**
@@ -26,6 +26,22 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token', 'confirmation_token', 'email', 'created_at', 'updated_at',
     ];
+
+    protected static function boot()
+    {
+        parent::boot();
+
+        static::created(function ($user) {
+            $user->update([
+                'slug' => $user->name
+            ]);
+        });
+    }
+
+    public function getRouteKeyName()
+    {
+        return 'slug';
+    }
 
     public function posts()
     {
@@ -64,5 +80,10 @@ class User extends Authenticatable
     {
         // return $avatar ? "/storage/{$avatar}" : '/images/default.png';
         return $avatar ? asset("/storage/{$avatar}") : asset('images/avatars/default.png');
+    }
+
+    public function setSlugAttribute($value)
+    {
+        $this->attributes['slug'] = str_slug($value);
     }
 }
