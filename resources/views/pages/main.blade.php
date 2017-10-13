@@ -6,7 +6,25 @@
 
 @section('content')
     <header>
-        @include('pages.main.nav')
+        {{-- @include('pages.main.nav') --}}
+        <main-menu>
+            <template slot="menu-items">
+                <li class="active"><a href="#featured">{{ __('Home') }}</a></li>
+                <li><a href="#mission">{{ __('Mission') }}</a></li>
+                <li><a href="#services">{{ __('Services') }}</a></li>
+                <li><a href="#staff">{{ __('Staff') }}</a></li>
+                <li><a href="#customers">{{ __('Customers') }}</a></li>
+                <li><a href="#contacts">{{ __('Contacts') }}</a></li>
+            </template>
+            <template slot="extra-items">
+                <li>
+                    <a href="/main/{{ $locale }}">
+                        <img src="/images/{{ $locale }}.png" title="{{ $locale == 'ru' ? 'English' : 'Русский' }}">
+                    </a>
+                </li>
+            </template>
+        </main-menu>
+
         <carousel>
             <div class="item"><img src="/images/carousel-team.jpg"   alt="Team"></div>
             <div class="item"><img src="/images/carousel-mike.jpg"   alt="Mike"></div>
@@ -16,11 +34,25 @@
     </header>
 
     <main class="main">
-        @include('pages.main.mission')
-        @include('pages.main.services')
-        @include('pages.main.staff')
-        @include('pages.main.customers')
-        @include('pages.main.contacts')
+        <section class="section" id="mission">
+            @include('pages.main.mission')
+        </section>
+
+        <section class="section" id="services">
+            @include('pages.main.services')
+        </section>
+
+        <section class="section" id="staff">
+            @include('pages.main.staff')
+        </section>
+
+        <section class="section" id="customers">
+            @include('pages.main.customers')
+        </section>
+
+        <section class="section" id="contacts">
+            @include('pages.main.contacts')
+        </section>
     </main>
 
     <footer id="footer">
@@ -28,6 +60,3 @@
     </footer>
 @endsection
 
-@section('footer')
-    <script src="/js/main.js"></script>
-@endsection

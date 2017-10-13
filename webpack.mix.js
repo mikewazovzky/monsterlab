@@ -13,9 +13,6 @@ mix.js([
    // Complile js assets specific to a blog
    // .. get rid of it, transfer into tags vue component
    .js('resources/assets/js/tags.js', 'public/js/blog.js')
-   // Complile js assets specific to main page
-   // .. get rid of it, turn into vue component(s)
-   .js('resources/assets/js/main.js', 'public/js/main.js')
    // Complile sass assets into app.css
    .sass('resources/assets/sass/app.scss', 'public/css')
    // Complile sass assets specific to main page into main.css

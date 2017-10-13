@@ -1,4 +1,4 @@
-webpackJsonp([3],{
+webpackJsonp([2],{
 
 /***/ "./resources/assets/js/tags.js":
 /***/ (function(module, exports) {

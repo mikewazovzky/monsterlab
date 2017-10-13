@@ -9,12 +9,12 @@ class PagesController extends Controller
 {
     public function index($locale = null)
     {
-        if ($locale != 'ru') {
-            $locale = 'en';
-        }
+        $locale = ($locale == 'ru') ? 'ru' : 'en';
 
         App::setLocale($locale);
 
-        return view('pages.main', compact('locale'));
+        $locale = ($locale == 'ru') ? 'en' : 'ru';
+
+        return view('pages.main', ['locale' => $locale]);
     }
 }
