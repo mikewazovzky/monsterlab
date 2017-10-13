@@ -1,39 +1,26 @@
-webpackJsonp([3],{
+webpackJsonp([2],{
 
 /***/ "./resources/assets/js/main.js":
-/***/ (function(module, exports) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-$(function someFunction() {
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__main_navigation__ = __webpack_require__("./resources/assets/js/main/navigation.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__main_scrollspy__ = __webpack_require__("./resources/assets/js/main/scrollspy.js");
 
-    var slideqty = $('#featured .item').length;
-    var wheight = window.innerHeight; // get the height of the window
-    var randSlide = Math.floor(Math.random() * slideqty);
 
-    $('#featured .item').eq(randSlide).addClass('active');
 
-    $('.fullheight').css('height', wheight); // set to window tallness
+Object(__WEBPACK_IMPORTED_MODULE_0__main_navigation__["a" /* default */])();
+Object(__WEBPACK_IMPORTED_MODULE_1__main_scrollspy__["a" /* default */])();
 
-    // replace IMG inside carousels with a background image
-    $('#featured .item img').each(function () {
-        var imgSrc = $(this).attr('src');
-        $(this).parent().css({ 'background-image': 'url(' + imgSrc + ')' });
-        $(this).remove();
-    });
+/***/ }),
 
-    // adjust height of .fullheight elements on window resize
-    $(window).resize(function () {
-        wheight = window.innerHeight; // get the height of the window
-        $('.fullheight').css('height', wheight); // set to window tallness
-    });
+/***/ "./resources/assets/js/main/navigation.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-    // Activate Scrollspy
-    var topoffset = 50; // variable for menu height
-    $('body').scrollspy({
-        target: 'header .navbar',
-        offset: topoffset
-    });
-
-    // add inbody class wheN page reloads
+"use strict";
+/* harmony default export */ __webpack_exports__["a"] = (function () {
+    // Add inbody class when page reloads
     var hash = $(this).find('li.active a').attr('href');
 
     if (hash !== '#featured') {
@@ -51,9 +38,26 @@ $(function someFunction() {
             $('header nav').removeClass('inbody');
         }
     });
+});
 
-    /*   //Use smooth scrolling when clicking on navigation
-    $('.navbar a[href*=#]:not([href=#])').click(function() {
+/***/ }),
+
+/***/ "./resources/assets/js/main/scrollspy.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony default export */ __webpack_exports__["a"] = (function () {
+  // Variable for menu height
+  var topoffset = 50;
+  // Activate Scrollspy
+  $('body').scrollspy({
+    target: 'header .navbar',
+    offset: topoffset
+  });
+
+  //Use smooth scrolling when clicking on navigation
+  /*************************************************
+  $('.navbar a[href*=#]:not([href=#])').click(function() {
     if (location.pathname.replace(/^\//,'') ===
       this.pathname.replace(/^\//,'') &&
       location.hostname === this.hostname) {
@@ -66,22 +70,8 @@ $(function someFunction() {
         return false;
       } //target.length
     } //click function
-    }); //smooth scrolling
-    */
-
-    // Automatically generate carousel indicators
-    for (var i = 0; i < slideqty; i++) {
-        var insertText = '<li data-target="#featured" data-slide-to="' + i + '"';
-        if (i === randSlide) {
-            insertText += ' class="active" ';
-        }
-        insertText += '></li>';
-        $('#featured ol').append(insertText);
-    }
-
-    $('.carousel').carousel({
-        pause: false
-    });
+  }); //smooth scrolling
+  ***************************************************/
 });
 
 /***/ }),

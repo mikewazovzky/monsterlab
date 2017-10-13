@@ -7,7 +7,12 @@
 @section('content')
     <header>
         @include('pages.main.nav')
-        @include('pages.main.carusel')
+        <carousel>
+            <div class="item"><img src="/images/carousel-team.jpg"   alt="Team"></div>
+            <div class="item"><img src="/images/carousel-mike.jpg"   alt="Mike"></div>
+            <div class="item"><img src="/images/carousel-ceila.jpg"  alt="Ceila"></div>
+            <div class="item"><img src="/images/carousel-sulley.jpg" alt="Sulley"></div>
+        </carousel>
     </header>
 
     <main class="main">
