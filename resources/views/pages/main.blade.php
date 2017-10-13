@@ -1,8 +1,7 @@
 @extends('layouts.app')
 
 @section('header')
-    <link rel="stylesheet" href="/css/style.css">
-    <script src="/js/prefixfree.min.js"></script>
+    <link href="{{ mix('/css/main.css') }}" rel="stylesheet"></link>
 @endsection
 
 @section('content')
@@ -228,5 +227,5 @@
 @endsection
 
 @section('footer')
-    <script src="/js/myscript.js"></script>
+    <script src="/js/main.js"></script>
 @endsection
