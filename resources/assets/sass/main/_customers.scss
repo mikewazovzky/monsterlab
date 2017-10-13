@@ -1,0 +1,89 @@
+// Section Customers
+
+#customers {
+  padding: 0;
+}
+
+#customers h2 {
+  display: none;
+}
+
+#customers blockquote {
+  margin: 0;
+  padding: 0;
+  border-left: none;
+  min-height: 500px;
+  position: relative;
+}
+
+#customers blockquote .quote {
+  background-color: rgba(255,255,255,.6);
+  padding: 20px 5%;
+  position: absolute;
+  bottom: 0;
+  width: 75%;
+  font-weight: 400;
+  border-radius: 0 50px 0 0;
+}
+
+#customers blockquote .quote:hover {
+  background-color: rgba(239,240,196,.9);
+}
+
+#customers #randell {
+  background: url(../images/customer-rendall.jpg) no-repeat center center;
+  background-size: cover;
+}
+
+#customers #henry {
+  background: url(../images/customer-henry.jpg) no-repeat center center;
+  background-size: cover;
+}
+
+#customers #roz {
+  background: url(../images/customer-roz.jpg) no-repeat center center;
+  background-size: cover;
+}
+
+#customers #boo {
+  background: url(../images/customer-boo.jpg) no-repeat center center;
+  background-size: cover;
+}
+
+#customers .quote {
+  font-size: 1.2em;
+  line-height: 110%;
+  font-weight: 400;
+}
+
+#customers .quote .more, #customers .customer {
+  opacity: 0;
+  font-size: 0;
+  line-height: 0;
+  padding-top: 10px;
+}
+
+#customers .quote:hover .more {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 100;
+  display: block;
+  opacity: 1;
+  font-size: .8em;
+  line-height: 120%;
+}
+
+#customers .quote:hover .customer {
+  display: block;
+  opacity: 1;
+  font-size: .7em;
+  text-align: right;
+  margin-top: 5px;
+}
+
+#customers .quote .intro::after {
+  content: '...';
+}
+
+#customers .quote:hover .intro::after {
+  content: '';
+}

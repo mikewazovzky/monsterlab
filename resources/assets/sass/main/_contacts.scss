@@ -1,0 +1,29 @@
+// Section Contacts
+
+#contacts {
+    color: #000;
+    font-size: .8em;
+    background: url(../images/team3.jpg);
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    background-size: contain;
+    height: 50vh;
+    margin-top: 50px;
+    margin-bottom: 40px;
+}
+
+#contacts h2 {
+    display: none;
+}
+
+#contacts .phone {
+  font-size: 1.4em;
+  font-weight: 700;
+  color: rgb(0,133,202);;
+}
+
+#contactdata {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+}
