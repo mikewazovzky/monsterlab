@@ -51,11 +51,11 @@
         <strong>Latest posts</strong>
     </div>
     <div class="panel-body">
-        <ul>
+        <ul class="sidebar-ul">
             @foreach($latest as $post)
                 <li>
                     <a href="{{ route('posts.show', $post) }}">
-                        {{ substr($post->title, 0, 25) . '...' }}
+                        {{ substr($post->title, 0, 30) . '...' }}
                     </a>
                     by
                     <a href="{{ route('profiles.show', $post->user) }}">
@@ -72,11 +72,11 @@
         <strong>Popular posts (top 5)</strong>
     </div>
     <div class="panel-body">
-        <ul>
+        <ul class="sidebar-ul">
             @foreach($popular as $post)
                 <li>
                     <a href="{{ route('posts.show', $post) }}">
-                        {{ substr($post->title, 0, 40) . '...' }}
+                        {{ substr($post->title, 0, 28) . '...' }}
                     </a>
                     by
                     <a href="{{ route('profiles.show', $post->user) }}">
@@ -93,7 +93,7 @@
         <strong>Archives</strong>
     </div>
     <div class="panel-body">
-        <ul>
+        <ul class="sidebar-ul">
             @foreach($archives as $period)
                 <li>
                     <a href="/posts?year={{ $period['year'] }}&month={{ $period['month'] }}">{{ $period['month'] . ' ' . $period['year'] }}</a>

@@ -24,6 +24,7 @@
         .tags li { list-style: none; display: inline; }
         .tags li:after { content: " | "; }
         .tags li:last-child:after { content: none; }
+        .sidebar-ul { padding-left: 20px; list-style-type: square; }
         .panel { margin: 7px 0; }
         .level { display: flex; align-items: center; }
         .flex { flex: 1; }
