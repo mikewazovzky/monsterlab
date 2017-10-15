@@ -30,6 +30,7 @@
         .mr-1 { margin-right: 1em; }
         .mt-1 { margin-top: 1em; }
         .panel-about { padding: 0; }
+        code { background-color: #535353; color: #eeeeee; padding: 3px;}
 
     </style>
     <!-- Pass data to JavaScript -->

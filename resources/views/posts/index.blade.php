@@ -21,7 +21,7 @@
                 </div>
             </div>
             <div class="panel-body">
-                <p>{{ substr($post->body, 0, 255) . ' ...' }}</p>
+                <p>{{ mb_substr(strip_tags($post->body), 0, 399) . ' ...' }}</p>
             </div>
             <div class="panel-footer">
                 @if($post->views)
