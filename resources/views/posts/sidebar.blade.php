@@ -35,7 +35,7 @@
         <strong>Tags</strong>
     </div>
     <div class="panel-body">
-        <ul>
+        <ul class="sidebar-ul">
             @foreach($tags as $tag)
                 <li>
                     <a href="/posts?tag={{ $tag->name }}">{{ $tag->name }}</a>
