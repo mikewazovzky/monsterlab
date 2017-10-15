@@ -4,6 +4,14 @@
 		"selected_items":
 		[
 			[
+				"sele",
+				"selectedTags"
+			],
+			[
+				"init",
+				"initSelect2"
+			],
+			[
 				"act",
 				"activeImage"
 			],
@@ -368,10 +376,6 @@
 				"couponApplied"
 			],
 			[
-				"sele",
-				"selectTab"
-			],
-			[
 				"hi",
 				"hideModal"
 			],
@@ -510,33 +514,11 @@
 			[
 				"flex",
 				"flexboxVideos"
-			],
-			[
-				"su",
-				"subie"
 			]
 		]
 	},
 	"buffers":
 	[
-		{
-			"file": "/C/OSPanel/domains/monster-lab/resources/assets/js/components/MainMenu.vue",
-			"settings":
-			{
-				"buffer_size": 3970,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "/C/OSPanel/domains/monster-lab/resources/assets/sass/app.scss",
-			"settings":
-			{
-				"buffer_size": 191,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -610,29 +592,36 @@
 	"expanded_folders":
 	[
 		"/C/OSPanel/domains/monster-lab",
-		"/C/OSPanel/domains/monster-lab/public",
-		"/C/OSPanel/domains/monster-lab/public/fonts",
-		"/C/OSPanel/domains/monster-lab/public/fonts/vendor",
-		"/C/OSPanel/domains/monster-lab/public/js",
-		"/C/OSPanel/domains/monster-lab/resources",
-		"/C/OSPanel/domains/monster-lab/resources/assets"
+		"/C/OSPanel/domains/monster-lab/app",
+		"/C/OSPanel/domains/monster-lab/app/Http",
+		"/C/OSPanel/domains/monster-lab/app/Http/Controllers",
+		"/C/OSPanel/domains/monster-lab/resources"
 	],
 	"file_history":
 	[
-		"/C/OSPanel/domains/monster-lab/resources/assets/sass/main/_carousel.scss",
+		"/C/OSPanel/domains/monster-lab/resources/assets/js/components/Tags.vue",
+		"/C/OSPanel/domains/monster-lab/webpack.mix.js",
+		"/C/OSPanel/domains/monster-lab/resources/views/posts/layout.blade.php",
+		"/C/OSPanel/domains/monster-lab/resources/views/posts/form.blade.php",
+		"/C/OSPanel/domains/monster-lab/app/Http/Controllers/PostsController.php",
+		"/C/OSPanel/domains/monster-lab/resources/assets/js/tags.js",
+		"/C/OSPanel/domains/monster-lab/app/Http/Controllers/TagsController.php",
+		"/C/OSPanel/domains/monster-lab/tests/Feature/TagOperationsTest.php",
+		"/C/OSPanel/domains/monster-lab/resources/assets/js/app.js",
+		"/C/OSPanel/domains/smart/resources/assets/js/components/Tags.vue",
+		"/C/OSPanel/domains/monster-lab/resources/assets/sass/app.scss",
+		"/C/OSPanel/domains/monster-lab/resources/assets/js/components/Carousel.vue",
 		"/C/OSPanel/domains/monster-lab/resources/assets/sass/main.scss",
+		"/C/OSPanel/domains/monster-lab/resources/assets/js/components/MainMenu.vue",
+		"/C/OSPanel/domains/monster-lab/resources/assets/sass/main/_carousel.scss",
 		"/C/OSPanel/domains/monster-lab/notes/notifications.txt",
 		"/C/OSPanel/domains/monster-lab/resources/views/pages/main.blade.php",
-		"/C/OSPanel/domains/monster-lab/resources/assets/js/components/Carousel.vue",
-		"/C/OSPanel/domains/monster-lab/resources/assets/js/components/MainMenu.vue",
-		"/C/OSPanel/domains/monster-lab/webpack.mix.js",
 		"/C/OSPanel/domains/monster-lab/app/Http/Controllers/PagesController.php",
 		"/C/OSPanel/domains/monster-lab/resources/views/pages/main/services.blade.php",
 		"/C/OSPanel/domains/monster-lab/resources/views/pages/main/contacts.blade.php",
 		"/C/OSPanel/domains/monster-lab/resources/views/pages/main/customers.blade.php",
 		"/C/OSPanel/domains/monster-lab/resources/views/pages/main/staff.blade.php",
 		"/C/OSPanel/domains/monster-lab/resources/views/pages/main/mission.blade.php",
-		"/C/OSPanel/domains/monster-lab/resources/assets/js/app.js",
 		"/C/OSPanel/domains/monster-lab/resources/assets/js/main.js",
 		"/C/OSPanel/domains/monster-lab/resources/views/pages/main/nav.blade.php",
 		"/C/OSPanel/domains/monster-lab/resources/assets/js/main/scrollspy.js",
@@ -647,13 +636,10 @@
 		"/C/OSPanel/domains/monster-lab/resources/assets/sass/main/_staff.scss",
 		"/C/OSPanel/domains/monster-lab/resources/assets/sass/main/_services.scss",
 		"/C/OSPanel/domains/monster-lab/resources/assets/sass/main/_nav.scss",
-		"/C/OSPanel/domains/monster-lab/resources/assets/sass/app.scss",
 		"/C/OSPanel/domains/monster-lab/resources/views/pages/main/stuff.blade.php",
 		"/C/OSPanel/domains/monster-lab/resources/views/layouts/app.blade.php",
-		"/C/OSPanel/domains/monster-lab/resources/views/posts/layout.blade.php",
 		"/C/OSPanel/domains/monster-lab/resources/assets/js/bootstrap.js",
 		"/C/OSPanel/domains/monster-lab/resources/assets/css/main.css",
-		"/C/OSPanel/domains/monster-lab/resources/assets/js/tags.js",
 		"/C/OSPanel/domains/monster-lab/public/css/app.css",
 		"/C/OSPanel/domains/monster-lab/tests/Unit/EventsTest.php",
 		"/C/Users/Dev/Documents/Network/mac.txt",
@@ -740,17 +726,11 @@
 		"/C/OSPanel/domains/monster-lab/app/Events/ReplyCreated.php",
 		"/C/OSPanel/domains/monster-lab/app/Reply.php",
 		"/C/OSPanel/domains/monster-lab/app/Notifications/ReplyCreatedNotification.php",
-		"/C/OSPanel/domains/monster-lab/app/Listeners/SendConfirmEmailRequest.php",
-		"/C/OSPanel/domains/monster-lab/app/Http/Controllers/Auth/RegisterController.php",
-		"/C/OSPanel/domains/monster-lab/app/Notifications/PostCreatedNotification.php",
-		"/C/OSPanel/domains/monster-lab/vendor/laravel/framework/src/Illuminate/Foundation/Auth/RegistersUsers.php",
-		"/C/OSPanel/domains/monster-lab/resources/views/emails/confirm.blade.php",
-		"/C/OSPanel/domains/monster-lab/app/Mail/ConfirmEmailRequest.php",
-		"/C/OSPanel/domains/monster-lab/app/Notifications/RegisteredNotification.php"
+		"/C/OSPanel/domains/monster-lab/app/Listeners/SendConfirmEmailRequest.php"
 	],
 	"find":
 	{
-		"height": 73.0
+		"height": 34.0
 	},
 	"find_in_files":
 	{
@@ -786,67 +766,8 @@
 	"groups":
 	[
 		{
-			"selected": 1,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "/C/OSPanel/domains/monster-lab/resources/assets/js/components/MainMenu.vue",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3970,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								3960,
-								2091
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Vue Syntax Highlight/vue.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 1145.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "/C/OSPanel/domains/monster-lab/resources/assets/sass/app.scss",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 191,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								191,
-								191
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Syntax Highlighting for Sass/Syntaxes/SCSS.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				}
 			]
 		}
 	],

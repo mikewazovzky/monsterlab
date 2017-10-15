@@ -29,6 +29,8 @@
         .flex { flex: 1; }
         .mr-1 { margin-right: 1em; }
         .mt-1 { margin-top: 1em; }
+        .panel-about { padding: 0; }
+
     </style>
     <!-- Pass data to JavaScript -->
     <script>

@@ -47,11 +47,6 @@ class ViewComposerServiceProvider extends ServiceProvider
                 'popular' => $popular,
             ]);
         });
-
-        View::composer('posts.form', function ($view) {
-            $tags = Tag::pluck('id', 'name');
-            return $view->with(['tags' => $tags]);
-        });
     }
 
     /**

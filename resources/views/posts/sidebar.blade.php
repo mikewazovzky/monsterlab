@@ -103,6 +103,14 @@
         </ul>
     </div>
 </div>
+{{-- IMAGE PANEL --}}
+<div class="panel panel-primary">
+    <div class="panel-body panel-about">
+        <div>
+            <img width="100%" src="/images/about.jpg" alt="Monster Lab. Team">
+        </div>
+    </div>
+</div>
 {{-- ABOUT PANEL --}}
 <div class="panel panel-primary">
     <div class="panel-body">
@@ -116,6 +124,6 @@
         </ul>
     </div>
     <div class="panel-footer center">
-        <span><a href="#">Monster-Lab, 2017</a></span>
+        <span><a href="/main">Monster-Lab, 2017</a></span>
     </div>
 </div>
