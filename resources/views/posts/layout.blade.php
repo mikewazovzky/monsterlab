@@ -15,7 +15,3 @@
         </div>
     </div>
 @stop
-
-@section('footer')
-    <script src="{{ mix('/js/blog.js') }}"></script>
-@endsection

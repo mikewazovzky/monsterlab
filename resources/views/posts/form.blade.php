@@ -18,17 +18,7 @@
                 <textarea type="text" id="body" name="body" class="form-control" rows="9">{{ getValue('body', $post ?? null) }}</textarea>
             </div>
 
-            <div class="form-group">
-                <label for="tags">Tags</label>
-                <select name="tagList[]" id="tagsList" class="form-control" multiple>
-                    @foreach($tags as $key => $value)
-                        <option value="{{ $value }}"
-                            {{ (isset($post) && $post->tags->contains('name', $key)) ? 'selected' : '' }}>
-                            {{ $key }}
-                        </option>
-                    @endforeach
-                </select>
-            </div>
+            <tags :post="{{ $post ?? 'false' }}"></tags>
 
         </div><!-- panel-body -->
 

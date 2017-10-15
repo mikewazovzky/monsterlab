@@ -34,4 +34,18 @@ class TagOperationsTest extends TestCase
 
         $this->assertDatabaseHas('tags', ['name' => $tagName]);
     }
+
+    /** @test */
+    public function user_can_get_list_of_tags()
+    {
+        $this->withoutExceptionHandling();
+        $tag = create('App\Tag');
+
+        $this->signIn();
+        $response = $this->getJson(route('tags.index'))
+            ->assertStatus(200)
+            ->json();
+
+        $this->assertEquals($tag->name, $response[0]['name']);
+    }
 }

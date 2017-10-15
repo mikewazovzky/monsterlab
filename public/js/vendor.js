@@ -36438,7 +36438,7 @@ module.exports = function(module) {
 
 /***/ }),
 
-/***/ 2:
+/***/ 1:
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__("./node_modules/vue/dist/vue.common.js");
@@ -36448,4 +36448,4 @@ module.exports = __webpack_require__("./node_modules/moment/moment.js");
 
 /***/ })
 
-},[2]);
+},[1]);
