@@ -22,7 +22,7 @@
                     <input type="radio" name="search-type" id="algolia" value="algolia" disabled> algolia
                 </label>
                 <label class="radio-inline">
-                    <input type="radio" name="search-type" id="elasticsearch" value="elasticsearch" disabled> elasticsearch
+                    <input type="radio" name="search-type" id="elasticsearch" value="elasticsearch" disabled> elastic
                 </label>
             </div>
 
@@ -55,7 +55,7 @@
             @foreach($latest as $post)
                 <li>
                     <a href="{{ route('posts.show', $post) }}">
-                        {{ substr($post->title, 0, 40) . '...' }}
+                        {{ substr($post->title, 0, 25) . '...' }}
                     </a>
                     by
                     <a href="{{ route('profiles.show', $post->user) }}">
