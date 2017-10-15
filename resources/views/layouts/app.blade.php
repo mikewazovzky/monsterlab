@@ -30,7 +30,10 @@
         .mr-1 { margin-right: 1em; }
         .mt-1 { margin-top: 1em; }
         .panel-about { padding: 0; }
-        code { background-color: #535353; color: #eeeeee; padding: 3px;}
+        .post-body { background-color: #fdfdfd; font-size: 1.2em; }
+        code { background-color: #535353; color: #eeeeee; padding: 10px; display: inline-block; width: 100%;}
+        .post-body p { margin-top: 10px; }
+        .post-body ol { padding-left: 20px; }
 
     </style>
     <!-- Pass data to JavaScript -->

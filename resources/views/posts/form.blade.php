@@ -15,7 +15,7 @@
 
             <div class="form-group">
                 <label for="body">Article</label>
-                <textarea type="text" id="body" name="body" class="form-control" rows="9">{{ getValue('body', $post ?? null) }}</textarea>
+                <textarea type="text" id="body" name="body" class="form-control" rows="28">{{ getValue('body', $post ?? null) }}</textarea>
             </div>
 
             <tags :post="{{ $post ?? 'false' }}"></tags>

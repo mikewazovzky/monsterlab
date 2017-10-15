@@ -92,5 +92,5 @@
 
 <style scoped>
     button { margin: 0 2px; width: 52px;}
-    .panel-heading { background-color: #f5f5f5; padding: 5px 15px; }
+    .panel-heading { background-color: #fdfdfd; padding: 5px 15px; }
 </style>

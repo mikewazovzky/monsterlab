@@ -33,7 +33,7 @@
             @endunless
 
         </div>
-        <div class="panel-body">
+        <div class="panel-body post-body">
             <p>{!! $post->body !!}</p>
         </div>
     </div>
