@@ -6,6 +6,8 @@ use Carbon\Carbon;
 use App\Events\PostCreated;
 use App\Filters\PostFilters;
 use Illuminate\Database\Eloquent\Model;
+use HTMLPurifier;
+use HTMLPurifier_Config;
 
 class Post extends Model
 {
@@ -142,5 +144,12 @@ class Post extends Model
         }
 
         $this->attributes['slug'] = $slug;
+    }
+
+    public function setBodyAttribute($value)
+    {
+        $config = HTMLPurifier_Config::createDefault();
+        $purifier = new HTMLPurifier($config);
+        $this->attributes['body']  = $purifier->purify($value);
     }
 }
