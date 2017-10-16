@@ -1,6 +1,5 @@
 {{-- SEARCH PANEL --}}
 <div class="panel panel-primary">
-
     <div class="panel-heading">
         <strong>Search</strong>
     </div>
@@ -55,7 +54,7 @@
             @foreach($latest as $post)
                 <li>
                     <a href="{{ route('posts.show', $post) }}">
-                        {{ substr($post->title, 0, 30) . '...' }}
+                        {{ mb_substr($post->title, 0, 30) . '...' }}
                     </a>
                     by
                     <a href="{{ route('profiles.show', $post->user) }}">
@@ -76,7 +75,7 @@
             @foreach($popular as $post)
                 <li>
                     <a href="{{ route('posts.show', $post) }}">
-                        {{ substr($post->title, 0, 28) . '...' }}
+                        {{ mb_substr($post->title, 0, 28) . '...' }}
                     </a>
                     by
                     <a href="{{ route('profiles.show', $post->user) }}">
