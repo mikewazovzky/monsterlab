@@ -45,6 +45,7 @@ Vue.component('avatar-form', require('./components/AvatarForm.vue'));
 Vue.component('carousel', require('./components/Carousel.vue'));
 Vue.component('main-menu', require('./components/MainMenu.vue'));
 Vue.component('tags', require('./components/Tags.vue'));
+Vue.component('notifications', require('./components/Notifications.vue'));
 
 const app = new Vue({
     el: '#app'

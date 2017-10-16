@@ -126,38 +126,6 @@
 
     @endcan
 
-    @if($notifications && $notifications->count())
-        <table class="table table-condensed">
-            @foreach($notifications as $notification)
-                <tr>
-                    <td>
-                        {{ $notification->created_at->toDateTimeString() }}
-                    </td>
-                    <td>
-                        @if(view()->exists($viewName ='profiles.notifications.' . snake_case(class_basename($notification->type))))
-                            @include($viewName)
-                        @else
-                            {{ $notification->type }}
-                        @endif
-                    </td>
-                    <td>
-                        <form method="POST" action="{{ route('notifications.markAsRead', [$profileUser, $notification]) }}">
-                            {{ method_field('DELETE') }}
-                            {{ csrf_field() }}
-                            <button class="btn btn-xs btn-info">Mark As Read</button>
-                        </form>
-                    </td>
-                <tr>
-            @endforeach
-        </table>
-
-        <form method="POST" action="{{ route('notifications.markAllAsRead', $profileUser) }}">
-            {{ method_field('DELETE') }}
-            {{ csrf_field() }}
-            <button class="btn btn-info">Mark ALL Read</button>
-        </form>
-    @else
-        There are no notifications for you at the moment.
-    @endif
+    <notifications :user="{{ $profileUser }}"></notifications>
 
 @endsection

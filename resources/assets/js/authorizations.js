@@ -7,5 +7,9 @@ module.exports =  {
 
     createReply() {
         return user.role === 'writer';
+    },
+
+    updateProfile(profileUser) {
+        return profileUser.id == user.id;
     }
 };
