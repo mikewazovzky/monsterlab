@@ -6,15 +6,15 @@
                 <div class="form-group form-group-sm">
                     <label for="name" class="col-sm-3">Name</label>
                     <div class="col-sm-6">
-                        <input type="text" class="form-control input-sm" name="name" v-model="form.name" required>
+                        <input type="text" class="form-control input-sm" name="name" v-model="form.name" required :disabled="!canUpdate">
                         <span class="error-message" v-if="form.errors.has('name')" v-text="form.errors.get('name')"></span>
                     </div>
                 </div>
 
-                <div class="form-group form-group-sm">
+                <div v-if="canUpdate" class="form-group form-group-sm">
                     <label for="email" class="col-sm-3">Email</label>
                     <div class="col-sm-6">
-                        <input type="email" class="form-control input-sm" name="email" v-model="form.email" required>
+                        <input type="email" class="form-control input-sm" name="email" v-model="form.email" required :disabled="!canUpdate">
                         <span class="error-message" v-if="form.errors.has('email')" v-text="form.errors.get('email')"></span>
                     </div>
                 </div>
@@ -22,7 +22,7 @@
                 <div class="form-group form-group-sm">
                     <label for="country" class="col-sm-3">Country</label>
                     <div class="col-sm-6">
-                        <select class="form-control" name="country" v-model="form.country" @change="form.errors.clear('country')">
+                        <select class="form-control" name="country" v-model="form.country" @change="form.errors.clear('country')" :disabled="!canUpdate">
                             <option value="Russia">Russia</option>
                             <option value="USA">USA</option>
                             <option value="undefined">undefined</option>
@@ -31,7 +31,7 @@
                     </div>
                 </div>
 
-                <button class="btn btn-sm btn-info" :disabled="form.errors.any()">Update</button>
+                <button v-if="canUpdate" class="btn btn-sm btn-info" :disabled="form.errors.any()">Update</button>
 
             </form>
         </div>
@@ -57,6 +57,10 @@
         computed: {
             endpoint() {
                 return `/profiles/${this.user.slug}/data`;
+            },
+
+            canUpdate() {
+                return this.authorize('updateProfile', this.user);
             }
         },
 

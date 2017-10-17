@@ -2483,6 +2483,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     computed: {
         endpoint: function endpoint() {
             return '/profiles/' + this.user.slug + '/data';
+        },
+        canUpdate: function canUpdate() {
+            return this.authorize('updateProfile', this.user);
         }
     },
 
@@ -2616,6 +2619,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     computed: {
         endpoint: function endpoint() {
             return '/profiles/' + this.user.slug + '/role';
+        },
+        canUpdate: function canUpdate() {
+            return this.isAdmin();
         }
     },
 
@@ -23047,7 +23053,12 @@ var render = function() {
                   }
                 ],
                 staticClass: "form-control input-sm",
-                attrs: { type: "text", name: "name", required: "" },
+                attrs: {
+                  type: "text",
+                  name: "name",
+                  required: "",
+                  disabled: !_vm.canUpdate
+                },
                 domProps: { value: _vm.form.name },
                 on: {
                   input: function($event) {
@@ -23070,44 +23081,53 @@ var render = function() {
             ])
           ]),
           _vm._v(" "),
-          _c("div", { staticClass: "form-group form-group-sm" }, [
-            _c("label", { staticClass: "col-sm-3", attrs: { for: "email" } }, [
-              _vm._v("Email")
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "col-sm-6" }, [
-              _c("input", {
-                directives: [
-                  {
-                    name: "model",
-                    rawName: "v-model",
-                    value: _vm.form.email,
-                    expression: "form.email"
-                  }
-                ],
-                staticClass: "form-control input-sm",
-                attrs: { type: "email", name: "email", required: "" },
-                domProps: { value: _vm.form.email },
-                on: {
-                  input: function($event) {
-                    if ($event.target.composing) {
-                      return
+          _vm.canUpdate
+            ? _c("div", { staticClass: "form-group form-group-sm" }, [
+                _c(
+                  "label",
+                  { staticClass: "col-sm-3", attrs: { for: "email" } },
+                  [_vm._v("Email")]
+                ),
+                _vm._v(" "),
+                _c("div", { staticClass: "col-sm-6" }, [
+                  _c("input", {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.form.email,
+                        expression: "form.email"
+                      }
+                    ],
+                    staticClass: "form-control input-sm",
+                    attrs: {
+                      type: "email",
+                      name: "email",
+                      required: "",
+                      disabled: !_vm.canUpdate
+                    },
+                    domProps: { value: _vm.form.email },
+                    on: {
+                      input: function($event) {
+                        if ($event.target.composing) {
+                          return
+                        }
+                        _vm.form.email = $event.target.value
+                      }
                     }
-                    _vm.form.email = $event.target.value
-                  }
-                }
-              }),
-              _vm._v(" "),
-              _vm.form.errors.has("email")
-                ? _c("span", {
-                    staticClass: "error-message",
-                    domProps: {
-                      textContent: _vm._s(_vm.form.errors.get("email"))
-                    }
-                  })
-                : _vm._e()
-            ])
-          ]),
+                  }),
+                  _vm._v(" "),
+                  _vm.form.errors.has("email")
+                    ? _c("span", {
+                        staticClass: "error-message",
+                        domProps: {
+                          textContent: _vm._s(_vm.form.errors.get("email"))
+                        }
+                      })
+                    : _vm._e()
+                ])
+              ])
+            : _vm._e(),
           _vm._v(" "),
           _c("div", { staticClass: "form-group form-group-sm" }, [
             _c(
@@ -23129,7 +23149,7 @@ var render = function() {
                     }
                   ],
                   staticClass: "form-control",
-                  attrs: { name: "country" },
+                  attrs: { name: "country", disabled: !_vm.canUpdate },
                   on: {
                     change: [
                       function($event) {
@@ -23175,14 +23195,16 @@ var render = function() {
             ])
           ]),
           _vm._v(" "),
-          _c(
-            "button",
-            {
-              staticClass: "btn btn-sm btn-info",
-              attrs: { disabled: _vm.form.errors.any() }
-            },
-            [_vm._v("Update")]
-          )
+          _vm.canUpdate
+            ? _c(
+                "button",
+                {
+                  staticClass: "btn btn-sm btn-info",
+                  attrs: { disabled: _vm.form.errors.any() }
+                },
+                [_vm._v("Update")]
+              )
+            : _vm._e()
         ]
       )
     ])
@@ -23396,7 +23418,7 @@ var render = function() {
                     }
                   ],
                   staticClass: "form-control",
-                  attrs: { name: "role" },
+                  attrs: { name: "role", disabled: !_vm.canUpdate },
                   on: {
                     change: [
                       function($event) {
@@ -23442,14 +23464,16 @@ var render = function() {
             ])
           ]),
           _vm._v(" "),
-          _c(
-            "button",
-            {
-              staticClass: "btn btn-sm btn-info",
-              attrs: { disabled: _vm.form.errors.any() }
-            },
-            [_vm._v("Update")]
-          )
+          _vm.canUpdate
+            ? _c(
+                "button",
+                {
+                  staticClass: "btn btn-sm btn-info",
+                  attrs: { disabled: _vm.form.errors.any() }
+                },
+                [_vm._v("Update")]
+              )
+            : _vm._e()
         ]
       )
     ])
@@ -24907,6 +24931,10 @@ __WEBPACK_IMPORTED_MODULE_0_vue___default.a.prototype.authorize = function () {
 };
 
 __WEBPACK_IMPORTED_MODULE_0_vue___default.a.prototype.signedIn = window.App.signedIn;
+
+__WEBPACK_IMPORTED_MODULE_0_vue___default.a.prototype.isAdmin = function () {
+    return window.App.user.role == 'admin';
+};
 
 // create global flash function
 window.flash = function (message) {

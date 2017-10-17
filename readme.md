@@ -10,6 +10,7 @@
 - 2.0.1 Simple blog created
 - 2.0.0 Project ported to Laravel
 
+<hr>
 ### Branch: KISS/PHP (old promo page)
-##### Status: archived
-##### Version: 1.3
+#### Status: archived
+#### Version: 1.3

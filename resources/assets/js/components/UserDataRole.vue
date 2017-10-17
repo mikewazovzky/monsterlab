@@ -6,7 +6,7 @@
                 <div class="form-group form-group-sm">
                     <label for="country" class="col-sm-3">Role</label>
                     <div class="col-sm-6">
-                        <select class="form-control" name="role" v-model="form.role" @change="form.errors.clear('role')">
+                        <select class="form-control" name="role" v-model="form.role" @change="form.errors.clear('role')" :disabled="!canUpdate">
                             <option value="reader">reader</option>
                             <option value="writer">writer</option>
                             <option value="admin">admin</option>
@@ -15,7 +15,7 @@
                     </div>
                 </div>
 
-                <button class="btn btn-sm btn-info" :disabled="form.errors.any()">Update</button>
+                <button v-if="canUpdate" class="btn btn-sm btn-info" :disabled="form.errors.any()">Update</button>
 
             </form>
         </div>
@@ -39,6 +39,10 @@
         computed: {
             endpoint() {
                 return `/profiles/${this.user.slug}/role`;
+            },
+
+            canUpdate() {
+                return this.isAdmin();
             }
         },
 

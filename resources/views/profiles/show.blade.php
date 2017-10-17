@@ -18,8 +18,9 @@
 
     <user-data-role :user="{{ $profileUser }}"></user-data-role>
     <user-data :user="{{ $profileUser }}"></user-data>
-    <user-data-password :user="{{ $profileUser }}"></user-data-password>
 
-    <notifications :user="{{ $profileUser }}"></notifications>
-
+    @can('update', $profileUser)
+        <user-data-password :user="{{ $profileUser }}"></user-data-password>
+        <notifications :user="{{ $profileUser }}"></notifications>
+    @endcan
 @endsection

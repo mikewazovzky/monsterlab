@@ -1,10 +1,3 @@
-
-/**
- * First we will load all of this project's JavaScript dependencies which
- * includes Vue and other libraries. It is a great starting point when
- * building robust, powerful web applications using Vue and Laravel.
- */
-
 require('./bootstrap');
 
 import Vue from 'vue';
@@ -22,7 +15,7 @@ const authorizations = require('./authorizations');
 Vue.prototype.authorize = function (...params) {
     if (!window.App.user) return false;
 
-    if(window.App.user.role === 'admin') return true;
+    if (window.App.user.role === 'admin') return true;
 
     if (typeof params[0] === 'string') {
         return authorizations[params[0]](params[1]);
@@ -33,22 +26,26 @@ Vue.prototype.authorize = function (...params) {
 
 Vue.prototype.signedIn = window.App.signedIn;
 
+Vue.prototype.isAdmin = function () {
+    return window.App.user.role === 'admin';
+};
+
 // create global flash function
 window.flash = function (message, level = 'success') {
     window.events.$emit('flash', { message, level });
 };
 
 Vue.component('flash', require('./components/Flash.vue'));
+Vue.component('tags', require('./components/Tags.vue'));
 Vue.component('paginator', require('./components/Paginator.vue'));
 Vue.component('replies', require('./components/Replies.vue'));
-Vue.component('avatar-form', require('./components/AvatarForm.vue'));
 Vue.component('carousel', require('./components/Carousel.vue'));
 Vue.component('main-menu', require('./components/MainMenu.vue'));
-Vue.component('tags', require('./components/Tags.vue'));
-Vue.component('notifications', require('./components/Notifications.vue'));
+Vue.component('avatar-form', require('./components/AvatarForm.vue'));
 Vue.component('user-data', require('./components/UserData.vue'));
 Vue.component('user-data-role', require('./components/UserDataRole.vue'));
 Vue.component('user-data-password', require('./components/UserDataPassword.vue'));
+Vue.component('notifications', require('./components/Notifications.vue'));
 
 const app = new Vue({
     el: '#app'
