@@ -32,7 +32,7 @@
         .mt-1 { margin-top: 1em; }
         .panel-about { padding: 0; }
         .post-body { background-color: #fdfdfd; font-size: 1.2em; }
-        code { background-color: #535353; color: #eeeeee; padding: 10px; display: inline-block; width: 100%;}
+        pre { background-color: #434343; color: #efefef; padding: 0 20px 20px 20px; font-size: 0.9em; }
         .post-body p { margin-top: 10px; }
         .post-body ol { padding-left: 20px; }
 
