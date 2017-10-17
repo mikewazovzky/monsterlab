@@ -64,16 +64,18 @@ class UserProfileTest extends TestCase
     }
 
     /** @test */
-    public function authorized_user_can_update_name_and_email()
+    public function authorized_user_can_update_name_and_email_country()
     {
         // user can change his name and email
         $this->signIn($user = create('App\User'));
         $updatedName = 'Updated Name';
         $updatedEmail = 'updated@email.com';
+        $updatedCountry = 'Russia';
 
         $this->patch(route('user.update.data', $user), [
             'name' => $updatedName,
             'email' => $updatedEmail,
+            'country' => $updatedCountry,
         ]);
 
         tap($user->fresh(), function($user) use ($updatedName, $updatedEmail) {
@@ -172,6 +174,24 @@ class UserProfileTest extends TestCase
         // Unique constrain should not be applied to update user request
         $this->patch(route('user.update.data', $newUser), ['name' => 'New Name', 'email' => $newEmail])
             ->assertSessionMissing('errors');
+    }
+
+    /** @test */
+    public function valid_country_should_be_provided()
+    {
+        $country = 'SomeNonexistingCountry';
+        $user = create('App\User', ['country' => $country]);
+        $this->signIn($user);
+
+        // Country may not be empty
+        $this->patch(route('user.update.data', $user), ['country' => null])
+            ->assertSessionHasErrors('country');
+
+        // Contry must be in the list of available countries
+        $this->patch(route('user.update.data', $user), ['country' => $country])
+            ->assertSessionHasErrors('country');
+
+        $this->assertEquals($country, $user->fresh()->country);
     }
 
     /** @test */

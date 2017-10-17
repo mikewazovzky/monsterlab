@@ -46,6 +46,9 @@ Vue.component('carousel', require('./components/Carousel.vue'));
 Vue.component('main-menu', require('./components/MainMenu.vue'));
 Vue.component('tags', require('./components/Tags.vue'));
 Vue.component('notifications', require('./components/Notifications.vue'));
+Vue.component('user-data', require('./components/UserData.vue'));
+Vue.component('user-data-role', require('./components/UserDataRole.vue'));
+Vue.component('user-data-password', require('./components/UserDataPassword.vue'));
 
 const app = new Vue({
     el: '#app'

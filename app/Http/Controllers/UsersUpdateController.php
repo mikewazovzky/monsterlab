@@ -23,8 +23,11 @@ class UsersUpdateController extends Controller
 
         $user->update($attributes);
 
-        flash('User role has been updated.');
+        if ($request->wantsJson()) {
+            return response(['message' => 'User role updated.'], 200);
+        }
 
+        flash('User role has been updated.');
         return back();
     }
 
@@ -41,13 +44,17 @@ class UsersUpdateController extends Controller
 
         $attributes = $request->validate([
             'name' => [ 'required', 'unique:users,name,' . $user->id, ],
-            'email' => [ 'required', 'email', 'unique:users,email,' . $user->id, ]
+            'email' => [ 'required', 'email', 'unique:users,email,' . $user->id, ],
+            'country' => [ 'required', 'in:Russia,USA,undefined'],
         ]);
 
         $user->update($attributes);
 
-        flash('User data has been updated.');
+        if ($request->wantsJson()) {
+            return response(['message' => 'User data updated.'], 200);
+        }
 
+        flash('User data has been updated.');
         return back();
     }
 
@@ -70,8 +77,11 @@ class UsersUpdateController extends Controller
             'password' => bcrypt($request->password),
         ]);
 
-        flash('User password has been updated.');
+        if ($request->wantsJson()) {
+            return response(['message' => 'User password updated.'], 200);
+        }
 
+        flash('User password has been updated.');
         return back();
     }
 }

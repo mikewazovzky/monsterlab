@@ -16,8 +16,8 @@ Route::get('/register/sendconfirmationrequest', 'Auth\RegisterConfirmationContro
 
 Route::get('/profiles/{user}', 'ProfilesController@show')->name('profiles.show')->middleware('auth');
 Route::post('/profiles/{user}/avatar', 'AvatarsController@store')->name('avatars.store')->middleware('auth');
-Route::patch('/profiles/{user}/role', 'UsersUpdateController@role')->name('user.update.role')->middleware('auth');
 Route::patch('/profiles/{user}/data', 'UsersUpdateController@data')->name('user.update.data')->middleware('auth');
+Route::patch('/profiles/{user}/role', 'UsersUpdateController@role')->name('user.update.role')->middleware('auth');
 Route::patch('/profiles/{user}/password', 'UsersUpdateController@password')->name('user.update.password')->middleware('auth');
 
 Route::get('/profiles/{user}/notifications', 'NotificationsController@index')->name('notifications.index');

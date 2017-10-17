@@ -21,6 +21,7 @@ class CreateUsersTable extends Migration
             $table->string('password');
             $table->rememberToken();
             $table->enum('role', ['reader', 'writer', 'admin'])->default('reader');
+            $table->enum('country', ['Russia', 'USA', 'undefined'])->default('undefined');
             $table->string('confirmation_token', 25)->nullable()->unique();
             $table->string('avatar_path')->nullable();
             $table->timestamps();
