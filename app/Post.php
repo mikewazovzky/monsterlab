@@ -5,9 +5,8 @@ namespace App;
 use Carbon\Carbon;
 use App\Events\PostCreated;
 use App\Filters\PostFilters;
+use App\Tools\HTMLProcessor;
 use Illuminate\Database\Eloquent\Model;
-use HTMLPurifier;
-use HTMLPurifier_Config;
 
 class Post extends Model
 {
@@ -135,6 +134,12 @@ class Post extends Model
         return $stats;
     }
 
+    /**
+     * Set unique post slug attribute
+     *
+     * @param string $value
+     * @return void
+     */
     public function setSlugAttribute($value)
     {
         $slug = str_slug($value);
@@ -146,10 +151,16 @@ class Post extends Model
         $this->attributes['slug'] = $slug;
     }
 
+    /**
+     * Set body attribute to purified html content
+     *
+     * @param string $value
+     * @return void
+     */
     public function setBodyAttribute($value)
     {
-        $config = HTMLPurifier_Config::createDefault();
-        $purifier = new HTMLPurifier($config);
-        $this->attributes['body']  = $purifier->purify($value);
+        $processor = new HTMLProcessor();
+
+        $this->attributes['body']  = $processor->process($value);
     }
 }
