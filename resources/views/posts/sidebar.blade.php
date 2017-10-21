@@ -4,9 +4,9 @@
         <strong>Search</strong>
     </div>
     <div class="panel-body">
-        <form method="GET" action="/posts">
+        <form method="GET" action="/search">
             <div class="input-group">
-                <input type="text" name="search" class="form-control" placeholder="Search posts title and body by query ..." />
+                <input type="text" name="search-query" class="form-control" placeholder="Search posts title and body by query ..." />
                 <div class="input-group-btn">
                     <button class="btn btn-info btn-md" type="submit">
                         <span class="glyphicon glyphicon-search"></span>
@@ -18,7 +18,7 @@
                     <input type="radio" name="search-type" id="mySQL" value="mySQL" checked> mySQL
                 </label>
                 <label class="radio-inline">
-                    <input type="radio" name="search-type" id="algolia" value="algolia" disabled> algolia
+                    <input type="radio" name="search-type" id="algolia" value="algolia"> algolia
                 </label>
                 <label class="radio-inline">
                     <input type="radio" name="search-type" id="elasticsearch" value="elasticsearch" disabled> elastic

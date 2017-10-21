@@ -6,10 +6,17 @@ use Carbon\Carbon;
 use App\Events\PostCreated;
 use App\Filters\PostFilters;
 use App\Tools\HTMLProcessor;
+use Laravel\Scout\Searchable;
 use Illuminate\Database\Eloquent\Model;
 
 class Post extends Model
 {
+    /**
+     * Makes the model searchable by scout
+     * @trait
+     */
+    use Searchable;
+
     /**
      * The attributes that are NOT mass assignable. Yolo!
      *
@@ -162,5 +169,26 @@ class Post extends Model
         $processor = new HTMLProcessor();
 
         $this->attributes['body']  = $processor->process($value);
+    }
+
+    /**
+     * Convert model to data object persisted into search engine database
+     *
+     * @return array
+     */
+    public function toSearchableArray()
+    {
+        $user = $this->user;
+
+        return [
+            'title' => $this->title,
+            'slug' => $this->slug,
+            'body' => $this->body,
+            'created_at' => $this->created_at->toDateString(),
+            'tags' => $this->tags()->pluck('name'),
+            'tagsList' => implode(',', $this->tags()->pluck('name')->all()),
+            'user_name' => $user->name,
+            'user_slug' => $user->slug,
+        ];
     }
 }

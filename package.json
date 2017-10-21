@@ -20,7 +20,7 @@
     },
     "dependencies": {
         "moment": "^2.18.1",
-        "select2": "^4.0.4",
+        "vue-instantsearch": "^1.2.2",
         "vue-select": "github:sagalbot/vue-select"
     }
 }

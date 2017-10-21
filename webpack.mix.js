@@ -8,7 +8,7 @@ mix.js([
     ], 'public/js')
     // Extract libraries into vendor.js to avoid reloading cache
     // .. only npm libs can be extracted ?
-   .extract(['vue', 'jquery', 'moment'])
+   .extract(['vue', 'vue-instantsearch', 'jquery', 'moment'])
    // Complile js assets specific to a page
    // .js('resources/assets/js/page.js', 'public/js/page.js')
    // Complile sass assets into app.css

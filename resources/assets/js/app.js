@@ -3,6 +3,9 @@ require('./bootstrap');
 import Vue from 'vue';
 window.Vue = Vue;
 
+import InstantSearch from 'vue-instantsearch';
+Vue.use(InstantSearch);
+
 import moment from 'moment';
 window.moment = moment;
 
@@ -46,7 +49,7 @@ Vue.component('user-data', require('./components/UserData.vue'));
 Vue.component('user-data-role', require('./components/UserDataRole.vue'));
 Vue.component('user-data-password', require('./components/UserDataPassword.vue'));
 Vue.component('notifications', require('./components/Notifications.vue'));
-
+Vue.component('search', require('./components/Search.vue'));
 const app = new Vue({
     el: '#app'
 });
