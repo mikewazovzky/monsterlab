@@ -1,23 +1,16 @@
-# see http://about.travis-ci.org/docs/user/languages/php/ for more hints
 language: php
-
-# list any PHP version you want to test against
 php:
-  # using major version aliases
-  - 7.1
-
-# optionally set up exclutions and allowed failures in the matrix
+- 7.1
 matrix:
   allow_failures:
-    - php: hhvm
-
+  - php: hhvm
 before_script:
-  - cp .env.travis .env
-  - composer install --no-interaction
-  - mkdir -p build/logs
-
+- cp .env.travis .env
+- composer install --no-interaction
+- mkdir -p build/logs
 script:
-  - vendor/bin/phpunit --coverage-clover build/logs/clover.xml
-
+- vendor/bin/phpunit --coverage-clover build/logs/clover.xml
 after_success:
 - travis_retry php vendor/bin/coveralls
+env:
+  secure: LAJcw2bzCyhspm9IKBE+CAogTKNr8E/LS9OtHmEEkXC1Q+4VAL0bKsLCK4tZTr8VN3QJJ3E4/N/QkCy+SiGJnwSQWNOPPK6GI5Rm+lqSjEwQv2SqTxjza6AO1USrJ/FRCiqYwIDyBJl+kas3B0wngDM7B5C2h6d6QAbxdp3+PYqkMQPyx0svrk7+Q+uvDcFHZ7BiEp4gL2Zb9kO3Hh/G5u8ktCvcnT8jfH0MgiKV0QAHfz1qxtiOgMlUosOGyJ/Zo801q/8M4hoT056J5FTSDig0Yx0ztv3BrnkUkB9Aq1bltquWBd85pzqYjCjauy4zLD9IV9UegitSmmXzhxgwpIsotuq+7mJmUDkgUFhepZMErvZ0qVg5wHkoiLi8j4/mZwkOqBxa7iF2y5kTb8NpFCxpB94qAsAV4pvzhbfFU+dlPLMmVZI2qolXso1Ycd8SkMwG5RdoOIEnnrAGPqS1PpF4FhfsSebdg+UMmXe45+WJ/x+1H0StIy7TBNuyB2CZ4e4Nn6Ytko7PKMhjgwlxmLvH8mA4ikc/bLTrcu9vEmyGB3J4UAHF5PpYB7T91nPxfvkKcKYFIj8ORnihzB2W5vHfuX/ocZlkaHAcXw2W3dHLpOFakHCctnIwMKAk0njIb+bceTa/YmnH05Xxq09iqqM3Zv04zIxVNtWchsN7WsM=
