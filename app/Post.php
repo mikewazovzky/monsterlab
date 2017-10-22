@@ -8,6 +8,7 @@ use App\Filters\PostFilters;
 use App\Tools\HTMLProcessor;
 use Laravel\Scout\Searchable;
 use Illuminate\Database\Eloquent\Model;
+use Mikewazovzky\Adjustable\Adjustable;
 
 class Post extends Model
 {
@@ -16,6 +17,7 @@ class Post extends Model
      * @trait
      */
     use Searchable;
+    use Adjustable;
 
     /**
      * The attributes that are NOT mass assignable. Yolo!

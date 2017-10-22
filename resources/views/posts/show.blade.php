@@ -40,4 +40,8 @@
 
     <replies></replies>
 
+    @can('update', $post)
+        @include('posts.adjustment-list')
+    @endcan
+
 @stop
