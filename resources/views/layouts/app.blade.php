@@ -38,6 +38,7 @@
         .post-body ol { padding-left: 20px; }
         .ais-highlight em { background-color: orange; padding: 3px; }
         .ais-snippet em { background-color: orange; padding: 3px; }
+        .instruction { font-size: 0.9em; }
     </style>
     <!-- Pass data to JavaScript -->
     <script>

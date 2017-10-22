@@ -6,7 +6,7 @@
             app-id="3FC8VEFCGP"
             api-key="f4d5ead510eebdccb6e8b302ca482993"
             :query="query"
-            index-name="posts">
+            :index-name="indexName">
 
             <ais-search-box>
                 <div class="input-group">
@@ -81,7 +81,13 @@
 
 <script>
     export default {
-        props: ['query'],
+        props: ['query', 'prefix'],
+
+        computed: {
+            indexName() {
+                return `${this.prefix}posts`;
+            }
+        },
 
         methods: {
             onPageChange() {
