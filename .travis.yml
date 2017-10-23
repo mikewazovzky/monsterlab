@@ -1,6 +1,8 @@
 language: php
 php:
 - 7.1
+services:
+  - redis-server
 matrix:
   allow_failures:
   - php: hhvm
