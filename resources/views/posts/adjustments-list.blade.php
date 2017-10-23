@@ -4,8 +4,10 @@
     </div>
 
     <ul class="list-group">
-        @foreach($adjustments as $adjustment)
+        @forelse($adjustments as $adjustment)
             @include('posts.adjustment')
-        @endforeach
+        @empty
+            Threre no changes logged.
+        @endforelse
     </ul>
 </div>

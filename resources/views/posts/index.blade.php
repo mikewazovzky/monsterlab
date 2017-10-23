@@ -24,8 +24,8 @@
                 <p>{{ mb_substr(strip_tags($post->body), 0, 399) . ' ...' }}</p>
             </div>
             <div class="panel-footer">
-                @if($post->views)
-                    Views: {{ $post->views }}
+                @if($post->viewsCount)
+                    Views: {{ $post->viewsCount }}
                 @else
                     No views.
                 @endif

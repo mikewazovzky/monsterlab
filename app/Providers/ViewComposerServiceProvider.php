@@ -37,7 +37,8 @@ class ViewComposerServiceProvider extends ServiceProvider
 
             $tags = Tag::has('posts')->withCount('posts')->get();
             $archives = Post::archives();
-            $popular = Post::orderBy('views', 'desc')->take(5)->get();
+            // $popular = Post::orderBy('views', 'desc')->take(5)->get();
+            $popular = Post::popular(5)->get();
             $latest = Post::latest()->take(5)->get();
 
             return $view->with([

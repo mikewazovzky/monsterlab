@@ -7,6 +7,7 @@ use App\Events\PostCreated;
 use App\Filters\PostFilters;
 use App\Tools\HTMLProcessor;
 use Laravel\Scout\Searchable;
+use Illuminate\Support\Facades\Redis;
 use Illuminate\Database\Eloquent\Model;
 use Mikewazovzky\Adjustable\Adjustable;
 
@@ -192,5 +193,52 @@ class Post extends Model
             'user_name' => $user->name,
             'user_slug' => $user->slug,
         ];
+    }
+
+    public function incrementViewsCount()
+    {
+        Redis::zincrby(static::cacheKey(), 1, $this->cacheData());
+    }
+
+    public function getViewsCount()
+    {
+        return Redis::zscore(static::cacheKey(), $this->cacheData());
+    }
+
+    public function getViewsCountAttribute()
+    {
+        return $this->getViewsCount();
+    }
+
+    public static function scopePopular($query, $limit = 0)
+    {
+        $data = array_map('json_decode', Redis::zrevrange(static::cacheKey(), 0, $limit - 1));
+        $ids = array_map(function ($item) {
+            return $item->id;
+        }, $data);
+
+        // To get the post in the same order as ids array: works with mySQL only
+        // string for the query
+        // $placeholders = implode(',', array_fill(0, count($ids), '?'));
+        // ->orderByRaw("field(id,{$placeholders})", $ids)
+        // $idsImploded = implode(',', $ids);
+        // $str = "FIND_IN_SET('id','{$idsImploded}')";
+
+        return $query->whereIn('id', $ids);
+    }
+
+    protected static function cacheKey()
+    {
+        $key = (app()->environment() === 'testing') ? 'trending_posts_testing' : 'trending_posts';
+        return $key;
+    }
+
+    public function cacheData()
+    {
+        return json_encode([
+            'id' => $this->id,
+            'title' => $this->title,
+            'slug' => $this->slug,
+        ]);
     }
 }
