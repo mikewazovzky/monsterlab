@@ -41,7 +41,10 @@
     <replies></replies>
 
     @can('update', $post)
-        @include('posts.adjustment-list')
+        @include('posts.adjustments-list', ['adjustments' => $post->lastAdjustments])
+        <div>
+            List of all <a href="{{ route('adjustments.index', $post) }}">adjustments</a>
+        </div>
     @endcan
 
 @stop

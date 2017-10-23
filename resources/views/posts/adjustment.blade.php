@@ -7,9 +7,11 @@
             <th>After</th>
         </tr>
         @foreach($adjustment->changedData() as $key => $value)
+            <tr>
                 <td>{{ $key }}</td>
                 <td>{{ $value['before']}}</td>
                 <td>{{ $value['after']}}</td>
+            </tr>
         @endforeach
     </table>
 </li>

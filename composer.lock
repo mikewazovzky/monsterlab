@@ -848,12 +848,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/mikewazovzky/adjustable.git",
-                "reference": "0ec5f823cce86a83daf13c37376e7328b613c7e3"
+                "reference": "49ba769716d50185346b3eece40c2a50c1143d5f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mikewazovzky/adjustable/zipball/0ec5f823cce86a83daf13c37376e7328b613c7e3",
-                "reference": "0ec5f823cce86a83daf13c37376e7328b613c7e3",
+                "url": "https://api.github.com/repos/mikewazovzky/adjustable/zipball/49ba769716d50185346b3eece40c2a50c1143d5f",
+                "reference": "49ba769716d50185346b3eece40c2a50c1143d5f",
                 "shasum": ""
             },
             "type": "library",
@@ -883,7 +883,7 @@
             "keywords": [
                 "laravel"
             ],
-            "time": "2017-10-22T15:36:46+00:00"
+            "time": "2017-10-23T08:07:06+00:00"
         },
         {
             "name": "monolog/monolog",

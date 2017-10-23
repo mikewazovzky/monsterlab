@@ -30,6 +30,7 @@ Route::get('/posts/{post}/replies', 'PostRepliesController@index')->name('post.r
 Route::post('/posts/{post}/replies', 'PostRepliesController@store')->name('post.replies.store');
 Route::patch('/posts/{post}/replies/{reply}', 'PostRepliesController@update')->name('post.replies.update');
 Route::delete('/posts/{post}/replies/{reply}', 'PostRepliesController@destroy')->name('post.replies.destroy');
+Route::get('/posts/{post}/adjustments', 'AdjustmentsController@index')->name('adjustments.index');
 
 // Route::get('/search', function(Illuminate\Http\Request $request) {
 //     $engine = $request['search-type'];
