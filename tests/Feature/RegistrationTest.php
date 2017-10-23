@@ -6,6 +6,7 @@ use App\User;
 use Tests\TestCase;
 use App\Mail\ConfirmEmailRequest;
 use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\Queue;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 
@@ -25,7 +26,8 @@ class RegistrationTest extends TestCase
             'password_confirmation' => 'password'
         ]);
 
-        Mail::assertSent(ConfirmEmailRequest::class);
+        // Mail::assertSent(ConfirmEmailRequest::class);
+        Mail::assertQueued(ConfirmEmailRequest::class);
     }
 
     /** @test */
@@ -40,11 +42,11 @@ class RegistrationTest extends TestCase
             'password_confirmation' => 'password'
         ]);
 
-        Mail::assertSent(ConfirmEmailRequest::class);
+        Mail::assertQueued(ConfirmEmailRequest::class);
 
         $this->get(route('register.send'))->assertStatus(302);
 
-        Mail::assertSent(ConfirmEmailRequest::class);
+        Mail::assertQueued(ConfirmEmailRequest::class);
     }
 
     /** @test */

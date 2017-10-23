@@ -8,7 +8,7 @@ use Illuminate\Auth\Events\Registered;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
 
-class SendConfirmEmailRequest
+class SendConfirmEmailRequest implements ShouldQueue
 {
     /**
      * Create the event listener.

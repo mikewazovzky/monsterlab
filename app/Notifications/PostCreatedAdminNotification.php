@@ -7,7 +7,7 @@ use Illuminate\Notifications\Notification;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Notifications\Messages\MailMessage;
 
-class PostCreatedAdminNotification extends Notification
+class PostCreatedAdminNotification extends Notification implements ShouldQueue
 {
     use Queueable;
 
