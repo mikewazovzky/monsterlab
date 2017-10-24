@@ -7,7 +7,6 @@ use App\Events\PostCreated;
 use App\Filters\PostFilters;
 use App\Tools\HTMLProcessor;
 use Laravel\Scout\Searchable;
-use Illuminate\Support\Facades\Redis;
 use Illuminate\Database\Eloquent\Model;
 use Mikewazovzky\Adjustable\Adjustable;
 
@@ -19,6 +18,7 @@ class Post extends Model
      */
     use Searchable;
     use Adjustable;
+    use TrackViewsCount;
 
     /**
      * The attributes that are NOT mass assignable. Yolo!
@@ -26,6 +26,12 @@ class Post extends Model
      * @var array
      */
     protected $guarded = [];
+
+    /**
+     * The attributes that should be casted to specific data type
+     *
+     * @var array
+     */
     protected $casts = [
         'user_id' => 'integer'
     ];
@@ -42,12 +48,17 @@ class Post extends Model
     // ];
 
     /**
-     * The relationships that shoul be eager loaded every tyme the model is retrieved.
+     * The relationships that shoudl be eager loaded every tyme the model is retrieved.
      *
      * @var array of strings
      */
     protected $with = ['tags', 'user'];
 
+    /**
+     * Hook to event:created to make a slug & dispatch event:PostCreated
+     *
+     * @return void
+     */
     protected static function boot()
     {
         parent::boot();
@@ -69,6 +80,19 @@ class Post extends Model
     public function getRouteKeyName()
     {
         return 'slug';
+    }
+
+    /**
+     * Clear views count and delete the post
+     *
+     * @param type name
+     * @return type
+     */
+    public function delete()
+    {
+        $this->clearViewsCount();
+
+        parent::delete();
     }
 
     /**
@@ -113,6 +137,13 @@ class Post extends Model
         return $filters->apply($query);
     }
 
+    /**
+     * Get statistics on number of posts published within specifc time period [year:month]
+     * for archives vidgets.
+     * Original code uses mysql year() and month() method and is not compliant with sqlite.
+     *
+     * @return array
+     */
     public static function archives()
     {
         // $posts = Post::selectRaw('year(created_at) as year, monthname(created_at) as month, count(*) as published')
@@ -175,7 +206,7 @@ class Post extends Model
     }
 
     /**
-     * Convert model to data object persisted into search engine database
+     * Convert model to data object persisted into search engine database via scout
      *
      * @return array
      */
@@ -195,50 +226,21 @@ class Post extends Model
         ];
     }
 
-    public function incrementViewsCount()
-    {
-        Redis::zincrby(static::cacheKey(), 1, $this->cacheData());
-    }
-
-    public function getViewsCount()
-    {
-        return Redis::zscore(static::cacheKey(), $this->cacheData());
-    }
-
-    public function getViewsCountAttribute()
-    {
-        return $this->getViewsCount();
-    }
-
-    public static function scopePopular($query, $limit = 0)
-    {
-        $data = array_map('json_decode', Redis::zrevrange(static::cacheKey(), 0, $limit - 1));
-        $ids = array_map(function ($item) {
-            return $item->id;
-        }, $data);
-
-        // To get the post in the same order as ids array: works with mySQL only
-        // string for the query
-        // $placeholders = implode(',', array_fill(0, count($ids), '?'));
-        // ->orderByRaw("field(id,{$placeholders})", $ids)
-        // $idsImploded = implode(',', $ids);
-        // $str = "FIND_IN_SET('id','{$idsImploded}')";
-
-        return $query->whereIn('id', $ids);
-    }
-
-    protected static function cacheKey()
-    {
-        $key = (app()->environment() === 'testing') ? 'trending_posts_testing' : 'trending_posts';
-        return $key;
-    }
-
+    /**
+     * Overide TrackViewsCount::cacheData method to fetch data [post, user]
+     * required for Trending vidget.
+     *
+     * @return string
+     */
     public function cacheData()
     {
         return json_encode([
-            'id' => $this->id,
             'title' => $this->title,
             'slug' => $this->slug,
+            'user' => [
+                'name' => $this->user->name,
+                'slug' => $this->user->slug,
+            ]
         ]);
     }
 }
