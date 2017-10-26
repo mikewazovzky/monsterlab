@@ -6,7 +6,7 @@
     </div>
 
     <div class="panel-body">
-        <form method="GET" action="/search">
+        <form method="GET" action="{{ route('posts.search') }}">
 
             <div class="input-group">
                 <input type="text" name="search-query" class="form-control" placeholder="Search posts title and body by query ..." />

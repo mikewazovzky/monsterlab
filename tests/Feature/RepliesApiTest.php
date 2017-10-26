@@ -5,7 +5,7 @@ namespace Tests\Feature;
 use Tests\TestCase;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 
-class ReplyOperationsTest extends TestCase
+class RepliesApiTest extends TestCase
 {
     use DatabaseMigrations;
 
@@ -16,8 +16,9 @@ class ReplyOperationsTest extends TestCase
 
         $response = $this->getJson(route('post.replies.index', $reply->post))->json();
 
-        $this->assertCount(1,
-            array_filter($response['data'], function($item) use ($reply) {
+        $this->assertCount(
+            1,
+            array_filter($response['data'], function ($item) use ($reply) {
                 return $item['body'] == $reply->body;
             })
         );
@@ -49,7 +50,7 @@ class ReplyOperationsTest extends TestCase
         $body = 'Some body';
 
         $response = $this->postJson(route('post.replies.store', $post), ['body' => $body])
-            ->assertStatus(200)
+            ->assertStatus(201)
             ->json();
 
         $this->assertEquals($body, $response['body']);
@@ -160,7 +161,7 @@ class ReplyOperationsTest extends TestCase
         ]);
 
         $this->deleteJson(route('post.replies.destroy', [$reply->post, $reply]))
-            ->assertStatus(200);
+            ->assertStatus(204);
 
         $this->assertDatabaseMissing('replies', [
             'body' => $reply->body,
@@ -172,7 +173,7 @@ class ReplyOperationsTest extends TestCase
         $this->signIn($user);
 
         $this->deleteJson(route('post.replies.destroy', [$reply->post, $reply]))
-            ->assertStatus(200);
+            ->assertStatus(204);
 
         $this->assertDatabaseMissing('replies', [
             'body' => $reply->body,

@@ -7,7 +7,7 @@ use Tests\TestCase;
 use App\Notifications\ReplyCreatedUserNotification;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 
-class NotificationOperationsTest extends TestCase
+class NotificationsApiTest extends TestCase
 {
     use DatabaseMigrations;
 

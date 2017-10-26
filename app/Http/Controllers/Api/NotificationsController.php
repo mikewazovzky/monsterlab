@@ -1,8 +1,9 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Api;
 
 use App\User;
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Notifications\DatabaseNotification;
 
@@ -22,13 +23,13 @@ class NotificationsController extends Controller
      * Return a listing of the notifications for the user.
      *
      * @param App\User $user
-     * @return Illuminate\Database\Eloquent\Collection
+     * @return Illuminate\Http\Response
      */
     public function index(User $user)
     {
         $this->authorize('update', $user);
 
-        return $user->unreadNotifications;
+        return response($user->unreadNotifications, 200);
     }
 
     /**

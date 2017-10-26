@@ -1,10 +1,11 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Api;
 
 use App\Post;
 use App\Reply;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
 class PostRepliesController extends Controller
 {
@@ -20,7 +21,9 @@ class PostRepliesController extends Controller
      */
     public function index(Post $post)
     {
-        return $post->replies()->latest()->paginate(10);
+        $replies = $post->replies()->latest()->paginate(10);
+
+        return response($replies, 200);
     }
 
     /**
@@ -40,7 +43,7 @@ class PostRepliesController extends Controller
             'body' => $request->body,
         ]);
 
-        return $reply;
+        return response($reply, 201);
     }
 
     /**
@@ -58,7 +61,7 @@ class PostRepliesController extends Controller
 
         $reply->update($attributes);
 
-        return $reply;
+        return response($reply, 200);
     }
 
     /**
@@ -72,5 +75,7 @@ class PostRepliesController extends Controller
         $this->authorize('delete', $reply);
 
         $reply->delete();
+
+        return response('deleted', 204);
     }
 }

@@ -10,8 +10,18 @@ use Illuminate\Support\Facades\Redis;
  *
  * @trait TrackViewsCount
  */
-trait TrackViewsCount
+trait Cacheable
 {
+    /**
+     * Clear model views count, when model is deleted
+     * via model 'deleted' event handler
+     */
+    public static function bootCacheable()
+    {
+        static::deleted(function ($post) {
+            $post->clearViewsCount();
+        });
+    }
     /**
      * Increment views count for the model instance (member).
      *
@@ -95,10 +105,14 @@ trait TrackViewsCount
      */
     public function cacheData()
     {
-        return json_encode([
-            'class' => static::className(),
-            'id' => $this->id,
-        ]);
+        return json_encode(
+            $this->toCacheableArray()
+        );
+    }
+
+    public function toCacheableArray()
+    {
+        return $this->toArray();
     }
 
     /**

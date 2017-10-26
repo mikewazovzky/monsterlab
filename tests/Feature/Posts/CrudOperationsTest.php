@@ -1,11 +1,11 @@
 <?php
 
-namespace Tests\Feature;
+namespace Tests\Feature\Posts;
 
 use Tests\TestCase;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 
-class PostOperationsTest extends TestCase
+class CrudOperationsTest extends TestCase
 {
     use DatabaseMigrations;
 

@@ -1,12 +1,12 @@
 <?php
 
-namespace Tests\Feature;
+namespace Tests\Feature\Posts;
 
 use Carbon\Carbon;
 use Tests\TestCase;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 
-class PostFiltersTest extends TestCase
+class FiltersTest extends TestCase
 {
     use DatabaseMigrations;
 
@@ -36,5 +36,17 @@ class PostFiltersTest extends TestCase
             ->assertStatus(200)
             ->assertSee(substr($post2017->body, 0, 100))
             ->assertDontSee(substr($post2015->body, 0, 100));
+    }
+
+    // It seems whereMonth() doesn't work with sqlite ??
+    /** @test */
+    public function it_filters_posts_by_month()
+    {
+        $postAugest  = create('App\Post', ['created_at' => Carbon::createFromDate(2015,  8, 1)]);
+        $postOctober = create('App\Post', ['created_at' => Carbon::createFromDate(2017, 10, 1)]);
+
+        $this->get('/posts?month=October')->assertStatus(200);
+            // ->assertSee(substr($postOctober->body, 0, 100))
+            // ->assertDontSee(substr($postAugest->body, 0, 100));
     }
 }

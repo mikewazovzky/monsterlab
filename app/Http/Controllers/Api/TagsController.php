@@ -1,9 +1,10 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Api;
 
 use App\Tag;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
 class TagsController extends Controller
 {
@@ -18,6 +19,8 @@ class TagsController extends Controller
     {
         $attributes = $request->validate(['name' => 'required|unique:tags,name']);
 
-        return Tag::create($attributes);
+        $tag = Tag::create($attributes);
+
+        return response($tag, 201);
     }
 }

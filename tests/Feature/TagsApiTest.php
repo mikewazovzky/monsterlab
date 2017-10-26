@@ -5,7 +5,7 @@ namespace Tests\Feature;
 use Tests\TestCase;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 
-class TagOperationsTest extends TestCase
+class TagsApiTest extends TestCase
 {
     use DatabaseMigrations;
 
@@ -16,8 +16,8 @@ class TagOperationsTest extends TestCase
         $tagName = 'TagName';
         $tag = make('App\Tag', ['name' => $tagName ]);
 
-        $this->post('/tags', $tag->toArray())
-            ->assertRedirect(route('login'));
+        $this->postJson('/tags', $tag->toArray())
+            ->assertStatus(401);
 
         $this->assertDatabaseMissing('tags', ['name' => $tagName]);
     }
@@ -30,7 +30,7 @@ class TagOperationsTest extends TestCase
         $tagName = 'TagName';
         $tag = make('App\Tag', ['name' => $tagName ]);
 
-        $this->post('/tags', $tag->toArray())->assertStatus(200);
+        $this->postJson('/tags', $tag->toArray())->assertStatus(201);
 
         $this->assertDatabaseHas('tags', ['name' => $tagName]);
     }

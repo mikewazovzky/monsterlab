@@ -8,9 +8,9 @@
 
     <div class="row">
         <div class="contacts col-sm-4">
-            <p><span class="glyphicon glyphicon-map-marker"></span> Адрес:<br><strong>Москва, Россия<br>Космодамианская набережная 52/2</strong></p>
-            <p><span class="glyphicon glyphicon-phone"></span> Телефон:<br><strong>+7 (xxx) xxx xx-xx</strong></p>
-            <p><span class="glyphicon glyphicon-envelope"></span> Электронная почта:<br><a href="">mike.wazovzky@gamil.com</a></p>
+            <p><span class="glyphicon glyphicon-map-marker"></span> Адрес:<br>Космодамианская набережная 52/2<br>Москва, Россия</p>
+            <p><span class="glyphicon glyphicon-phone"></span> Телефон:<br>+7 (xxx) xxx xx-xx</p>
+            <p><span class="glyphicon glyphicon-envelope"></span> Электронная почта:<br><a href="">mike.wazovzky@gmail.com</a></p>
         </div>
 
         <div class="contacts col-sm-8">

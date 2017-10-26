@@ -1,20 +1,19 @@
 <?php
 
-namespace Tests\Feature;
+namespace Tests\Feature\Posts;
 
 use App\Post;
 use Tests\TestCase;
 use Illuminate\Support\Facades\Redis;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 
-class TrendingPostsTest extends TestCase
+class TrendingTest extends TestCase
 {
     use DatabaseMigrations;
 
     public function setUp()
     {
         parent::setUp();
-
         Post::resetViewsCount();
     }
 
@@ -27,8 +26,6 @@ class TrendingPostsTest extends TestCase
         $this->get(route('posts.show', $post));
 
         $this->assertEquals(1, $post->viewsCount);
-
-        // $this->assertEquals($post->title, $trending[0]->title);
     }
 
     /** @test */

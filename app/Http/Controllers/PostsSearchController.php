@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class SearchController extends Controller
+class PostsSearchController extends Controller
 {
     /**
      * Define required serch engine and redirect to proper action

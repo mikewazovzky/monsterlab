@@ -12,13 +12,7 @@ use Mikewazovzky\Adjustable\Adjustable;
 
 class Post extends Model
 {
-    /**
-     * Makes the model searchable by scout
-     * @trait
-     */
-    use Searchable;
-    use Adjustable;
-    use TrackViewsCount;
+    use Searchable, Adjustable, Cacheable;
 
     /**
      * The attributes that are NOT mass assignable. Yolo!
@@ -37,25 +31,30 @@ class Post extends Model
     ];
 
     /**
-     * The attributes that should be hidden for arrays (toArray()) and json (json_encode()).
+     * The attributes that should be hidden for arrays via toArray() and json via json_encode().
      *
      * @var array
      */
     protected $hidden = [];
 
-    // protected $dispatchesEvents = [
-    //     'created' => PostCreated::class,
-    // ];
+    /**
+     * The events fired upon model operations.
+     *
+     * @var array
+     */
+    protected $dispatchesEvents = [
+        'created' => PostCreated::class,
+    ];
 
     /**
-     * The relationships that shoudl be eager loaded every tyme the model is retrieved.
+     * The relationships that should be eager loaded every time the model is retrieved.
      *
      * @var array of strings
      */
     protected $with = ['tags', 'user'];
 
     /**
-     * Hook to event:created to make a slug & dispatch event:PostCreated
+     * Hook to model:created event to make a post slug
      *
      * @return void
      */
@@ -67,8 +66,6 @@ class Post extends Model
             $post->update([
                 'slug' => $post->title
             ]);
-
-            event(new PostCreated($post));
         });
     }
 
@@ -80,19 +77,6 @@ class Post extends Model
     public function getRouteKeyName()
     {
         return 'slug';
-    }
-
-    /**
-     * Clear views count and delete the post
-     *
-     * @param type name
-     * @return type
-     */
-    public function delete()
-    {
-        $this->clearViewsCount();
-
-        parent::delete();
     }
 
     /**
@@ -139,8 +123,9 @@ class Post extends Model
 
     /**
      * Get statistics on number of posts published within specifc time period [year:month]
-     * for archives vidgets.
-     * Original code uses mysql year() and month() method and is not compliant with sqlite.
+     * for sidebar archives vidgets.
+     * The original (commented out) code uses mysql year() and month() method and
+     * is not compliant with sqlite.
      *
      * @return array
      */
@@ -227,20 +212,20 @@ class Post extends Model
     }
 
     /**
-     * Overide TrackViewsCount::cacheData method to fetch data [post, user]
-     * required for Trending vidget.
+     * Convert model to data object persisted into cache layer.
+     * Persisted attributes are required by Trending vidget.
      *
      * @return string
      */
-    public function cacheData()
+    public function toCacheableArray()
     {
-        return json_encode([
+        return [
             'title' => $this->title,
             'slug' => $this->slug,
             'user' => [
                 'name' => $this->user->name,
                 'slug' => $this->user->slug,
             ]
-        ]);
+        ];
     }
 }

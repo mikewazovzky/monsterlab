@@ -1,12 +1,13 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Api;
 
 use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Validation\Rule;
+use App\Http\Controllers\Controller;
 
-class UsersUpdateController extends Controller
+class UsersDataController extends Controller
 {
     /**
      * Updates user role.
@@ -23,12 +24,7 @@ class UsersUpdateController extends Controller
 
         $user->update($attributes);
 
-        if ($request->wantsJson()) {
-            return response(['message' => 'User role updated.'], 200);
-        }
-
-        flash('User role has been updated.');
-        return back();
+        return response(['message' => 'User role updated.'], 200);
     }
 
     /**
@@ -50,12 +46,7 @@ class UsersUpdateController extends Controller
 
         $user->update($attributes);
 
-        if ($request->wantsJson()) {
-            return response(['message' => 'User data updated.'], 200);
-        }
-
-        flash('User data has been updated.');
-        return back();
+        return response(['message' => 'User data updated.'], 200);
     }
 
     /**
@@ -77,11 +68,6 @@ class UsersUpdateController extends Controller
             'password' => bcrypt($request->password),
         ]);
 
-        if ($request->wantsJson()) {
-            return response(['message' => 'User password updated.'], 200);
-        }
-
-        flash('User password has been updated.');
-        return back();
+        return response(['message' => 'User password updated.'], 200);
     }
 }
