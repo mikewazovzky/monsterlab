@@ -32,21 +32,12 @@ Route::patch('/posts/{post}/replies/{reply}', 'PostRepliesController@update')->n
 Route::delete('/posts/{post}/replies/{reply}', 'PostRepliesController@destroy')->name('post.replies.destroy');
 Route::get('/posts/{post}/adjustments', 'AdjustmentsController@index')->name('adjustments.index');
 
-// Route::get('/search', function(Illuminate\Http\Request $request) {
-//     $engine = $request['search-type'];
-//     $query = $request['search-query'];
-
-//     switch($engine) {
-//         case 'mySQL':   return redirect(route('posts.index', ['search' => $query]));
-//         case 'algolia': return view('search', ['query' => $query]);
-//         default:        return back();
-//     }
-// });
 Route::get('/search', 'SearchController@search');
 
 Route::get('/main/{locale?}', 'PagesController@index')->name('main');
 Route::view('/about', 'pages.about')->name('about');
 Route::view('/contacts', 'pages.contacts')->name('contacts');
+Route::post('/feedback', 'FeedbackController@feedback')->name('feedback');
 
 Route::redirect('/', '/main', 301);
 Route::redirect('/home', '/main', 301);  // TEMPORARY: find actions that redirect home!
