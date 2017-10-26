@@ -14,8 +14,6 @@ class WebsiteFeedbackTest extends TestCase
     /** @test */
     public function user_can_send_a_feedback_form()
     {
-        $this->withoutExceptionHandling();
-
         Mail::fake();
 
         $admin = create('App\User', ['role' => 'admin']);

@@ -11,12 +11,11 @@
 <div class="panel panel-primary">
     <div class="panel-body">
         <ul class="terms">
-            <li><a href="#">О нас</a></li>
-            <li><a href="#">Проекты</a></li>
+            <li><a href="{{ route('about')}}">О проекте</a></li>
             <li><a href="#">Условия использования</a></li>
             <li><a href="#">Политика конфиденциальности</a></li>
             <li><a href="#">Рекламa</a></li>
-            <li><a href="#">Контакты</a></li>
+            <li><a href="{{ route('contacts')}}">Контакты</a></li>
         </ul>
     </div>
     <div class="panel-footer center">
