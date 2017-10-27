@@ -3,7 +3,7 @@
 
 Pls. press the button to confirm your email address and complete the registration process.
 
-@component('mail::button', ['url' => 'http://monster-lab/register/confirm?token=' . $user->confirmation_token])
+@component('mail::button', ['url' => config('app.url') . '/register/confirm?token=' . $user->confirmation_token])
 Confirm Email
 @endcomponent
 
