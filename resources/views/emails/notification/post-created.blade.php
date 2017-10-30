@@ -7,7 +7,7 @@
     {{ substr($post->body, 0, 255) . '...' }}
 </blockquote>
 
-@component('mail::button', ['url' => 'http://monster-lab/posts/' . $post->id])
+@component('mail::button', ['url' => route('posts.show', $post)])
 View post
 @endcomponent
 

@@ -20,6 +20,8 @@ class EventServiceProvider extends ServiceProvider
         ],
         'App\Events\PostCreated' => [
             'App\Listeners\InformAdminThatPostCreated',
+            'App\Listeners\PublishTwitterStatus',
+            'App\Listeners\PublishFacebookStatus',
         ],
         'App\Events\ReplyCreated' => [
             'App\Listeners\InformAdminThatReplyCreated',

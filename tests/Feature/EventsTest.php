@@ -1,6 +1,6 @@
 <?php
 
-namespace Tests\Unit;
+namespace Tests\Feature;
 
 use App\Events\PostCreated;
 use App\Events\ReplyCreated;

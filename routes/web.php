@@ -1,5 +1,11 @@
 <?php
 
+use App\Post;
+use App\Twitter;
+use App\Facebook;
+use GuzzleHttp\Client;
+use Illuminate\Http\Request;
+
 Auth::routes();
 Route::get('/register/confirm', 'Auth\RegisterConfirmationController@confirm')->name('register.confirm');
 Route::get('/register/sendconfirmationrequest', 'Auth\RegisterConfirmationController@send')->name('register.send')->middleware('auth');
@@ -33,5 +39,43 @@ Route::post('/feedback', 'FeedbackController@feedback')->name('feedback');
 Route::redirect('/', '/main', 301);
 Route::redirect('/home', '/main', 301); // TEMPORARY: find actions that redirects to  'home' and 'logout'!
 
+// TEMPORATY ROUTES: TESTING Social API
 
+// Redirect to APP OAuth Route
+Route::get('/facebook/login', function () {
+    $fb = new Facebook;
+    return $fb->login();
+});
 
+Route::get('/facebook/callback', function (Request $request) {
+    // Get authentication code passed by Facebook Login
+    $code = $request->code;
+    // Confirm Identity: Exchanging Code for an User Access Token
+    $fb = new Facebook;
+    $app_access_token = $fb->getAppAccessToken();
+    $user_access_token = $fb->getUserAccessToken($code);
+    $page_access_token = $fb->getPageAccessToken($user_access_token);
+    // Inspect access token
+    if (!$page_access_token || !$fb->isValidAccessToken($page_access_token)) {
+        return 'Error: Something went wrong....';
+    }
+    // Post status to a page timeline on behalf of the Page
+    $result = $fb->postToPage(
+        $message = 'How cool is that!',
+        $link = 'https://laracasts.com/series/whats-new-in-laravel-5-5',
+        $page_access_token
+    );
+    return $result;
+});
+
+Route::get('/twitter/{id}', function ($id) {
+    $post = Post::findOrFail($id);
+    $result = (new Twitter())->publish($post);
+    dd(json_decode((string) $result->getBody(), true));
+});
+
+Route::get('/facebook/{id}', function ($id) {
+    $post = Post::findOrFail($id);
+    $result = (new Facebook())->publish($post);
+    dd(json_decode((string) $result->getBody(), true));
+});

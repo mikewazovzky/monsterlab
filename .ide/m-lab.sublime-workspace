@@ -4,16 +4,40 @@
 		"selected_items":
 		[
 			[
+				"page",
+				"page_access_token"
+			],
+			[
+				"pa",
+				"page_access_token"
+			],
+			[
+				"access",
+				"access_token"
+			],
+			[
+				"acc",
+				"access_token"
+			],
+			[
+				"res",
+				"response"
+			],
+			[
+				"get_",
+				"get_class"
+			],
+			[
+				"margin",
+				"margin-left"
+			],
+			[
 				"post",
 				"postOctober"
 			],
 			[
 				"feedba",
 				"feedbackData"
-			],
-			[
-				"margin",
-				"margin-bottom"
 			],
 			[
 				"req",
@@ -74,10 +98,6 @@
 			[
 				"requ",
 				"requestType"
-			],
-			[
-				"pa",
-				"panel-body"
 			],
 			[
 				"font",
@@ -494,31 +514,20 @@
 			[
 				"secu",
 				"security"
-			],
-			[
-				"security",
-				"securityHandler"
-			],
-			[
-				"ph",
-				"phoneProxy"
-			],
-			[
-				"per",
-				"personProxy"
-			],
-			[
-				"pe",
-				"person"
-			],
-			[
-				"thi",
-				"thirst"
 			]
 		]
 	},
 	"buffers":
 	[
+		{
+			"file": "/C/OSPanel/domains/m-lab.dev/routes/web.php",
+			"settings":
+			{
+				"buffer_size": 3855,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -592,10 +601,39 @@
 	},
 	"expanded_folders":
 	[
-		"/C/OSPanel/domains/m-lab.dev"
+		"/C/OSPanel/domains/m-lab.dev",
+		"/C/OSPanel/domains/m-lab.dev/app",
+		"/C/OSPanel/domains/m-lab.dev/production"
 	],
 	"file_history":
 	[
+		"/C/OSPanel/modules/conemu/ConEmu/CmdInit.cmd",
+		"/C/OSPanel/domains/m-lab.dev/app/Facebook.php",
+		"/C/OSPanel/domains/test/readme.txt",
+		"/C/OSPanel/domains/research/laravel-social-media/routes/web.php",
+		"/C/OSPanel/domains/m-lab.dev/.env",
+		"/C/OSPanel/domains/m-lab.dev/config/social.php",
+		"/C/OSPanel/domains/m-lab.dev/production/.env",
+		"/C/OSPanel/domains/m-lab.dev/notes/requirements/social-media-integration",
+		"/C/OSPanel/domains/m-lab.dev/app/Providers/EventServiceProvider.php",
+		"/C/OSPanel/domains/m-lab.dev/app/Listeners/PublishTwitterStatus.php",
+		"/C/OSPanel/domains/m-lab.dev/app/Listeners/PublishFacebookStatus.php",
+		"/C/OSPanel/domains/m-lab.dev/vendor/guzzle/guzzle/src/Guzzle/Http/Client.php",
+		"/C/OSPanel/domains/m-lab.dev/app/Events/PostCreated.php",
+		"/C/OSPanel/domains/m-lab.dev/app/Post.php",
+		"/C/OSPanel/domains/m-lab.dev/tests/Feature/NotificationsTest.php",
+		"/C/OSPanel/domains/m-lab.dev/tests/Feature/EventsTest.php",
+		"/C/OSPanel/domains/m-lab.dev/routes/web.php",
+		"/C/OSPanel/domains/m-lab.dev/app/Twitter.php",
+		"/C/OSPanel/domains/m-lab.dev/resources/views/emails/notification/user-registered.blade.php",
+		"/C/OSPanel/domains/m-lab.dev/resources/views/emails/notification/post-created.blade.php",
+		"/C/OSPanel/domains/m-lab.dev/resources/views/emails/notification/reply-created.blade.php",
+		"/C/OSPanel/domains/m-lab.dev/resources/views/emails/notification/user-confirmed.blade.php",
+		"/C/OSPanel/domains/m-lab.dev/resources/views/welcome.blade.php",
+		"/C/OSPanel/domains/research/laravel-passport-consumer/routes/web.php",
+		"/C/OSPanel/domains/m-lab.dev/resources/views/layouts/app.blade.php",
+		"/C/OSPanel/domains/m-lab.dev/resources/views/posts/show.blade.php",
+		"/C/OSPanel/domains/m-lab.dev/resources/views/emails/confirm.blade.php",
 		"/C/OSPanel/domains/monster-lab/app/Post.php",
 		"/C/OSPanel/domains/monster-lab/resources/views/posts/sidebar/trending.blade.php",
 		"/C/OSPanel/domains/monster-lab/routes/web.php",
@@ -656,7 +694,6 @@
 		"/C/OSPanel/domains/monster-lab/resources/assets/js/app.js",
 		"/C/OSPanel/domains/monster-lab/resources/assets/js/components/ListItem.vue",
 		"/C/OSPanel/domains/monster-lab/resources/assets/js/components/ListGroup.vue",
-		"/C/OSPanel/domains/research/laravel-passport-consumer/routes/web.php",
 		"/C/OSPanel/domains/monster-lab/config/passport.php",
 		"/C/Users/Dev/Documents/Network/mac.txt",
 		"/Y/Tutorials/PHP/PHP (profIT)/PHP-2/Урок 1/дз.txt",
@@ -697,37 +734,11 @@
 		"/C/OSPanel/domains/monster-lab/resources/views/posts/adjustment.blade.php",
 		"/C/OSPanel/domains/monster-lab/tests/Feature/AdjustmentsTest.php",
 		"/C/OSPanel/domains/laravel-packages/packages/Mikewazovzky/Favoritable/composer.json",
-		"/C/OSPanel/domains/laravel-packages/packages/Mikewazovzky/Favoritable/.travis.yml",
-		"/C/OSPanel/domains/laravel-packages/packages/Mikewazovzky/Favoritable/.gitignore",
-		"/C/OSPanel/domains/laravel-packages/laravel/5.4.x/composer.json",
-		"/C/OSPanel/domains/monster-lab/composer.json",
-		"/C/OSPanel/domains/monster-lab/resources/views/posts/adjustment-list.blade.php",
-		"/C/OSPanel/domains/laravel-packages/packages/Mikewazovzky/Favoritable/src/Models/Favorite.php",
-		"/C/OSPanel/domains/laravel-packages/packages/Mikewazovzky/Adjustable/database/migrations/2017_05_15_000000_create_adjustables_table.php",
-		"/C/OSPanel/domains/laravel-packages/packages/Mikewazovzky/Favoritable/database/migrations/2017_05_14_000000_create_favorites_table.php",
-		"/C/OSPanel/domains/monster-lab/resources/assets/js/components/Search.vue",
-		"/C/OSPanel/domains/monster-lab/resources/views/posts/search-algolia.blade.php",
-		"/C/OSPanel/domains/monster-lab/resources/views/posts/form.blade.php",
-		"/C/OSPanel/domains/monster-lab/resources/views/layouts/app.blade.php",
-		"/C/OSPanel/domains/monster-lab/production/.env",
-		"/C/OSPanel/domains/monster-lab/notes/posts/travis-secure-env-variables.md",
-		"/C/OSPanel/domains/monster-lab/notes/posts/travis-secure-env-variables.txt",
-		"/C/OSPanel/domains/monster-lab/webpack.mix.js",
-		"/C/OSPanel/domains/monster-lab/package.json",
-		"/C/OSPanel/domains/research/search-scout-algolia/resources/views/search.blade.php",
-		"/C/OSPanel/domains/research/search-scout-algolia/routes/web.php",
-		"/C/OSPanel/domains/research/search-scout-algolia/.env",
-		"/Y/Tutorials/PHP/PHP (profIT)/PHP-1/homework/lesson5/gbook/db.txt",
-		"/Y/Tutorials/PHP/PHP (profIT)/PHP-1/homework/lesson5/gbook/guestbook.class.php",
-		"/Y/Tutorials/PHP/PHP (profIT)/PHP-1/homework/lesson6/l6_oop.php",
-		"/C/Program Files/Elastic/Elasticsearch/README.textile",
-		"/Y/Tutorials/PHP/PHP (profIT)/PHP-1/homework/lesson6/l6_buffer.php",
-		"/Y/Tutorials/PHP/PHP (profIT)/PHP-1/homework/lesson7/news/model/db.class.php",
-		"/Y/Tutorials/PHP/PHP (profIT)/PHP-1/homework/lesson8/news/classes/db.php"
+		"/C/OSPanel/domains/laravel-packages/packages/Mikewazovzky/Favoritable/.travis.yml"
 	],
 	"find":
 	{
-		"height": 74.0
+		"height": 35.0
 	},
 	"find_in_files":
 	{
@@ -741,6 +752,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			");\n"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -758,8 +770,39 @@
 	"groups":
 	[
 		{
+			"selected": 0,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "/C/OSPanel/domains/m-lab.dev/routes/web.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3855,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1633,
+								1633
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 527.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -992,7 +1035,7 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 329.0,
+	"side_bar_width": 218.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

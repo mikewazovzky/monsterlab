@@ -6,7 +6,7 @@ commented by <a href="#">{{ $reply->user->name }}</a>
     {{ $reply->body }}
 </blockquote>
 
-@component('mail::button', ['url' => ''])
+@component('mail::button', ['url' => route('posts.show', $reply->post)])
 Link
 @endcomponent
 

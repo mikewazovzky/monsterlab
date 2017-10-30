@@ -39,6 +39,7 @@
         .ais-highlight em { background-color: orange; padding: 3px; }
         .ais-snippet em { background-color: orange; padding: 3px; }
         .instruction { font-size: 0.9em; }
+        .fb-share-button { margin-bottom: 3px;  margin-left: 3px; }
     </style>
     <!-- Pass data to JavaScript -->
     <script>

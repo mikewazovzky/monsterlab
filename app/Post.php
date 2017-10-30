@@ -62,10 +62,8 @@ class Post extends Model
     {
         parent::boot();
 
-        static::created(function ($post) {
-            $post->update([
-                'slug' => $post->title
-            ]);
+        static::creating(function ($post) {
+            $post->slug = $post->title;
         });
     }
 
