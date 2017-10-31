@@ -30,6 +30,7 @@
         .flex { flex: 1; }
         .mr-1 { margin-right: 1em; }
         .mt-1 { margin-top: 1em; }
+        .fs-08 { font-size: 0.9em; }
         .panel-about { padding: 0; }
         .post-body { background-color: #fdfdfd; font-size: 1.2em; }
         pre { background-color: #434343; color: #efefef; padding: 0 20px 20px 20px; font-size: 0.9em; }
@@ -40,6 +41,7 @@
         .ais-snippet em { background-color: orange; padding: 3px; }
         .instruction { font-size: 0.9em; }
         .fb-share-button { margin-bottom: 3px;  margin-left: 3px; }
+        .developers pre { font-size: 1.1em; }
     </style>
     <!-- Pass data to JavaScript -->
     <script>

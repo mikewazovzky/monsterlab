@@ -63,11 +63,13 @@
 
     <replies></replies>
 
+    <br>
     @can('update', $post)
-        @include('posts.adjustments-list', ['adjustments' => $post->lastAdjustments])
-        <div>
-            List of all <a href="{{ route('adjustments.index', $post) }}">adjustments</a>
-        </div>
+        @if($post->adjustments->count())
+            <div>
+                Post <a href="{{ route('adjustments.index', $post) }}">adjustments</a> history.
+            </div>
+        @endif
     @endcan
 
 @stop

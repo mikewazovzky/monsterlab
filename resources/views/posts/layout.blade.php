@@ -4,11 +4,11 @@
     <div class="container">
         <div class="row">
 
-            <div class="col-sm-9 main">
+            <div class="col-md-9 main">
                 @yield('main')
             </div>
 
-            <div class="col-sm-3 sidebar">
+            <div class="col-md-3 sidebar">
                 @include('posts.sidebar')
             </div>
 

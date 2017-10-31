@@ -146,12 +146,14 @@
                 </list-item>
 
                 <list-item :show="show">
-                    <a slot="href">Integration with Social Media [-]</a>
+                    <a slot="href">Integration with Social Media</a>
                     <p>
-                        Интеграция с социальными сетями позволяет пользователю поделится (share)
-                        заметкой или автоматически дублировать (post) все созданные пользователем
-                        заметки в социальных сетях.
-                        Поддерживаемые социальные сети: Twitter, Facebook.
+                        Интеграция с социальными сетями<br>
+                        - позволяет пользователю поделится (share) заметкой в собственнной ленте и<br>
+                        - при создании новой заметки (Post) автоматически создает записи (cross-posting) в ленте приложения в социальных сетях<br>
+                        Поддерживаемые социальные сети:
+                        <a href="https://twitter.com/MWazovzky">Twitter</a>,
+                        <a href="https://www.facebook.com/M-LAB-Blog-140507703248558">Facebook</a>.
                     </p>
                 </list-item>
 

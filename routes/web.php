@@ -33,6 +33,7 @@ Route::delete('/posts/{post}/replies/{reply}', 'Api\PostRepliesController@destro
 
 Route::get('/main/{locale?}', 'PagesController@index')->name('main');
 Route::view('/about', 'pages.about')->name('about');
+Route::view('/developers', 'pages.developers')->name('developers');
 Route::view('/contacts', 'pages.contacts')->name('contacts');
 Route::post('/feedback', 'FeedbackController@feedback')->name('feedback');
 

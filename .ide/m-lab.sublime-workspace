@@ -527,6 +527,15 @@
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
+		},
+		{
+			"file": "/C/OSPanel/domains/m-lab.dev/resources/views/pages/about.blade.php",
+			"settings":
+			{
+				"buffer_size": 7453,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
 		}
 	],
 	"build_system": "",
@@ -602,11 +611,14 @@
 	"expanded_folders":
 	[
 		"/C/OSPanel/domains/m-lab.dev",
-		"/C/OSPanel/domains/m-lab.dev/app",
-		"/C/OSPanel/domains/m-lab.dev/production"
+		"/C/OSPanel/domains/m-lab.dev/production",
+		"/C/OSPanel/domains/m-lab.dev/resources",
+		"/C/OSPanel/domains/m-lab.dev/resources/views",
+		"/C/OSPanel/domains/m-lab.dev/resources/views/pages"
 	],
 	"file_history":
 	[
+		"/C/OSPanel/domains/m-lab.original/routes/web.php",
 		"/C/OSPanel/modules/conemu/ConEmu/CmdInit.cmd",
 		"/C/OSPanel/domains/m-lab.dev/app/Facebook.php",
 		"/C/OSPanel/domains/test/readme.txt",
@@ -733,8 +745,7 @@
 		"/C/OSPanel/domains/monster-lab/resources/views/posts/show.blade.php",
 		"/C/OSPanel/domains/monster-lab/resources/views/posts/adjustment.blade.php",
 		"/C/OSPanel/domains/monster-lab/tests/Feature/AdjustmentsTest.php",
-		"/C/OSPanel/domains/laravel-packages/packages/Mikewazovzky/Favoritable/composer.json",
-		"/C/OSPanel/domains/laravel-packages/packages/Mikewazovzky/Favoritable/.travis.yml"
+		"/C/OSPanel/domains/laravel-packages/packages/Mikewazovzky/Favoritable/composer.json"
 	],
 	"find":
 	{
@@ -770,7 +781,7 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 1,
 			"sheets":
 			[
 				{
@@ -797,7 +808,37 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 527.0,
+						"translation.y": 713.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/C/OSPanel/domains/m-lab.dev/resources/views/pages/about.blade.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 7453,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								6441,
+								6441
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Laravel Blade Highlighter/blade.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 4278.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -1035,7 +1076,7 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 218.0,
+	"side_bar_width": 293.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

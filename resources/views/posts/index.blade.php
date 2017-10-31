@@ -24,6 +24,7 @@
                 <p>{{ mb_substr(strip_tags($post->body), 0, 399) . ' ...' }}</p>
             </div>
             <div class="panel-footer">
+                ID: {{ $post->id }} |
                 @if($post->viewsCount)
                     Views: {{ $post->viewsCount }}
                 @else
