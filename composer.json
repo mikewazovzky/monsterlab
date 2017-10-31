@@ -12,6 +12,7 @@
         "guzzlehttp/guzzle": "^6.3",
         "guzzlehttp/oauth-subscriber": "^0.3.0",
         "laravel/framework": "5.5.*",
+        "laravel/passport": "^4.0",
         "laravel/scout": "^3.0",
         "laravel/tinker": "~1.0",
         "mikewazovzky/adjustable": "dev-master",

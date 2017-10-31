@@ -33,9 +33,10 @@ Route::delete('/posts/{post}/replies/{reply}', 'Api\PostRepliesController@destro
 
 Route::get('/main/{locale?}', 'PagesController@index')->name('main');
 Route::view('/about', 'pages.about')->name('about');
-Route::view('/developers', 'pages.developers')->name('developers');
 Route::view('/contacts', 'pages.contacts')->name('contacts');
 Route::post('/feedback', 'FeedbackController@feedback')->name('feedback');
+Route::view('/developers', 'pages.developers')->name('developers');
+Route::view('/oauth', 'pages.oauth')->name('oauth');
 
 Route::redirect('/', '/main', 301);
 Route::redirect('/home', '/main', 301); // TEMPORARY: find actions that redirects to  'home' and 'logout'!
@@ -80,3 +81,8 @@ Route::get('/facebook/{id}', function ($id) {
     $result = (new Facebook())->publish($post);
     dd(json_decode((string) $result->getBody(), true));
 });
+
+// Server: API authorized method
+// Route::get('/user', function () {
+//     return auth()->user();
+// })->middleware('auth:api');
