@@ -31,10 +31,17 @@ class CrudApiTest extends TestCase
 
         $post = create('App\Post');
 
-        $this->getJson('/api/v1.01/posts')
+        $response = $this->getJson("/api/v1.01/posts?id={$post->id}")
             ->assertStatus(200)
             ->assertJsonFragment([
                 'title' => $post->title
+            ]);
+
+        // Empty array is returned if Post with specified ID doesn't exist
+        $response = $this->getJson("/api/v1.01/posts?id=333")
+            ->assertStatus(200)
+            ->assertJson([
+                'data' => []
             ]);
     }
 

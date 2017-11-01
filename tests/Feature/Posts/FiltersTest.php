@@ -11,6 +11,18 @@ class FiltersTest extends TestCase
     use DatabaseMigrations;
 
     /** @test */
+    public function it_filters_posts_by_id()
+    {
+        $postOne = create('App\Post');
+        $postTwo = create('App\Post');
+
+        $this->get('/posts?id=' . $postOne->id)
+            ->assertStatus(200)
+            ->assertSee(substr($postOne->body, 0, 100))
+            ->assertDontSee(substr($postTwo->body, 0, 100));
+    }
+
+    /** @test */
     public function it_filters_posts_by_tag()
     {
         $tagOne = create('App\Tag', ['name' => 'One']);

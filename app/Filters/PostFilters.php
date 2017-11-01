@@ -11,7 +11,19 @@ class PostFilters extends Filters
      *
      * @var array of strings
      */
-    protected $filters = ['tag', 'year', 'month', 'search'];
+    protected $filters = ['id', 'tag', 'year', 'month', 'search'];
+
+    /**
+     * Filters posts by id.
+     * Used by API
+     *
+     * @param string $value
+     * @return Illuminate\Database\Eloquent\Builder
+     */
+    protected function id($value)
+    {
+        $this->builder->whereId($value);
+    }
 
     /**
      * Filters posts by tag.
@@ -25,6 +37,7 @@ class PostFilters extends Filters
             return $query->whereName($value);
         });
     }
+
 
     /**
      * Filters posts by year.

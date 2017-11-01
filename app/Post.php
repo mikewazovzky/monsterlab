@@ -51,7 +51,7 @@ class Post extends Model
      *
      * @var array of strings
      */
-    protected $with = ['tags', 'user'];
+    protected $with = [];
 
     /**
      * Hook to model:created event to make a post slug

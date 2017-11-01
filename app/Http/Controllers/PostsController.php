@@ -21,7 +21,7 @@ class PostsController extends Controller
      */
     public function index(PostFilters $filters)
     {
-        $posts = Post::latest()->filter($filters);
+        $posts = Post::with('user:id,name,slug')->latest()->filter($filters);
 
         if (request()->wantsJson()) {
             return $posts->get();
@@ -105,8 +105,8 @@ class PostsController extends Controller
         $this->authorize('update', $post);
 
         $attributes = $request->validate([
-            'title' => 'required',
-            'body' => 'required',
+            'title' => 'sometimes|required',
+            'body' => 'sometimes|required',
         ]);
 
         $post->update($attributes);

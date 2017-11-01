@@ -17,20 +17,7 @@ class PostsController extends Controller
      */
     public function index(PostFilters $filters)
     {
-        $posts =  Post::latest()->filter($filters)->get();
-
-        return response(['data' => $posts], 200);
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Post  $post
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        $posts = Post::whereId($id)->get();
+        $posts =  Post::with('user:id,name,slug')->with('tags:name')->latest()->filter($filters)->get();
 
         return response(['data' => $posts], 200);
     }
@@ -69,8 +56,8 @@ class PostsController extends Controller
         $this->authorize('update', $post);
 
         $attributes = $request->validate([
-            'title' => 'required',
-            'body' => 'required',
+            'title' => 'sometimes|required',
+            'body' => 'sometimes|required',
         ]);
 
         $post->update($attributes);
