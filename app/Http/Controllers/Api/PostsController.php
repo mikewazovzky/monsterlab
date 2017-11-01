@@ -1,19 +1,15 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Api;
 
 use App\Tag;
 use App\Post;
 use App\Filters\PostFilters;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
 class PostsController extends Controller
 {
-    public function __construct()
-    {
-        $this->middleware('auth')->except(['index', 'show']);
-    }
-
     /**
      * Display a listing of the resource.
      *
@@ -21,25 +17,22 @@ class PostsController extends Controller
      */
     public function index(PostFilters $filters)
     {
-        $posts = Post::latest()->filter($filters);
+        $posts =  Post::latest()->filter($filters)->get();
 
-        if (request()->wantsJson()) {
-            return $posts->get();
-        }
-
-        return view('posts.index', ['posts' => $posts->paginate(10)]);
+        return response(['data' => $posts], 200);
     }
 
     /**
-     * Show the form for creating a new resource.
+     * Display the specified resource.
      *
+     * @param  \App\Post  $post
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function show($id)
     {
-        $this->authorize('create', Post::class);
+        $posts = Post::whereId($id)->get();
 
-        return view('posts.create');
+        return response(['data' => $posts], 200);
     }
 
     /**
@@ -50,8 +43,6 @@ class PostsController extends Controller
      */
     public function store(Request $request)
     {
-        // return $request->all();
-
         $this->authorize('create', Post::class);
 
         $attributes = $request->validate([
@@ -61,35 +52,7 @@ class PostsController extends Controller
 
         $post = Post::publish($attributes, $request->tagList);
 
-        flash('Your post has been published!');
-
-        return redirect(route('posts.show', $post));
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Post  $post
-     * @return \Illuminate\Http\Response
-     */
-    public function show(Post $post)
-    {
-        $post->incrementViewsCount();
-
-        return view('posts.show', ['post' => $post]);
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Post  $post
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Post $post)
-    {
-        $this->authorize('update', $post);
-
-        return view('posts.edit', ['post' => $post]);
+        return response(['status' => 'success'], 201);
     }
 
     /**
@@ -99,8 +62,9 @@ class PostsController extends Controller
      * @param  \App\Post  $post
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Post $post)
+    public function update($id, Request $request)
     {
+        $post = Post::findOrFail($id);
 
         $this->authorize('update', $post);
 
@@ -113,9 +77,7 @@ class PostsController extends Controller
 
         $post->syncTags($request->tagList);
 
-        flash('Your post has been updated!');
-
-        return redirect(route('posts.show', $post));
+        return response(['status' => 'success'], 200);
     }
 
     /**
@@ -124,14 +86,14 @@ class PostsController extends Controller
      * @param  \App\Post  $post
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Post $post)
+    public function destroy($id)
     {
+        $post = Post::findOrFail($id);
+
         $this->authorize('delete', $post);
 
         $post->delete();
 
-        flash()->danger('Your post has been deleted!');
-
-        return redirect(route('posts.index'));
+        return response(['status' => 'success'], 200);
     }
 }

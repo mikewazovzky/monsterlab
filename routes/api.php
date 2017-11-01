@@ -20,3 +20,9 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function () {
     return auth()->user();
 });
+
+Route::middleware('auth:api')->get('/posts', 'Api\PostsController@index');
+Route::middleware('auth:api')->get('/posts/{id}', 'Api\PostsController@show');
+Route::middleware('auth:api')->post('/posts', 'Api\PostsController@store');
+Route::middleware('auth:api')->post('/posts/{id}/update', 'Api\PostsController@update');
+Route::middleware('auth:api')->post('/posts/{id}/destroy', 'Api\PostsController@destroy');

@@ -33,7 +33,7 @@
         .fs-08 { font-size: 0.9em; }
         .panel-about { padding: 0; }
         .post-body { background-color: #fdfdfd; font-size: 1.2em; }
-        pre { background-color: #434343; color: #efefef; padding: 0 20px 20px 20px; font-size: 0.9em; }
+        pre { background-color: #222222; color: #efefef; padding: 0 20px 20px 20px; font-size: 0.9em; }
         kbd { background-color: #434343; color: #efefef; }
         .post-body p { margin-top: 10px; }
         .post-body ol { padding-left: 20px; }

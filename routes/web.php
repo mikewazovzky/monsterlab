@@ -81,8 +81,3 @@ Route::get('/facebook/{id}', function ($id) {
     $result = (new Facebook())->publish($post);
     dd(json_decode((string) $result->getBody(), true));
 });
-
-// Server: API authorized method
-// Route::get('/user', function () {
-//     return auth()->user();
-// })->middleware('auth:api');

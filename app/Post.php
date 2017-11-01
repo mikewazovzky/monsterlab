@@ -68,6 +68,35 @@ class Post extends Model
     }
 
     /**
+     * Create new post. Associate tags with the post.
+     *
+     * @param array $attributes
+     * @param array $tagList
+     * @return App\Post
+     */
+    public static function publish($attributes, $tagList = [], $user = null)
+    {
+        $user = $user ?? auth()->user();
+
+        $post = $user->posts()->create($attributes);
+
+        $post->syncTags($tagList);
+
+        return $post;
+    }
+
+    /**
+     * Sync post tags.
+     *
+     * @param array $tagList
+     * @return void
+     */
+    public function syncTags($tagList = [])
+    {
+        $this->tags()->sync($tagList);
+    }
+
+    /**
      * Get the route key name for Laravel.
      *
      * @return string
