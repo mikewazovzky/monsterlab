@@ -2,6 +2,9 @@
 
 @section('header')
     <style>
+        h4 { color: #000000; }
+        th, td { padding: 5px 10px !important; }
+
         #section-1 { margin-top: 0; }
         .menu ul { list-style-type: square; padding-left: 1em; }
         .section { font-size: 1.2em; }
@@ -93,7 +96,11 @@ GET  HTTP/1.1
 URL: http://m-lab.xyz/api/v1.01/
 </code></pre>
 <p><strong>Права доступа</strong> Зарегистрированные пользователи c ролями <strong>reader, writer</strong></p>
-<p><strong>Параметры запроса</strong> Параметры запроса можно комбинировать</p>
+<p><strong>Параметры запроса</strong>
+Параметры запроса можно комбинировать,
+фильтры будут применены в том порядке в котором они включены в запрос.
+По умолчанию записи отсортированы по дате публикации в обратно порядке (latest first).
+</p>
 <table class="table table-condensed fs-08">
     <tr>
         <th>Параметр</th>
@@ -104,7 +111,8 @@ URL: http://m-lab.xyz/api/v1.01/
     <tr>
         <td>id</td>
         <td>нет</td>
-        <td>Идентификатор записи (поста). Возвращает массив с одной записью с указанным id, если он существует</td>
+        <td>Идентификатор записи (поста).
+            <br>Возвращает массив с одной записью с указанным id, если он существует</td>
         <td>integer</td>
     </tr>
     <tr>
@@ -124,6 +132,19 @@ URL: http://m-lab.xyz/api/v1.01/
         <td>нет</td>
         <td>Возвращает массив записей опубликованных в указанном месяце</td>
         <td>string</td>
+    </tr>
+    <tr>
+        <td>popular</td>
+        <td>нет</td>
+        <td>Сортирует записи по их популярности.
+            <br>Допустимые значения: <code>DESC</code> (по умолчанию) и <code>ASC</code>.</td>
+        <td>string</td>
+    </tr>
+    <tr>
+        <td>limit</td>
+        <td>нет</td>
+        <td>Ограничивает максимальное количество записей.</td>
+        <td>integer</td>
     </tr>
 </table>
 <p><strong>Ответ сервера.</strong></p>
