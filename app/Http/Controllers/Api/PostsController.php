@@ -30,11 +30,6 @@ class PostsController extends Controller
      */
     public function store(Request $request)
     {
-        // TEMPORARY!
-        if (auth()->guest()) {
-            return response(['Unauthenticated'], 401);
-        }
-
         $this->authorize('create', Post::class);
 
         $attributes = $request->validate([
@@ -56,11 +51,6 @@ class PostsController extends Controller
      */
     public function update($id, Request $request)
     {
-        // TEMPORARY!
-        if (auth()->guest()) {
-            return response(['Unauthenticated'], 401);
-        }
-
         $post = Post::findOrFail($id);
 
         $this->authorize('update', $post);
@@ -85,11 +75,6 @@ class PostsController extends Controller
      */
     public function destroy($id)
     {
-        // TEMPORARY!
-        if (auth()->guest()) {
-            return response(['Unauthenticated'], 401);
-        }
-
         $post = Post::findOrFail($id);
 
         $this->authorize('delete', $post);
