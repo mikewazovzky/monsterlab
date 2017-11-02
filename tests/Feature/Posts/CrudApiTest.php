@@ -10,6 +10,12 @@ class CrudApiTest extends TestCase
 {
     use DatabaseMigrations;
 
+    /** Fails at Tavis CI  */
+    public function guest_may_not_get_posts()
+    {
+        $this->getJson('/api/v1.01/posts')->assertStatus(401);
+    }
+
     /** @test */
     public function any_user_can_get_array_of_posts()
     {
