@@ -42,14 +42,7 @@
                     <li><a href="{{ route('login') }}">Login</a></li>
                     <li><a href="{{ route('register') }}">Register</a></li>
                 @else
-{{--                     @if($notificationsCount = Auth::user()->unreadNotifications()->count() )
-                        <li title="You have new notifications!">
-                            <a href="{{ route('profiles.show', Auth::user()) }}">
-                                <span class="glyphicon glyphicon-bell"></span>
-                                <notifications-count :value="{{ $notificationsCount }}"></notifications-count>
-                            </a>
-                        </li>
-                    @endif --}}
+
                     <notifications-count :value="{{ Auth::user()->unreadNotifications()->count() }}"></notifications-count>
 
                     <li class="dropdown">

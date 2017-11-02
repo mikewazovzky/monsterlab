@@ -11,7 +11,7 @@ class PostFilters extends Filters
      *
      * @var array of strings
      */
-    protected $filters = ['id', 'tag', 'year', 'month', 'search', 'limit'];
+    protected $filters = ['id', 'tag', 'year', 'month', 'search', 'limit', 'popular'];
 
     /**
      * Filters posts by id.
@@ -83,5 +83,12 @@ class PostFilters extends Filters
     protected function limit($limit)
     {
         $this->builder->take($limit);
+    }
+
+    public function popular($value = 'DESC')
+    {
+        $order = ($value === 'ASC' || $value === 'asc') ? 'ASC' : 'DESC';
+
+        $this->builder->orderBy('views', $order);
     }
 }

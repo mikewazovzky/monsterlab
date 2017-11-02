@@ -26,4 +26,20 @@ class PostTest extends TestCase
 
         $this->assertNotEquals($postOne->slug, $postTwo->slug);
     }
+
+    /** @test */
+    public function post_tracks_a_views_count()
+    {
+        $post = create('App\Post');
+
+        $this->assertEquals(0, $post->fresh()->views);
+
+        $post->increment('views');
+
+        $this->assertEquals(1, $post->fresh()->views);
+
+        $this->get(route('posts.show', $post))->assertStatus(200);
+
+        $this->assertEquals(2, $post->fresh()->views);
+    }
 }

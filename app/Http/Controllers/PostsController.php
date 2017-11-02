@@ -74,7 +74,11 @@ class PostsController extends Controller
      */
     public function show(Post $post)
     {
+        // Updates cached (Redis) views count
         $post->incrementViewsCount();
+
+        // Updates views count database field
+        $post->increment('views');
 
         return view('posts.show', ['post' => $post]);
     }

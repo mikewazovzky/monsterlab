@@ -72,4 +72,57 @@ class FiltersTest extends TestCase
 
         $this->assertCount(5, $response);
     }
+
+    /** @test */
+    public function it_sorts_post_by_views()
+    {
+        $postRegular = create('App\Post', ['views' => 33]);
+        $postPopular = create('App\Post', ['views' => 333]);
+        $postUnPopular = create('App\Post', ['views' => 3]);
+
+        // Ascending order: ASC
+        $response = $this->getJson('/posts?popular=ASC')->assertStatus(200)->json();
+
+        $data = array_map(function ($item) {
+            return $item['id'];
+        }, $response);
+
+        $this->assertEquals([3, 1, 2], $data);
+
+        // Ascending order: asc
+        $response = $this->getJson('/posts?popular=asc')->assertStatus(200)->json();
+
+        $data = array_map(function ($item) {
+            return $item['id'];
+        }, $response);
+
+        $this->assertEquals([3, 1, 2], $data);
+
+        // Descending order: DESC
+        $response = $this->getJson('/posts?popular=DESC')->assertStatus(200)->json();
+
+        $data = array_map(function ($item) {
+            return $item['id'];
+        }, $response);
+
+        $this->assertEquals([2, 1, 3], $data);
+
+        // Descending order: by default if no value passed
+        $response = $this->getJson('/posts?popular')->assertStatus(200)->json();
+
+        $data = array_map(function ($item) {
+            return $item['id'];
+        }, $response);
+
+        $this->assertEquals([2, 1, 3], $data);
+
+        // Descending order: by default if wrong value passed
+        $response = $this->getJson('/posts?popular=jdbcdsinsxdi')->assertStatus(200)->json();
+
+        $data = array_map(function ($item) {
+            return $item['id'];
+        }, $response);
+
+        $this->assertEquals([2, 1, 3], $data);
+    }
 }
