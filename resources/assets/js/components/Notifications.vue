@@ -46,11 +46,16 @@
         methods: {
             remove(index) {
                 this.items.splice(index, 1);
+                console.log('dismissing');
+                window.events.$emit('notifications:dismiss');
             },
 
             markAll() {
                 axios.delete(this.endpoint)
-                    .then(() => this.items = [])
+                    .then(() => {
+                        this.items = [];
+                        window.events.$emit('notifications:dismiss-all');
+                    })
                     .catch(errors => console.log(errors));
             }
         }

@@ -28,6 +28,7 @@ Vue.prototype.authorize = function (...params) {
 };
 
 Vue.prototype.signedIn = window.App.signedIn;
+Vue.prototype.signedUser = window.App.user;
 
 Vue.prototype.isAdmin = function () {
     return window.App.user.role === 'admin';
@@ -49,6 +50,7 @@ Vue.component('user-data', require('./components/UserData.vue'));
 Vue.component('user-data-role', require('./components/UserDataRole.vue'));
 Vue.component('user-data-password', require('./components/UserDataPassword.vue'));
 Vue.component('notifications', require('./components/Notifications.vue'));
+Vue.component('notifications-count', require('./components/NotificationsCount.vue'));
 Vue.component('search', require('./components/Search.vue'));
 Vue.component('list-item', require('./components/ListItem.vue'));
 Vue.component('list-group', require('./components/ListGroup.vue'));

@@ -2082,16 +2082,64 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     methods: {
         remove: function remove(index) {
             this.items.splice(index, 1);
+            console.log('dismissing');
+            window.events.$emit('notifications:dismiss');
         },
         markAll: function markAll() {
             var _this2 = this;
 
             axios.delete(this.endpoint).then(function () {
-                return _this2.items = [];
+                _this2.items = [];
+                window.events.$emit('notifications:dismiss-all');
             }).catch(function (errors) {
                 return console.log(errors);
             });
         }
+    }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?{\"cacheDirectory\":true,\"presets\":[[\"env\",{\"modules\":false,\"targets\":{\"browsers\":[\"> 2%\"],\"uglify\":true}}]]}!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./resources/assets/js/components/NotificationsCount.vue":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+    props: ['value'],
+
+    data: function data() {
+        return {
+            count: this.value
+        };
+    },
+
+
+    computed: {
+        userProfile: function userProfile() {
+            return 'http://' + location.hostname + '/profiles/' + this.signedUser.slug;
+        }
+    },
+
+    created: function created() {
+        var _this = this;
+
+        window.events.$on('notifications:dismiss', function () {
+            return _this.count--;
+        });
+        window.events.$on('notifications:dismiss-all', function () {
+            return _this.count = 0;
+        });
     }
 });
 
@@ -23804,6 +23852,38 @@ if (false) {
 
 /***/ }),
 
+/***/ "./node_modules/vue-loader/lib/template-compiler/index.js?{\"id\":\"data-v-029f8a83\",\"hasScoped\":false}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./resources/assets/js/components/NotificationsCount.vue":
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _vm.count != 0
+    ? _c("li", { attrs: { title: "You have new notifications!" } }, [
+        _c("a", { attrs: { href: _vm.userProfile } }, [
+          _c("span", { staticClass: "glyphicon glyphicon-bell" }),
+          _vm._v(" "),
+          _c("span", {
+            staticClass: "label label-info",
+            domProps: { textContent: _vm._s(_vm.count) }
+          })
+        ])
+      ])
+    : _vm._e()
+}
+var staticRenderFns = []
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+     require("vue-hot-reload-api").rerender("data-v-029f8a83", module.exports)
+  }
+}
+
+/***/ }),
+
 /***/ "./node_modules/vue-loader/lib/template-compiler/index.js?{\"id\":\"data-v-0a170e9c\",\"hasScoped\":false}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./resources/assets/js/components/Notifications.vue":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -27213,6 +27293,7 @@ __WEBPACK_IMPORTED_MODULE_0_vue___default.a.prototype.authorize = function () {
 };
 
 __WEBPACK_IMPORTED_MODULE_0_vue___default.a.prototype.signedIn = window.App.signedIn;
+__WEBPACK_IMPORTED_MODULE_0_vue___default.a.prototype.signedUser = window.App.user;
 
 __WEBPACK_IMPORTED_MODULE_0_vue___default.a.prototype.isAdmin = function () {
     return window.App.user.role === 'admin';
@@ -27236,6 +27317,7 @@ __WEBPACK_IMPORTED_MODULE_0_vue___default.a.component('user-data', __webpack_req
 __WEBPACK_IMPORTED_MODULE_0_vue___default.a.component('user-data-role', __webpack_require__("./resources/assets/js/components/UserDataRole.vue"));
 __WEBPACK_IMPORTED_MODULE_0_vue___default.a.component('user-data-password', __webpack_require__("./resources/assets/js/components/UserDataPassword.vue"));
 __WEBPACK_IMPORTED_MODULE_0_vue___default.a.component('notifications', __webpack_require__("./resources/assets/js/components/Notifications.vue"));
+__WEBPACK_IMPORTED_MODULE_0_vue___default.a.component('notifications-count', __webpack_require__("./resources/assets/js/components/NotificationsCount.vue"));
 __WEBPACK_IMPORTED_MODULE_0_vue___default.a.component('search', __webpack_require__("./resources/assets/js/components/Search.vue"));
 __WEBPACK_IMPORTED_MODULE_0_vue___default.a.component('list-item', __webpack_require__("./resources/assets/js/components/ListItem.vue"));
 __WEBPACK_IMPORTED_MODULE_0_vue___default.a.component('list-group', __webpack_require__("./resources/assets/js/components/ListGroup.vue"));
@@ -27761,6 +27843,53 @@ if (false) {(function () {
     hotAPI.createRecord("data-v-0a170e9c", Component.options)
   } else {
     hotAPI.reload("data-v-0a170e9c", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+
+/***/ "./resources/assets/js/components/NotificationsCount.vue":
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+var normalizeComponent = __webpack_require__("./node_modules/vue-loader/lib/component-normalizer.js")
+/* script */
+var __vue_script__ = __webpack_require__("./node_modules/babel-loader/lib/index.js?{\"cacheDirectory\":true,\"presets\":[[\"env\",{\"modules\":false,\"targets\":{\"browsers\":[\"> 2%\"],\"uglify\":true}}]]}!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./resources/assets/js/components/NotificationsCount.vue")
+/* template */
+var __vue_template__ = __webpack_require__("./node_modules/vue-loader/lib/template-compiler/index.js?{\"id\":\"data-v-029f8a83\",\"hasScoped\":false}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./resources/assets/js/components/NotificationsCount.vue")
+/* styles */
+var __vue_styles__ = null
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "resources\\assets\\js\\components\\NotificationsCount.vue"
+if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key.substr(0, 2) !== "__"})) {console.error("named exports are not supported in *.vue files.")}
+if (Component.options.functional) {console.error("[vue-loader] NotificationsCount.vue: functional components are not supported with templates, they should use render functions.")}
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-029f8a83", Component.options)
+  } else {
+    hotAPI.reload("data-v-029f8a83", Component.options)
   }
   module.hot.dispose(function (data) {
     disposed = true
