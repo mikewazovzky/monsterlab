@@ -520,37 +520,20 @@
 	"buffers":
 	[
 		{
-			"file": "/C/OSPanel/domains/m-lab.dev/routes/api.php",
+			"file": "/C/OSPanel/domains/m-lab.dev/tests/Feature/Posts/FiltersTest.php",
 			"settings":
 			{
-				"buffer_size": 1038,
+				"buffer_size": 2360,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "/C/OSPanel/domains/m-lab.dev/routes/web.php",
+			"file": "/C/OSPanel/domains/m-lab.dev/app/Filters/PostFilters.php",
 			"settings":
 			{
-				"buffer_size": 3976,
+				"buffer_size": 1871,
 				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "/C/OSPanel/domains/m-lab.dev/resources/views/layouts/app.blade.php",
-			"settings":
-			{
-				"buffer_size": 2524,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "/C/OSPanel/domains/m-lab.dev/app/Facebook.php",
-			"settings":
-			{
-				"buffer_size": 7013,
 				"line_ending": "Windows"
 			}
 		}
@@ -629,34 +612,40 @@
 	[
 		"/C/OSPanel/domains/m-lab.dev",
 		"/C/OSPanel/domains/m-lab.dev/app",
-		"/C/OSPanel/domains/m-lab.dev/resources",
-		"/C/OSPanel/domains/m-lab.dev/resources/views",
-		"/C/OSPanel/domains/m-lab.dev/resources/views/layouts",
-		"/C/OSPanel/domains/m-lab.dev/routes"
+		"/C/OSPanel/domains/m-lab.dev/app/Filters",
+		"/C/OSPanel/domains/m-lab.dev/app/Http",
+		"/C/OSPanel/domains/m-lab.dev/app/Http/Controllers",
+		"/C/OSPanel/domains/m-lab.dev/tests",
+		"/C/OSPanel/domains/m-lab.dev/tests/Feature",
+		"/C/OSPanel/domains/m-lab.dev/tests/Feature/Posts"
 	],
 	"file_history":
 	[
-		"/C/OSPanel/domains/m-lab.dev/resources/views/pages/developers.blade.php",
-		"/C/OSPanel/domains/m-lab.dev/routes/api.php",
-		"/C/OSPanel/domains/m-lab.dev/app/Providers/RouteServiceProvider.php",
-		"/C/OSPanel/domains/m-lab.dev/tests/Feature/Posts/CrudApiTest.php",
-		"/C/OSPanel/domains/m-lab.dev/app/Http/Controllers/PostsController.php",
-		"/C/OSPanel/domains/m-lab.dev/tests/Feature/Posts/CrudOperationsTest.php",
+		"/C/OSPanel/domains/m-lab.dev/phpunit.xml",
+		"/C/OSPanel/domains/m-lab.dev/.env",
+		"/C/OSPanel/domains/m-lab.dev/resources/views/pages/about.blade.php",
 		"/C/OSPanel/domains/m-lab.dev/app/Post.php",
-		"/C/OSPanel/domains/m-lab.dev/tests/Feature/Posts/ValidationTest.php",
+		"/C/OSPanel/domains/m-lab.dev/tests/Feature/Posts/CrudApiTest.php",
 		"/C/OSPanel/domains/m-lab.dev/app/Http/Controllers/Api/PostsController.php",
+		"/C/OSPanel/domains/m-lab.dev/app/Http/Controllers/PostsController.php",
+		"/C/OSPanel/domains/m-lab.dev/resources/views/pages/developers.blade.php",
+		"/C/OSPanel/domains/m-lab.dev/tests/Feature/Posts/ValidationTest.php",
+		"/C/OSPanel/domains/m-lab.dev/routes/api.php",
+		"/C/OSPanel/domains/m-lab.dev/app/Filters/PostFilters.php",
+		"/C/OSPanel/domains/m-lab.dev/tests/Feature/Posts/FiltersTest.php",
 		"/C/OSPanel/domains/m-lab.dev/routes/web.php",
+		"/C/OSPanel/domains/m-lab.dev/resources/views/layouts/app.blade.php",
+		"/C/OSPanel/domains/m-lab.dev/app/Providers/RouteServiceProvider.php",
+		"/C/OSPanel/domains/m-lab.dev/tests/Feature/Posts/CrudOperationsTest.php",
 		"/C/OSPanel/domains/m-lab.dev/resources/assets/js/app.js",
 		"/C/OSPanel/domains/m-lab.dev/config/auth.php",
 		"/C/OSPanel/domains/m-lab.dev/app/Providers/AuthServiceProvider.php",
 		"/C/OSPanel/domains/m-lab.dev/app/User.php",
-		"/C/OSPanel/domains/m-lab.dev/resources/views/pages/about.blade.php",
 		"/C/OSPanel/domains/m-lab.original/routes/web.php",
 		"/C/OSPanel/modules/conemu/ConEmu/CmdInit.cmd",
 		"/C/OSPanel/domains/m-lab.dev/app/Facebook.php",
 		"/C/OSPanel/domains/test/readme.txt",
 		"/C/OSPanel/domains/research/laravel-social-media/routes/web.php",
-		"/C/OSPanel/domains/m-lab.dev/.env",
 		"/C/OSPanel/domains/m-lab.dev/config/social.php",
 		"/C/OSPanel/domains/m-lab.dev/production/.env",
 		"/C/OSPanel/domains/m-lab.dev/notes/requirements/social-media-integration",
@@ -674,7 +663,6 @@
 		"/C/OSPanel/domains/m-lab.dev/resources/views/emails/notification/user-confirmed.blade.php",
 		"/C/OSPanel/domains/m-lab.dev/resources/views/welcome.blade.php",
 		"/C/OSPanel/domains/research/laravel-passport-consumer/routes/web.php",
-		"/C/OSPanel/domains/m-lab.dev/resources/views/layouts/app.blade.php",
 		"/C/OSPanel/domains/m-lab.dev/resources/views/posts/show.blade.php",
 		"/C/OSPanel/domains/m-lab.dev/resources/views/emails/confirm.blade.php",
 		"/C/OSPanel/domains/monster-lab/app/Post.php",
@@ -760,14 +748,11 @@
 		"/C/OSPanel/domains/monster-lab/app/Notifications/ReplyCreatedAdminNotification.php",
 		"/C/OSPanel/domains/monster-lab/vendor/laravel/framework/src/Illuminate/Notifications/Messages/MailMessage.php",
 		"/C/OSPanel/domains/monster-lab/app/Notifications/UserRegistered.php",
-		"/C/OSPanel/domains/monster-lab/app/Notifications/UserConfirmed.php",
-		"/C/OSPanel/domains/monster-lab/app/Notifications/PostCreatedAdminNotification.php",
-		"/C/OSPanel/domains/monster-lab/app/Listeners/InformUserThatReplyCreated.php",
-		"/C/OSPanel/domains/monster-lab/app/Listeners/InformAdminThatUserRegistered.php"
+		"/C/OSPanel/domains/monster-lab/app/Notifications/UserConfirmed.php"
 	],
 	"find":
 	{
-		"height": 35.0
+		"height": 101.0
 	},
 	"find_in_files":
 	{
@@ -781,6 +766,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"user",
 			");\n"
 		],
 		"highlight": true,
@@ -799,52 +785,24 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 1,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "/C/OSPanel/domains/m-lab.dev/routes/api.php",
+					"file": "/C/OSPanel/domains/m-lab.dev/tests/Feature/Posts/FiltersTest.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1038,
+						"buffer_size": 2360,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								622,
-								622
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "/C/OSPanel/domains/m-lab.dev/routes/web.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3976,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								3539,
-								3539
+								2162,
+								2162
 							]
 						],
 						"settings":
@@ -854,57 +812,27 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1488.0,
+						"translation.y": 1581.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
 					"type": "text"
 				},
 				{
-					"buffer": 2,
-					"file": "/C/OSPanel/domains/m-lab.dev/resources/views/layouts/app.blade.php",
+					"buffer": 1,
+					"file": "/C/OSPanel/domains/m-lab.dev/app/Filters/PostFilters.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2524,
+						"buffer_size": 1871,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1020,
-								1020
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Laravel Blade Highlighter/blade.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 372.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "/C/OSPanel/domains/m-lab.dev/app/Facebook.php",
-					"semi_transient": true,
-					"settings":
-					{
-						"buffer_size": 7013,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								4118,
-								4129
+								1721,
+								1721
 							]
 						],
 						"settings":
@@ -914,10 +842,10 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 3906.0,
+						"translation.y": 2232.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 0,
 					"type": "text"
 				}
 			]
@@ -1152,7 +1080,7 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 293.0,
+	"side_bar_width": 228.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

@@ -11,7 +11,7 @@ class PostFilters extends Filters
      *
      * @var array of strings
      */
-    protected $filters = ['id', 'tag', 'year', 'month', 'search'];
+    protected $filters = ['id', 'tag', 'year', 'month', 'search', 'limit'];
 
     /**
      * Filters posts by id.
@@ -72,5 +72,16 @@ class PostFilters extends Filters
         $this->builder
             ->where('title', 'LIKE', "%{$value}%")
             ->orWhere('body', 'LIKE', "%{$value}%");
+    }
+
+    /**
+     * Limit the number of return posts.
+     *
+     * @param integer $limit
+     * @return Illuminate\Database\Eloquent\Builder
+     */
+    protected function limit($limit)
+    {
+        $this->builder->take($limit);
     }
 }

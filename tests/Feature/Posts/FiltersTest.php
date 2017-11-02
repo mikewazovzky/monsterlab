@@ -61,4 +61,15 @@ class FiltersTest extends TestCase
             // ->assertSee(substr($postOctober->body, 0, 100))
             // ->assertDontSee(substr($postAugest->body, 0, 100));
     }
+
+    /** @test */
+    public function it_limits_number_of_returned_posts()
+    {
+        create('App\Post', [], 20);
+        $limit = 5;
+
+        $response = $this->getJson('/posts?limit=' . $limit)->assertStatus(200)->json();
+
+        $this->assertCount(5, $response);
+    }
 }
