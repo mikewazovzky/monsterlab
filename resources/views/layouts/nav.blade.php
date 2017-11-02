@@ -43,7 +43,7 @@
                     <li><a href="{{ route('register') }}">Register</a></li>
                 @else
 
-                    <notifications-count :value="{{ Auth::user()->unreadNotifications()->count() }}"></notifications-count>
+                    <li is="notifications-count" :value="{{ Auth::user()->unreadNotifications()->count() }}"></li>
 
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
