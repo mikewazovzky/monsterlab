@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"min",
+				"min-width"
+			],
+			[
 				"padd",
 				"padding-left"
 			],
@@ -510,29 +514,16 @@
 			[
 				"show",
 				"showCount"
-			],
-			[
-				"click",
-				"clickCount"
 			]
 		]
 	},
 	"buffers":
 	[
 		{
-			"file": "/C/OSPanel/domains/m-lab.dev/tests/Feature/Posts/FiltersTest.php",
+			"file": "/C/OSPanel/domains/test/test.php",
 			"settings":
 			{
-				"buffer_size": 2360,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "/C/OSPanel/domains/m-lab.dev/app/Filters/PostFilters.php",
-			"settings":
-			{
-				"buffer_size": 1871,
+				"buffer_size": 25,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -612,32 +603,41 @@
 	[
 		"/C/OSPanel/domains/m-lab.dev",
 		"/C/OSPanel/domains/m-lab.dev/app",
-		"/C/OSPanel/domains/m-lab.dev/app/Filters",
 		"/C/OSPanel/domains/m-lab.dev/app/Http",
 		"/C/OSPanel/domains/m-lab.dev/app/Http/Controllers",
-		"/C/OSPanel/domains/m-lab.dev/tests",
-		"/C/OSPanel/domains/m-lab.dev/tests/Feature",
-		"/C/OSPanel/domains/m-lab.dev/tests/Feature/Posts"
+		"/C/OSPanel/domains/m-lab.dev/app/Http/Controllers/Api",
+		"/C/OSPanel/domains/m-lab.dev/app/Http/Controllers/Auth",
+		"/C/OSPanel/domains/m-lab.dev/app/Policies",
+		"/C/OSPanel/domains/m-lab.dev/resources",
+		"/C/OSPanel/domains/m-lab.dev/routes"
 	],
 	"file_history":
 	[
+		"/Z/Shared/webdev/hosting/hostinger.ru/readme.txt",
+		"/C/OSPanel/domains/m-lab.dev/app/Http/Controllers/Api/PostsController.php",
+		"/C/OSPanel/domains/m-lab.dev/tests/Feature/Posts/CrudApiTest.php",
+		"/C/OSPanel/domains/m-lab.dev/app/Policies/PostPolicy.php",
+		"/C/OSPanel/domains/m-lab.dev/resources/views/pages/developers.blade.php",
+		"/C/OSPanel/domains/m-lab.dev/resources/views/layouts/nav.blade.php",
+		"/C/OSPanel/domains/m-lab.dev/app/Filters/PostFilters.php",
+		"/C/OSPanel/domains/m-lab.dev/tests/Feature/Posts/FiltersTest.php",
+		"/C/OSPanel/domains/m-lab.dev/app/Http/Controllers/PostsController.php",
+		"/C/OSPanel/domains/m-lab.dev/database/migrations/2017_10_03_170059_create_posts_table.php",
+		"/C/OSPanel/domains/m-lab.dev/tests/Unit/PostTest.php",
+		"/C/OSPanel/domains/m-lab.dev/resources/assets/js/components/NotificationsCount.vue",
+		"/C/OSPanel/domains/m-lab.dev/resources/assets/js/app.js",
+		"/C/OSPanel/domains/m-lab.dev/resources/assets/js/components/Notifications.vue",
+		"/C/Users/Dev/Documents/Network/mac.txt",
 		"/C/OSPanel/domains/m-lab.dev/phpunit.xml",
 		"/C/OSPanel/domains/m-lab.dev/.env",
 		"/C/OSPanel/domains/m-lab.dev/resources/views/pages/about.blade.php",
 		"/C/OSPanel/domains/m-lab.dev/app/Post.php",
-		"/C/OSPanel/domains/m-lab.dev/tests/Feature/Posts/CrudApiTest.php",
-		"/C/OSPanel/domains/m-lab.dev/app/Http/Controllers/Api/PostsController.php",
-		"/C/OSPanel/domains/m-lab.dev/app/Http/Controllers/PostsController.php",
-		"/C/OSPanel/domains/m-lab.dev/resources/views/pages/developers.blade.php",
 		"/C/OSPanel/domains/m-lab.dev/tests/Feature/Posts/ValidationTest.php",
 		"/C/OSPanel/domains/m-lab.dev/routes/api.php",
-		"/C/OSPanel/domains/m-lab.dev/app/Filters/PostFilters.php",
-		"/C/OSPanel/domains/m-lab.dev/tests/Feature/Posts/FiltersTest.php",
 		"/C/OSPanel/domains/m-lab.dev/routes/web.php",
 		"/C/OSPanel/domains/m-lab.dev/resources/views/layouts/app.blade.php",
 		"/C/OSPanel/domains/m-lab.dev/app/Providers/RouteServiceProvider.php",
 		"/C/OSPanel/domains/m-lab.dev/tests/Feature/Posts/CrudOperationsTest.php",
-		"/C/OSPanel/domains/m-lab.dev/resources/assets/js/app.js",
 		"/C/OSPanel/domains/m-lab.dev/config/auth.php",
 		"/C/OSPanel/domains/m-lab.dev/app/Providers/AuthServiceProvider.php",
 		"/C/OSPanel/domains/m-lab.dev/app/User.php",
@@ -726,7 +726,6 @@
 		"/C/OSPanel/domains/monster-lab/resources/assets/js/components/ListItem.vue",
 		"/C/OSPanel/domains/monster-lab/resources/assets/js/components/ListGroup.vue",
 		"/C/OSPanel/domains/monster-lab/config/passport.php",
-		"/C/Users/Dev/Documents/Network/mac.txt",
 		"/Y/Tutorials/PHP/PHP (profIT)/PHP-2/Урок 1/дз.txt",
 		"/C/OSPanel/domains/monster-lab/tests/Feature/TrendingPostsTest.php",
 		"/C/OSPanel/domains/monster-lab/notes/requirements/favoiriting.txt",
@@ -741,18 +740,11 @@
 		"/C/OSPanel/domains/monster-lab/.env",
 		"/C/OSPanel/domains/monster-lab/tests/Feature/RegistrationTest.php",
 		"/C/OSPanel/domains/monster-lab/config/queue.php",
-		"/C/OSPanel/domains/monster-lab/app/Mail/ConfirmEmailRequest.php",
-		"/C/OSPanel/domains/monster-lab/vendor/laravel/framework/src/Illuminate/Contracts/Queue/ShouldQueue.php",
-		"/C/OSPanel/domains/monster-lab/app/Providers/AppServiceProvider.php",
-		"/C/OSPanel/domains/monster-lab/app/Notifications/ReplyCreatedUserNotification.php",
-		"/C/OSPanel/domains/monster-lab/app/Notifications/ReplyCreatedAdminNotification.php",
-		"/C/OSPanel/domains/monster-lab/vendor/laravel/framework/src/Illuminate/Notifications/Messages/MailMessage.php",
-		"/C/OSPanel/domains/monster-lab/app/Notifications/UserRegistered.php",
-		"/C/OSPanel/domains/monster-lab/app/Notifications/UserConfirmed.php"
+		"/C/OSPanel/domains/monster-lab/app/Mail/ConfirmEmailRequest.php"
 	],
 	"find":
 	{
-		"height": 39.0
+		"height": 35.0
 	},
 	"find_in_files":
 	{
@@ -766,6 +758,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"50px",
 			"user",
 			");\n"
 		],
@@ -785,64 +778,32 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 0,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "/C/OSPanel/domains/m-lab.dev/tests/Feature/Posts/FiltersTest.php",
+					"file": "/C/OSPanel/domains/test/test.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2360,
+						"buffer_size": 25,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2162,
-								2162
+								25,
+								25
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/PHP/PHP.sublime-syntax"
 						},
 						"translation.x": 0.0,
-						"translation.y": 1581.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "/C/OSPanel/domains/m-lab.dev/app/Filters/PostFilters.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1871,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1721,
-								1721
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 2232.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -853,7 +814,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 39.0
+		"height": 35.0
 	},
 	"input":
 	{
@@ -890,7 +851,7 @@
 	"project": "m-lab.sublime-project",
 	"replace":
 	{
-		"height": 74.0
+		"height": 66.0
 	},
 	"save_all_on_build": false,
 	"select_file":
@@ -1080,7 +1041,7 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 228.0,
+	"side_bar_width": 462.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

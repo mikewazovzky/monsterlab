@@ -37,6 +37,7 @@
     <li><a href="#article-3-2">Создание записи</a></li>
     <li><a href="#article-3-3">Редактирование записи</a></li>
     <li><a href="#article-3-4">Удаление записи</a></li>
+    <li><a href="#article-3-5">Пример использования</a></li>
 </ul>
 
 </div> {{-- Menu --}}
@@ -50,7 +51,7 @@
 <h3 id="section-2">Использование API</h3>
 <h4 id="article-2-1">Аутентификация пользователей</h4>
 <p>Аутентификация пользователей осуществляется в соответствии с потоколом OAuth2.</p>
-<p>Для создания клиента удаленного доступа необходимо перейти в <a href="#">панель управления
+<p>Для создания клиента удаленного доступа необходимо перейти в <a href="/oauth">панель управления
 удаленным доступом</a>, создать клиента, указать его имя (Name) и адрес для переадресации
 (Redirect URL) при регистрации приложения, запомнить его id (Client ID) и маркер
 доступа (Secret)</p>
@@ -92,8 +93,8 @@
 <p>Получение массива записей соответствующих определенному пользователем критерию.
 В случае отсутствия записей, соответствующих запросу, возвращается пустой массив.</p>
 <pre><code>
-GET  HTTP/1.1
-URL: http://m-lab.xyz/api/v1.01/
+GET  /api/v1.01/posts HTTP/1.1
+HOST: http://m-lab.xyz
 </code></pre>
 <p><strong>Права доступа</strong> Зарегистрированные пользователи c ролями <strong>reader, writer</strong></p>
 <p><strong>Параметры запроса</strong>
@@ -178,8 +179,8 @@ Content-Type: application/json
 <h4 id="article-3-2">Создание записи</h4>
 <p>Создание новой записи</p>
 <pre><code>
-POST HTTP/1.1
-URL: http://m-lab.xyz/api/v1.01/
+POST /api/v1.01/posts HTTP/1.1
+HOST: http://m-lab.xyz
 </code></pre>
 <p><strong>Права доступа</strong> Зарегистрированные пользователи c ролями <strong>writer</strong></p>
 <p><strong>Параметры запроса</strong></p>
@@ -233,8 +234,8 @@ Content-Type: application/json
 <h4 id="article-3-3">Редактирование записи</h4>
 <p>Внесение изменений в существующую запись.</p>
 <pre><code>
-POST HTTP/1.1
-URL: http://m-lab.xyz/api/v1.01/{$post_id}/update
+POST /api/v1.01/posts/{$post_id}/update HTTP/1.1
+HOST: http://m-lab.xyz
 </code></pre>
 <p><strong>Права доступа</strong> Пользователь создавший запись (<strong>writer</strong>)</p>
 <p><strong>Параметры запроса</strong></p>
@@ -280,8 +281,8 @@ Content-Type: application/json
 <br>
 <h4 id="article-3-4">Удаление записи</h4>
 <pre><code>
-POST HTTP/1.1
-URL: http://m-lab.xyz/api/v1.01/{$post_id}/destroy
+POST /api/v1.01/posts/{$post_id}/destroy HTTP/1.1
+URL: http://m-lab.xyz
 </code></pre>
 <p><strong>Права доступа</strong> Пользователь создавший запись (<strong>writer</strong>).</p>
 <p><strong>Параметры запроса:</strong> нет</p>
@@ -295,6 +296,11 @@ Content-Type: application/json
     "status": "success",
 }
 </code></pre>
+
+<br>
+<h4 id="article-3-5">Пример использования API</h4>
+<p>Пример простого приложения использующего API: <a href="http://zeolit.96.lt">Zeo</a></p>
+
 </div> {{-- content col-md-8 --}}
 </div> {{-- dev row --}}
 </div> {{-- container --}}
