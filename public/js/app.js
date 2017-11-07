@@ -1837,6 +1837,18 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         return {
             show: false
         };
+    },
+
+
+    methods: {
+        open: function open() {
+            this.show = true;
+            events.$emit('about', this.show);
+        },
+        close: function close() {
+            this.show = false;
+            events.$emit('about', this.show);
+        }
     }
 });
 
@@ -1863,12 +1875,12 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             open: this.show
         };
     },
+    created: function created() {
+        var _this = this;
 
-
-    watch: {
-        show: function show() {
-            this.open = this.show;
-        }
+        events.$on('about', function (status) {
+            return _this.open = status;
+        });
     }
 });
 

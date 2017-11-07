@@ -1,10 +1,10 @@
 <?php
 
-use App\Post;
-use App\Twitter;
-use App\Facebook;
-use GuzzleHttp\Client;
-use Illuminate\Http\Request;
+// use App\Post;
+// use App\Twitter;
+// use App\Facebook;
+// use GuzzleHttp\Client;
+// use Illuminate\Http\Request;
 
 Auth::routes();
 Route::get('/register/confirm', 'Auth\RegisterConfirmationController@confirm')->name('register.confirm');

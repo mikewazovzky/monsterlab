@@ -15,10 +15,8 @@
             };
         },
 
-        watch: {
-            show() {
-                this.open = this.show;
-            }
+        created() {
+            events.$on('about', (status) => this.open = status);
         }
     };
 </script>
