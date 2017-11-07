@@ -593,15 +593,19 @@
 	"expanded_folders":
 	[
 		"/C/OSPanel/domains/m-lab.dev",
-		"/C/OSPanel/domains/m-lab.dev/production"
+		"/C/OSPanel/domains/m-lab.dev/public",
+		"/C/OSPanel/domains/m-lab.dev/resources",
+		"/C/OSPanel/domains/m-lab.dev/resources/views",
+		"/C/OSPanel/domains/m-lab.dev/resources/views/pages"
 	],
 	"file_history":
 	[
+		"/C/OSPanel/domains/m-lab.dev/resources/views/pages/about.blade.php",
+		"/C/OSPanel/domains/m-lab.dev/resources/views/layouts/app.blade.php",
 		"/Y/Tutorials/PHP/PHP (profIT)/PHP-2/homework/lesson77/App/Core/Mail/YaMailer.php",
 		"/C/OSPanel/domains/m-lab.dev/production/deploy.txt",
 		"/C/OSPanel/domains/m-lab.dev/readme.md",
 		"/C/OSPanel/domains/m-lab.dev/notes/posts/deploy-laravel-project.md",
-		"/C/OSPanel/domains/m-lab.dev/resources/views/pages/about.blade.php",
 		"/C/OSPanel/domains/m-lab.dev/resources/assets/js/components/ListGroup.vue",
 		"/C/OSPanel/domains/m-lab.dev/resources/assets/js/components/ListItem.vue",
 		"/C/OSPanel/domains/m-lab.dev/tests/Feature/Posts/FiltersTest.php",
@@ -626,7 +630,6 @@
 		"/C/OSPanel/domains/m-lab.dev/app/Post.php",
 		"/C/OSPanel/domains/m-lab.dev/tests/Feature/Posts/ValidationTest.php",
 		"/C/OSPanel/domains/m-lab.dev/routes/api.php",
-		"/C/OSPanel/domains/m-lab.dev/resources/views/layouts/app.blade.php",
 		"/C/OSPanel/domains/m-lab.dev/app/Providers/RouteServiceProvider.php",
 		"/C/OSPanel/domains/m-lab.dev/tests/Feature/Posts/CrudOperationsTest.php",
 		"/C/OSPanel/domains/m-lab.dev/config/auth.php",

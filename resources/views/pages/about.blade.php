@@ -189,7 +189,6 @@
 
     <h4>Код проекта</h4>
     <p>
-        Познакомиться с кодом проекта можно на аккаунте в
-        <a href="https://github.com/mikewazovzky/monsterlab">Github</a>
+        Познакомиться с кодом проекта можно в <a href="https://github.com/mikewazovzky/monsterlab">репозитории</a> на Github.
     </p>
 @endsection
