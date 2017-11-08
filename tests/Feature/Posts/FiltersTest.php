@@ -125,4 +125,21 @@ class FiltersTest extends TestCase
 
         $this->assertEquals([2, 1, 3], $data);
     }
+
+    /** @test */
+    public function it_filters_favorite_posts()
+    {
+        $this->signIn($user = create('App\User'));
+
+        $postNotFavorited = create('App\Post');
+        $postFavorited = create('App\Post');
+        $postFavorited->favorite($user);
+
+        $this->assertCount(1, $postFavorited->favorites);
+
+        $this->get('/posts?favorite=')
+            ->assertStatus(200)
+            ->assertSee(substr($postFavorited->body, 0, 100))
+            ->assertDontSee(substr($postNotFavorited->body, 0, 100));
+    }
 }

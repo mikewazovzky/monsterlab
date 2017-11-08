@@ -12,7 +12,7 @@ use Mikewazovzky\Adjustable\Adjustable;
 
 class Post extends Model
 {
-    use Searchable, Adjustable, Cacheable;
+    use Searchable, Adjustable, Cacheable, Favoritable;
 
     /**
      * The attributes that are NOT mass assignable. Yolo!
@@ -52,6 +52,14 @@ class Post extends Model
      * @var array of strings
      */
     protected $with = [];
+
+    /**
+     * List of custom attributes that will be appended when
+     * model is casted toArray or to JSON object
+     *
+     * @var array
+     */
+    protected $appends = [];
 
     /**
      * Hook to model:created event to make a post slug

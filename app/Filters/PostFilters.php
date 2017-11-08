@@ -11,7 +11,7 @@ class PostFilters extends Filters
      *
      * @var array of strings
      */
-    protected $filters = ['id', 'tag', 'year', 'month', 'search', 'limit', 'popular'];
+    protected $filters = ['id', 'tag', 'year', 'month', 'search', 'limit', 'popular', 'favorite'];
 
     /**
      * Filters posts by id.
@@ -85,10 +85,35 @@ class PostFilters extends Filters
         $this->builder->take($limit);
     }
 
+    /**
+     * Sorts posts by popularity - views count.
+     *
+     * @param integer $value
+     * @return Illuminate\Database\Eloquent\Builder
+     */
     public function popular($value = 'DESC')
     {
         $order = ($value === 'ASC' || $value === 'asc') ? 'ASC' : 'DESC';
 
         $this->builder->orderBy('views', $order);
+    }
+
+    /**
+     * Filters posts favorited by authenticated user.
+     *
+     * @param string $value
+     * @return Illuminate\Database\Eloquent\Builder
+     */
+    public function favorite($value = null)
+    {
+        $user = auth()->user();
+
+        if (!$user) {
+            return $this->builder;
+        }
+
+        $this->builder->whereHas('favorites', function ($query) use ($user) {
+            return $query->where('user_id', $user->id);
+        });
     }
 }

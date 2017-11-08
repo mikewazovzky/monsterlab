@@ -1,16 +1,19 @@
-{{-- SEARCH PANEL --}}
+{{-- FAVORITE VIDGET --}}
+@include('posts.sidebar.favorite')
+
+{{-- SEARCH VIDGET --}}
 @include('posts.sidebar.search')
 
-{{-- TAGS PANEL --}}
+{{-- TAGS VIDGET --}}
 @include('posts.sidebar.tags')
 
-{{-- LATEST POSTS PANEL --}}
+{{-- LATEST POSTS VIDGET --}}
 @include('posts.sidebar.latest')
 
-{{-- TRENDING POSTS PANEL --}}
+{{-- TRENDING POSTS VIDGET --}}
 @include('posts.sidebar.trending')
 
-{{-- ARCHIVES PANEL --}}
+{{-- ARCHIVES VIDGET --}}
 @include('posts.sidebar.archives')
 
 {{-- ABOUT VIDGET --}}

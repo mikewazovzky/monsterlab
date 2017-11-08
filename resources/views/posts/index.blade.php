@@ -30,6 +30,11 @@
                 @else
                     No views.
                 @endif
+                @if($post->favoritesCount)
+                    <div class="pull-right">
+                        <favorite :post={{ $post->favoriteAttributes() }}></favorite>
+                    </div>
+                @endif
             </div>
         </div>
     @endforeach

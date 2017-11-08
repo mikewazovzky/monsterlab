@@ -63,6 +63,10 @@
         .instruction { font-size: 0.9em; }
         .fb-share-button { margin-bottom: 3px;  margin-left: 3px; }
         .developers pre { font-size: 1.1em; }
+        /* Favorite Vidget */
+        .sidebar-favorite .panel-heading { background-color: #3097D1; color: #ffffff; }
+        .sidebar-favorite .panel-heading:hover { background-color: #ffffff; color: #3097D1; }
+        .sidebar-favorite a:hover { text-decoration: none; }
     </style>
     <!-- Pass data to JavaScript -->
     <script>
