@@ -17,7 +17,7 @@ class PostsController extends Controller
      */
     public function index(PostFilters $filters)
     {
-        $posts =  Post::with('user:id,name,slug')->with('tags:name')->latest()->filter($filters)->get();
+        $posts =  Post::with('user:id,name,slug')->latest()->filter($filters)->get();
 
         return response(['data' => $posts], 200);
     }

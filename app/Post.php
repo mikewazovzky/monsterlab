@@ -52,7 +52,7 @@ class Post extends Model
      *
      * @var array of strings
      */
-    protected $with = [];
+    protected $with = ['tags'];
 
     /**
      * List of custom attributes that will be appended when
