@@ -1,5 +1,6 @@
 {{-- FAVORITE VIDGET --}}
-@include('posts.sidebar.favorite')
+{{-- @include('posts.sidebar.favorite') --}}
+@include('favoritable::favorite')
 
 {{-- SEARCH VIDGET --}}
 @include('posts.sidebar.search')

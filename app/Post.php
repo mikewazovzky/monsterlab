@@ -9,6 +9,7 @@ use App\Tools\HTMLProcessor;
 use Laravel\Scout\Searchable;
 use Illuminate\Database\Eloquent\Model;
 use Mikewazovzky\Adjustable\Adjustable;
+use Mikewazovzky\Favoritable\Favoritable;
 
 class Post extends Model
 {
