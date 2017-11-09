@@ -7,12 +7,12 @@
 
 <script>
 export default {
-    props: ['post'],
+    props: ['type', 'model'],
 
     data() {
         return {
-            count: this.post.favoritesCount,
-            active: this.post.isFavorited
+            count: this.model.favoritesCount,
+            active: this.model.isFavorited
         };
     },
 
@@ -22,7 +22,7 @@ export default {
         },
 
         endpoint() {
-            return '/posts/' + this.post.slug + '/favorites';
+            return `/favorites/${this.type}/${this.model.id}`;
         }
     },
 

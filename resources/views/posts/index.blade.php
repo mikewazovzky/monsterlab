@@ -32,7 +32,7 @@
                 @endif
                 @if($post->favoritesCount)
                     <div class="pull-right">
-                        <favorite :post={{ $post->favoriteAttributes() }}></favorite>
+                        <favorite type="post" :model={{ $post->favoriteAttributes() }}></favorite>
                     </div>
                 @endif
             </div>

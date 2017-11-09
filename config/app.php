@@ -178,7 +178,7 @@ return [
         App\Providers\RouteServiceProvider::class,
         // Custom Service Provider
         App\Providers\ViewComposerServiceProvider::class,
-
+        App\Providers\FavoritableServiceProvider::class,
     ],
 
     /*

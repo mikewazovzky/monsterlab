@@ -31,8 +31,8 @@ Route::post('/posts/{post}/replies', 'Api\PostRepliesController@store')->name('p
 Route::patch('/posts/{post}/replies/{reply}', 'Api\PostRepliesController@update')->name('post.replies.update');
 Route::delete('/posts/{post}/replies/{reply}', 'Api\PostRepliesController@destroy')->name('post.replies.destroy');
 
-Route::post('/posts/{post}/favorites', 'FavoritesController@store')->name('posts.favorites.store');
-Route::delete('/posts/{post}/favorites', 'FavoritesController@destroy')->name('posts.favorites.destroy');
+// Route::post('/favorites/{model}/{id}', 'FavoritesController@store')->name('favorites.store');
+// Route::delete('/favorites/{model}/{id}', 'FavoritesController@destroy')->name('favorites.destroy');
 
 Route::get('/main/{locale?}', 'PagesController@index')->name('main');
 Route::view('/about', 'pages.about')->name('about');

@@ -32,6 +32,16 @@ trait Favoritable
     }
 
     /**
+     * Get users who favorited the model
+     *
+     * @return Illuminate\Database\Eloquent\Relations\morphMany
+     */
+    public function favoritedBy()
+    {
+        return $this->morphToMany('App\User', 'favorite');
+    }
+
+    /**
      * Favorite the current model.
      *
      * @param User | null   $user
@@ -103,7 +113,7 @@ trait Favoritable
         return json_encode([
             'favoritesCount' => $this->favoritesCount,
             'isFavorited' => $this->isFavorited,
-            'slug' => $this->slug
+            'id' => $this->id
         ]);
     }
 }

@@ -2,12 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Post;
-
 class FavoritesController extends Controller
 {
     /**
-     * Create a new controller instance.
+     * Create a new FavoritesController instance.
      */
     public function __construct()
     {
@@ -19,9 +17,9 @@ class FavoritesController extends Controller
      *
      * @param  Post $reply
      */
-    public function store(Post $post)
+    public function store($modelType, $modelId)
     {
-        $post->favorite(auth()->user());
+        $this->getModel($modelType, $modelId)->favorite(auth()->user());
 
         if (request()->expectsJson()) {
             return response(['status' => 'Post favorited']);
@@ -35,14 +33,28 @@ class FavoritesController extends Controller
      *
      * @param Post $post
      */
-    public function destroy(Post $post)
+    public function destroy($modelType, $modelId)
     {
-        $post->unfavorite(auth()->user());
+        $this->getModel($modelType, $modelId)->unfavorite(auth()->user());
 
-        if(request()->expectsJson()) {
+        if (request()->expectsJson()) {
             return response(['status' => 'Post unfavorited']);
         }
 
         return back();
+    }
+
+    /**
+     * Find the model of requested type with requested id
+     *
+     * @param string $type
+     * @param integer $id
+     * @return Illuminate\Database\Eloquent\Model
+     */
+    protected function getModel($type, $id)
+    {
+        $class = '\\App\\' . studly_case($type);
+
+        return  $class::findOrFail($id);
     }
 }

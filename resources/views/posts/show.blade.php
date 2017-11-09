@@ -31,7 +31,7 @@
                     </form>
                 @endcan
 
-                <favorite :post={{ $post->favoriteAttributes() }}></favorite>
+                <favorite type="post" :model={{ $post->favoriteAttributes() }}></favorite>
 
                 {{-- TWITTER BUTTON --}}
                 <a class="twitter-share-button mr-1" href="https://twitter.com/intent/tweet">Tweet</a>

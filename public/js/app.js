@@ -1723,12 +1723,12 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-    props: ['post'],
+    props: ['type', 'model'],
 
     data: function data() {
         return {
-            count: this.post.favoritesCount,
-            active: this.post.isFavorited
+            count: this.model.favoritesCount,
+            active: this.model.isFavorited
         };
     },
 
@@ -1738,7 +1738,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             return ['btn', 'btn-xs', this.active ? 'btn-primary' : 'btn-default'];
         },
         endpoint: function endpoint() {
-            return '/posts/' + this.post.slug + '/favorites';
+            return '/favorites/' + this.type + '/' + this.model.id;
         }
     },
 
