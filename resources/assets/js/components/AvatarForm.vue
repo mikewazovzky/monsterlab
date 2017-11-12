@@ -53,4 +53,5 @@
 
 <style scoped>
     small { font-size: 0.7em; }
+    img:hover { cursor: pointer; }
 </style>
