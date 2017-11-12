@@ -1,6 +1,7 @@
 {{-- FAVORITE VIDGET --}}
-{{-- @include('posts.sidebar.favorite') --}}
-@include('favoritable::favorite')
+@auth
+    <favorite-vidget></favorite-vidget>
+@endauth
 
 {{-- SEARCH VIDGET --}}
 @include('posts.sidebar.search')

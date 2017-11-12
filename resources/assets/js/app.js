@@ -55,6 +55,7 @@ Vue.component('search', require('./components/Search.vue'));
 Vue.component('list-item', require('./components/ListItem.vue'));
 Vue.component('list-group', require('./components/ListGroup.vue'));
 Vue.component('favorite', require('./components/favoritable/Favorite.vue'));
+Vue.component('favorite-vidget', require('./components/favoritable/FavoriteVidget.vue'));
 
 Vue.component(
     'passport-clients',

@@ -1,6 +1,6 @@
 <template>
     <li class="list-group-item">
-        <a href="#" @click.prevent="open = !open"><slot name="href"></slot></a>
+        <a href="#" @click.prevent="open = !open"><span v-html="symbol"></span> <slot name="href"></slot></a>
         <p v-show="open"><slot></slot></p>
     </li>
 </template>
@@ -15,6 +15,12 @@
             };
         },
 
+        computed: {
+            symbol() {
+                return this.open ? '-' : '+';
+            }
+        },
+
         created() {
             events.$on('about', (status) => this.open = status);
         }
@@ -23,4 +29,5 @@
 
 <style scoped>
     p { margin-bottom: 0; }
+    a { text-decoration: none; }
 </style>
