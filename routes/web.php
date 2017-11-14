@@ -25,6 +25,7 @@ Route::resource('/tags', 'Api\TagsController')->middleware('auth');
 Route::resource('/posts', 'PostsController');
 Route::get('/posts/{post}/adjustments', 'PostsAdjustmentsController@index')->name('adjustments.index');
 Route::get('/search', 'PostsSearchController@search')->name('posts.search');
+Route::get('/elasticsearch', 'PostsSearchController@elasticsearch')->name('posts.elasticsearch');
 
 Route::get('/posts/{post}/replies', 'Api\PostRepliesController@index')->name('post.replies.index');
 Route::post('/posts/{post}/replies', 'Api\PostRepliesController@store')->name('post.replies.store');

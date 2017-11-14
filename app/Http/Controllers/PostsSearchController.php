@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Post;
 use Illuminate\Http\Request;
 
 class PostsSearchController extends Controller
@@ -23,6 +24,9 @@ class PostsSearchController extends Controller
 
             case 'algolia':
                 return $this->algolia($query);
+
+            case 'elasticsearch':
+                return redirect()->action('PostsSearchController@elasticsearch', ['query' => $query]);
 
             default:
                 return back();
@@ -49,5 +53,28 @@ class PostsSearchController extends Controller
     protected function algolia($query)
     {
         return view('posts.search-algolia', ['query' => $query]);
+    }
+
+
+    /**
+     * Search by elasticsearch engine
+     *
+     * @param string $query
+     * @return Illuninate\Http\Response
+     */
+    protected function elasticsearch(Request $request)
+    {
+        $page = request()->page ?: 1;
+        $results = [];
+
+        if ($query = $request['query']) {
+            $results = Post::search($query)->paginate(10);
+        }
+
+        return view('posts.search-elasticsearch', [
+            'query' => $query,
+            'page' => $page,
+            'results' => $results,
+        ]);
     }
 }

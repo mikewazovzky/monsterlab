@@ -69,6 +69,9 @@
         .sidebar-favorite .panel-heading { background-color: #3097D1; color: #ffffff; }
         .sidebar-favorite .panel-heading:hover { background-color: #ffffff; color: #3097D1; }
         .sidebar-favorite a:hover { text-decoration: none; }
+        /* Search highlight */
+        .hightlight { background-color: orange; }
+
     </style>
     <!-- Pass data to JavaScript -->
     <script>

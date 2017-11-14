@@ -22,10 +22,10 @@
                     <input type="radio" name="search-type" id="mySQL" value="mySQL" checked> mySQL
                 </label>
                 <label class="radio-inline">
-                    <input type="radio" name="search-type" id="algolia" value="algolia"> algolia
+                    <input type="radio" name="search-type" id="algolia" value="algolia" disabled> algolia
                 </label>
                 <label class="radio-inline">
-                    <input type="radio" name="search-type" id="elasticsearch" value="elasticsearch" disabled> elastic
+                    <input type="radio" name="search-type" id="elasticsearch" value="elasticsearch"> elastic
                 </label>
             </div>
 

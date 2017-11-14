@@ -22,3 +22,10 @@ function getValue($key, $model = null)
 {
     return old($key) ?: (isset($model) ? $model->$key : null);
 }
+
+function highlight(string $search, string $subject)
+{
+    $replace = "<span class=\"hightlight\">{$search}</span>";
+
+    return str_replace($search, $replace, $subject);
+}
