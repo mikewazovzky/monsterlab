@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"p",
+				"pointer"
+			],
+			[
 				"model",
 				"modelInstance"
 			],
@@ -510,21 +514,25 @@
 			[
 				"co",
 				"couponCode"
-			],
-			[
-				"Cou",
-				"couponApplied"
 			]
 		]
 	},
 	"buffers":
 	[
 		{
-			"file": "/C/OSPanel/domains/m-lab.dev/resources/views/posts/sidebar.blade.php",
+			"file": "/C/OSPanel/domains/m-lab.dev/resources/assets/js/components/AvatarForm.vue",
 			"settings":
 			{
-				"buffer_size": 443,
+				"buffer_size": 1492,
 				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/OSPanel/domains/m-lab.dev/database/migrations/2014_10_12_000000_create_users_table.php",
+			"settings":
+			{
+				"buffer_size": 1120,
 				"line_ending": "Windows"
 			}
 		}
@@ -602,12 +610,20 @@
 	"expanded_folders":
 	[
 		"/C/OSPanel/domains/m-lab.dev",
-		"/C/OSPanel/domains/m-lab.dev/vendor",
-		"/C/OSPanel/domains/m-lab.dev/vendor/mikewazovzky",
-		"/C/OSPanel/domains/m-lab.dev/vendor/mikewazovzky/favoritable"
+		"/C/OSPanel/domains/m-lab.dev/database",
+		"/C/OSPanel/domains/m-lab.dev/resources",
+		"/C/OSPanel/domains/m-lab.dev/resources/assets",
+		"/C/OSPanel/domains/m-lab.dev/resources/views",
+		"/C/OSPanel/domains/m-lab.dev/resources/views/layouts"
 	],
 	"file_history":
 	[
+		"/C/OSPanel/domains/m-lab.dev/resources/views/pages/about.blade.php",
+		"/C/OSPanel/domains/m-lab.dev/resources/views/layouts/app.blade.php",
+		"/C/Users/Dev/AppData/Local/Temp/fz3temp-2/.env",
+		"/C/OSPanel/domains/m-lab.dev/app/User.php",
+		"/C/OSPanel/domains/m-lab.dev/resources/views/posts/sidebar.blade.php",
+		"/C/OSPanel/domains/laravel-packages/laravel/readme.md",
 		"/C/OSPanel/domains/laravel-packages/packages/Mikewazovzky/Favoritable/src/FavoritableServiceProvider.php",
 		"/C/OSPanel/domains/laravel-packages/packages/Mikewazovzky/Favoritable/readme.md",
 		"/C/OSPanel/domains/m-lab.dev/resources/assets/js/components/favoritable/FavoriteVidget.vue",
@@ -627,7 +643,6 @@
 		"/C/OSPanel/domains/m-lab.dev/notes/posts/vue-polimorphysm.md",
 		"/C/OSPanel/domains/m-lab.dev/notes/posts/deploy-laravel-project.md",
 		"/C/OSPanel/domains/m-lab.dev/resources/views/posts/index.blade.php",
-		"/C/OSPanel/domains/m-lab.dev/resources/views/posts/sidebar.blade.php",
 		"/C/OSPanel/domains/m-lab.dev/resources/assets/js/app.js",
 		"/C/OSPanel/domains/m-lab.dev/app/Post.php",
 		"/C/OSPanel/domains/m-lab.dev/app/Http/Controllers/Api/PostsController.php",
@@ -642,7 +657,6 @@
 		"/C/OSPanel/domains/m-lab.dev/app/Favoritable.php",
 		"/C/OSPanel/domains/m-lab.dev/resources/assets/js/components/Favorite.vue",
 		"/C/OSPanel/domains/m-lab.dev/routes/web.php",
-		"/C/OSPanel/domains/m-lab.dev/resources/views/pages/about.blade.php",
 		"/C/OSPanel/domains/m-lab.dev/app/FavoritableFactory.php",
 		"/C/OSPanel/domains/m-lab.dev/config/favoritable.php",
 		"/C/OSPanel/domains/m-lab.dev/app/FavoritableModel.php",
@@ -650,7 +664,6 @@
 		"/C/OSPanel/domains/smart/app/Catalog.php",
 		"/C/OSPanel/domains/m-lab.dev/tests/Feature/Posts/FiltersTest.php",
 		"/C/OSPanel/domains/m-lab.dev/app/Filters/PostFilters.php",
-		"/C/OSPanel/domains/m-lab.dev/resources/views/layouts/app.blade.php",
 		"/C/OSPanel/domains/m-lab.dev/app/Favorite.php",
 		"/C/OSPanel/domains/m-lab.dev/database/migrations/2017_11_08_093252_create_favorites_table.php",
 		"/C/OSPanel/domains/m-lab.dev/tests/TestCase.php",
@@ -678,7 +691,6 @@
 		"/C/OSPanel/domains/m-lab.dev/tests/Feature/Posts/CrudOperationsTest.php",
 		"/C/OSPanel/domains/m-lab.dev/config/auth.php",
 		"/C/OSPanel/domains/m-lab.dev/app/Providers/AuthServiceProvider.php",
-		"/C/OSPanel/domains/m-lab.dev/app/User.php",
 		"/C/OSPanel/domains/m-lab.original/routes/web.php",
 		"/C/OSPanel/modules/conemu/ConEmu/CmdInit.cmd",
 		"/C/OSPanel/domains/m-lab.dev/app/Facebook.php",
@@ -733,13 +745,11 @@
 		"/C/OSPanel/domains/monster-lab/resources/views/pages/about.blade.php",
 		"/C/OSPanel/domains/monster-lab/tests/Feature/Posts/AdjustmentsTest.php",
 		"/C/OSPanel/domains/monster-lab/tests/Feature/Posts/CrudOperationsTest.php",
-		"/C/OSPanel/domains/monster-lab/tests/Feature/UsersRegistrationTest.php",
-		"/C/OSPanel/domains/monster-lab/tests/Feature/UsersProfilesTest.php",
-		"/C/OSPanel/domains/monster-lab/tests/Feature/PostsFiltersTest.php"
+		"/C/OSPanel/domains/monster-lab/tests/Feature/UsersRegistrationTest.php"
 	],
 	"find":
 	{
-		"height": 41.0
+		"height": 38.0
 	},
 	"find_in_files":
 	{
@@ -774,32 +784,64 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 1,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "/C/OSPanel/domains/m-lab.dev/resources/views/posts/sidebar.blade.php",
+					"file": "/C/OSPanel/domains/m-lab.dev/resources/assets/js/components/AvatarForm.vue",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 443,
+						"buffer_size": 1492,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								324,
-								324
+								1416,
+								1448
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Laravel Blade Highlighter/blade.sublime-syntax"
+							"syntax": "Packages/Vue Syntax Highlight/vue.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 1843.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/C/OSPanel/domains/m-lab.dev/database/migrations/2014_10_12_000000_create_users_table.php",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 1120,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								782,
+								691
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 333.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -810,7 +852,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 41.0
+		"height": 38.0
 	},
 	"input":
 	{
@@ -847,7 +889,7 @@
 	"project": "m-lab.sublime-project",
 	"replace":
 	{
-		"height": 78.0
+		"height": 72.0
 	},
 	"save_all_on_build": false,
 	"select_file":
@@ -1037,7 +1079,7 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 240.0,
+	"side_bar_width": 414.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
