@@ -214,6 +214,17 @@ class Post extends Model
     }
 
     /**
+     * Set title attribute striped from html tags
+     *
+     * @param string $value
+     * @return void
+     */
+    public function setTitleAttribute($value)
+    {
+        $this->attributes['title']  = strip_tags($value);
+    }
+
+    /**
      * Set body attribute to purified html content
      *
      * @param string $value
@@ -224,6 +235,16 @@ class Post extends Model
         $processor = new HTMLProcessor();
 
         $this->attributes['body']  = $processor->process($value);
+    }
+
+    public function getTitle(string $search = '')
+    {
+        return $this->highlight($search, $this->title);
+    }
+
+    public function getExcerpt(string $search = '', int $symbols = 399)
+    {
+        return $this->highlight($search, (mb_substr(strip_tags($this->body), 0, $symbols))) . ' ...';
     }
 
     /**
@@ -263,5 +284,12 @@ class Post extends Model
                 'slug' => $this->user->slug,
             ]
         ];
+    }
+
+    protected function highlight(string $search, string $subject)
+    {
+        $replace = "<span class=\"highlight\">{$search}</span>";
+
+        return str_replace($search, $replace, $subject);
     }
 }

@@ -520,19 +520,11 @@
 	"buffers":
 	[
 		{
-			"file": "/C/OSPanel/domains/m-lab.dev/resources/assets/js/components/AvatarForm.vue",
+			"file": "/C/OSPanel/domains/learning/LeetCode/index.html",
 			"settings":
 			{
-				"buffer_size": 1492,
+				"buffer_size": 544,
 				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "/C/OSPanel/domains/m-lab.dev/database/migrations/2014_10_12_000000_create_users_table.php",
-			"settings":
-			{
-				"buffer_size": 1120,
 				"line_ending": "Windows"
 			}
 		}
@@ -585,7 +577,7 @@
 				"Package Control: Install Package"
 			]
 		],
-		"width": 480.0
+		"width": 464.0
 	},
 	"console":
 	{
@@ -610,16 +602,31 @@
 	"expanded_folders":
 	[
 		"/C/OSPanel/domains/m-lab.dev",
-		"/C/OSPanel/domains/m-lab.dev/database",
+		"/C/OSPanel/domains/m-lab.dev/app",
+		"/C/OSPanel/domains/m-lab.dev/app/Tools",
 		"/C/OSPanel/domains/m-lab.dev/resources",
-		"/C/OSPanel/domains/m-lab.dev/resources/assets",
 		"/C/OSPanel/domains/m-lab.dev/resources/views",
-		"/C/OSPanel/domains/m-lab.dev/resources/views/layouts"
+		"/C/OSPanel/domains/m-lab.dev/resources/views/layouts",
+		"/C/OSPanel/domains/m-lab.dev/resources/views/posts",
+		"/C/OSPanel/domains/m-lab.dev/resources/views/posts/sidebar"
 	],
 	"file_history":
 	[
-		"/C/OSPanel/domains/m-lab.dev/resources/views/pages/about.blade.php",
+		"/C/OSPanel/domains/research/search-scout-algolia/resources/assets/js/components/Search.vue",
+		"/C/OSPanel/domains/m-lab.dev/app/Tools/helpers.php",
 		"/C/OSPanel/domains/m-lab.dev/resources/views/layouts/app.blade.php",
+		"/C/OSPanel/domains/m-lab.dev/.gitignore",
+		"/C/OSPanel/domains/m-lab.dev/config/app.php",
+		"/C/OSPanel/domains/m-lab.dev/app/Http/Controllers/PostsSearchController.php",
+		"/C/OSPanel/domains/m-lab.dev/routes/web.php",
+		"/C/OSPanel/domains/m-lab.dev/resources/views/posts/search-elasticsearch.blade.php",
+		"/C/OSPanel/domains/research/laravel-mail/routes/web.php",
+		"/C/OSPanel/domains/research/html-handling/routes/web.php",
+		"/C/OSPanel/domains/m-lab.dev/config/scout.php",
+		"/C/OSPanel/domains/m-lab.dev/resources/views/posts/sidebar/search.blade.php",
+		"/C/OSPanel/domains/research/search-scout-algolia/resources/views/search.blade.php",
+		"/C/OSPanel/domains/m-lab.dev/resources/assets/js/components/AvatarForm.vue",
+		"/C/OSPanel/domains/m-lab.dev/resources/views/pages/about.blade.php",
 		"/C/Users/Dev/AppData/Local/Temp/fz3temp-2/.env",
 		"/C/OSPanel/domains/m-lab.dev/app/User.php",
 		"/C/OSPanel/domains/m-lab.dev/resources/views/posts/sidebar.blade.php",
@@ -647,7 +654,6 @@
 		"/C/OSPanel/domains/m-lab.dev/app/Post.php",
 		"/C/OSPanel/domains/m-lab.dev/app/Http/Controllers/Api/PostsController.php",
 		"/C/OSPanel/domains/m-lab.client.dev/.env",
-		"/C/OSPanel/domains/m-lab.dev/config/app.php",
 		"/C/OSPanel/domains/m-lab.dev/tests/Feature/Posts/FavoritesTest.php",
 		"/C/OSPanel/domains/m-lab.dev/routes/favoritable.php",
 		"/C/OSPanel/domains/m-lab.dev/app/Providers/FavoritableServiceProvider.php",
@@ -656,7 +662,6 @@
 		"/C/OSPanel/domains/smart/app/Providers/CatalogServiceProvider.php",
 		"/C/OSPanel/domains/m-lab.dev/app/Favoritable.php",
 		"/C/OSPanel/domains/m-lab.dev/resources/assets/js/components/Favorite.vue",
-		"/C/OSPanel/domains/m-lab.dev/routes/web.php",
 		"/C/OSPanel/domains/m-lab.dev/app/FavoritableFactory.php",
 		"/C/OSPanel/domains/m-lab.dev/config/favoritable.php",
 		"/C/OSPanel/domains/m-lab.dev/app/FavoritableModel.php",
@@ -734,22 +739,11 @@
 		"/C/OSPanel/domains/monster-lab/tests/Feature/Users/UpdateApiTest.php",
 		"/C/OSPanel/domains/monster-lab/app/Http/Controllers/Api/UsersDataController.php",
 		"/C/OSPanel/domains/monster-lab/resources/views/posts/sidebar/search.blade.php",
-		"/C/OSPanel/domains/monster-lab/tests/Feature/TagsApiTest.php",
-		"/C/OSPanel/domains/monster-lab/app/Http/Controllers/Api/TagsController.php",
-		"/C/OSPanel/domains/monster-lab/app/Http/Controllers/AdjustmentsController.php",
-		"/C/OSPanel/domains/monster-lab/tests/Feature/RepliesApiTest.php",
-		"/C/OSPanel/domains/monster-lab/app/Http/Controllers/Api/PostRepliesController.php",
-		"/C/OSPanel/domains/monster-lab/tests/Feature/NotificationsApiTest.php",
-		"/C/OSPanel/domains/monster-lab/app/Http/Controllers/Api/NotificationsController.php",
-		"/C/OSPanel/domains/monster-lab/notes/known-bugs.txt",
-		"/C/OSPanel/domains/monster-lab/resources/views/pages/about.blade.php",
-		"/C/OSPanel/domains/monster-lab/tests/Feature/Posts/AdjustmentsTest.php",
-		"/C/OSPanel/domains/monster-lab/tests/Feature/Posts/CrudOperationsTest.php",
-		"/C/OSPanel/domains/monster-lab/tests/Feature/UsersRegistrationTest.php"
+		"/C/OSPanel/domains/monster-lab/tests/Feature/TagsApiTest.php"
 	],
 	"find":
 	{
-		"height": 38.0
+		"height": 35.0
 	},
 	"find_in_files":
 	{
@@ -784,64 +778,32 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 0,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "/C/OSPanel/domains/m-lab.dev/resources/assets/js/components/AvatarForm.vue",
+					"file": "/C/OSPanel/domains/learning/LeetCode/index.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1492,
+						"buffer_size": 544,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1416,
-								1448
+								543,
+								0
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Vue Syntax Highlight/vue.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/HTML/HTML.sublime-syntax"
 						},
 						"translation.x": 0.0,
-						"translation.y": 1843.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "/C/OSPanel/domains/m-lab.dev/database/migrations/2014_10_12_000000_create_users_table.php",
-					"semi_transient": true,
-					"settings":
-					{
-						"buffer_size": 1120,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								782,
-								691
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 333.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -852,7 +814,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 38.0
+		"height": 35.0
 	},
 	"input":
 	{
@@ -889,7 +851,7 @@
 	"project": "m-lab.sublime-project",
 	"replace":
 	{
-		"height": 72.0
+		"height": 66.0
 	},
 	"save_all_on_build": false,
 	"select_file":
@@ -1079,7 +1041,7 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 414.0,
+	"side_bar_width": 235.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

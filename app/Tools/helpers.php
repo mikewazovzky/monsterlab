@@ -25,7 +25,7 @@ function getValue($key, $model = null)
 
 function highlight(string $search, string $subject)
 {
-    $replace = "<span class=\"hightlight\">{$search}</span>";
+    $replace = "<span class=\"highlight\">{$search}</span>";
 
     return str_replace($search, $replace, $subject);
 }

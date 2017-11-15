@@ -26,7 +26,7 @@ class PostsSearchController extends Controller
                 return $this->algolia($query);
 
             case 'elasticsearch':
-                return redirect()->action('PostsSearchController@elasticsearch', ['query' => $query]);
+                return redirect()->action('PostsSearchController@elasticsearch', ['search' => $query]);
 
             default:
                 return back();
@@ -50,9 +50,9 @@ class PostsSearchController extends Controller
      * @param string $query
      * @return Illuninate\Http\Response
      */
-    protected function algolia($query)
+    protected function algolia($search)
     {
-        return view('posts.search-algolia', ['query' => $query]);
+        return view('posts.search-algolia', ['search' => $search]);
     }
 
 
@@ -65,16 +65,16 @@ class PostsSearchController extends Controller
     protected function elasticsearch(Request $request)
     {
         $page = request()->page ?: 1;
-        $results = [];
+        $posts = [];
 
-        if ($query = $request['query']) {
-            $results = Post::search($query)->paginate(10);
+        if ($search = $request->search) {
+            $posts = Post::search($search)->paginate(10);
         }
 
         return view('posts.search-elasticsearch', [
-            'query' => $query,
+            'search' => $search,
             'page' => $page,
-            'results' => $results,
+            'posts' => $posts,
         ]);
     }
 }

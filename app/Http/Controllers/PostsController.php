@@ -19,7 +19,7 @@ class PostsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index(PostFilters $filters)
+    public function index(Request $request, PostFilters $filters)
     {
         $posts = Post::with('user:id,name,slug')->latest()->filter($filters);
 
@@ -27,7 +27,19 @@ class PostsController extends Controller
             return $posts->get();
         }
 
-        return view('posts.index', ['posts' => $posts->paginate(10)]);
+        // provide service info on the page
+        $page = $request->page ?: 1;
+        $postsOnPage = 10;
+
+        // highligh search query in the posts
+        $search = $request->search ?: '';
+
+        return view('posts.index', [
+            'posts' => $posts->paginate($postsOnPage),
+            'page' => $page,
+            'postsOnPage' => $postsOnPage,
+            'search' => $search,
+        ]);
     }
 
     /**
