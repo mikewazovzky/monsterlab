@@ -22,10 +22,14 @@
                     <input type="radio" name="search-type" id="mySQL" value="mySQL" checked> mySQL
                 </label>
                 <label class="radio-inline">
-                    <input type="radio" name="search-type" id="algolia" value="algolia" {{-- disabled --}}> algolia
+                    <input type="radio" name="search-type" id="algolia" value="algolia"
+                        {{ searchEngine() === 'algolia' ? '' : 'disabled' }}>
+                    algolia
                 </label>
                 <label class="radio-inline">
-                    <input type="radio" name="search-type" id="elasticsearch" value="elasticsearch"> elastic
+                    <input type="radio" name="search-type" id="elasticsearch" value="elasticsearch"
+                        {{ searchEngine() === 'elasticsearch' ? '' : 'disabled' }}>
+                    elastic
                 </label>
             </div>
 

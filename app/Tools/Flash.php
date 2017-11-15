@@ -21,17 +21,6 @@ class Flash
     }
 
     /**
-     * Create an information flash message
-     *
-     * @param  string      $message
-     * @return void
-     */
-    public function info($message)
-    {
-        $this->message($message, 'info');
-    }
-
-    /**
      * Create a success flash message
      *
      * @param  string      $message
@@ -43,14 +32,14 @@ class Flash
     }
 
     /**
-     * Create an error flash message
+     * Create an information flash message
      *
      * @param  string      $message
      * @return void
      */
-    public function danger($message)
+    public function info($message)
     {
-        $this->message($message, 'danger');
+        $this->message($message, 'info');
     }
 
     /**
@@ -62,5 +51,28 @@ class Flash
     public function warning($message)
     {
         $this->message($message, 'warning');
+    }
+
+    /**
+     * Create a danger flash message.
+     *
+     * @param  string      $message
+     * @return void
+     */
+    public function danger($message)
+    {
+        $this->message($message, 'danger');
+    }
+
+    /**
+     * Create an error flash message.
+     * Alias to danger
+     *
+     * @param  string      $message
+     * @return void
+     */
+    public function error($message)
+    {
+        $this->danger($message);
     }
 }

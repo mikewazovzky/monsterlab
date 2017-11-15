@@ -55,7 +55,6 @@ class PostsSearchController extends Controller
         return view('posts.search-algolia', ['search' => $search]);
     }
 
-
     /**
      * Search by elasticsearch engine
      *
@@ -64,6 +63,11 @@ class PostsSearchController extends Controller
      */
     protected function elasticsearch(Request $request)
     {
+        if (!$this->checkElasticsearch()) {
+            flash()->error('Error! Elasticsearch Server is not available.');
+            return redirect(route('posts.index'));
+        }
+
         $page = request()->page ?: 1;
         $posts = [];
 
@@ -76,5 +80,28 @@ class PostsSearchController extends Controller
             'page' => $page,
             'posts' => $posts,
         ]);
+    }
+
+    /**
+     * Check if Elasticsearch server [0] is available
+     *
+     * @param type name
+     * @return type
+     */
+    protected function checkElasticsearch()
+    {
+        if (config('scout.driver') !== 'elasticsearch') {
+            return false;
+        }
+
+        $hosts = config('scout.elasticsearch.hosts');
+        $url = $hosts[0] . ':9200';
+
+        try {
+            $result = file_get_contents($url);
+            return true;
+        } catch (\Exception $e) {
+            return false;
+        }
     }
 }

@@ -28,12 +28,14 @@
 
             <ais-stats></ais-stats>
 
-            <img class="algolia-image pull-right" src="https://www.algolia.com/assets/pricing_new/algolia-powered-by-ac7dba62d03d1e28b0838c5634eb42a9.svg">
+            <a href="https://www.algolia.com">
+                <img class="algolia-image pull-right" src="https://www.algolia.com/assets/pricing_new/algolia-powered-by-ac7dba62d03d1e28b0838c5634eb42a9.svg">
+            </a>
 
             <hr>
 
             <div class="row">
-                <div class="col-sm-4">
+                <div class="col-sm-3">
                     <ais-refinement-list attribute-name="tags"
                         :class-names="{
                             'ais-refinement-list': 'tags-list',
@@ -44,7 +46,7 @@
                     </ais-refinement-list>
                 </div>
 
-                <div class="col-sm-8">
+                <div class="col-sm-9">
                     <ais-no-results>
                         <template scope="props">
                             No results found for <i>{{ props.query }}</i>.

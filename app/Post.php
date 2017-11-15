@@ -23,7 +23,7 @@ class Post extends Model
     protected $guarded = [];
 
     /**
-     * The attributes that should be casted to specific data type
+     * The attributes that should be casted to specific data type.
      *
      * @var array
      */
@@ -56,14 +56,14 @@ class Post extends Model
 
     /**
      * List of custom attributes that will be appended when
-     * model is casted toArray or to JSON object
+     * model is casted toArray or to JSON object.
      *
      * @var array
      */
     protected $appends = [];
 
     /**
-     * Hook to model:created event to make a post slug
+     * Hook to model:created event to make a post slug.
      *
      * @return void
      */
@@ -146,7 +146,7 @@ class Post extends Model
     }
 
     /**
-     *  Applies existing PostFilters to the post
+     *  Applies existing PostFilters to the post.
      *
      * @param Illuminate\Database\Eloquent\Builder $query
      * @param App\Filters\PostFilters
@@ -197,7 +197,7 @@ class Post extends Model
     }
 
     /**
-     * Set unique post slug attribute
+     * Set unique post slug attribute.
      *
      * @param string $value
      * @return void
@@ -214,7 +214,7 @@ class Post extends Model
     }
 
     /**
-     * Set title attribute striped from html tags
+     * Set title attribute striped from html tags.
      *
      * @param string $value
      * @return void
@@ -225,7 +225,7 @@ class Post extends Model
     }
 
     /**
-     * Set body attribute to purified html content
+     * Set body attribute to purified html content.
      *
      * @param string $value
      * @return void
@@ -237,18 +237,31 @@ class Post extends Model
         $this->attributes['body']  = $processor->process($value);
     }
 
+    /**
+     * Get [highlighted] post title.
+     *
+     * @param string $search
+     * @return string
+     */
     public function getTitle(string $search = '')
     {
         return $this->highlight($search, $this->title);
     }
 
+    /**
+     * Get [highlighted] post body excerpt.
+     *
+     * @param string $search
+     * @param integer $sumbols
+     * @return string
+     */
     public function getExcerpt(string $search = '', int $symbols = 399)
     {
         return $this->highlight($search, (mb_substr(strip_tags($this->body), 0, $symbols))) . ' ...';
     }
 
     /**
-     * Convert model to data object persisted into search engine database via scout
+     * Convert model to data object persisted into search engine database via scout.
      *
      * @return array
      */
@@ -286,6 +299,13 @@ class Post extends Model
         ];
     }
 
+    /**
+     * Highlight matching substring.
+     *
+     * @param string $search
+     * @param string $subject
+     * @return string
+     */
     protected function highlight(string $search, string $subject)
     {
         $replace = "<span class=\"highlight\">{$search}</span>";
