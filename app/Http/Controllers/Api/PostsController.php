@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers\Api;
 
-use App\Tag;
 use App\Post;
 use App\Filters\PostFilters;
 use Illuminate\Http\Request;
@@ -17,7 +16,11 @@ class PostsController extends Controller
      */
     public function index(PostFilters $filters)
     {
-        $posts =  Post::with('user:id,name,slug')->latest()->filter($filters)->get();
+        $posts =  Post::latest()
+            ->with('user:id,name,slug')
+            ->with('tags:name')
+            ->filter($filters)
+            ->get();
 
         return response(['data' => $posts], 200);
     }
@@ -60,9 +63,7 @@ class PostsController extends Controller
             'body' => 'sometimes|required',
         ]);
 
-        $post->update($attributes);
-
-        $post->syncTags($request->tagList);
+        $post->modify($attributes, $request->tagList);
 
         return response(['status' => 'success'], 200);
     }

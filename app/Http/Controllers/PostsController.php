@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\Tag;
 use App\Post;
 use App\Filters\PostFilters;
 use Illuminate\Http\Request;
@@ -21,7 +20,9 @@ class PostsController extends Controller
      */
     public function index(Request $request, PostFilters $filters)
     {
-        $posts = Post::with('user:id,name,slug')->latest()->filter($filters);
+        $posts = Post::with('user:id,name,slug')
+            ->latest()
+            ->filter($filters);
 
         if (request()->wantsJson()) {
             return $posts->get();
@@ -62,8 +63,6 @@ class PostsController extends Controller
      */
     public function store(Request $request)
     {
-        // return $request->all();
-
         $this->authorize('create', Post::class);
 
         $attributes = $request->validate([
@@ -86,11 +85,7 @@ class PostsController extends Controller
      */
     public function show(Post $post)
     {
-        // Updates cached (Redis) views count
-        $post->incrementViewsCount();
-
-        // Updates views count database field
-        $post->increment('views');
+        $post->updateViewsCount();
 
         return view('posts.show', ['post' => $post]);
     }
@@ -125,9 +120,7 @@ class PostsController extends Controller
             'body' => 'sometimes|required',
         ]);
 
-        $post->update($attributes);
-
-        $post->syncTags($request->tagList);
+        $post->modify($attributes, $request->tagList);
 
         flash('Your post has been updated!');
 

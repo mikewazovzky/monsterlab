@@ -11,7 +11,7 @@
             >
         </vue-select>
         <select v-show="false" name="tagList[]" multiple>
-            <option v-for="option in selectedTags" :value="option.id" v-text="option.id" selected></option>
+            <option v-for="option in selectedTags" :value="option.name" v-text="option.id" selected></option>
         </select>
     </div>
 </template>

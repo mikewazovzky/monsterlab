@@ -2,6 +2,7 @@
 
 namespace App;
 
+use App\Tag;
 use Carbon\Carbon;
 use App\Events\PostCreated;
 use App\Filters\PostFilters;
@@ -77,35 +78,6 @@ class Post extends Model
     }
 
     /**
-     * Create new post. Associate tags with the post.
-     *
-     * @param array $attributes
-     * @param array $tagList
-     * @return App\Post
-     */
-    public static function publish($attributes, $tagList = [], $user = null)
-    {
-        $user = $user ?? auth()->user();
-
-        $post = $user->posts()->create($attributes);
-
-        $post->syncTags($tagList);
-
-        return $post;
-    }
-
-    /**
-     * Sync post tags.
-     *
-     * @param array $tagList
-     * @return void
-     */
-    public function syncTags($tagList = [])
-    {
-        $this->tags()->sync($tagList);
-    }
-
-    /**
      * Get the route key name for Laravel.
      *
      * @return string
@@ -146,54 +118,49 @@ class Post extends Model
     }
 
     /**
-     *  Applies existing PostFilters to the post.
+     * Create new post. Associate tags with the post.
      *
-     * @param Illuminate\Database\Eloquent\Builder $query
-     * @param App\Filters\PostFilters
-     * @return Illuminate\Database\Eloquent\Builder
+     * @param array $attributes - post attributes as $key => $value
+     * @param array $tagList - array of tag ids
+     * @return App\Post
      */
-    public function scopeFilter($query, PostFilters $filters)
+    public static function publish($attributes, $tagList = [], $user = null)
     {
-        return $filters->apply($query);
+        $user = $user ?? auth()->user();
+
+        $post = $user->posts()->create($attributes);
+
+        $post->syncTags($tagList);
+
+        return $post;
     }
 
     /**
-     * Get statistics on number of posts published within specifc time period [year:month]
-     * for sidebar archives vidgets.
-     * The original (commented out) code uses mysql year() and month() method and
-     * is not compliant with sqlite.
+     * Update post. Sync tags with the post.
      *
-     * @return array
+     * @param array $attributes - post attributes as $key => $value
+     * @param array $tagList - array of tag ids
+     * @return App\Post
      */
-    public static function archives()
+    public function modify($attributes, $tagList)
     {
-        // $posts = Post::selectRaw('year(created_at) as year, monthname(created_at) as month, count(*) as published')
-        //     ->groupBy('year', 'month')
-        //     ->orderByRaw('min(created_at) desc')
-        //     ->get()
-        //     ->toArray();
+        $this->update($attributes);
 
-        $posts = Post::orderBy('created_at', 'desc')->pluck('created_at')->toArray();
-        $stats = [];
+        $this->syncTags($tagList);
 
-        foreach ($posts as $post) {
-            $newItem = true;
-            $year = $post->year;
-            $month = $post->format('F');
+        return $this;
+    }
 
-            foreach ($stats as $index => $item) {
-                if ($item['year'] === $year && $item['month'] === $month) {
-                    $stats[$index]['published']++;
-                    $newItem = false;
-                }
-            }
-
-            if ($newItem) {
-                $stats[] = ['year' => $year, 'month' => $month, 'published' => 1];
-            }
-        }
-
-        return $stats;
+    /**
+     * Sync post tags.
+     * Only valid tags are added to post.
+     *
+     * @param array $tagList - array of tags (names)
+     * @return void
+     */
+    public function syncTags($tagList = [])
+    {
+        $this->tags()->sync(Tag::validate($tagList));
     }
 
     /**
@@ -258,6 +225,72 @@ class Post extends Model
     public function getExcerpt(string $search = '', int $symbols = 399)
     {
         return $this->highlight($search, (mb_substr(strip_tags($this->body), 0, $symbols))) . ' ...';
+    }
+
+    /**
+     * Update views count(s)
+     *
+     * @param type name
+     * @return type
+     */
+    public function updateViewsCount()
+    {
+        // Updates cached (Redis) views count
+        $this->incrementViewsCount();
+
+        // Updates views count database field
+        $this->increment('views');
+    }
+
+    /**
+     *  Applies existing PostFilters to the post.
+     *
+     * @param Illuminate\Database\Eloquent\Builder $query
+     * @param App\Filters\PostFilters
+     * @return Illuminate\Database\Eloquent\Builder
+     */
+    public function scopeFilter($query, PostFilters $filters)
+    {
+        return $filters->apply($query);
+    }
+
+    /**
+     * Get statistics on number of posts published within specifc time period [year:month]
+     * for sidebar archives vidgets.
+     * The original (commented out) code uses mysql year() and month() method and
+     * is not compliant with sqlite.
+     *
+     * @return array
+     */
+    public static function archives()
+    {
+        // $posts = Post::selectRaw('year(created_at) as year, monthname(created_at) as month, count(*) as published')
+        //     ->groupBy('year', 'month')
+        //     ->orderByRaw('min(created_at) desc')
+        //     ->get()
+        //     ->toArray();
+
+        $posts = Post::orderBy('created_at', 'desc')->pluck('created_at')->toArray();
+        $stats = [];
+
+        foreach ($posts as $post) {
+            $newItem = true;
+            $year = $post->year;
+            $month = $post->format('F');
+
+            foreach ($stats as $index => $item) {
+                if ($item['year'] === $year && $item['month'] === $month) {
+                    $stats[$index]['published']++;
+                    $newItem = false;
+                }
+            }
+
+            if ($newItem) {
+                $stats[] = ['year' => $year, 'month' => $month, 'published' => 1];
+            }
+        }
+
+        return $stats;
     }
 
     /**

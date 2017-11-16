@@ -131,7 +131,6 @@ class CrudOperationsTest extends TestCase
         $this->delete(route('posts.update', $post))->assertStatus(403);
     }
 
-
     /** @test */
     public function authorized_user_can_delete_posts()
     {

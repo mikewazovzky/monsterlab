@@ -1,6 +1,6 @@
 <?php
 
-namespace Tests\Feature\Posts;
+namespace Tests\Feature\Posts\Api;
 
 use Tests\TestCase;
 use Laravel\Passport\Passport;
@@ -36,6 +36,8 @@ class CrudApiTest extends TestCase
         Passport::actingAs(create('App\User'));
 
         $post = create('App\Post');
+        $tag = create('App\Tag');
+        $post->tags()->attach($tag);
 
         $response = $this->getJson("/api/v1.01/posts?id={$post->id}")
             ->assertStatus(200)
