@@ -1,5 +1,7 @@
 <?php
 
+use App\Post;
+
 /**
  * Flash message to the session
  *
@@ -52,4 +54,21 @@ function highlight(string $search, string $subject)
 function searchEngine()
 {
     return config('scout.driver');
+}
+
+/**
+ * Counts number of posts per tag
+ * without using tag->posts relationship
+ *
+ * @return array of ['tagName' => $count, ...] items
+ */
+function tagCounts($key = null)
+{
+    $data = array_count_values(
+        Post::all()->flatMap(function ($post) {
+            return $post->tags()->pluck('name');
+        })->all()
+    );
+
+    return $key && isset($data[$key]) ? $data[$key] : $data;
 }

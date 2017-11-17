@@ -4,6 +4,26 @@
 		"selected_items":
 		[
 			[
+				"php",
+				"phpCount"
+			],
+			[
+				"tag",
+				"tagCounts"
+			],
+			[
+				"for",
+				"for\tfor …"
+			],
+			[
+				"ta",
+				"tagOne"
+			],
+			[
+				"check",
+				"checkElasticsearch"
+			],
+			[
 				"p",
 				"pointer"
 			],
@@ -224,10 +244,6 @@
 				"notifications"
 			],
 			[
-				"for",
-				"foreach\tforeach …"
-			],
-			[
 				"noti",
 				"notification"
 			],
@@ -264,10 +280,6 @@
 				"year"
 			],
 			[
-				"tag",
-				"tagOne"
-			],
-			[
 				"grid-temp",
 				"grid-template-rows"
 			],
@@ -294,10 +306,6 @@
 			[
 				"err",
 				"errors"
-			],
-			[
-				"ta",
-				"tag"
 			],
 			[
 				"cl",
@@ -506,28 +514,11 @@
 			[
 				"coupen",
 				"coupon-was-applied"
-			],
-			[
-				"coupon",
-				"couponApplied"
-			],
-			[
-				"co",
-				"couponCode"
 			]
 		]
 	},
 	"buffers":
 	[
-		{
-			"file": "/C/OSPanel/domains/learning/LeetCode/index.html",
-			"settings":
-			{
-				"buffer_size": 544,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -537,7 +528,7 @@
 	"command_palette":
 	{
 		"height": 354.0,
-		"last_filter": "Snippet: ",
+		"last_filter": "",
 		"selected_items":
 		[
 			[
@@ -603,27 +594,76 @@
 	[
 		"/C/OSPanel/domains/m-lab.dev",
 		"/C/OSPanel/domains/m-lab.dev/app",
-		"/C/OSPanel/domains/m-lab.dev/app/Tools",
-		"/C/OSPanel/domains/m-lab.dev/resources",
-		"/C/OSPanel/domains/m-lab.dev/resources/views",
-		"/C/OSPanel/domains/m-lab.dev/resources/views/layouts",
-		"/C/OSPanel/domains/m-lab.dev/resources/views/posts",
-		"/C/OSPanel/domains/m-lab.dev/resources/views/posts/sidebar"
+		"/C/OSPanel/domains/m-lab.dev/app/Tools"
 	],
 	"file_history":
 	[
-		"/C/OSPanel/domains/research/search-scout-algolia/resources/assets/js/components/Search.vue",
-		"/C/OSPanel/domains/m-lab.dev/app/Tools/helpers.php",
-		"/C/OSPanel/domains/m-lab.dev/resources/views/layouts/app.blade.php",
-		"/C/OSPanel/domains/m-lab.dev/.gitignore",
-		"/C/OSPanel/domains/m-lab.dev/config/app.php",
-		"/C/OSPanel/domains/m-lab.dev/app/Http/Controllers/PostsSearchController.php",
 		"/C/OSPanel/domains/m-lab.dev/routes/web.php",
-		"/C/OSPanel/domains/m-lab.dev/resources/views/posts/search-elasticsearch.blade.php",
-		"/C/OSPanel/domains/research/laravel-mail/routes/web.php",
-		"/C/OSPanel/domains/research/html-handling/routes/web.php",
+		"/C/OSPanel/domains/m-lab.dev/tests/Unit/HelpersTest.php",
+		"/C/OSPanel/domains/m-lab.dev/app/Providers/ViewComposerServiceProvider.php",
+		"/C/OSPanel/domains/m-lab.dev/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php",
+		"/C/OSPanel/domains/m-lab.dev/app/Tools/helpers.php",
+		"/C/OSPanel/domains/m-lab.dev/resources/views/posts/sidebar/tags.blade.php",
+		"/C/OSPanel/domains/m-lab.dev/database/factories/PostFactory.php",
+		"/C/Users/Dev/Documents/tmp/new.php",
+		"/C/OSPanel/domains/m-lab.dev/app/Http/Controllers/Auth/ResetPasswordController.php",
+		"/C/OSPanel/domains/laravel-packages/packages/Mikewazovzky/Taggable/src/Http/routes.php",
+		"/C/OSPanel/domains/m-lab.dev/app/Post.php",
+		"/C/OSPanel/domains/m-lab.dev/tests/Feature/TagsApiTest.php",
+		"/C/OSPanel/domains/m-lab.dev/database/factories/TagFactory.php",
+		"/C/OSPanel/domains/m-lab.dev/database/seeds/TagsTableSeeder.php",
+		"/C/OSPanel/domains/m-lab.dev/app/Taggable.php",
+		"/C/OSPanel/domains/laravel-packages/packages/Mikewazovzky/Taggable/readme.md",
+		"/C/OSPanel/domains/laravel-packages/packages/Mikewazovzky/Taggable/phpunit.xml",
+		"/C/OSPanel/domains/laravel-packages/packages/Mikewazovzky/Favoritable/composer.json",
+		"/C/OSPanel/domains/laravel-packages/packages/Mikewazovzky/Taggable/composer.json",
+		"/C/OSPanel/domains/laravel-packages/packages/Mikewazovzky/Taggable/.travis.yml",
+		"/C/OSPanel/domains/m-lab.dev/tests/Feature/Posts/TagsTest.php",
+		"/C/OSPanel/domains/m-lab.dev/app/Tag.php",
+		"/C/OSPanel/domains/m-lab.dev/database/migrations/2017_10_04_223753_create_tags_table.php",
+		"/C/OSPanel/domains/m-lab.client.dev/.env",
+		"/C/OSPanel/domains/m-lab.dev/app/Http/Controllers/PostsController.php",
+		"/C/OSPanel/domains/m-lab.dev/app/Http/Controllers/Api/PostsController.php",
+		"/C/OSPanel/domains/m-lab.dev/tests/Feature/Posts/Api/CrudApiTest.php",
+		"/C/OSPanel/domains/m-lab.dev/tests/Feature/Posts/Api/ValidationApiTest.php",
+		"/C/OSPanel/domains/m-lab.dev/tests/Feature/Posts/CrudOperationsTest.php",
+		"/C/OSPanel/domains/m-lab.dev/tests/Feature/Posts/CrudApiTest.php",
+		"/Z/Shared/.env2",
+		"/Z/Shared/.env",
+		"/Z/Shared/webdev/pmo/.env",
+		"/Z/Shared/webdev/pusher.php/index.php",
+		"/Z/Shared/webdev/victoryoverenglish.beget/.env",
+		"/Z/Shared/webdev/laravel.readme.txt",
+		"/Z/Shared/webdev/victoryoverenglish.env",
+		"/Z/Shared/webdev/zeolite/production/.env",
+		"/Z/Shared/web.php",
+		"/C/OSPanel/domains/m-lab.dev/tests/Feature/Posts/ValidationTest.php",
+		"/C/OSPanel/domains/m-lab.dev/tests/Feature/Posts/Api/ValidationTest.php",
+		"/C/OSPanel/domains/m-lab.dev/app/PostTag.php",
+		"/C/OSPanel/domains/m-lab.dev/resources/assets/js/components/Tags.vue",
+		"/C/OSPanel/domains/assets/mb_str_replace.php",
+		"/C/OSPanel/domains/m-lab.dev/resources/assets/js/components/Search.vue",
 		"/C/OSPanel/domains/m-lab.dev/config/scout.php",
 		"/C/OSPanel/domains/m-lab.dev/resources/views/posts/sidebar/search.blade.php",
+		"/C/OSPanel/domains/test/curl.php",
+		"/C/OSPanel/domains/research/search-scout-elasticsearch/notes/elastic-commands.md",
+		"/C/OSPanel/domains/m-lab.dev/app/Tools/Flash.php",
+		"/C/OSPanel/domains/m-lab.dev/app/Http/Controllers/PostsSearchController.php",
+		"/C/OSPanel/domains/m-lab.dev/notes/requirements/post.txt",
+		"/C/OSPanel/domains/m-lab.dev/tests/Unit/PostTest.php",
+		"/C/OSPanel/domains/m-lab.dev/resources/views/posts/search-elasticsearch.blade.php",
+		"/C/OSPanel/domains/m-lab.dev/resources/views/posts/index.blade.php",
+		"/C/OSPanel/domains/research/search-scout-elasticsearch/resources/views/ducks/advanced.blade.php",
+		"/C/OSPanel/domains/m-lab.dev/resources/views/posts/search-algolia.blade.php",
+		"/C/OSPanel/domains/learning/LeetCode/index.html",
+		"/C/OSPanel/domains/m-lab.dev/resources/views/layouts/app.blade.php",
+		"/C/OSPanel/domains/m-lab.dev/notes/elasticsearch.md",
+		"/C/Users/Dev/Documents/Network/mac.txt",
+		"/C/OSPanel/domains/research/search-scout-algolia/resources/assets/js/components/Search.vue",
+		"/C/OSPanel/domains/m-lab.dev/.gitignore",
+		"/C/OSPanel/domains/m-lab.dev/config/app.php",
+		"/C/OSPanel/domains/research/laravel-mail/routes/web.php",
+		"/C/OSPanel/domains/research/html-handling/routes/web.php",
 		"/C/OSPanel/domains/research/search-scout-algolia/resources/views/search.blade.php",
 		"/C/OSPanel/domains/m-lab.dev/resources/assets/js/components/AvatarForm.vue",
 		"/C/OSPanel/domains/m-lab.dev/resources/views/pages/about.blade.php",
@@ -638,7 +678,6 @@
 		"/C/OSPanel/domains/m-lab.dev/notes/requirements/favoriting.txt",
 		"/C/OSPanel/domains/m-lab.dev/app/Cacheable.php",
 		"/C/OSPanel/domains/m-lab.dev/vendor/laravel/framework/src/Illuminate/Config/Repository.php",
-		"/C/OSPanel/domains/m-lab.dev/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php",
 		"/C/OSPanel/domains/php-packages/simple/composer.json",
 		"/C/OSPanel/domains/php-packages/simple/Mikewazovzky/environment.php",
 		"/C/OSPanel/domains/php-packages/simple/Mikewazovzky/News/Models/Author.php",
@@ -646,14 +685,9 @@
 		"/C/OSPanel/domains/m-lab.dev/notes/posts/laravel-package-development.md",
 		"/C/OSPanel/domains/m-lab.dev/notes/posts/travis-secure-env-variables.md",
 		"/C/OSPanel/domains/m-lab.dev/resources/views/posts/show.blade.php",
-		"/C/OSPanel/domains/m-lab.dev/app/Http/Controllers/PostsController.php",
 		"/C/OSPanel/domains/m-lab.dev/notes/posts/vue-polimorphysm.md",
 		"/C/OSPanel/domains/m-lab.dev/notes/posts/deploy-laravel-project.md",
-		"/C/OSPanel/domains/m-lab.dev/resources/views/posts/index.blade.php",
 		"/C/OSPanel/domains/m-lab.dev/resources/assets/js/app.js",
-		"/C/OSPanel/domains/m-lab.dev/app/Post.php",
-		"/C/OSPanel/domains/m-lab.dev/app/Http/Controllers/Api/PostsController.php",
-		"/C/OSPanel/domains/m-lab.client.dev/.env",
 		"/C/OSPanel/domains/m-lab.dev/tests/Feature/Posts/FavoritesTest.php",
 		"/C/OSPanel/domains/m-lab.dev/routes/favoritable.php",
 		"/C/OSPanel/domains/m-lab.dev/app/Providers/FavoritableServiceProvider.php",
@@ -672,7 +706,6 @@
 		"/C/OSPanel/domains/m-lab.dev/app/Favorite.php",
 		"/C/OSPanel/domains/m-lab.dev/database/migrations/2017_11_08_093252_create_favorites_table.php",
 		"/C/OSPanel/domains/m-lab.dev/tests/TestCase.php",
-		"/C/Users/Dev/Documents/Network/mac.txt",
 		"/Y/Tutorials/PHP/PHP (profIT)/PHP-2/homework/lesson77/App/Core/Mail/YaMailer.php",
 		"/C/OSPanel/domains/m-lab.dev/production/deploy.txt",
 		"/C/OSPanel/domains/m-lab.dev/readme.md",
@@ -681,65 +714,18 @@
 		"/C/OSPanel/domains/m-lab.dev/resources/views/pages/developers.blade.php",
 		"/C/OSPanel/domains/test/test.php",
 		"/Z/Shared/webdev/hosting/hostinger.ru/readme.txt",
-		"/C/OSPanel/domains/m-lab.dev/tests/Feature/Posts/CrudApiTest.php",
 		"/C/OSPanel/domains/m-lab.dev/app/Policies/PostPolicy.php",
 		"/C/OSPanel/domains/m-lab.dev/resources/views/layouts/nav.blade.php",
 		"/C/OSPanel/domains/m-lab.dev/database/migrations/2017_10_03_170059_create_posts_table.php",
-		"/C/OSPanel/domains/m-lab.dev/tests/Unit/PostTest.php",
 		"/C/OSPanel/domains/m-lab.dev/resources/assets/js/components/NotificationsCount.vue",
 		"/C/OSPanel/domains/m-lab.dev/resources/assets/js/components/Notifications.vue",
 		"/C/OSPanel/domains/m-lab.dev/phpunit.xml",
 		"/C/OSPanel/domains/m-lab.dev/.env",
-		"/C/OSPanel/domains/m-lab.dev/tests/Feature/Posts/ValidationTest.php",
 		"/C/OSPanel/domains/m-lab.dev/routes/api.php",
 		"/C/OSPanel/domains/m-lab.dev/app/Providers/RouteServiceProvider.php",
-		"/C/OSPanel/domains/m-lab.dev/tests/Feature/Posts/CrudOperationsTest.php",
 		"/C/OSPanel/domains/m-lab.dev/config/auth.php",
 		"/C/OSPanel/domains/m-lab.dev/app/Providers/AuthServiceProvider.php",
-		"/C/OSPanel/domains/m-lab.original/routes/web.php",
-		"/C/OSPanel/modules/conemu/ConEmu/CmdInit.cmd",
-		"/C/OSPanel/domains/m-lab.dev/app/Facebook.php",
-		"/C/OSPanel/domains/test/readme.txt",
-		"/C/OSPanel/domains/research/laravel-social-media/routes/web.php",
-		"/C/OSPanel/domains/m-lab.dev/config/social.php",
-		"/C/OSPanel/domains/m-lab.dev/production/.env",
-		"/C/OSPanel/domains/m-lab.dev/notes/requirements/social-media-integration",
-		"/C/OSPanel/domains/m-lab.dev/app/Providers/EventServiceProvider.php",
-		"/C/OSPanel/domains/m-lab.dev/app/Listeners/PublishTwitterStatus.php",
-		"/C/OSPanel/domains/m-lab.dev/app/Listeners/PublishFacebookStatus.php",
-		"/C/OSPanel/domains/m-lab.dev/vendor/guzzle/guzzle/src/Guzzle/Http/Client.php",
-		"/C/OSPanel/domains/m-lab.dev/app/Events/PostCreated.php",
-		"/C/OSPanel/domains/m-lab.dev/tests/Feature/NotificationsTest.php",
-		"/C/OSPanel/domains/m-lab.dev/tests/Feature/EventsTest.php",
-		"/C/OSPanel/domains/m-lab.dev/app/Twitter.php",
-		"/C/OSPanel/domains/m-lab.dev/resources/views/emails/notification/user-registered.blade.php",
-		"/C/OSPanel/domains/m-lab.dev/resources/views/emails/notification/post-created.blade.php",
-		"/C/OSPanel/domains/m-lab.dev/resources/views/emails/notification/reply-created.blade.php",
-		"/C/OSPanel/domains/m-lab.dev/resources/views/emails/notification/user-confirmed.blade.php",
-		"/C/OSPanel/domains/m-lab.dev/resources/views/welcome.blade.php",
-		"/C/OSPanel/domains/research/laravel-passport-consumer/routes/web.php",
-		"/C/OSPanel/domains/m-lab.dev/resources/views/emails/confirm.blade.php",
-		"/C/OSPanel/domains/monster-lab/app/Post.php",
-		"/C/OSPanel/domains/monster-lab/resources/views/posts/sidebar/trending.blade.php",
-		"/C/OSPanel/domains/monster-lab/routes/web.php",
-		"/C/OSPanel/domains/monster-lab/app/Filters/PostFilters.php",
-		"/C/OSPanel/domains/monster-lab/tests/Feature/Posts/FiltersTest.php",
-		"/C/OSPanel/domains/monster-lab/app/Http/Controllers/Api/UsersAvatarsController.php",
-		"/C/OSPanel/domains/monster-lab/app/Http/Controllers/PostsAdjustmentsController.php",
-		"/C/OSPanel/domains/monster-lab/app/Http/Controllers/PostsSearchController.php",
-		"/C/OSPanel/domains/monster-lab/app/Http/Controllers/PostSearchController.php",
-		"/C/OSPanel/domains/monster-lab/tests/Feature/Posts/ArchivesTest.php",
-		"/C/OSPanel/domains/monster-lab/app/Http/Controllers/SearchController.php",
-		"/C/OSPanel/domains/monster-lab/tests/Feature/Posts/SearchTest.php",
-		"/C/OSPanel/domains/monster-lab/tests/utilities/functions.php",
-		"/C/OSPanel/domains/monster-lab/tests/Feature/Posts/TrendingTest.php",
-		"/C/OSPanel/domains/monster-lab/tests/Feature/Users/AvatarUpdateTest.php",
-		"/C/OSPanel/domains/monster-lab/tests/Feature/Users/ProfilesTest.php",
-		"/C/OSPanel/domains/monster-lab/tests/Feature/Users/RegistrationTest.php",
-		"/C/OSPanel/domains/monster-lab/tests/Feature/Users/UpdateApiTest.php",
-		"/C/OSPanel/domains/monster-lab/app/Http/Controllers/Api/UsersDataController.php",
-		"/C/OSPanel/domains/monster-lab/resources/views/posts/sidebar/search.blade.php",
-		"/C/OSPanel/domains/monster-lab/tests/Feature/TagsApiTest.php"
+		"/C/OSPanel/domains/m-lab.original/routes/web.php"
 	],
 	"find":
 	{
@@ -757,6 +743,9 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"Tag",
+			"dd",
+			"Tag",
 			"kbd",
 			"50px",
 			"user",
@@ -778,37 +767,8 @@
 	"groups":
 	[
 		{
-			"selected": 0,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "/C/OSPanel/domains/learning/LeetCode/index.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 544,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								543,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				}
 			]
 		}
 	],
@@ -1041,7 +1001,7 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 235.0,
+	"side_bar_width": 254.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

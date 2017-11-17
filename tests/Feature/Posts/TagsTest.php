@@ -74,4 +74,25 @@ class TagsTest extends TestCase
             Tag::validate([$tagOne->name, $tagTwo->name, 'wrongName'])
         );
     }
+
+    /** @test */
+    public function it_detachs_tags_when_model_is_deleted()
+    {
+        $post = create('App\Post');
+        $tag = create('App\Tag');
+        $post->tags()->attach($tag);
+
+        $this->assertDatabaseHas('taggables', [
+            'tag_id' => $tag->id,
+            'taggable_id' => $post->id,
+        ]);
+
+        $post->delete();
+
+        $this->assertDatabaseMissing('taggables', [
+            'tag_id' => $tag->id,
+            'taggable_id' => $post->id,
+        ]);
+
+    }
 }

@@ -2,7 +2,7 @@
 
 namespace App;
 
-use App\Tag;
+use App\Taggable;
 use Carbon\Carbon;
 use App\Events\PostCreated;
 use App\Filters\PostFilters;
@@ -14,7 +14,7 @@ use Mikewazovzky\Favoritable\Favoritable;
 
 class Post extends Model
 {
-    use Searchable, Adjustable, Cacheable, Favoritable;
+    use Searchable, Adjustable, Cacheable, Favoritable, Taggable;
 
     /**
      * The attributes that are NOT mass assignable. Yolo!
@@ -98,17 +98,6 @@ class Post extends Model
     }
 
     /**
-     * Get tags attached to the post.
-     *
-     * @return Illuminate\Database\Eloquent\Relations\belongsToMany
-     */
-    public function tags()
-    {
-        // return $this->belongsToMany(Tag::class);
-        return $this->morphToMany(Tag::class, 'taggable');
-    }
-
-    /**
      * Get replies associated to the to post.
      *
      * @return Illuminate\Database\Eloquent\Relations\belongsToMany
@@ -150,18 +139,6 @@ class Post extends Model
         $this->syncTags($tagList);
 
         return $this;
-    }
-
-    /**
-     * Sync post tags.
-     * Only valid tags are added to post.
-     *
-     * @param array $tagList - array of tags (names)
-     * @return void
-     */
-    public function syncTags($tagList = [])
-    {
-        $this->tags()->sync(Tag::validate($tagList));
     }
 
     /**
