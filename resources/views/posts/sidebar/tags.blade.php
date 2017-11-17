@@ -7,10 +7,10 @@
 
     <div class="panel-body">
         <ul class="sidebar-ul">
-            @foreach($tags as $tag)
+            @foreach($tags as $name => $count)
                 <li>
-                    <a href="/posts?tag={{ $tag->name }}">{{ $tag->name }}</a>
-                    <span class="label label-info">{{ $tag->posts_count }}</span>
+                    <a href="/posts?tag={{ $name }}">{{ $name }}</a>
+                    <span class="label label-info">{{ $count }}</span>
                 </li>
             @endforeach
         </ul>

@@ -19,9 +19,11 @@ class ViewComposerServiceProvider extends ServiceProvider
     {
         View::composer('posts.sidebar', function ($view) {
 
-            $tags = Cache::remember('tags', 60, function() {
-                return Tag::has('posts')->withCount('posts')->get();
-            });
+            // Cache values
+
+            // $tags = Cache::remember('tags', 60, function() {
+            //     return Tag::has('posts')->withCount('posts')->get();
+            // });
 
             // $archives = Cache::remember('archives', 1440, function() {
             //     return Post::archives();
@@ -31,6 +33,12 @@ class ViewComposerServiceProvider extends ServiceProvider
             //     return Post::latest()->take(5)->get();
             // });
 
+            // Option 1: uses tag->posts relationship, returns collection of tags
+            // $tags = Tag::has('posts')->withCount('posts')->get();
+            // Option 2: uses tag->posts relationship, returns array ['name' => count]
+            // $tags = tagCounts(); // returns
+            // Option 3: does NOT use tag->posts relationship, returns array ['name' => count]
+            $tags = Tag::has('posts')->withCount('posts')->pluck('posts_count', 'name');
             $archives = Post::archives();
             $trending = Post::trending(5);
             $latest   = Post::latest()->take(5)->get();
