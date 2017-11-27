@@ -4,6 +4,7 @@ namespace Tests\Feature\Posts;
 
 use Carbon\Carbon;
 use Tests\TestCase;
+use Mikewazovzky\Taggable\Tag;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 
 class FiltersTest extends TestCase
@@ -25,8 +26,8 @@ class FiltersTest extends TestCase
     /** @test */
     public function it_filters_posts_by_tag()
     {
-        $tagOne = create('App\Tag', ['name' => 'One']);
-        $tagTwo = create('App\Tag', ['name' => 'Two']);
+        $tagOne = create(Tag::class, ['name' => 'One']);
+        $tagTwo = create(Tag::class, ['name' => 'Two']);
         $postOne = create('App\Post');
         $postTwo = create('App\Post');
         $postOne->tags()->attach($tagOne);

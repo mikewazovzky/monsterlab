@@ -1,5 +1,6 @@
 <?php
 
+use Mikewazovzky\Taggable\Tag;
 use Illuminate\Database\Seeder;
 
 class TagsTableSeeder extends Seeder
@@ -11,10 +12,10 @@ class TagsTableSeeder extends Seeder
      */
     public function run()
     {
-        factory(App\Tag::class)->create(['name' => 'PHP']);
-        factory(App\Tag::class)->create(['name' => 'Laravel']);
-        factory(App\Tag::class)->create(['name' => 'JavaScript']);
-        factory(App\Tag::class)->create(['name' => 'ES6']);
-        factory(App\Tag::class)->create(['name' => 'Vue']);
+        factory(Tag::class)->create(['name' => 'PHP']);
+        factory(Tag::class)->create(['name' => 'Laravel']);
+        factory(Tag::class)->create(['name' => 'JavaScript']);
+        factory(Tag::class)->create(['name' => 'ES6']);
+        factory(Tag::class)->create(['name' => 'Vue']);
     }
 }

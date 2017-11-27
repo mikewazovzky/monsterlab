@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "5e945f98730100d0971057d957f4bfbd",
+    "content-hash": "f86529fe0ea202b36da3363a56ab373e",
     "packages": [
         {
             "name": "algolia/algoliasearch-client-php",
@@ -1669,6 +1669,49 @@
                 "laravel"
             ],
             "time": "2017-11-12T08:11:58+00:00"
+        },
+        {
+            "name": "mikewazovzky/taggable",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mikewazovzky/taggable.git",
+                "reference": "286f4e815bc8c9f7a3c5633058a9e1892847c8ca"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mikewazovzky/taggable/zipball/286f4e815bc8c9f7a3c5633058a9e1892847c8ca",
+                "reference": "286f4e815bc8c9f7a3c5633058a9e1892847c8ca",
+                "shasum": ""
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Mikewazovzky\\Taggable\\TaggableServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Mikewazovzky\\Taggable\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Mike Wazovzky",
+                    "email": "mike.wazovzky@gmail.com"
+                }
+            ],
+            "description": "Laravel Package makes model taggable.",
+            "keywords": [
+                "laravel"
+            ],
+            "time": "2017-11-16T21:03:45+00:00"
         },
         {
             "name": "monolog/monolog",
@@ -5591,7 +5634,8 @@
     "minimum-stability": "stable",
     "stability-flags": {
         "mikewazovzky/adjustable": 20,
-        "mikewazovzky/favoritable": 20
+        "mikewazovzky/favoritable": 20,
+        "mikewazovzky/taggable": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,

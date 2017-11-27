@@ -36,9 +36,9 @@ class ViewComposerServiceProvider extends ServiceProvider
             // Option 1: uses tag->posts relationship, returns collection of tags
             // $tags = Tag::has('posts')->withCount('posts')->get();
             // Option 2: uses tag->posts relationship, returns array ['name' => count]
-            // $tags = tagCounts(); // returns
-            // Option 3: does NOT use tag->posts relationship, returns array ['name' => count]
-            $tags = Tag::has('posts')->withCount('posts')->pluck('posts_count', 'name');
+            // $tags = Tag::has('posts')->withCount('posts')->pluck('posts_count', 'name');
+            // Option 3: doesn't use tag->posts relationship, returns array ['name' => count]
+            $tags = tagCounts();
             $archives = Post::archives();
             $trending = Post::trending(5);
             $latest   = Post::latest()->take(5)->get();

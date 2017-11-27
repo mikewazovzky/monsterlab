@@ -2,12 +2,12 @@
 
 namespace App;
 
-use App\Taggable;
 use Carbon\Carbon;
 use App\Events\PostCreated;
 use App\Filters\PostFilters;
 use App\Tools\HTMLProcessor;
 use Laravel\Scout\Searchable;
+use Mikewazovzky\Taggable\Taggable;
 use Illuminate\Database\Eloquent\Model;
 use Mikewazovzky\Adjustable\Adjustable;
 use Mikewazovzky\Favoritable\Favoritable;

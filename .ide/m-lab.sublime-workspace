@@ -593,14 +593,22 @@
 	"expanded_folders":
 	[
 		"/C/OSPanel/domains/m-lab.dev",
-		"/C/OSPanel/domains/m-lab.dev/app",
-		"/C/OSPanel/domains/m-lab.dev/app/Tools"
+		"/C/OSPanel/domains/m-lab.dev/tests",
+		"/C/OSPanel/domains/m-lab.dev/tests/Unit"
 	],
 	"file_history":
 	[
 		"/C/OSPanel/domains/m-lab.dev/routes/web.php",
+		"/C/OSPanel/domains/m-lab.dev/composer.json",
+		"/C/OSPanel/domains/m-lab.dev/tests/Unit/PostTest.php",
+		"/C/OSPanel/domains/m-lab.dev/app/Http/Controllers/Api/TagsController.php",
+		"/C/OSPanel/domains/m-lab.dev/tests/Feature/TagsApiTest.php",
 		"/C/OSPanel/domains/m-lab.dev/tests/Unit/HelpersTest.php",
 		"/C/OSPanel/domains/m-lab.dev/app/Providers/ViewComposerServiceProvider.php",
+		"/C/OSPanel/domains/m-lab.dev/tests/Feature/Posts/TagsTest.php",
+		"/C/OSPanel/domains/m-lab.dev/app/Post.php",
+		"/C/OSPanel/domains/m-lab.dev/database/seeds/TagsTableSeeder.php",
+		"/C/OSPanel/domains/m-lab.dev/database/factories/TagFactory.php",
 		"/C/OSPanel/domains/m-lab.dev/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php",
 		"/C/OSPanel/domains/m-lab.dev/app/Tools/helpers.php",
 		"/C/OSPanel/domains/m-lab.dev/resources/views/posts/sidebar/tags.blade.php",
@@ -608,17 +616,12 @@
 		"/C/Users/Dev/Documents/tmp/new.php",
 		"/C/OSPanel/domains/m-lab.dev/app/Http/Controllers/Auth/ResetPasswordController.php",
 		"/C/OSPanel/domains/laravel-packages/packages/Mikewazovzky/Taggable/src/Http/routes.php",
-		"/C/OSPanel/domains/m-lab.dev/app/Post.php",
-		"/C/OSPanel/domains/m-lab.dev/tests/Feature/TagsApiTest.php",
-		"/C/OSPanel/domains/m-lab.dev/database/factories/TagFactory.php",
-		"/C/OSPanel/domains/m-lab.dev/database/seeds/TagsTableSeeder.php",
 		"/C/OSPanel/domains/m-lab.dev/app/Taggable.php",
 		"/C/OSPanel/domains/laravel-packages/packages/Mikewazovzky/Taggable/readme.md",
 		"/C/OSPanel/domains/laravel-packages/packages/Mikewazovzky/Taggable/phpunit.xml",
 		"/C/OSPanel/domains/laravel-packages/packages/Mikewazovzky/Favoritable/composer.json",
 		"/C/OSPanel/domains/laravel-packages/packages/Mikewazovzky/Taggable/composer.json",
 		"/C/OSPanel/domains/laravel-packages/packages/Mikewazovzky/Taggable/.travis.yml",
-		"/C/OSPanel/domains/m-lab.dev/tests/Feature/Posts/TagsTest.php",
 		"/C/OSPanel/domains/m-lab.dev/app/Tag.php",
 		"/C/OSPanel/domains/m-lab.dev/database/migrations/2017_10_04_223753_create_tags_table.php",
 		"/C/OSPanel/domains/m-lab.client.dev/.env",
@@ -650,7 +653,6 @@
 		"/C/OSPanel/domains/m-lab.dev/app/Tools/Flash.php",
 		"/C/OSPanel/domains/m-lab.dev/app/Http/Controllers/PostsSearchController.php",
 		"/C/OSPanel/domains/m-lab.dev/notes/requirements/post.txt",
-		"/C/OSPanel/domains/m-lab.dev/tests/Unit/PostTest.php",
 		"/C/OSPanel/domains/m-lab.dev/resources/views/posts/search-elasticsearch.blade.php",
 		"/C/OSPanel/domains/m-lab.dev/resources/views/posts/index.blade.php",
 		"/C/OSPanel/domains/research/search-scout-elasticsearch/resources/views/ducks/advanced.blade.php",
@@ -723,13 +725,11 @@
 		"/C/OSPanel/domains/m-lab.dev/.env",
 		"/C/OSPanel/domains/m-lab.dev/routes/api.php",
 		"/C/OSPanel/domains/m-lab.dev/app/Providers/RouteServiceProvider.php",
-		"/C/OSPanel/domains/m-lab.dev/config/auth.php",
-		"/C/OSPanel/domains/m-lab.dev/app/Providers/AuthServiceProvider.php",
-		"/C/OSPanel/domains/m-lab.original/routes/web.php"
+		"/C/OSPanel/domains/m-lab.dev/config/auth.php"
 	],
 	"find":
 	{
-		"height": 35.0
+		"height": 74.0
 	},
 	"find_in_files":
 	{
@@ -743,6 +743,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"'App\\Tag'",
 			"Tag",
 			"dd",
 			"Tag",
@@ -757,6 +758,7 @@
 		"regex": false,
 		"replace_history":
 		[
+			"Tag::class"
 		],
 		"reverse": false,
 		"show_context": true,
@@ -811,7 +813,7 @@
 	"project": "m-lab.sublime-project",
 	"replace":
 	{
-		"height": 66.0
+		"height": 122.0
 	},
 	"save_all_on_build": false,
 	"select_file":

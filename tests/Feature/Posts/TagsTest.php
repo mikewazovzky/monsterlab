@@ -1,9 +1,9 @@
 <?php
 
-namespace Tests\Feature;
+namespace Tests\Feature\Api;
 
-use App\Tag;
 use Tests\TestCase;
+use Mikewazovzky\Taggable\Tag;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 
 class TagsTest extends TestCase
@@ -14,7 +14,7 @@ class TagsTest extends TestCase
     public function it_can_attach_tags_to_the_post()
     {
         $post = create('App\Post');
-        $tag = create('App\Tag');
+        $tag = create(Tag::class);
 
         $this->assertCount(0, $post->tags);
 
@@ -26,7 +26,7 @@ class TagsTest extends TestCase
     public function it_can_detach_tags_from_the_post()
     {
         $post = create('App\Post');
-        $tag = create('App\Tag');
+        $tag = create(Tag::class);
         $post->tags()->attach($tag);
 
         $this->assertCount(1, $post->tags);
@@ -39,9 +39,9 @@ class TagsTest extends TestCase
     public function it_can_sync_tags()
     {
         $post = create('App\Post');
-        $tagOne = create('App\Tag');
-        $tagTwo = create('App\Tag');
-        $tagThree = create('App\Tag');
+        $tagOne = create(Tag::class);
+        $tagTwo = create(Tag::class);
+        $tagThree = create(Tag::class);
 
         $post->tags()->attach($tagOne);
         $post->tags()->attach($tagTwo);
@@ -61,8 +61,8 @@ class TagsTest extends TestCase
     /** @test */
     public function it_validates_tags()
     {
-        $tagOne = create('App\Tag');
-        $tagTwo = create('App\Tag');
+        $tagOne = create(Tag::class);
+        $tagTwo = create(Tag::class);
 
         $this->assertEquals(
             [$tagOne->id, $tagTwo->id],
@@ -79,7 +79,7 @@ class TagsTest extends TestCase
     public function it_detachs_tags_when_model_is_deleted()
     {
         $post = create('App\Post');
-        $tag = create('App\Tag');
+        $tag = create(Tag::class);
         $post->tags()->attach($tag);
 
         $this->assertDatabaseHas('taggables', [

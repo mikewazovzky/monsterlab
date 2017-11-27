@@ -3,6 +3,7 @@
 namespace Tests\Feature;
 
 use Tests\TestCase;
+use Mikewazovzky\Taggable\Tag;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 
 class TagsApiTest extends TestCase
@@ -14,7 +15,7 @@ class TagsApiTest extends TestCase
     {
 
         $tagName = 'TagName';
-        $tag = make('App\Tag', ['name' => $tagName ]);
+        $tag = make(Tag::class, ['name' => $tagName ]);
 
         $this->postJson('/tags', $tag->toArray())
             ->assertStatus(401);
@@ -28,7 +29,7 @@ class TagsApiTest extends TestCase
         $this->signIn();
 
         $tagName = 'TagName';
-        $tag = make('App\Tag', ['name' => $tagName ]);
+        $tag = make(Tag::class, ['name' => $tagName ]);
 
         $this->postJson('/tags', $tag->toArray())->assertStatus(201);
 
@@ -39,7 +40,7 @@ class TagsApiTest extends TestCase
     public function user_can_get_list_of_tags()
     {
         $this->withoutExceptionHandling();
-        $tag = create('App\Tag');
+        $tag = create(Tag::class);
 
         $this->signIn();
         $response = $this->getJson(route('tags.index'))

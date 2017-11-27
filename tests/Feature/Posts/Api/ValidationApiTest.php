@@ -1,9 +1,10 @@
 <?php
 
-namespace Tests\Feature\Posts\Api;
+namespace Feature\Posts\Api;
 
 use Tests\TestCase;
 use Laravel\Passport\Passport;
+use Mikewazovzky\Taggable\Tag;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 
 class ValidationApiTest extends TestCase
@@ -100,9 +101,9 @@ class ValidationApiTest extends TestCase
         // Given we have an authenticated user (writer)
         Passport::actingAs($user = create('App\User', ['role' => 'writer']));
         // .. and tagOne persisted into database
-        $tagOne = create('App\Tag');
+        $tagOne = create(Tag::class);
         // .. and tagTwo NOT persisted into database
-        $tagTwo = make('App\Tag');
+        $tagTwo = make(Tag::class);
 
         // When user creates a new post
         $this->postJson('/api/v1.01/posts', [
@@ -127,12 +128,12 @@ class ValidationApiTest extends TestCase
         Passport::actingAs($user = create('App\User', ['role' => 'writer']));
         // .. and a post with a tag
         $post = create('App\Post', ['user_id' => $user->id]);
-        $tagOriginal = create('App\Tag');
+        $tagOriginal = create(Tag::class);
         $post->tags()->attach($tagOriginal);
         // .. and tag tagNewOne persisted into database
-        $tagNewOne = create('App\Tag');
+        $tagNewOne = create(Tag::class);
         // .. and tag tagNewTwo NOT persisted into database
-        $tagNewTwo = make('App\Tag');
+        $tagNewTwo = make(Tag::class);
 
         // When user updates a new post
         $this->postJson("/api/v1.01/posts/{$post->id}/update", [

@@ -4,6 +4,7 @@ namespace Tests\Feature\Posts\Api;
 
 use Tests\TestCase;
 use Laravel\Passport\Passport;
+use Mikewazovzky\Taggable\Tag;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 
 class CrudApiTest extends TestCase
@@ -36,7 +37,7 @@ class CrudApiTest extends TestCase
         Passport::actingAs(create('App\User'));
 
         $post = create('App\Post');
-        $tag = create('App\Tag');
+        $tag = create(Tag::class);
         $post->tags()->attach($tag);
 
         $response = $this->getJson("/api/v1.01/posts?id={$post->id}")

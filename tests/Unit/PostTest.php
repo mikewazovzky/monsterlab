@@ -30,6 +30,8 @@ class PostTest extends TestCase
     /** @test */
     public function post_tracks_a_views_count()
     {
+        $this->withoutExceptionHandling();
+
         $post = create('App\Post');
 
         $this->assertEquals(0, $post->fresh()->views);

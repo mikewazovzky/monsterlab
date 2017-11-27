@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers\Api;
 
-use App\Tag;
 use Illuminate\Http\Request;
+use Mikewazovzky\Taggable\Tag;
 use App\Http\Controllers\Controller;
 
 class TagsController extends Controller

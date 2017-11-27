@@ -17,9 +17,6 @@ Route::prefix('/profile')->group(function () {
     Route::delete('/{user}/notifications', 'Api\NotificationsController@markAllAsRead')->name('notifications.markAllAsRead');
 });
 
-// Tags routes
-Route::resource('/tags', 'Api\TagsController')->middleware('auth');
-
 // Posts routes
 Route::resource('/posts', 'PostsController');
 Route::prefix('/posts')->group(function () {
