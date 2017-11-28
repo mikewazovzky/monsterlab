@@ -7,10 +7,10 @@ use App\Events\PostCreated;
 use App\Filters\PostFilters;
 use App\Tools\HTMLProcessor;
 use Laravel\Scout\Searchable;
-use Mikewazovzky\Taggable\Taggable;
+use MWazovzky\Taggable\Taggable;
 use Illuminate\Database\Eloquent\Model;
-use Mikewazovzky\Adjustable\Adjustable;
-use Mikewazovzky\Favoritable\Favoritable;
+use MWazovzky\Adjustable\Adjustable;
+use MWazovzky\Favoritable\Favoritable;
 
 class Post extends Model
 {

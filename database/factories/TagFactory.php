@@ -1,7 +1,7 @@
 <?php
 
 use Faker\Generator as Faker;
-use Mikewazovzky\Taggable\Tag;
+use MWazovzky\Taggable\Tag;
 
 /*
 |--------------------------------------------------------------------------

@@ -15,9 +15,9 @@
         "laravel/passport": "^4.0",
         "laravel/scout": "^3.0",
         "laravel/tinker": "~1.0",
-        "mikewazovzky/adjustable": "dev-master",
-        "mikewazovzky/favoritable": "dev-master",
-        "mikewazovzky/taggable": "dev-master",
+        "mwazovzky/adjustable": "dev-master",
+        "mwazovzky/favoritable": "dev-master",
+        "mwazovzky/taggable": "dev-master",
         "predis/predis": "^1.1",
         "tamayo/laravel-scout-elastic": "^3.0"
     },

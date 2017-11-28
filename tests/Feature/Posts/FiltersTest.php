@@ -4,7 +4,7 @@ namespace Tests\Feature\Posts;
 
 use Carbon\Carbon;
 use Tests\TestCase;
-use Mikewazovzky\Taggable\Tag;
+use MWazovzky\Taggable\Tag;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 
 class FiltersTest extends TestCase

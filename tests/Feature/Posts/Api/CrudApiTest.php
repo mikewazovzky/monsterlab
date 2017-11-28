@@ -4,7 +4,7 @@ namespace Tests\Feature\Posts\Api;
 
 use Tests\TestCase;
 use Laravel\Passport\Passport;
-use Mikewazovzky\Taggable\Tag;
+use MWazovzky\Taggable\Tag;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 
 class CrudApiTest extends TestCase

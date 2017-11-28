@@ -3,7 +3,7 @@
 namespace Tests\Feature\Posts;
 
 use Tests\TestCase;
-use Mikewazovzky\Taggable\Tag;
+use MWazovzky\Taggable\Tag;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 
 class ValidationTest extends TestCase
