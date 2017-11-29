@@ -2,15 +2,16 @@
 
 namespace App;
 
+use App\Image;
 use Carbon\Carbon;
 use App\Events\PostCreated;
 use App\Filters\PostFilters;
 use App\Tools\HTMLProcessor;
 use Laravel\Scout\Searchable;
 use MWazovzky\Taggable\Taggable;
-use Illuminate\Database\Eloquent\Model;
 use MWazovzky\Adjustable\Adjustable;
 use MWazovzky\Favoritable\Favoritable;
+use Illuminate\Database\Eloquent\Model;
 
 class Post extends Model
 {
@@ -100,11 +101,21 @@ class Post extends Model
     /**
      * Get replies associated to the to post.
      *
-     * @return Illuminate\Database\Eloquent\Relations\belongsToMany
+     * @return Illuminate\Database\Eloquent\Relations\hasMany
      */
     public function replies()
     {
         return $this->hasMany(Reply::class);
+    }
+
+    /**
+     * Get images associated to the to post.
+     *
+     * @return Illuminate\Database\Eloquent\Relations\hasMany
+     */
+    public function images()
+    {
+        return $this->hasMany(Image::class);
     }
 
     /**
@@ -139,6 +150,54 @@ class Post extends Model
         $this->syncTags($tagList);
 
         return $this;
+    }
+
+    /**
+     * Check if post has featured image: $post->hasFeatured.
+     *
+     * @return boolean
+     */
+    public function getHasFeaturedAttribute()
+    {
+        return $this->images()->count() != 0;
+    }
+
+    /**
+     * Get link (src) to featured image: $post->featured.
+     *
+     * @return string
+     */
+    public function getFeaturedAttribute()
+    {
+        return $this->hasFeatured ?
+            '/storage/'.$this->images()->first()->featured :
+            '/images/default.png';
+    }
+
+    /**
+     * Add featured image to post.
+     *
+     * @param App\Image
+     * @return void
+     */
+    public function addImage(Image $image)
+    {
+        $this->images()->save($image);
+    }
+
+    /**
+     * Update featured image.
+     *
+     * @param App\Image
+     * @return type
+     */
+    public function updateImage(Image $image)
+    {
+        $this->images->each(function($img) {
+            $img->delete();
+        });
+
+        $this->addImage($image);
     }
 
     /**

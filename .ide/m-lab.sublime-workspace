@@ -520,13 +520,29 @@
 	"buffers":
 	[
 		{
-			"file": "/C/OSPanel/domains/projects.txt",
+			"file": "/C/OSPanel/domains/m-lab.dev/resources/views/posts/form.blade.php",
 			"settings":
 			{
-				"buffer_size": 1611,
+				"buffer_size": 1570,
 				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "SELECT @rownum := @rownum + 1 AS rank, city.name, city.population, country.name, country.capital \nFROM (SELECT @rownum := 0) r, world.city \nJOIN world.country \n    ON city.countrycode = country.code\nWHERE city.id = country.capital;",
+			"settings":
+			{
+				"buffer_size": 231,
 				"line_ending": "Windows",
-				"name": "domains"
+				"name": "SELECT @rownum := @rownum + 1 AS rank, city.name,"
+			}
+		},
+		{
+			"file": "/C/OSPanel/domains/m-lab.dev/resources/views/posts/create.blade.php",
+			"settings":
+			{
+				"buffer_size": 296,
+				"line_ending": "Windows"
 			}
 		}
 	],
@@ -605,10 +621,26 @@
 		"/C/OSPanel/domains/m-lab.dev",
 		"/C/OSPanel/domains/m-lab.dev/resources",
 		"/C/OSPanel/domains/m-lab.dev/resources/views",
-		"/C/OSPanel/domains/m-lab.dev/resources/views/pages"
+		"/C/OSPanel/domains/m-lab.dev/resources/views/posts"
 	],
 	"file_history":
 	[
+		"/C/OSPanel/domains/m-lab.dev/config/app.php",
+		"/C/OSPanel/userdata/config/PHP-7.1-x64_php.ini",
+		"/C/OSPanel/domains/m-lab.dev/tests/Feature/TagsApiTest.php",
+		"/C/OSPanel/domains/m-lab.dev/tests/Feature/Posts/Api/CrudApiTest.php",
+		"/C/OSPanel/domains/m-lab.dev/tests/Feature/Posts/Api/ValidationApiTest.php",
+		"/C/OSPanel/domains/m-lab.dev/tests/Feature/Posts/ValidationTest.php",
+		"/C/OSPanel/domains/m-lab.dev/tests/Feature/Posts/TagsTest.php",
+		"/C/OSPanel/domains/m-lab.dev/tests/Feature/Posts/FiltersTest.php",
+		"/C/OSPanel/domains/m-lab.dev/tests/Unit/HelpersTest.php",
+		"/C/OSPanel/domains/m-lab.dev/app/Post.php",
+		"/C/OSPanel/domains/m-lab.dev/database/factories/TagFactory.php",
+		"/C/OSPanel/domains/m-lab.dev/vendor/mwazovzky/taggable/composer.json",
+		"/C/OSPanel/domains/packages-laravel/packages/MWazovzky/Taggable/composer.json",
+		"/C/OSPanel/domains/projects.txt",
+		"/C/OSPanel/domains/m-lab.dev/composer.json",
+		"/C/OSPanel/domains/m-lab.client.dev/storage/tdata.txt",
 		"/C/OSPanel/domains/laravel-packages/laravel/readme.md",
 		"/C/OSPanel/domains/laravel-packages/packages/MWazovzky/Adjustable/composer.json",
 		"/C/OSPanel/domains/laravel-packages/packages/MWazovzky/Adjustable/src/Models/Adjustment.php",
@@ -626,23 +658,13 @@
 		"/C/OSPanel/domains/zeolit/readme.md",
 		"/C/OSPanel/domains/m-lab.dev/resources/views/pages/about.blade.php",
 		"/C/OSPanel/domains/m-lab.dev/app/Http/Controllers/Api/TagsController.php",
-		"/C/OSPanel/domains/m-lab.dev/tests/Unit/HelpersTest.php",
 		"/C/OSPanel/domains/m-lab.dev/app/Providers/AppServiceProvider.php",
-		"/C/OSPanel/domains/m-lab.dev/app/Post.php",
 		"/C/OSPanel/domains/m-lab.dev/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php",
 		"/C/OSPanel/domains/m-lab.dev/routes/web.php",
-		"/C/OSPanel/domains/m-lab.dev/tests/Feature/Posts/ValidationTest.php",
 		"/C/OSPanel/domains/m-lab.dev/tests/Unit/PostTest.php",
-		"/C/OSPanel/domains/m-lab.dev/tests/Feature/Posts/Api/CrudApiTest.php",
-		"/C/OSPanel/domains/m-lab.dev/tests/Feature/Posts/Api/ValidationApiTest.php",
-		"/C/OSPanel/domains/m-lab.dev/tests/Feature/Posts/FiltersTest.php",
-		"/C/OSPanel/domains/m-lab.dev/tests/Feature/TagsApiTest.php",
-		"/C/OSPanel/domains/m-lab.dev/tests/Feature/Posts/TagsTest.php",
 		"/C/OSPanel/domains/m-lab.dev/app/Providers/ViewComposerServiceProvider.php",
-		"/C/OSPanel/domains/m-lab.dev/database/factories/TagFactory.php",
 		"/C/OSPanel/domains/m-lab.dev/database/seeds/TagsTableSeeder.php",
 		"/C/OSPanel/domains/m-lab.dev/database/migrations/2017_10_04_223753_create_tags_table.php",
-		"/C/OSPanel/domains/m-lab.dev/composer.json",
 		"/C/OSPanel/domains/m-lab.dev/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php",
 		"/C/OSPanel/domains/m-lab.dev/app/Tools/helpers.php",
 		"/C/OSPanel/domains/m-lab.dev/resources/views/posts/sidebar/tags.blade.php",
@@ -693,7 +715,6 @@
 		"/C/Users/Dev/Documents/Network/mac.txt",
 		"/C/OSPanel/domains/research/search-scout-algolia/resources/assets/js/components/Search.vue",
 		"/C/OSPanel/domains/m-lab.dev/.gitignore",
-		"/C/OSPanel/domains/m-lab.dev/config/app.php",
 		"/C/OSPanel/domains/research/laravel-mail/routes/web.php",
 		"/C/OSPanel/domains/research/html-handling/routes/web.php",
 		"/C/OSPanel/domains/research/search-scout-algolia/resources/views/search.blade.php",
@@ -731,12 +752,7 @@
 		"/C/OSPanel/domains/m-lab.dev/app/FavoritableModel.php",
 		"/C/OSPanel/domains/m-lab.dev/vendor/laravel/framework/src/Illuminate/Support/helpers.php",
 		"/C/OSPanel/domains/smart/app/Catalog.php",
-		"/C/OSPanel/domains/m-lab.dev/app/Filters/PostFilters.php",
-		"/C/OSPanel/domains/m-lab.dev/app/Favorite.php",
-		"/C/OSPanel/domains/m-lab.dev/database/migrations/2017_11_08_093252_create_favorites_table.php",
-		"/C/OSPanel/domains/m-lab.dev/tests/TestCase.php",
-		"/Y/Tutorials/PHP/PHP (profIT)/PHP-2/homework/lesson77/App/Core/Mail/YaMailer.php",
-		"/C/OSPanel/domains/m-lab.dev/production/deploy.txt"
+		"/C/OSPanel/domains/m-lab.dev/app/Filters/PostFilters.php"
 	],
 	"find":
 	{
@@ -781,30 +797,29 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 1,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "/C/OSPanel/domains/projects.txt",
+					"file": "/C/OSPanel/domains/m-lab.dev/resources/views/posts/form.blade.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1611,
+						"buffer_size": 1570,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								427,
-								427
+								531,
+								531
 							]
 						],
 						"settings":
 						{
-							"auto_name": "domains",
-							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"syntax": "Packages/Laravel Blade Highlighter/blade.sublime-syntax",
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
@@ -812,7 +827,63 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 231,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								231,
+								0
+							]
+						],
+						"settings":
+						{
+							"auto_name": "SELECT @rownum := @rownum + 1 AS rank, city.name,",
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
 					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "/C/OSPanel/domains/m-lab.dev/resources/views/posts/create.blade.php",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 296,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Laravel Blade Highlighter/blade.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
 					"type": "text"
 				}
 			]
@@ -1047,7 +1118,7 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 203.0,
+	"side_bar_width": 225.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

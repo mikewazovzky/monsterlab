@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Post;
+use App\Image;
 use App\Filters\PostFilters;
 use Illuminate\Http\Request;
 
@@ -65,12 +66,21 @@ class PostsController extends Controller
     {
         $this->authorize('create', Post::class);
 
-        $attributes = $request->validate([
+        $postAttributes = $request->validate([
             'title' => 'required',
             'body' => 'required',
         ]);
 
-        $post = Post::publish($attributes, $request->tagList);
+        $imageAttributes = $request->validate([
+            'featured' => 'sometimes|image|max:400',
+        ]);
+
+        $post = Post::publish($postAttributes, $request->tagList);
+
+        if ($request->has('featured')) {
+            $image = Image::fromFile($request->file('featured'));
+            $post->addImage($image);
+        }
 
         flash('Your post has been published!');
 
@@ -120,7 +130,16 @@ class PostsController extends Controller
             'body' => 'sometimes|required',
         ]);
 
+        $imageAttributes = $request->validate([
+            'featured' => 'sometimes|image|max:400',
+        ]);
+
         $post->modify($attributes, $request->tagList);
+
+        if ($request->has('featured')) {
+            $image = Image::fromFile($request->file('featured'));
+            $post->updateImage($image);
+        }
 
         flash('Your post has been updated!');
 

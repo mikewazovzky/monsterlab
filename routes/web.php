@@ -6,7 +6,7 @@ Route::get('/register/confirm', 'Auth\RegisterConfirmationController@confirm')->
 Route::get('/register/sendconfirmationrequest', 'Auth\RegisterConfirmationController@send')->name('register.send')->middleware('auth');
 
 // User profile routes
-Route::prefix('/profile')->group(function () {
+Route::prefix('/profiles')->group(function () {
     Route::get('/{user}', 'ProfilesController@show')->name('profiles.show')->middleware('auth');
     Route::post('/{user}/avatar', 'Api\UsersAvatarsController@store')->name('avatars.store')->middleware('auth');
     Route::patch('/{user}/data', 'Api\UsersDataController@data')->name('user.update.data')->middleware('auth');

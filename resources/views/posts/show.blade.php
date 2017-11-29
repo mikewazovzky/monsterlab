@@ -59,6 +59,10 @@
 
         </div>
         <div class="panel-body post-body">
+            @if($post->hasFeatured)
+                <img class="ml-1 pull-right" width="240px" src="{{ $post->featured }}" >
+            @endif
+
             <p>{!! $post->body !!}</p>
         </div>
     </div>
