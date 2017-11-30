@@ -107,7 +107,10 @@ class NotificationsTest extends TestCase
 
         $post = create('App\Post');
 
-        event(new ReplyCreated($reply = create('App\Reply', ['post_id' => $post->id])));
+        event(new ReplyCreated($reply = create('App\Reply', [
+            'repliable_id' => $post->id,
+            'repliable_type' => 'App\Post',
+        ])));
 
         Notification::assertSentTo(
             $post->user,

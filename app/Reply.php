@@ -2,6 +2,7 @@
 
 namespace App;
 
+use App\Post;
 use App\Events\ReplyCreated;
 use Illuminate\Database\Eloquent\Model;
 
@@ -46,12 +47,22 @@ class Reply extends Model
     }
 
     /**
+     * Get a model instance the reply belongs to.
+     *
+     * @return Illuminate\Database\Eloquent\Relations\morphTo
+     */
+    public function repliable()
+    {
+        return $this->morphTo();
+    }
+
+    /**
      * Get a post the reply belongs to.
      *
-     * @return Illuminate\Database\Eloquent\Relations\BelongsTo
+     * @return Illuminate\Database\Eloquent\Relations\BelongsTo | null
      */
     public function post()
     {
-        return $this->belongsTo(Post::class);
+        return $this->repliable_type === Post::class ?  $this->repliable() : null;
     }
 }

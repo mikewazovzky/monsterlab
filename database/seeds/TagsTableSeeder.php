@@ -1,6 +1,6 @@
 <?php
 
-use Mikewazovzky\Taggable\Tag;
+use MWazovzky\Taggable\Tag;
 use Illuminate\Database\Seeder;
 
 class TagsTableSeeder extends Seeder

@@ -12,6 +12,8 @@ class RepliesApiTest extends TestCase
     /** @test */
     public function any_user_can_get_a_list_of_replies_for_the_post()
     {
+        $this->withoutExceptionHandling();
+
         $reply = create('App\Reply');
 
         $response = $this->getJson(route('post.replies.index', $reply->post))->json();

@@ -20,7 +20,9 @@ class RepliesTableSeeder extends Seeder
             for ($i = 0; $i < 5; $i++) {
                 Reply::create([
                     'user_id' => factory('App\User')->create()->id,
-                    'post_id' => $post->id,
+                    // 'post_id' => $post->id,
+                    'repliable_id' => $post->id,
+                    'repliable_type' => 'App\Post',
                     'body' => $faker->paragraph,
                 ]);
             }

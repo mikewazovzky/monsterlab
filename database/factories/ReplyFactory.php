@@ -16,7 +16,8 @@ use Faker\Generator as Faker;
 $factory->define(App\Reply::class, function (Faker $faker) {
     return [
         'user_id' => factory('App\User')->create()->id,
-        'post_id' => factory('App\Post')->create()->id,
+        'repliable_id' => factory('App\Post')->create()->id,
+        'repliable_type' => 'App\Post',
         'body' => $faker->paragraph,
     ];
 });
