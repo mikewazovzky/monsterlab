@@ -59,7 +59,8 @@
             },
 
             updateUrl() {
-                history.pushState(null, null, '?page=' + this.page);
+                // history.pushState(null, null, '?page=' + this.page);
+                history.replaceState(null, null, '?page=' + this.page);
                 return this;
             },
 
