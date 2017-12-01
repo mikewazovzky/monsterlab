@@ -2249,7 +2249,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
     data: function data() {
         return {
-            page: 0,
+            page: 1,
             prevUrl: false,
             nextUrl: false,
             links: []
@@ -2262,9 +2262,11 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             this.page = this.dataSet.current_page;
             this.prevUrl = this.dataSet.prev_page_url;
             this.nextUrl = this.dataSet.next_page_url;
+
+            this.updateUrl().updateLinks();
         },
         page: function page() {
-            this.broadcast().updateUrl().updateLinks();
+            this.broadcast();
         }
     },
 

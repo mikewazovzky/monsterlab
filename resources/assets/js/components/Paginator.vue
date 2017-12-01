@@ -28,7 +28,7 @@
 
         data() {
             return {
-                page: 0,
+                page: 1,
                 prevUrl: false,
                 nextUrl: false,
                 links: []
@@ -40,10 +40,12 @@
                 this.page = this.dataSet.current_page;
                 this.prevUrl = this.dataSet.prev_page_url;
                 this.nextUrl = this.dataSet.next_page_url;
+
+                this.updateUrl().updateLinks();
             },
 
             page() {
-                this.broadcast().updateUrl().updateLinks();
+                this.broadcast();
             }
         },
 
