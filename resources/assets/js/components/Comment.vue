@@ -42,7 +42,7 @@
 
         computed: {
             endpoint() {
-                return location.pathname + '/replies/' + this.data.id;
+                return location.pathname + '/comments/' + this.data.id;
             },
 
             ago() {
@@ -54,7 +54,7 @@
             },
 
             canUpdate() {
-                return this.authorize('updateReply', this.item);
+                return this.authorize('updateComment', this.item);
             }
         },
 

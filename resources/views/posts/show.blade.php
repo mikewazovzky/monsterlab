@@ -67,7 +67,7 @@
         </div>
     </div>
 
-    <replies></replies>
+    <comments></comments>
 
     <br>
     @can('update', $post)

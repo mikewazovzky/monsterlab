@@ -1,23 +1,23 @@
 <template>
     <div>
-        <reply v-for="(item, index) in items"
+        <comment v-for="(item, index) in items"
             :item="item"
             :key="item.id"
             @deleted="fetch"
             @updated="fetch">
-        </reply>
-        <reply-create v-if="canCreate" @created="fetch"></reply-create>
+        </comment>
+        <comment-create v-if="canCreate" @created="fetch"></comment-create>
 
         <paginator :dataSet="dataSet" @changed="fetch" ref="paginator"></paginator>
     </div>
 </template>
 
 <script>
-    import Reply from './Reply.vue';
-    import ReplyCreate from './ReplyCreate.vue';
+    import Comment from './Comment.vue';
+    import CommentCreate from './CommentCreate.vue';
 
     export default {
-        components: { Reply, ReplyCreate },
+        components: { Comment, CommentCreate },
 
         // props: ['post'],
 
@@ -34,7 +34,7 @@
 
         computed: {
             canCreate() {
-                return this.authorize('createReply');
+                return this.authorize('createComment');
             }
         },
 
@@ -56,7 +56,7 @@
                     page = query ? query[1] : 1;
                 }
 
-                return `${location.pathname}/replies?page=${page}`;
+                return `${location.pathname}/comments?page=${page}`;
             }
         }
     };

@@ -1,11 +1,11 @@
 const user = window.App.user;
 
 module.exports =  {
-    updateReply(reply) {
-        return reply.user_id === user.id;
+    updateComment(comment) {
+        return comment.user_id === user.id;
     },
 
-    createReply() {
+    createComment() {
         return user.role === 'writer';
     },
 

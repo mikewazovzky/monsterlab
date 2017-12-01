@@ -20,7 +20,7 @@
 
         computed: {
             endpoint() {
-                return location.pathname + '/replies';
+                return location.pathname + '/comments';
             }
         },
 
