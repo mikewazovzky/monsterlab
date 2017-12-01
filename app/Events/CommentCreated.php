@@ -10,18 +10,18 @@ use Illuminate\Foundation\Events\Dispatchable;
 use Illuminate\Broadcasting\InteractsWithSockets;
 use Illuminate\Contracts\Broadcasting\ShouldBroadcast;
 
-class ReplyCreated
+class CommentCreated
 {
     use Dispatchable, InteractsWithSockets, SerializesModels;
 
-    public $reply;
+    public $comment;
     /**
      * Create a new event instance.
      *
      * @return void
      */
-    public function __construct($reply)
+    public function __construct($comment)
     {
-        $this->reply = $reply;
+        $this->comment = $comment;
     }
 }

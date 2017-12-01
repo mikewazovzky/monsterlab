@@ -3,10 +3,10 @@
 namespace App\Policies;
 
 use App\User;
-use App\Reply;
+use App\Comment;
 use Illuminate\Auth\Access\HandlesAuthorization;
 
-class ReplyPolicy
+class CommentPolicy
 {
     use HandlesAuthorization;
 
@@ -27,26 +27,26 @@ class ReplyPolicy
     }
 
     /**
-     * Determine whether the user can update the reply.
+     * Determine whether the user can update the comment.
      *
      * @param  \App\User  $user
-     * @param  \App\Reply  $reply
+     * @param  \App\Comment  $comment
      * @return mixed
      */
-    public function update(User $user, Reply $reply)
+    public function update(User $user, Comment $comment)
     {
-        return $user->isWriter() && $user->id == $reply->user_id;
+        return $user->isWriter() && $user->id == $comment->user_id;
     }
 
     /**
-     * Determine whether the user can delete the reply.
+     * Determine whether the user can delete the comment.
      *
      * @param  \App\User  $user
-     * @param  \App\Reply  $reply
+     * @param  \App\Comment  $comment
      * @return mixed
      */
-    public function delete(User $user, Reply $reply)
+    public function delete(User $user, Comment $comment)
     {
-        return $user->isWriter() && $user->id == $reply->user_id;
+        return $user->isWriter() && $user->id == $comment->user_id;
     }
 }

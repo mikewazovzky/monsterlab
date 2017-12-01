@@ -1,11 +1,11 @@
 <?php
 
 use App\Post;
-use App\Reply;
+use App\Comment;
 use Illuminate\Database\Seeder;
 use Faker\Factory as FakerFactory;
 
-class RepliesTableSeeder extends Seeder
+class CommentsTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -18,11 +18,11 @@ class RepliesTableSeeder extends Seeder
 
         Post::all()->each(function ($post) use ($faker) {
             for ($i = 0; $i < 5; $i++) {
-                Reply::create([
+                Comment::create([
                     'user_id' => factory('App\User')->create()->id,
                     // 'post_id' => $post->id,
-                    'repliable_id' => $post->id,
-                    'repliable_type' => 'App\Post',
+                    'commentable_id' => $post->id,
+                    'commentable_type' => 'App\Post',
                     'body' => $faker->paragraph,
                 ]);
             }

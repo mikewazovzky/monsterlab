@@ -2,13 +2,12 @@
 
 namespace App\Listeners;
 
-use App\User;
-use App\Events\ReplyCreated;
+use App\Events\CommentCreated;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
-use App\Notifications\ReplyCreatedAdminNotification;
+use App\Notifications\CommentCreatedUserNotification;
 
-class InformAdminThatReplyCreated
+class InformUserThatCommentCreated
 {
     /**
      * Create the event listener.
@@ -26,12 +25,12 @@ class InformAdminThatReplyCreated
      * @param  ReplyCreated  $event
      * @return void
      */
-    public function handle(ReplyCreated $event)
+    public function handle(CommentCreated $event)
     {
-        $admin = User::admin();
+        $postAuthor = $event->comment->post->user;
 
-        if ($admin && $admin->id != $event->reply->user->id) {
-            $admin->notify(new ReplyCreatedAdminNotification($event->reply));
+        if ($postAuthor->id != $event->comment->user_id) {
+            $postAuthor->notify(new CommentCreatedUserNotification($event->comment));
         }
     }
 }

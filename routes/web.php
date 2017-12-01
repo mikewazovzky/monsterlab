@@ -21,10 +21,10 @@ Route::prefix('/profiles')->group(function () {
 Route::resource('/posts', 'PostsController');
 Route::prefix('/posts')->group(function () {
     Route::get('/{post}/adjustments', 'PostsAdjustmentsController@index')->name('adjustments.index');
-    Route::get('/{post}/replies', 'Api\PostRepliesController@index')->name('post.replies.index');
-    Route::post('/{post}/replies', 'Api\PostRepliesController@store')->name('post.replies.store');
-    Route::patch('/{post}/replies/{reply}', 'Api\PostRepliesController@update')->name('post.replies.update');
-    Route::delete('/{post}/replies/{reply}', 'Api\PostRepliesController@destroy')->name('post.replies.destroy');
+    Route::get('/{post}/comments', 'Api\PostCommentsController@index')->name('post.comments.index');
+    Route::post('/{post}/comments', 'Api\PostCommentsController@store')->name('post.comments.store');
+    Route::patch('/{post}/comments/{comment}', 'Api\PostCommentsController@update')->name('post.comments.update');
+    Route::delete('/{post}/comments/{comment}', 'Api\PostCommentsController@destroy')->name('post.comments.destroy');
 });
 Route::get('/search', 'PostsSearchController@search')->name('posts.search');
 Route::get('/elasticsearch', 'PostsSearchController@elasticsearch')->name('posts.elasticsearch');

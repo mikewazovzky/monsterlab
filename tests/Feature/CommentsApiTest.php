@@ -5,7 +5,7 @@ namespace Tests\Feature;
 use Tests\TestCase;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 
-class RepliesApiTest extends TestCase
+class CommentsApiTest extends TestCase
 {
     use DatabaseMigrations;
 
@@ -14,14 +14,14 @@ class RepliesApiTest extends TestCase
     {
         $this->withoutExceptionHandling();
 
-        $reply = create('App\Reply');
+        $comment = create('App\Comment');
 
-        $response = $this->getJson(route('post.replies.index', $reply->post))->json();
+        $response = $this->getJson(route('post.comments.index', $comment->post))->json();
 
         $this->assertCount(
             1,
-            array_filter($response['data'], function ($item) use ($reply) {
-                return $item['body'] == $reply->body;
+            array_filter($response['data'], function ($item) use ($comment) {
+                return $item['body'] == $comment->body;
             })
         );
     }
@@ -29,17 +29,17 @@ class RepliesApiTest extends TestCase
     /** @test */
     public function unauthorized_user_may_not_create_a_reply_to_a_post()
     {
-        // Guest may not post a reply
+        // Guest may not post a comment
         $post = create('App\Post');
 
-        $this->postJson(route('post.replies.store', $post), [])
+        $this->postJson(route('post.comments.store', $post), [])
             ->assertStatus(401);
 
-        // Reader may not post a reply
+        // Reader may not post a comment
         $user = create('App\User', ['role' => 'reader']);
         $this->signIn($user);
 
-        $this->postJson(route('post.replies.store', $post), [])
+        $this->postJson(route('post.comments.store', $post), [])
             ->assertStatus(403);
     }
 
@@ -51,13 +51,13 @@ class RepliesApiTest extends TestCase
         $post = create('App\Post');
         $body = 'Some body';
 
-        $response = $this->postJson(route('post.replies.store', $post), ['body' => $body])
+        $response = $this->postJson(route('post.comments.store', $post), ['body' => $body])
             ->assertStatus(201)
             ->json();
 
         $this->assertEquals($body, $response['body']);
 
-        $this->assertDatabaseHas('replies', [
+        $this->assertDatabaseHas('comments', [
             'body' => $body,
         ]);
     }
@@ -65,51 +65,51 @@ class RepliesApiTest extends TestCase
     /** @test */
     public function unauthorized_user_may_not_update_a_reply_to_a_post()
     {
-        $reply = create('App\Reply');
+        $comment = create('App\Comment');
 
-        // Guest may not update a reply
-        $this->patchJson(route('post.replies.update', [$reply->post, $reply]), [])
+        // Guest may not update a comment
+        $this->patchJson(route('post.comments.update', [$comment->post, $comment]), [])
             ->assertStatus(401);
 
-        // Reader may not update a reply
+        // Reader may not update a comment
         $user = create('App\User', ['role' => 'reader']);
         $this->signIn($user);
 
-        $this->patchJson(route('post.replies.update', [$reply->post, $reply]), [])
+        $this->patchJson(route('post.comments.update', [$comment->post, $comment]), [])
             ->assertStatus(403);
     }
 
     /** @test */
     public function authorized_user_may_update_a_reply_to_a_post()
     {
-        // Writer can update own reply
+        // Writer can update own comment
         $user = create('App\User', ['role' => 'writer']);
         $this->signIn($user);
-        $reply = create('App\Reply', ['user_id' => $user->id]);
+        $comment = create('App\Comment', ['user_id' => $user->id]);
         $updatedBody = 'Updated';
 
-        $response = $this->patchJson(route('post.replies.update', [$reply->post, $reply]), ['body' => $updatedBody])
+        $response = $this->patchJson(route('post.comments.update', [$comment->post, $comment]), ['body' => $updatedBody])
             ->assertStatus(200)
             ->json();
 
         $this->assertEquals($updatedBody, $response['body']);
 
-        $this->assertDatabaseHas('replies', [
+        $this->assertDatabaseHas('comments', [
             'body' => $updatedBody,
         ]);
 
-        // Admin can update any reply
+        // Admin can update any comment
         $user = create('App\User', ['role' => 'admin']);
         $this->signIn($user);
         $updatedBody = 'Updated again';
 
-        $response = $this->patchJson(route('post.replies.update', [$reply->post, $reply]), ['body' => $updatedBody])
+        $response = $this->patchJson(route('post.comments.update', [$comment->post, $comment]), ['body' => $updatedBody])
             ->assertStatus(200)
             ->json();
 
         $this->assertEquals($updatedBody, $response['body']);
 
-        $this->assertDatabaseHas('replies', [
+        $this->assertDatabaseHas('comments', [
             'body' => $updatedBody,
         ]);
     }
@@ -117,68 +117,68 @@ class RepliesApiTest extends TestCase
     /** @test */
     public function unauthorized_user_may_not_delete_reply_to_a_post()
     {
-        // Guest may not delete a reply
-        $reply = create('App\Reply');
+        // Guest may not delete a comment
+        $comment = create('App\Comment');
 
-        $this->deleteJson(route('post.replies.destroy', [$reply->post, $reply]))
+        $this->deleteJson(route('post.comments.destroy', [$comment->post, $comment]))
             ->assertStatus(401);
 
-        $this->assertDatabaseHas('replies', [
-            'body' => $reply->body,
+        $this->assertDatabaseHas('comments', [
+            'body' => $comment->body,
         ]);
 
-        // Reader may not delete a reply
+        // Reader may not delete a comment
         $user = create('App\User', ['role' => 'reader']);
         $this->signIn($user);
 
-        $this->deleteJson(route('post.replies.destroy', [$reply->post, $reply]))
+        $this->deleteJson(route('post.comments.destroy', [$comment->post, $comment]))
             ->assertStatus(403);
 
-        $this->assertDatabaseHas('replies', [
-            'body' => $reply->body,
+        $this->assertDatabaseHas('comments', [
+            'body' => $comment->body,
         ]);
 
-        // Writer may not delete other user's reply
+        // Writer may not delete other user's comment
         $user = create('App\User', ['role' => 'writer']);
         $this->signIn($user);
 
-        $this->deleteJson(route('post.replies.destroy', [$reply->post, $reply]))
+        $this->deleteJson(route('post.comments.destroy', [$comment->post, $comment]))
             ->assertStatus(403);
 
-        $this->assertDatabaseHas('replies', [
-            'body' => $reply->body,
+        $this->assertDatabaseHas('comments', [
+            'body' => $comment->body,
         ]);
     }
 
     /** @test */
     public function authorized_user_may_delete_a_reply_to_a_post()
     {
-        // Writer may delete own reply
+        // Writer may delete own comment
         $user = create('App\User', ['role' => 'writer']);
         $this->signIn($user);
-        $reply = create('App\Reply', ['user_id' => $user->id]);
+        $comment = create('App\Comment', ['user_id' => $user->id]);
 
-        $this->assertDatabaseHas('replies', [
-            'body' => $reply->body,
+        $this->assertDatabaseHas('comments', [
+            'body' => $comment->body,
         ]);
 
-        $this->deleteJson(route('post.replies.destroy', [$reply->post, $reply]))
+        $this->deleteJson(route('post.comments.destroy', [$comment->post, $comment]))
             ->assertStatus(204);
 
-        $this->assertDatabaseMissing('replies', [
-            'body' => $reply->body,
+        $this->assertDatabaseMissing('comments', [
+            'body' => $comment->body,
         ]);
 
-        // Admin may delete any reply
-        $reply = create('App\Reply');
+        // Admin may delete any comment
+        $comment = create('App\Comment');
         $user = create('App\User', ['role' => 'admin']);
         $this->signIn($user);
 
-        $this->deleteJson(route('post.replies.destroy', [$reply->post, $reply]))
+        $this->deleteJson(route('post.comments.destroy', [$comment->post, $comment]))
             ->assertStatus(204);
 
-        $this->assertDatabaseMissing('replies', [
-            'body' => $reply->body,
+        $this->assertDatabaseMissing('comments', [
+            'body' => $comment->body,
         ]);
     }
 
@@ -189,18 +189,18 @@ class RepliesApiTest extends TestCase
         $this->signIn($user);
         $post = create('App\Post');
 
-        // Create a reply
-        $response = $this->postJson(route('post.replies.store', $post), ['body' => null])
+        // Create a comment
+        $response = $this->postJson(route('post.comments.store', $post), ['body' => null])
             ->assertStatus(422)
             ->json();
 
         $this->assertTrue(isset($response['errors']['body']));
 
-        // Update a reply
-        $reply = create('App\Reply', ['user_id' => $user->id]);
-        $reply->body = null;
+        // Update a comment
+        $comment = create('App\Comment', ['user_id' => $user->id]);
+        $comment->body = null;
 
-        $response = $this->patchJson(route('post.replies.update', [$reply->post, $reply]), $reply->toArray())
+        $response = $this->patchJson(route('post.comments.update', [$comment->post, $comment]), $comment->toArray())
             ->assertStatus(422)
             ->json();
 

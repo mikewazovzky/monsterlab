@@ -5,12 +5,12 @@ namespace Tests\Feature;
 use App\User;
 use Tests\TestCase;
 use App\Events\PostCreated;
-use App\Events\ReplyCreated;
+use App\Events\CommentCreated;
 use App\Notifications\UserConfirmed;
 use App\Notifications\UserRegistered;
 use App\Notifications\PostCreatedAdminNotification;
-use App\Notifications\ReplyCreatedUserNotification;
-use App\Notifications\ReplyCreatedAdminNotification;
+use App\Notifications\CommentCreatedUserNotification;
+use App\Notifications\CommentCreatedAdminNotification;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Support\Facades\Notification;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
@@ -83,40 +83,40 @@ class NotificationsTest extends TestCase
     }
 
     /** @test */
-    public function it_sends_notification_to_admin_wnen_new_reply_is_created()
+    public function it_sends_notification_to_admin_wnen_new_comment_is_created()
     {
         Notification::fake();
 
         $admin = create('App\User', ['role' => 'admin']);
 
-        event(new ReplyCreated($reply = create('App\Reply')));
+        event(new CommentCreated($comment = create('App\Comment')));
 
         Notification::assertSentTo(
             $admin,
-            ReplyCreatedAdminNotification::class,
-            function ($notification, $channels) use ($reply) {
-                return ($notification->reply->id === $reply->id) && $channels = ['database', 'mail'];
+            CommentCreatedAdminNotification::class,
+            function ($notification, $channels) use ($comment) {
+                return ($notification->comment->id === $comment->id) && $channels = ['database', 'mail'];
             }
         );
     }
 
     /** @test */
-    public function it_sends_notification_to_user_wnen_new_reply_is_created_to_his_post()
+    public function it_sends_notification_to_user_wnen_new_comment_is_created_to_his_post()
     {
         Notification::fake();
 
         $post = create('App\Post');
 
-        event(new ReplyCreated($reply = create('App\Reply', [
-            'repliable_id' => $post->id,
-            'repliable_type' => 'App\Post',
+        event(new CommentCreated($comment = create('App\Comment', [
+            'commentable_id' => $post->id,
+            'commentable_type' => 'App\Post',
         ])));
 
         Notification::assertSentTo(
             $post->user,
-            ReplyCreatedUserNotification::class,
-            function ($notification, $channels) use ($reply) {
-                return ($notification->reply->id === $reply->id) && $channels = ['database', 'mail'];
+            CommentCreatedUserNotification::class,
+            function ($notification, $channels) use ($comment) {
+                return ($notification->comment->id === $comment->id) && $channels = ['database', 'mail'];
             }
         );
     }

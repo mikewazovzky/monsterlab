@@ -103,10 +103,10 @@ class Post extends Model
      *
      * @return Illuminate\Database\Eloquent\Relations\hasMany
      */
-    public function replies()
+    public function comments()
     {
-        // return $this->hasMany(Reply::class);
-        return $this->morphMany(Reply::class, 'repliable');
+        // return $this->hasMany(Comment::class);
+        return $this->morphMany(Comment::class, 'commentable');
     }
 
     /**

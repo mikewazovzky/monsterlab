@@ -23,9 +23,9 @@ class EventServiceProvider extends ServiceProvider
             'App\Listeners\PublishTwitterStatus',
             'App\Listeners\PublishFacebookStatus',
         ],
-        'App\Events\ReplyCreated' => [
-            'App\Listeners\InformAdminThatReplyCreated',
-            'App\Listeners\InformUserThatReplyCreated',
+        'App\Events\CommentCreated' => [
+            'App\Listeners\InformAdminThatCommentCreated',
+            'App\Listeners\InformUserThatCommentCreated',
         ],
     ];
 

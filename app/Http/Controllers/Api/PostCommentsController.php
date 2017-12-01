@@ -3,11 +3,11 @@
 namespace App\Http\Controllers\Api;
 
 use App\Post;
-use App\Reply;
+use App\Comment;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
-class PostRepliesController extends Controller
+class PostCommentsController extends Controller
 {
     public function __construct()
     {
@@ -21,9 +21,9 @@ class PostRepliesController extends Controller
      */
     public function index(Post $post)
     {
-        $replies = $post->replies()->latest()->paginate(10);
+        $comments = $post->comments()->latest()->paginate(10);
 
-        return response($replies, 200);
+        return response($comments, 200);
     }
 
     /**
@@ -34,47 +34,47 @@ class PostRepliesController extends Controller
      */
     public function store(Post $post, Request $request)
     {
-        $this->authorize('create', Reply::class);
+        $this->authorize('create', Comment::class);
 
         $request->validate(['body' => 'required']);
 
-        $reply = $post->replies()->create([
+        $comment = $post->comments()->create([
             'user_id' => auth()->id(),
             'body' => $request->body,
         ]);
 
-        return response($reply, 201);
+        return response($comment, 201);
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Reply  $reply
+     * @param  \App\Comment  $comment
      * @return \Illuminate\Http\Response
      */
-    public function update(Post $post, Request $request, Reply $reply)
+    public function update(Post $post, Request $request, Comment $comment)
     {
-        $this->authorize('update', $reply);
+        $this->authorize('update', $comment);
 
         $attributes = $request->validate(['body' => 'required']);
 
-        $reply->update($attributes);
+        $comment->update($attributes);
 
-        return response($reply, 200);
+        return response($comment, 200);
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Reply  $reply
+     * @param  \App\Comment  $comment
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Post $post, Reply $reply)
+    public function destroy(Post $post, Comment $comment)
     {
-        $this->authorize('delete', $reply);
+        $this->authorize('delete', $comment);
 
-        $reply->delete();
+        $comment->delete();
 
         return response('deleted', 204);
     }

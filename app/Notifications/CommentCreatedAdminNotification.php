@@ -7,7 +7,7 @@ use Illuminate\Notifications\Notification;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Notifications\Messages\MailMessage;
 
-class ReplyCreatedUserNotification extends Notification implements ShouldQueue
+class CommentCreatedAdminNotification extends Notification implements ShouldQueue
 {
     use Queueable;
 
@@ -18,9 +18,9 @@ class ReplyCreatedUserNotification extends Notification implements ShouldQueue
      *
      * @return void
      */
-    public function __construct($reply)
+    public function __construct($comment)
     {
-        $this->reply = $reply;
+        $this->comment = $comment;
     }
 
     /**
@@ -42,7 +42,7 @@ class ReplyCreatedUserNotification extends Notification implements ShouldQueue
      */
     public function toMail($notifiable)
     {
-        return (new MailMessage)->markdown('emails.notification.reply-created', ['reply' => $this->reply]);
+        return (new MailMessage)->markdown('emails.notification.comment-created', ['comment' => $this->comment]);
     }
 
     /**
@@ -54,10 +54,10 @@ class ReplyCreatedUserNotification extends Notification implements ShouldQueue
     public function toArray($notifiable)
     {
         return [
-            'reply' => $this->reply,
-            'user' => $this->reply->user,
-            'post_title' => $this->reply->post->title,
-            'post_slug' => $this->reply->post->slug,
+            'comment' => $this->comment,
+            'user' => $this->comment->user,
+            'post_title' => $this->comment->post->title,
+            'post_slug' => $this->comment->post->slug,
         ];
     }
 }

@@ -4,7 +4,7 @@ namespace Tests\Feature;
 
 use Carbon\Carbon;
 use Tests\TestCase;
-use App\Notifications\ReplyCreatedUserNotification;
+use App\Notifications\CommentCreatedUserNotification;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 
 class NotificationsApiTest extends TestCase
@@ -15,9 +15,9 @@ class NotificationsApiTest extends TestCase
     public function user_can_be_notified()
     {
         $user = create('App\User');
-        $reply = create('App\Reply');
+        $comment = create('App\Comment');
 
-        $user->notify(new ReplyCreatedUserNotification($reply));
+        $user->notify(new CommentCreatedUserNotification($comment));
 
         $this->assertCount(1, $user->notifications);
         $this->assertCount(1, $user->unreadNotifications);
@@ -47,8 +47,8 @@ class NotificationsApiTest extends TestCase
         $response = $this->getJson(route('notifications.index', $user))->json();
         $this->assertCount(0, $response);
 
-        $reply = create('App\Reply');
-        $user->notify(new ReplyCreatedUserNotification($reply));
+        $comment = create('App\Comment');
+        $user->notify(new CommentCreatedUserNotification($comment));
 
         $response = $this->getJson(route('notifications.index', $user))->json();
         $this->assertCount(1, $response);
@@ -58,7 +58,7 @@ class NotificationsApiTest extends TestCase
     public function guest_may_not_mark_a_notification_as_read()
     {
         $user = create('App\User');
-        $user->notify(new ReplyCreatedUserNotification(create('App\Reply')));
+        $user->notify(new CommentCreatedUserNotification(create('App\Comment')));
         $notification = $user->notifications()->first();
 
         $this->deleteJson(route('notifications.markAsRead', [$user, $notification]))->assertStatus(401);
@@ -70,7 +70,7 @@ class NotificationsApiTest extends TestCase
         // User can not mark other user's notification as read
         $this->signIn();
         $user = create('App\User');
-        $user->notify(new ReplyCreatedUserNotification(create('App\Reply')));
+        $user->notify(new CommentCreatedUserNotification(create('App\Comment')));
         $notification = $user->notifications()->first();
 
         $this->deleteJson(route('notifications.markAsRead', [$user, $notification]))->assertStatus(403);
@@ -80,7 +80,7 @@ class NotificationsApiTest extends TestCase
     public function authorized_user_can_mark_a_notification_as_read()
     {
         $this->signIn($user = create('App\User'));
-        $user->notify(new ReplyCreatedUserNotification(create('App\Reply')));
+        $user->notify(new CommentCreatedUserNotification(create('App\Comment')));
         $notification = $user->notifications()->first();
 
         $response = $this->getJson(route('notifications.index', $user))->json();
@@ -96,7 +96,7 @@ class NotificationsApiTest extends TestCase
     public function guest_may_not_mark_all_notifications_as_read()
     {
         $user = create('App\User');
-        $user->notify(new ReplyCreatedUserNotification(create('App\Reply')));
+        $user->notify(new CommentCreatedUserNotification(create('App\Comment')));
         $notification = $user->notifications()->first();
 
         $this->deleteJson(route('notifications.markAllAsRead', $user))->assertStatus(401);
@@ -108,7 +108,7 @@ class NotificationsApiTest extends TestCase
         // User can not mark all other user's notifications as read
         $this->signIn();
         $user = create('App\User');
-        $user->notify(new ReplyCreatedUserNotification(create('App\Reply')));
+        $user->notify(new CommentCreatedUserNotification(create('App\Comment')));
         $notification = $user->notifications()->first();
 
         $this->deleteJson(route('notifications.markAllAsRead', $user))->assertStatus(403);
@@ -118,7 +118,7 @@ class NotificationsApiTest extends TestCase
     public function authorized_user_can_mark_all_notifications_as_read()
     {
         $this->signIn($user = create('App\User'));
-        $user->notify(new ReplyCreatedUserNotification(create('App\Reply')));
+        $user->notify(new CommentCreatedUserNotification(create('App\Comment')));
         $notification = $user->notifications()->first();
 
         $response = $this->getJson(route('notifications.index', $user))->json();

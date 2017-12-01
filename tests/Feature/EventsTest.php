@@ -3,7 +3,7 @@
 namespace Tests\Feature;
 
 use App\Events\PostCreated;
-use App\Events\ReplyCreated;
+use App\Events\CommentCreated;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Support\Facades\Event;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
@@ -47,12 +47,12 @@ class EventsTest extends TestCase
     }
 
     /** @test */
-    public function event_is_fired_when_reply_is_created()
+    public function event_is_fired_when_comment_is_created()
     {
-        $reply = create('App\Reply');
+        $comment = create('App\Comment');
 
-        Event::assertDispatched(ReplyCreated::class, function ($event) use ($reply) {
-            return $event->reply->id === $reply->id;
+        Event::assertDispatched(CommentCreated::class, function ($event) use ($comment) {
+            return $event->comment->id === $comment->id;
         });
     }
 }

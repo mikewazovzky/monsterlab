@@ -13,11 +13,11 @@ use Faker\Generator as Faker;
 |
 */
 
-$factory->define(App\Reply::class, function (Faker $faker) {
+$factory->define(App\Comment::class, function (Faker $faker) {
     return [
         'user_id' => factory('App\User')->create()->id,
-        'repliable_id' => factory('App\Post')->create()->id,
-        'repliable_type' => 'App\Post',
+        'commentable_id' => factory('App\Post')->create()->id,
+        'commentable_type' => 'App\Post',
         'body' => $faker->paragraph,
     ];
 });
