@@ -10,6 +10,9 @@
 // Utility Classes
 @import "utilities";
 
+// Styling Pages
+@import "pages";
+
 // Styling Sidebar
 @import "sidebar";
 
@@ -18,8 +21,5 @@
 
 // Styling Search
 @import "search";
-
-// Styling Pages
-@import "pages";
 
 body { margin-bottom: 50px; }
