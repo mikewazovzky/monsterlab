@@ -1,0 +1,18 @@
+.panel { margin: 7px 0; }
+.panel-about { padding: 0; }
+
+.tags { padding-left: 0; display: inline; }
+.tags li { list-style: none; display: inline; }
+.tags li:after { content: " | "; }
+.tags li:last-child:after { content: none; }
+
+.fb-share-button { margin-bottom: 3px;  margin-left: 3px; }
+
+.post-body { background-color: #fdfdfd; font-size: 1.2em; }
+.post-body p { margin-top: 10px; }
+.post-body ol { padding-left: 20px; }
+
+pre { background-color: #222222; color: #efefef; padding: 0 20px 20px 20px; font-size: 0.9em; }
+kbd { background-color: #434343; color: #efefef; }
+
+.instruction { font-size: 0.8em; }

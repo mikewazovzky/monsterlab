@@ -7,3 +7,19 @@
 // Bootstrap
 @import "~bootstrap-sass/assets/stylesheets/bootstrap";
 
+// Utility Classes
+@import "utilities";
+
+// Styling Sidebar
+@import "sidebar";
+
+// Styling Posts
+@import "posts";
+
+// Styling Search
+@import "search";
+
+// Styling Pages
+@import "pages";
+
+body { margin-bottom: 50px; }

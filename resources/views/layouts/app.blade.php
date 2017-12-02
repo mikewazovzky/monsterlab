@@ -35,45 +35,7 @@
 
     <!-- Styles -->
     <link href="{{ mix('/css/app.css') }}" rel="stylesheet">
-    <!-- TEMPORARY -->
-    <style>
-        body { margin-bottom: 50px; }
-        .center { text-align: center; }
-        .terms { padding-left: 20px; }
-        .terms li { list-style: none; display: inline; }
-        .terms li:after { content: " | "; }
-        .terms li:last-child:after { content: none; }
-        .tags { padding-left: 0; display: inline; }
-        .tags li { list-style: none; display: inline; }
-        .tags li:after { content: " | "; }
-        .tags li:last-child:after { content: none; }
-        .sidebar-ul { padding-left: 20px; list-style-type: square; }
-        .panel { margin: 7px 0; }
-        .level { display: flex; align-items: center; }
-        .flex { flex: 1; }
-        .mr-1 { margin-right: 1em; }
-        .ml-1 { margin-left: 1em; }
-        .mt-1 { margin-top: 1em; }
-        .fs-08 { font-size: 0.9em; }
-        .panel-about { padding: 0; }
-        .post-body { background-color: #fdfdfd; font-size: 1.2em; }
-        pre { background-color: #222222; color: #efefef; padding: 0 20px 20px 20px; font-size: 0.9em; }
-        kbd { background-color: #434343; color: #efefef; }
-        .post-body p { margin-top: 10px; }
-        .post-body ol { padding-left: 20px; }
-        .ais-highlight em { background-color: orange; padding: 3px; }
-        .ais-snippet em { background-color: orange; padding: 3px; }
-        .instruction { font-size: 0.9em; }
-        .fb-share-button { margin-bottom: 3px;  margin-left: 3px; }
-        .developers pre { font-size: 1.1em; }
-        /* Favorite Vidget */
-        .sidebar-favorite .panel-heading { background-color: #3097D1; color: #ffffff; }
-        .sidebar-favorite .panel-heading:hover { background-color: #ffffff; color: #3097D1; }
-        .sidebar-favorite a:hover { text-decoration: none; }
-        /* Search highlight */
-        .highlight { background-color: orange; }
 
-    </style>
     <!-- Pass data to JavaScript -->
     <script>
         window.App = {!! json_encode([

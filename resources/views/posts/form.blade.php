@@ -18,10 +18,10 @@
                 <textarea type="text" id="body" name="body" class="form-control" rows="24">{{ getValue('body', $post ?? null) }}</textarea>
             </div>
 
-{{--             <div class="form-group">
-                <input type="file" name="featured" class="form-control">
-            </div> --}}
-            <featured-image src="{{ $post->featured }}"></featured-image>
+            <featured-image
+                src="{{ isset($post) ? $post->featured : '/images/default.png' }}"
+            >
+            </featured-image>
 
             <tags :post="{{ $post ?? 'false' }}"></tags>
 

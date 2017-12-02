@@ -1,0 +1,11 @@
+/* Favorite Vidget */
+.sidebar-favorite .panel-heading { background-color: #3097D1; color: #ffffff; }
+.sidebar-favorite .panel-heading:hover { background-color: #ffffff; color: #3097D1; }
+.sidebar-favorite a:hover { text-decoration: none; }
+.sidebar-ul { padding-left: 20px; list-style-type: square; }
+
+/* About Vidget */
+.terms { padding-left: 20px; }
+.terms li { list-style: none; display: inline; }
+.terms li:after { content: " | "; }
+.terms li:last-child:after { content: none; }
