@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/mikewazovzky/monsterlab.svg?branch=master)](https://travis-ci.org/mikewazovzky/monsterlab)
+[![Build Status](https://travis-ci.org/mwazovzky/m-lab.svg?branch=master)](https://travis-ci.org/mwazovzky/m-lab)
 [![Coverage Status](https://coveralls.io/repos/github/mikewazovzky/monsterlab/badge.svg?branch=master)](https://coveralls.io/github/mikewazovzky/monsterlab?branch=master)
 
 # Project: Monster Lab.
