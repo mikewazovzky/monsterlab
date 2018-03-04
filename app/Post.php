@@ -343,7 +343,7 @@ class Post extends Model
         return [
             'title' => $this->title,
             'slug' => $this->slug,
-            'body' => $this->body,
+            'body' => mb_substr($this->body, 0, 7000),
             'created_at' => $this->created_at->toDateString(),
             'tags' => $this->tags()->pluck('name'),
             'tagsList' => implode(',', $this->tags()->pluck('name')->all()),
