@@ -48,13 +48,13 @@
 
                 <div class="col-sm-9">
                     <ais-no-results>
-                        <template scope="props">
+                        <template slot-scope="props">
                             No results found for <i>{{ props.query }}</i>.
                         </template>
                     </ais-no-results>
 
                     <ais-results>
-                        <template scope="{ result }">
+                        <template slot-scope="{ result }">
                             <a :href="'/posts/' + result.slug">
                                 <ais-highlight :result="result" attribute-name="title"></ais-highlight>
                             </a>
