@@ -39,12 +39,12 @@ window.flash = function (message, level = 'success') {
     window.events.$emit('flash', { message, level });
 };
 
-Vue.component('flash', require('./components/Flash.vue'));
+Vue.component('carousel', require('./components/Carousel.vue').default);
+Vue.component('main-menu', require('./components/MainMenu.vue').default);
+Vue.component('flash', require('./components/Flash.vue').default);
 Vue.component('tags', require('./components/Tags.vue'));
 Vue.component('paginator', require('./components/Paginator.vue'));
 Vue.component('comments', require('./components/Comments.vue'));
-Vue.component('carousel', require('./components/Carousel.vue'));
-Vue.component('main-menu', require('./components/MainMenu.vue'));
 Vue.component('avatar-form', require('./components/AvatarForm.vue'));
 Vue.component('user-data', require('./components/UserData.vue'));
 Vue.component('user-data-role', require('./components/UserDataRole.vue'));
